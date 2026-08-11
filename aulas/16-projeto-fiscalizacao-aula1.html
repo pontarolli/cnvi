@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v35
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v36
           </p>
     </div>
 </div>
@@ -180,7 +180,7 @@ Ricardo Pasquati Pontarolli
 <section id="como-vamos-simular-isso" class="slide level2">
 <h2>Como vamos simular isso</h2>
 <ul>
-<li>Cada grupo representa um <strong>tipo de veículo</strong>: carro, ônibus, moto ou patinete elétrico</li>
+<li>Cada grupo representa um <strong>tipo de veículo diferente</strong> — 8 ao todo, já definidos (ver adiante)</li>
 <li>Cada veículo “roda” uma <strong>rota fixa e pré-cadastrada</strong> — sequência de trechos com limite (ex.: via local 40 → coletora 60 → arterial 80)</li>
 <li>Um <strong>ESP32</strong> vai simular o GPS/velocímetro do veículo (entra em uma aula futura)</li>
 <li>Um <strong>Raspberry Pi</strong> é o <strong>nó de borda da nuvem municipal</strong>: recebe, processa e guarda os dados</li>
@@ -233,34 +233,116 @@ Ricardo Pasquati Pontarolli
 <section id="os-grupos-de-hoje" class="slide level2">
 <h2>Os grupos de hoje</h2>
 <ul>
-<li>4 grupos por turma, um por tipo de veículo: <strong>Carro · Ônibus · Moto · Patinete elétrico</strong></li>
+<li>8 grupos ao todo (4 por turma) — <strong>cada grupo já tem um veículo definido</strong>, sem repetir entre Turma A e Turma B</li>
+<li><strong>Máximo de 5 integrantes por grupo</strong> (4 grupos × 5 = os 20 computadores do laboratório)</li>
 <li>Cada grupo define: nome do grupo, quem grava o cartão hoje, quem preenche a ficha</li>
-<li>O tipo de veículo define a <strong>regra de negócio</strong> (limite de velocidade) que vocês vão simular</li>
+<li>O tipo de veículo define a <strong>regra de negócio</strong> (limite de velocidade) que vocês vão simular — e ela não é igual para todo mundo</li>
 </ul>
+</section>
+<section id="turma-a-veículos" class="slide level2">
+<h2>Turma A — veículos</h2>
 <table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Veículo</th>
 <th>Regra de velocidade</th>
+<th>Hostname</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Carro / Ônibus / Moto</td>
+<td>Carro</td>
 <td>Segue o limite normal da via</td>
+<td><code>rpi-carro</code></td>
+</tr>
+<tr class="even">
+<td>Ônibus</td>
+<td>Segue o limite da via, nunca acima de 90 km/h</td>
+<td><code>rpi-onibus</code></td>
+</tr>
+<tr class="odd">
+<td>Caminhão</td>
+<td>Segue o limite da via, nunca acima de 80 km/h</td>
+<td><code>rpi-caminhao</code></td>
 </tr>
 <tr class="even">
 <td>Patinete elétrico</td>
-<td>Limitado a vias/ciclovias, 20–25 km/h</td>
+<td>Só em vias até 60 km/h; teto próprio de 25 km/h</td>
+<td><code>rpi-patinete</code></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="turma-b-veículos" class="slide level2">
+<h2>Turma B — veículos</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Veículo</th>
+<th>Regra de velocidade</th>
+<th>Hostname</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Moto</td>
+<td>Segue o limite normal da via</td>
+<td><code>rpi-moto</code></td>
+</tr>
+<tr class="even">
+<td>Mobilete a combustão</td>
+<td>Segue o limite da via, nunca acima de 60 km/h</td>
+<td><code>rpi-mobilete</code></td>
+</tr>
+<tr class="odd">
+<td>Skate elétrico</td>
+<td>Só em vias até 60 km/h; teto próprio de 20 km/h</td>
+<td><code>rpi-skate</code></td>
+</tr>
+<tr class="even">
+<td>Monociclo elétrico</td>
+<td>Só em vias até 60 km/h; teto próprio de 24 km/h</td>
+<td><code>rpi-monociclo</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="três-famílias-de-regra" class="slide level2">
+<h2>Três famílias de regra</h2>
+<ol type="1">
+<li><strong>Limite normal</strong> (Carro, Moto) — usa direto o limite do trecho</li>
+<li><strong>Teto legal do veículo</strong> (Ônibus, Caminhão, Mobilete) — vale o <strong>menor</strong> entre o limite da via e o teto do veículo</li>
+<li><strong>Via restrita + teto do equipamento</strong> (Patinete, Skate, Monociclo) — só circula em vias até 60 km/h, e dentro delas tem teto próprio, mais baixo</li>
+</ol>
+<aside class="notes">
+<p>As três famílias existem de propósito: dão aos grupos lógicas de comparação diferentes (não é só “trocar o número do limite”), o que fica rico lá na Aula 3 (microsserviço) e na apresentação final da Aula 5.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="atividade-de-hoje" class="slide level2">
 <h2>Atividade de hoje</h2>
 <ol type="1">
 <li>Preencher a <strong>ficha do grupo</strong> (rota simulada, limites, hostname do Raspberry Pi)</li>
-<li>Gravar o cartão SD com Raspberry Pi OS Lite (headless), em rodízio pelas estações disponíveis</li>
+<li>Gravar o cartão SD com Raspberry Pi OS Lite 64-bit Legacy (headless), em rodízio pelas estações disponíveis</li>
 <li>Testar o acesso via SSH ao Raspberry Pi</li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -290,7 +372,7 @@ Ricardo Pasquati Pontarolli
 <p>Usar o <strong>Raspberry Pi Imager</strong> (<code>https://www.raspberrypi.com/software/</code>), já instalado/baixável nos PCs do laboratório.</p>
 <ol type="1">
 <li><strong>Choose Device</strong> → o modelo de Raspberry Pi do grupo</li>
-<li><strong>Choose OS</strong> → <em>Raspberry Pi OS Lite (64-bit)</em> — sem interface gráfica, é um servidor</li>
+<li><strong>Choose OS</strong> → <em>Raspberry Pi OS (other)</em> → <em>Raspberry Pi OS Lite (64-bit) — Legacy</em> — sem interface gráfica; usamos a versão Legacy porque o hardware do grupo é o Raspberry Pi 3B+</li>
 <li><strong>Choose Storage</strong> → o cartão SD do grupo</li>
 <li>Clique na engrenagem (⚙, ou <code>Ctrl+Shift+X</code>) para as <strong>opções avançadas</strong></li>
 </ol>
@@ -298,7 +380,7 @@ Ricardo Pasquati Pontarolli
 <section id="roteiro-prático-opções-avançadas" class="slide level2">
 <h2>Roteiro prático — opções avançadas</h2>
 <ul>
-<li><strong>Hostname:</strong> <code>rpi-&lt;veiculo&gt;-&lt;turma&gt;</code> (ex.: <code>rpi-carro-a</code>, <code>rpi-onibus-b</code>)</li>
+<li><strong>Hostname:</strong> <code>rpi-&lt;veiculo&gt;</code> — o da tabela do grupo (ex.: <code>rpi-carro</code>, <code>rpi-onibus</code>). Sem sufixo de turma: como cada veículo é único entre a Turma A e a Turma B, não há colisão de nome</li>
 <li><strong>Enable SSH</strong> → usar autenticação por senha</li>
 <li><strong>Usuário e senha:</strong> definir um usuário próprio do grupo (não usar <code>pi</code>/<code>raspberry</code> padrão)</li>
 <li><strong>Configurar WLAN:</strong> SSID/senha da rede do laboratório, país da rede Wi-Fi</li>
@@ -323,8 +405,8 @@ Ricardo Pasquati Pontarolli
 <ol type="1">
 <li>Gravar (<em>Write</em>) e aguardar a verificação</li>
 <li>Colocar o cartão no Raspberry Pi e ligar</li>
-<li>No PC: <code>ping rpi-&lt;hostname&gt;.local</code></li>
-<li>Se responder: <code>ssh &lt;usuario&gt;@rpi-&lt;hostname&gt;.local</code></li>
+<li>No PC: <code>ping &lt;hostname&gt;.local</code> (ex.: <code>ping rpi-carro.local</code>)</li>
+<li>Se responder: <code>ssh &lt;usuario&gt;@&lt;hostname&gt;.local</code></li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">

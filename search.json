@@ -4,14 +4,14 @@
     "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html",
     "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
     "section": "",
-    "text": "Nota\n\n\n\nEste roteiro não é uma atividade avaliativa — é o documento de trabalho do grupo para o projeto integrador. Preencham juntos; ele vai ser consultado nas próximas aulas.\nGrupo (tipo de veículo): ______________________________________________\nIntegrantes: ______________________________________________"
+    "text": "Nota\n\n\n\nEste roteiro não é uma atividade avaliativa — é o documento de trabalho do grupo para o projeto integrador. Preencham juntos; ele vai ser consultado nas próximas aulas.\nGrupo (tipo de veículo): ______________________________________________\nIntegrantes (máx. 5): ______________________________________________"
   },
   {
     "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#regra-de-velocidade-do-grupo",
     "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#regra-de-velocidade-do-grupo",
     "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
     "section": "1. Regra de velocidade do grupo",
-    "text": "1. Regra de velocidade do grupo\nMarquem a regra que se aplica ao veículo do grupo.\n\nCarro / Ônibus / Moto — segue o limite normal de cada trecho da via\nPatinete elétrico — limitado a 20–25 km/h, mesmo em vias com limite maior"
+    "text": "1. Regra de velocidade do grupo\nCada grupo já tem um veículo definido pelo professor — não há repetição entre a Turma A e a Turma B. Encontrem o veículo do grupo na tabela e copiem a regra correspondente.\n\n\n\n\n\n\n\n\n\nTurma\nVeículo\nRegra de velocidade\nHostname\n\n\n\n\nA\nCarro\nSegue o limite normal da via\nrpi-carro\n\n\nA\nÔnibus\nSegue o limite da via, nunca acima de 90 km/h\nrpi-onibus\n\n\nA\nCaminhão\nSegue o limite da via, nunca acima de 80 km/h\nrpi-caminhao\n\n\nA\nPatinete elétrico\nSó em vias até 60 km/h; teto próprio de 25 km/h\nrpi-patinete\n\n\nB\nMoto\nSegue o limite normal da via\nrpi-moto\n\n\nB\nMobilete a combustão\nSegue o limite da via, nunca acima de 60 km/h\nrpi-mobilete\n\n\nB\nSkate elétrico\nSó em vias até 60 km/h; teto próprio de 20 km/h\nrpi-skate\n\n\nB\nMonociclo elétrico\nSó em vias até 60 km/h; teto próprio de 24 km/h\nrpi-monociclo\n\n\n\nNosso veículo: ______________________________________________\nNossa regra de velocidade (copiada da tabela): ______________________________________________"
   },
   {
     "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#rota-simulada",
@@ -25,14 +25,14 @@
     "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#configuração-do-raspberry-pi-raspberry-pi-imager",
     "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
     "section": "3. Configuração do Raspberry Pi (Raspberry Pi Imager)",
-    "text": "3. Configuração do Raspberry Pi (Raspberry Pi Imager)\nPreencham antes de gravar o cartão — vão precisar disso nas próximas aulas.\nHostname: rpi- __________________ (ex.: rpi-carro-a)\nUsuário SSH: ______________________________________________\nSenha: ______________________________________________ (anotem em local seguro do grupo — não aqui se a ficha for compartilhada)\nSSID da rede Wi-Fi usada: ______________________________________________"
+    "text": "3. Configuração do Raspberry Pi (Raspberry Pi Imager)\nPreencham antes de gravar o cartão — vão precisar disso nas próximas aulas.\nHostname: rpi- __________________ (o da tabela acima, ex.: rpi-carro)\nUsuário SSH: ______________________________________________\nSenha: ______________________________________________ (anotem em local seguro do grupo — não aqui se a ficha for compartilhada)\nSSID da rede Wi-Fi usada: ______________________________________________"
   },
   {
     "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#checklist-da-estação-de-gravação",
     "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#checklist-da-estação-de-gravação",
     "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
     "section": "4. Checklist da estação de gravação",
-    "text": "4. Checklist da estação de gravação\n\nRaspberry Pi Imager aberto, dispositivo e OS (Raspberry Pi OS Lite 64-bit) selecionados\nOpções avançadas: hostname definido\nOpções avançadas: SSH habilitado (senha)\nOpções avançadas: usuário e senha definidos\nOpções avançadas: WLAN configurada\nLocale: fuso America/Sao_Paulo, teclado br\nGravação concluída e verificada\nCartão testado no Raspberry Pi (ping + ssh) ou guardado para testar na próxima estação livre"
+    "text": "4. Checklist da estação de gravação\n\nRaspberry Pi Imager aberto, dispositivo (Raspberry Pi 3B+) e OS (Raspberry Pi OS Lite 64-bit — Legacy) selecionados\nOpções avançadas: hostname definido\nOpções avançadas: SSH habilitado (senha)\nOpções avançadas: usuário e senha definidos\nOpções avançadas: WLAN configurada\nLocale: fuso America/Sao_Paulo, teclado br\nGravação concluída e verificada\nCartão testado no Raspberry Pi (ping + ssh) ou guardado para testar na próxima estação livre"
   },
   {
     "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#para-a-próxima-aula-de-cnvi",
@@ -88,7 +88,7 @@
     "href": "aulas/16-projeto-fiscalizacao-aula1.html#como-vamos-simular-isso",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Como vamos simular isso",
-    "text": "Como vamos simular isso\n\nCada grupo representa um tipo de veículo: carro, ônibus, moto ou patinete elétrico\nCada veículo “roda” uma rota fixa e pré-cadastrada — sequência de trechos com limite (ex.: via local 40 → coletora 60 → arterial 80)\nUm ESP32 vai simular o GPS/velocímetro do veículo (entra em uma aula futura)\nUm Raspberry Pi é o nó de borda da nuvem municipal: recebe, processa e guarda os dados\n\n\n\n\n\n\n\nNota\n\n\nNão é GPS real nem mapa real — é simulação da lógica. O foco do projeto é a infraestrutura de nuvem, rede e dados por trás do problema, não a geolocalização em si."
+    "text": "Como vamos simular isso\n\nCada grupo representa um tipo de veículo diferente — 8 ao todo, já definidos (ver adiante)\nCada veículo “roda” uma rota fixa e pré-cadastrada — sequência de trechos com limite (ex.: via local 40 → coletora 60 → arterial 80)\nUm ESP32 vai simular o GPS/velocímetro do veículo (entra em uma aula futura)\nUm Raspberry Pi é o nó de borda da nuvem municipal: recebe, processa e guarda os dados\n\n\n\n\n\n\n\nNota\n\n\nNão é GPS real nem mapa real — é simulação da lógica. O foco do projeto é a infraestrutura de nuvem, rede e dados por trás do problema, não a geolocalização em si."
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#onde-entra-a-computação-em-nuvem",
@@ -109,14 +109,35 @@
     "href": "aulas/16-projeto-fiscalizacao-aula1.html#os-grupos-de-hoje",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Os grupos de hoje",
-    "text": "Os grupos de hoje\n\n4 grupos por turma, um por tipo de veículo: Carro · Ônibus · Moto · Patinete elétrico\nCada grupo define: nome do grupo, quem grava o cartão hoje, quem preenche a ficha\nO tipo de veículo define a regra de negócio (limite de velocidade) que vocês vão simular\n\n\n\n\nVeículo\nRegra de velocidade\n\n\n\n\nCarro / Ônibus / Moto\nSegue o limite normal da via\n\n\nPatinete elétrico\nLimitado a vias/ciclovias, 20–25 km/h"
+    "text": "Os grupos de hoje\n\n8 grupos ao todo (4 por turma) — cada grupo já tem um veículo definido, sem repetir entre Turma A e Turma B\nMáximo de 5 integrantes por grupo (4 grupos × 5 = os 20 computadores do laboratório)\nCada grupo define: nome do grupo, quem grava o cartão hoje, quem preenche a ficha\nO tipo de veículo define a regra de negócio (limite de velocidade) que vocês vão simular — e ela não é igual para todo mundo"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#turma-a-veículos",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#turma-a-veículos",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Turma A — veículos",
+    "text": "Turma A — veículos\n\n\n\n\n\n\n\n\nVeículo\nRegra de velocidade\nHostname\n\n\n\n\nCarro\nSegue o limite normal da via\nrpi-carro\n\n\nÔnibus\nSegue o limite da via, nunca acima de 90 km/h\nrpi-onibus\n\n\nCaminhão\nSegue o limite da via, nunca acima de 80 km/h\nrpi-caminhao\n\n\nPatinete elétrico\nSó em vias até 60 km/h; teto próprio de 25 km/h\nrpi-patinete"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#turma-b-veículos",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#turma-b-veículos",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Turma B — veículos",
+    "text": "Turma B — veículos\n\n\n\n\n\n\n\n\nVeículo\nRegra de velocidade\nHostname\n\n\n\n\nMoto\nSegue o limite normal da via\nrpi-moto\n\n\nMobilete a combustão\nSegue o limite da via, nunca acima de 60 km/h\nrpi-mobilete\n\n\nSkate elétrico\nSó em vias até 60 km/h; teto próprio de 20 km/h\nrpi-skate\n\n\nMonociclo elétrico\nSó em vias até 60 km/h; teto próprio de 24 km/h\nrpi-monociclo"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#três-famílias-de-regra",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#três-famílias-de-regra",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Três famílias de regra",
+    "text": "Três famílias de regra\n\nLimite normal (Carro, Moto) — usa direto o limite do trecho\nTeto legal do veículo (Ônibus, Caminhão, Mobilete) — vale o menor entre o limite da via e o teto do veículo\nVia restrita + teto do equipamento (Patinete, Skate, Monociclo) — só circula em vias até 60 km/h, e dentro delas tem teto próprio, mais baixo\n\n\nAs três famílias existem de propósito: dão aos grupos lógicas de comparação diferentes (não é só “trocar o número do limite”), o que fica rico lá na Aula 3 (microsserviço) e na apresentação final da Aula 5."
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#atividade-de-hoje",
     "href": "aulas/16-projeto-fiscalizacao-aula1.html#atividade-de-hoje",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Atividade de hoje",
-    "text": "Atividade de hoje\n\nPreencher a ficha do grupo (rota simulada, limites, hostname do Raspberry Pi)\nGravar o cartão SD com Raspberry Pi OS Lite (headless), em rodízio pelas estações disponíveis\nTestar o acesso via SSH ao Raspberry Pi\n\n\n\n\n\n\n\nNota\n\n\nTemos menos cartões/leitores do que grupos hoje. Vamos revezar nas estações de gravação — quem não estiver gravando, preenche a ficha do grupo e confere a configuração de outro grupo enquanto espera a vez."
+    "text": "Atividade de hoje\n\nPreencher a ficha do grupo (rota simulada, limites, hostname do Raspberry Pi)\nGravar o cartão SD com Raspberry Pi OS Lite 64-bit Legacy (headless), em rodízio pelas estações disponíveis\nTestar o acesso via SSH ao Raspberry Pi\n\n\n\n\n\n\n\nNota\n\n\nTemos menos cartões/leitores do que grupos hoje. Vamos revezar nas estações de gravação — quem não estiver gravando, preenche a ficha do grupo e confere a configuração de outro grupo enquanto espera a vez."
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#raspberry-pi-como-nó-de-borda",
@@ -130,21 +151,21 @@
     "href": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-o-cartão-sd",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Roteiro prático — gravar o cartão SD",
-    "text": "Roteiro prático — gravar o cartão SD\nUsar o Raspberry Pi Imager (https://www.raspberrypi.com/software/), já instalado/baixável nos PCs do laboratório.\n\nChoose Device → o modelo de Raspberry Pi do grupo\nChoose OS → Raspberry Pi OS Lite (64-bit) — sem interface gráfica, é um servidor\nChoose Storage → o cartão SD do grupo\nClique na engrenagem (⚙, ou Ctrl+Shift+X) para as opções avançadas"
+    "text": "Roteiro prático — gravar o cartão SD\nUsar o Raspberry Pi Imager (https://www.raspberrypi.com/software/), já instalado/baixável nos PCs do laboratório.\n\nChoose Device → o modelo de Raspberry Pi do grupo\nChoose OS → Raspberry Pi OS (other) → Raspberry Pi OS Lite (64-bit) — Legacy — sem interface gráfica; usamos a versão Legacy porque o hardware do grupo é o Raspberry Pi 3B+\nChoose Storage → o cartão SD do grupo\nClique na engrenagem (⚙, ou Ctrl+Shift+X) para as opções avançadas"
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-opções-avançadas",
     "href": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-opções-avançadas",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Roteiro prático — opções avançadas",
-    "text": "Roteiro prático — opções avançadas\n\nHostname: rpi-&lt;veiculo&gt;-&lt;turma&gt; (ex.: rpi-carro-a, rpi-onibus-b)\nEnable SSH → usar autenticação por senha\nUsuário e senha: definir um usuário próprio do grupo (não usar pi/raspberry padrão)\nConfigurar WLAN: SSID/senha da rede do laboratório, país da rede Wi-Fi\nLocale: fuso America/Sao_Paulo, layout de teclado br\n\n\n\n\n\n\n\nNota\n\n\nAnotem hostname, usuário e senha na ficha do grupo — vão precisar disso todas as próximas aulas."
+    "text": "Roteiro prático — opções avançadas\n\nHostname: rpi-&lt;veiculo&gt; — o da tabela do grupo (ex.: rpi-carro, rpi-onibus). Sem sufixo de turma: como cada veículo é único entre a Turma A e a Turma B, não há colisão de nome\nEnable SSH → usar autenticação por senha\nUsuário e senha: definir um usuário próprio do grupo (não usar pi/raspberry padrão)\nConfigurar WLAN: SSID/senha da rede do laboratório, país da rede Wi-Fi\nLocale: fuso America/Sao_Paulo, layout de teclado br\n\n\n\n\n\n\n\nNota\n\n\nAnotem hostname, usuário e senha na ficha do grupo — vão precisar disso todas as próximas aulas."
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-e-testar",
     "href": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-e-testar",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Roteiro prático — gravar e testar",
-    "text": "Roteiro prático — gravar e testar\n\nGravar (Write) e aguardar a verificação\nColocar o cartão no Raspberry Pi e ligar\nNo PC: ping rpi-&lt;hostname&gt;.local\nSe responder: ssh &lt;usuario&gt;@rpi-&lt;hostname&gt;.local\n\n\n\n\n\n\n\nNota\n\n\nSem Raspberry Pi disponível agora? Sem problema — terminem a gravação e guardem o cartão. O boot e o teste de SSH podem ficar para o começo da próxima estação livre ou da próxima aula."
+    "text": "Roteiro prático — gravar e testar\n\nGravar (Write) e aguardar a verificação\nColocar o cartão no Raspberry Pi e ligar\nNo PC: ping &lt;hostname&gt;.local (ex.: ping rpi-carro.local)\nSe responder: ssh &lt;usuario&gt;@&lt;hostname&gt;.local\n\n\n\n\n\n\n\nNota\n\n\nSem Raspberry Pi disponível agora? Sem problema — terminem a gravação e guardem o cartão. O boot e o teste de SSH podem ficar para o começo da próxima estação livre ou da próxima aula."
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#próxima-aula",
