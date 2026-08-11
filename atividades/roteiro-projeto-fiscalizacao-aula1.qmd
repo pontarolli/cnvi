@@ -25,16 +25,16 @@ consultado nas próximas aulas.
 Cada grupo já tem um veículo definido pelo professor — não há repetição entre a Turma A e a
 Turma B. Encontrem o veículo do grupo na tabela e copiem a regra correspondente.
 
-| Turma | Veículo | Regra de velocidade | Hostname |
-|---|---|---|---|
-| A | Carro | Segue o limite normal da via | `rpi-carro` |
-| A | Ônibus | Segue o limite da via, nunca acima de 90 km/h | `rpi-onibus` |
-| A | Caminhão | Segue o limite da via, nunca acima de 80 km/h | `rpi-caminhao` |
-| A | Patinete elétrico | Só em vias até 60 km/h; teto próprio de 25 km/h | `rpi-patinete` |
-| B | Moto | Segue o limite normal da via | `rpi-moto` |
-| B | Mobilete a combustão | Segue o limite da via, nunca acima de 60 km/h | `rpi-mobilete` |
-| B | Skate elétrico | Só em vias até 60 km/h; teto próprio de 20 km/h | `rpi-skate` |
-| B | Monociclo elétrico | Só em vias até 60 km/h; teto próprio de 24 km/h | `rpi-monociclo` |
+| Turma | Veículo | Regra de velocidade |
+|---|---|---|
+| A | Carro | Segue o limite normal da via |
+| A | Ônibus | Segue o limite da via, nunca acima de 90 km/h |
+| A | Caminhão | Segue o limite da via, nunca acima de 80 km/h |
+| A | Patinete elétrico | Só em vias até 60 km/h; teto próprio de 25 km/h |
+| B | Moto | Segue o limite normal da via |
+| B | Mobilete a combustão | Segue o limite da via, nunca acima de 60 km/h |
+| B | Skate elétrico | Só em vias até 60 km/h; teto próprio de 20 km/h |
+| B | Monociclo elétrico | Só em vias até 60 km/h; teto próprio de 24 km/h |
 
 **Nosso veículo:** ______________________________________________
 
@@ -53,30 +53,42 @@ cada trecho, anotem o tipo de via e o limite de velocidade.
 | 4 | | |
 | 5 | | |
 
-## 3. Configuração do Raspberry Pi (Raspberry Pi Imager)
+## 3. Infraestrutura compartilhada
 
-Preencham **antes de gravar** o cartão — vão precisar disso nas próximas aulas.
+O Raspberry Pi **não é do grupo** — são **6 nós compartilhados** pelos 8 grupos das duas
+turmas (`rpi-102` a `rpi-107`; o `rpi-101` é a máquina de testes do professor). Mesmo
+usuário/senha e mesma rede em todos:
 
-**Hostname:** `rpi-` __________________ (o da tabela acima, ex.: `rpi-carro`)
+- **Usuário SSH:** `pi`
+- **Senha:** `147`
+- **Rede Wi-Fi (SSID):** `i4` — senha `147258369`
 
-**Usuário SSH:** ______________________________________________
+**Prefixo do nosso grupo** (para nomear containers/tópicos MQTT mais pra frente, já que o nó é
+compartilhado): ______________________________________________ *(ex.: `carro`, `onibus`)*
 
-**Senha:** ______________________________________________ *(anotem em local seguro do grupo — não aqui se a ficha for compartilhada)*
+**Nó(s) que testamos hoje:** ______________________________________________
 
-**SSID da rede Wi-Fi usada:** ______________________________________________
-
-## 4. Checklist da estação de gravação
+## 4. Checklist — só para o grupo responsável por preparar um nó hoje
 
 - [ ] Raspberry Pi Imager aberto, dispositivo (Raspberry Pi 3B+) e OS (*Raspberry Pi OS Lite 64-bit — Legacy*) selecionados
-- [ ] Opções avançadas: hostname definido
+- [ ] Opções avançadas: hostname definido (próximo número livre, 102 a 107)
 - [ ] Opções avançadas: SSH habilitado (senha)
-- [ ] Opções avançadas: usuário e senha definidos
-- [ ] Opções avançadas: WLAN configurada
+- [ ] Opções avançadas: usuário `pi` / senha `147` definidos
+- [ ] Opções avançadas: WLAN `i4` configurada
 - [ ] Locale: fuso `America/Sao_Paulo`, teclado `br`
 - [ ] Gravação concluída e verificada
-- [ ] Cartão testado no Raspberry Pi (`ping` + `ssh`) **ou** guardado para testar na próxima estação livre
+- [ ] Nó testado (`ping` + `ssh`) **ou** guardado para testar na próxima estação livre
 
-## 5. Para a próxima aula de CNVI
+## 5. Desafio bônus (opcional, sem nota) — só se sobrar tempo
+
+A escola tem ~500 TV boxes (2 GB de RAM) ainda não testadas como nó de infraestrutura. Se
+terminarem tudo acima, peguem 2 TV boxes, instalem um Linux e tentem fazer as duas se
+comunicarem (`ping` já conta como resultado). Se der certo, é o argumento para pedir ao diretor
+mais unidades liberadas.
+
+**Conseguimos o quê?** ______________________________________________
+
+## 6. Para a próxima aula de CNVI
 
 O que falta terminar? ______________________________________________
 

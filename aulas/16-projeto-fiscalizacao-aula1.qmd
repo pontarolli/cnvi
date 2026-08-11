@@ -69,21 +69,36 @@ plano de CNVI.
 
 ## Turma A — veículos
 
-| Veículo | Regra de velocidade | Hostname |
-|---|---|---|
-| Carro | Segue o limite normal da via | `rpi-carro` |
-| Ônibus | Segue o limite da via, nunca acima de 90 km/h | `rpi-onibus` |
-| Caminhão | Segue o limite da via, nunca acima de 80 km/h | `rpi-caminhao` |
-| Patinete elétrico | Só em vias até 60 km/h; teto próprio de 25 km/h | `rpi-patinete` |
+| Veículo | Regra de velocidade |
+|---|---|
+| Carro | Segue o limite normal da via |
+| Ônibus | Segue o limite da via, nunca acima de 90 km/h |
+| Caminhão | Segue o limite da via, nunca acima de 80 km/h |
+| Patinete elétrico | Só em vias até 60 km/h; teto próprio de 25 km/h |
 
 ## Turma B — veículos
 
-| Veículo | Regra de velocidade | Hostname |
-|---|---|---|
-| Moto | Segue o limite normal da via | `rpi-moto` |
-| Mobilete a combustão | Segue o limite da via, nunca acima de 60 km/h | `rpi-mobilete` |
-| Skate elétrico | Só em vias até 60 km/h; teto próprio de 20 km/h | `rpi-skate` |
-| Monociclo elétrico | Só em vias até 60 km/h; teto próprio de 24 km/h | `rpi-monociclo` |
+| Veículo | Regra de velocidade |
+|---|---|
+| Moto | Segue o limite normal da via |
+| Mobilete a combustão | Segue o limite da via, nunca acima de 60 km/h |
+| Skate elétrico | Só em vias até 60 km/h; teto próprio de 20 km/h |
+| Monociclo elétrico | Só em vias até 60 km/h; teto próprio de 24 km/h |
+
+## Infraestrutura compartilhada
+
+- O **ESP32** é individual: cada grupo tem o seu, é o veículo simulado
+- O **Raspberry Pi** é diferente: **não é 1 por grupo** — são **6 nós compartilhados** (`rpi-102` a `rpi-107`) usados pelos 8 grupos das duas turmas
+- `rpi-101` fica de fora — é a máquina de testes do professor
+- Isso é mais parecido com a nuvem municipal real: a prefeitura não compraria um servidor por veículo, ela compartilha uma infraestrutura pequena entre todos
+
+::: {.callout-note}
+Mesmo usuário/senha e mesma rede em todos os nós: usuário `pi`, senha
+`147`, Wi-Fi `i4` (senha `147258369`). Mais pra frente, quando subirem
+Docker/MQTT, cada grupo identifica seus containers e tópicos pelo **nome
+do veículo** (ex.: tópico `fiscalizacao/carro/...`), não pelo host — vários
+grupos vão dividir o mesmo Raspberry Pi.
+:::
 
 ## Três famílias de regra
 
@@ -99,14 +114,15 @@ Aula 3 (microsserviço) e na apresentação final da Aula 5.
 
 ## Atividade de hoje
 
-1. Preencher a **ficha do grupo** (rota simulada, limites, hostname do Raspberry Pi)
-2. Gravar o cartão SD com Raspberry Pi OS Lite 64-bit Legacy (headless), em rodízio pelas estações disponíveis
-3. Testar o acesso via SSH ao Raspberry Pi
+1. Preencher a **ficha do grupo** (rota simulada, limites)
+2. Ajudar a preparar os **6 nós compartilhados** — só precisamos de 6 cartões no total, não 1 por grupo
+3. Testar o acesso via SSH a pelo menos um dos nós
 
 ::: {.callout-note}
-Temos menos cartões/leitores do que grupos hoje. Vamos revezar nas
-estações de gravação — quem não estiver gravando, preenche a ficha do
-grupo e confere a configuração de outro grupo enquanto espera a vez.
+Como a infraestrutura é compartilhada, sobra tempo: enquanto um grupo por
+vez prepara um dos 6 cartões (rodízio nas estações de gravação), os
+demais aprofundam a ficha — inclusive já pensando em como o grupo vai
+nomear seus containers e tópicos MQTT dentro dos nós compartilhados.
 :::
 
 ## Raspberry Pi como nó de borda
@@ -117,39 +133,53 @@ grupo e confere a configuração de outro grupo enquanto espera a vez.
 
 ---
 
-## Roteiro prático — gravar o cartão SD
+## Roteiro prático — preparar os nós compartilhados
 
-Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já instalado/baixável nos PCs do laboratório.
+Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já instalado/baixável nos PCs do laboratório. Só precisamos gravar até 6 cartões hoje — um por nó da infraestrutura, não um por grupo.
 
-1. **Choose Device** → o modelo de Raspberry Pi do grupo
-2. **Choose OS** → *Raspberry Pi OS (other)* → *Raspberry Pi OS Lite (64-bit) — Legacy* — sem interface gráfica; usamos a versão Legacy porque o hardware do grupo é o Raspberry Pi 3B+
-3. **Choose Storage** → o cartão SD do grupo
+1. **Choose Device** → Raspberry Pi 3B+
+2. **Choose OS** → *Raspberry Pi OS (other)* → *Raspberry Pi OS Lite (64-bit) — Legacy* — sem interface gráfica; usamos a versão Legacy porque o hardware da infraestrutura é o Raspberry Pi 3B+
+3. **Choose Storage** → o próximo cartão SD disponível na estação
 4. Clique na engrenagem (⚙, ou `Ctrl+Shift+X`) para as **opções avançadas**
 
 ## Roteiro prático — opções avançadas
 
-- **Hostname:** `rpi-<veiculo>` — o da tabela do grupo (ex.: `rpi-carro`, `rpi-onibus`). Sem sufixo de turma: como cada veículo é único entre a Turma A e a Turma B, não há colisão de nome
+- **Hostname:** o próximo número livre — `rpi-102`, `rpi-103`, ... até `rpi-107`. O `rpi-101` fica reservado, é a máquina de testes do professor
 - **Enable SSH** → usar autenticação por senha
-- **Usuário e senha:** definir um usuário próprio do grupo (não usar `pi`/`raspberry` padrão)
-- **Configurar WLAN:** SSID/senha da rede do laboratório, país da rede Wi-Fi
+- **Usuário e senha:** usuário `pi`, senha `147` — igual em todos os nós, para facilitar o suporte em sala
+- **Configurar WLAN:** SSID `i4`, senha `147258369`
 - **Locale:** fuso `America/Sao_Paulo`, layout de teclado `br`
 
 ::: {.callout-note}
-Anotem hostname, usuário e senha na ficha do grupo — vão precisar disso
-todas as próximas aulas.
+Anotem na lousa/ficha qual grupo preparou qual hostname — a turma toda
+(os 8 grupos) vai usar esses 6 nós nas próximas aulas.
 :::
 
 ## Roteiro prático — gravar e testar
 
 1. Gravar (*Write*) e aguardar a verificação
 2. Colocar o cartão no Raspberry Pi e ligar
-3. No PC: `ping <hostname>.local` (ex.: `ping rpi-carro.local`)
-4. Se responder: `ssh <usuario>@<hostname>.local`
+3. No PC: `ping <hostname>.local` (ex.: `ping rpi-102.local`)
+4. Se responder: `ssh pi@<hostname>.local`
 
 ::: {.callout-note}
 Sem Raspberry Pi disponível agora? Sem problema — terminem a gravação e
 guardem o cartão. O boot e o teste de SSH podem ficar para o começo da
 próxima estação livre ou da próxima aula.
+:::
+
+## Desafio bônus — se sobrar tempo
+
+- A escola tem **~500 TV boxes (2 GB de RAM)** paradas — ainda **não testamos** se dá pra usar
+  uma como nó da infraestrutura, no lugar de (ou além d)o Raspberry Pi
+- **Desafio de hoje, só para quem terminar cedo:** pegar 2 TV boxes, colocar um Linux nelas e
+  fazer as duas se comunicarem (`ping` já vale como primeiro resultado)
+- Não vale nota, não atrasa a ficha nem a rota do grupo — é experimental, é normal não dar certo de primeira
+
+::: {.callout-note}
+Se o teste com essas 2 TV boxes funcionar, é o argumento pra pedir ao
+diretor mais unidades liberadas — a ideia é ampliar a infraestrutura
+compartilhada para 10 ou mais nós usando o estoque de TV boxes.
 :::
 
 ---
