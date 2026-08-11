@@ -14,6 +14,15 @@ do grupo para o projeto integrador. Preencham juntos; ele vai ser
 consultado nas próximas aulas.
 :::
 
+::: {.callout-tip}
+**Como preencher:** esta página é só leitura. Para preencher, abram o
+[arquivo-fonte deste roteiro no GitHub](https://github.com/pontarolli/cnvi-aulas/blob/master/atividades/roteiro-projeto-fiscalizacao-aula1.qmd),
+copiem todo o texto e colem em um arquivo novo (ex.: `roteiro.md`) no
+repositório do próprio grupo — pelo botão **Add file → Create new file**,
+direto no navegador. Editem os `______` ali mesmo pelo editor web do
+GitHub e cliquem em **Commit changes** para salvar.
+:::
+
 **Grupo (tipo de veículo):** ______________________________________________
 
 **Integrantes (máx. 5):** ______________________________________________
