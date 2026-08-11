@@ -27,7 +27,7 @@ sem repetir o que a turma já viu com o professor anterior.
 
 ## Como vamos simular isso
 
-- Cada grupo representa um **tipo de veículo**: carro, ônibus, moto ou patinete elétrico
+- Cada grupo representa um **tipo de veículo diferente** — 8 ao todo, já definidos (ver adiante)
 - Cada veículo "roda" uma **rota fixa e pré-cadastrada** — sequência de trechos com limite (ex.: via local 40 → coletora 60 → arterial 80)
 - Um **ESP32** vai simular o GPS/velocímetro do veículo (entra em uma aula futura)
 - Um **Raspberry Pi** é o **nó de borda da nuvem municipal**: recebe, processa e guarda os dados
@@ -62,19 +62,45 @@ plano de CNVI.
 
 ## Os grupos de hoje
 
-- 4 grupos por turma, um por tipo de veículo: **Carro · Ônibus · Moto · Patinete elétrico**
+- 8 grupos ao todo (4 por turma) — **cada grupo já tem um veículo definido**, sem repetir entre Turma A e Turma B
+- **Máximo de 5 integrantes por grupo** (4 grupos × 5 = os 20 computadores do laboratório)
 - Cada grupo define: nome do grupo, quem grava o cartão hoje, quem preenche a ficha
-- O tipo de veículo define a **regra de negócio** (limite de velocidade) que vocês vão simular
+- O tipo de veículo define a **regra de negócio** (limite de velocidade) que vocês vão simular — e ela não é igual para todo mundo
 
-| Veículo | Regra de velocidade |
-|---|---|
-| Carro / Ônibus / Moto | Segue o limite normal da via |
-| Patinete elétrico | Limitado a vias/ciclovias, 20–25 km/h |
+## Turma A — veículos
+
+| Veículo | Regra de velocidade | Hostname |
+|---|---|---|
+| Carro | Segue o limite normal da via | `rpi-carro` |
+| Ônibus | Segue o limite da via, nunca acima de 90 km/h | `rpi-onibus` |
+| Caminhão | Segue o limite da via, nunca acima de 80 km/h | `rpi-caminhao` |
+| Patinete elétrico | Só em vias até 60 km/h; teto próprio de 25 km/h | `rpi-patinete` |
+
+## Turma B — veículos
+
+| Veículo | Regra de velocidade | Hostname |
+|---|---|---|
+| Moto | Segue o limite normal da via | `rpi-moto` |
+| Mobilete a combustão | Segue o limite da via, nunca acima de 60 km/h | `rpi-mobilete` |
+| Skate elétrico | Só em vias até 60 km/h; teto próprio de 20 km/h | `rpi-skate` |
+| Monociclo elétrico | Só em vias até 60 km/h; teto próprio de 24 km/h | `rpi-monociclo` |
+
+## Três famílias de regra
+
+1. **Limite normal** (Carro, Moto) — usa direto o limite do trecho
+2. **Teto legal do veículo** (Ônibus, Caminhão, Mobilete) — vale o **menor** entre o limite da via e o teto do veículo
+3. **Via restrita + teto do equipamento** (Patinete, Skate, Monociclo) — só circula em vias até 60 km/h, e dentro delas tem teto próprio, mais baixo
+
+::: {.notes}
+As três famílias existem de propósito: dão aos grupos lógicas de comparação
+diferentes (não é só "trocar o número do limite"), o que fica rico lá na
+Aula 3 (microsserviço) e na apresentação final da Aula 5.
+:::
 
 ## Atividade de hoje
 
 1. Preencher a **ficha do grupo** (rota simulada, limites, hostname do Raspberry Pi)
-2. Gravar o cartão SD com Raspberry Pi OS Lite (headless), em rodízio pelas estações disponíveis
+2. Gravar o cartão SD com Raspberry Pi OS Lite 64-bit Legacy (headless), em rodízio pelas estações disponíveis
 3. Testar o acesso via SSH ao Raspberry Pi
 
 ::: {.callout-note}
@@ -96,13 +122,13 @@ grupo e confere a configuração de outro grupo enquanto espera a vez.
 Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já instalado/baixável nos PCs do laboratório.
 
 1. **Choose Device** → o modelo de Raspberry Pi do grupo
-2. **Choose OS** → *Raspberry Pi OS Lite (64-bit)* — sem interface gráfica, é um servidor
+2. **Choose OS** → *Raspberry Pi OS (other)* → *Raspberry Pi OS Lite (64-bit) — Legacy* — sem interface gráfica; usamos a versão Legacy porque o hardware do grupo é o Raspberry Pi 3B+
 3. **Choose Storage** → o cartão SD do grupo
 4. Clique na engrenagem (⚙, ou `Ctrl+Shift+X`) para as **opções avançadas**
 
 ## Roteiro prático — opções avançadas
 
-- **Hostname:** `rpi-<veiculo>-<turma>` (ex.: `rpi-carro-a`, `rpi-onibus-b`)
+- **Hostname:** `rpi-<veiculo>` — o da tabela do grupo (ex.: `rpi-carro`, `rpi-onibus`). Sem sufixo de turma: como cada veículo é único entre a Turma A e a Turma B, não há colisão de nome
 - **Enable SSH** → usar autenticação por senha
 - **Usuário e senha:** definir um usuário próprio do grupo (não usar `pi`/`raspberry` padrão)
 - **Configurar WLAN:** SSID/senha da rede do laboratório, país da rede Wi-Fi
@@ -117,8 +143,8 @@ todas as próximas aulas.
 
 1. Gravar (*Write*) e aguardar a verificação
 2. Colocar o cartão no Raspberry Pi e ligar
-3. No PC: `ping rpi-<hostname>.local`
-4. Se responder: `ssh <usuario>@rpi-<hostname>.local`
+3. No PC: `ping <hostname>.local` (ex.: `ping rpi-carro.local`)
+4. Se responder: `ssh <usuario>@<hostname>.local`
 
 ::: {.callout-note}
 Sem Raspberry Pi disponível agora? Sem problema — terminem a gravação e

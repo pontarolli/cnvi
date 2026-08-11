@@ -16,16 +16,29 @@ consultado nas próximas aulas.
 
 **Grupo (tipo de veículo):** ______________________________________________
 
-**Integrantes:** ______________________________________________
+**Integrantes (máx. 5):** ______________________________________________
 
 ---
 
 ## 1. Regra de velocidade do grupo
 
-Marquem a regra que se aplica ao veículo do grupo.
+Cada grupo já tem um veículo definido pelo professor — não há repetição entre a Turma A e a
+Turma B. Encontrem o veículo do grupo na tabela e copiem a regra correspondente.
 
-- [ ] Carro / Ônibus / Moto — segue o limite normal de cada trecho da via
-- [ ] Patinete elétrico — limitado a 20–25 km/h, mesmo em vias com limite maior
+| Turma | Veículo | Regra de velocidade | Hostname |
+|---|---|---|---|
+| A | Carro | Segue o limite normal da via | `rpi-carro` |
+| A | Ônibus | Segue o limite da via, nunca acima de 90 km/h | `rpi-onibus` |
+| A | Caminhão | Segue o limite da via, nunca acima de 80 km/h | `rpi-caminhao` |
+| A | Patinete elétrico | Só em vias até 60 km/h; teto próprio de 25 km/h | `rpi-patinete` |
+| B | Moto | Segue o limite normal da via | `rpi-moto` |
+| B | Mobilete a combustão | Segue o limite da via, nunca acima de 60 km/h | `rpi-mobilete` |
+| B | Skate elétrico | Só em vias até 60 km/h; teto próprio de 20 km/h | `rpi-skate` |
+| B | Monociclo elétrico | Só em vias até 60 km/h; teto próprio de 24 km/h | `rpi-monociclo` |
+
+**Nosso veículo:** ______________________________________________
+
+**Nossa regra de velocidade (copiada da tabela):** ______________________________________________
 
 ## 2. Rota simulada
 
@@ -44,7 +57,7 @@ cada trecho, anotem o tipo de via e o limite de velocidade.
 
 Preencham **antes de gravar** o cartão — vão precisar disso nas próximas aulas.
 
-**Hostname:** `rpi-` __________________ (ex.: `rpi-carro-a`)
+**Hostname:** `rpi-` __________________ (o da tabela acima, ex.: `rpi-carro`)
 
 **Usuário SSH:** ______________________________________________
 
@@ -54,7 +67,7 @@ Preencham **antes de gravar** o cartão — vão precisar disso nas próximas au
 
 ## 4. Checklist da estação de gravação
 
-- [ ] Raspberry Pi Imager aberto, dispositivo e OS (*Raspberry Pi OS Lite 64-bit*) selecionados
+- [ ] Raspberry Pi Imager aberto, dispositivo (Raspberry Pi 3B+) e OS (*Raspberry Pi OS Lite 64-bit — Legacy*) selecionados
 - [ ] Opções avançadas: hostname definido
 - [ ] Opções avançadas: SSH habilitado (senha)
 - [ ] Opções avançadas: usuário e senha definidos
