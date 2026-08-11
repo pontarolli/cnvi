@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v36
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v37
           </p>
     </div>
 </div>
@@ -242,38 +242,28 @@ Ricardo Pasquati Pontarolli
 <section id="turma-a-veículos" class="slide level2">
 <h2>Turma A — veículos</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Veículo</th>
 <th>Regra de velocidade</th>
-<th>Hostname</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Carro</td>
 <td>Segue o limite normal da via</td>
-<td><code>rpi-carro</code></td>
 </tr>
 <tr class="even">
 <td>Ônibus</td>
 <td>Segue o limite da via, nunca acima de 90 km/h</td>
-<td><code>rpi-onibus</code></td>
 </tr>
 <tr class="odd">
 <td>Caminhão</td>
 <td>Segue o limite da via, nunca acima de 80 km/h</td>
-<td><code>rpi-caminhao</code></td>
 </tr>
 <tr class="even">
 <td>Patinete elétrico</td>
 <td>Só em vias até 60 km/h; teto próprio de 25 km/h</td>
-<td><code>rpi-patinete</code></td>
 </tr>
 </tbody>
 </table>
@@ -281,41 +271,53 @@ Ricardo Pasquati Pontarolli
 <section id="turma-b-veículos" class="slide level2">
 <h2>Turma B — veículos</h2>
 <table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Veículo</th>
 <th>Regra de velocidade</th>
-<th>Hostname</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Moto</td>
 <td>Segue o limite normal da via</td>
-<td><code>rpi-moto</code></td>
 </tr>
 <tr class="even">
 <td>Mobilete a combustão</td>
 <td>Segue o limite da via, nunca acima de 60 km/h</td>
-<td><code>rpi-mobilete</code></td>
 </tr>
 <tr class="odd">
 <td>Skate elétrico</td>
 <td>Só em vias até 60 km/h; teto próprio de 20 km/h</td>
-<td><code>rpi-skate</code></td>
 </tr>
 <tr class="even">
 <td>Monociclo elétrico</td>
 <td>Só em vias até 60 km/h; teto próprio de 24 km/h</td>
-<td><code>rpi-monociclo</code></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="infraestrutura-compartilhada" class="slide level2">
+<h2>Infraestrutura compartilhada</h2>
+<ul>
+<li>O <strong>ESP32</strong> é individual: cada grupo tem o seu, é o veículo simulado</li>
+<li>O <strong>Raspberry Pi</strong> é diferente: <strong>não é 1 por grupo</strong> — são <strong>6 nós compartilhados</strong> (<code>rpi-102</code> a <code>rpi-107</code>) usados pelos 8 grupos das duas turmas</li>
+<li><code>rpi-101</code> fica de fora — é a máquina de testes do professor</li>
+<li>Isso é mais parecido com a nuvem municipal real: a prefeitura não compraria um servidor por veículo, ela compartilha uma infraestrutura pequena entre todos</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Mesmo usuário/senha e mesma rede em todos os nós: usuário <code>pi</code>, senha <code>147</code>, Wi-Fi <code>i4</code> (senha <code>147258369</code>). Mais pra frente, quando subirem Docker/MQTT, cada grupo identifica seus containers e tópicos pelo <strong>nome do veículo</strong> (ex.: tópico <code>fiscalizacao/carro/...</code>), não pelo host — vários grupos vão dividir o mesmo Raspberry Pi.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="três-famílias-de-regra" class="slide level2">
 <h2>Três famílias de regra</h2>
@@ -341,9 +343,9 @@ Ricardo Pasquati Pontarolli
 <section id="atividade-de-hoje" class="slide level2">
 <h2>Atividade de hoje</h2>
 <ol type="1">
-<li>Preencher a <strong>ficha do grupo</strong> (rota simulada, limites, hostname do Raspberry Pi)</li>
-<li>Gravar o cartão SD com Raspberry Pi OS Lite 64-bit Legacy (headless), em rodízio pelas estações disponíveis</li>
-<li>Testar o acesso via SSH ao Raspberry Pi</li>
+<li>Preencher a <strong>ficha do grupo</strong> (rota simulada, limites)</li>
+<li>Ajudar a preparar os <strong>6 nós compartilhados</strong> — só precisamos de 6 cartões no total, não 1 por grupo</li>
+<li>Testar o acesso via SSH a pelo menos um dos nós</li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -354,7 +356,7 @@ Ricardo Pasquati Pontarolli
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Temos menos cartões/leitores do que grupos hoje. Vamos revezar nas estações de gravação — quem não estiver gravando, preenche a ficha do grupo e confere a configuração de outro grupo enquanto espera a vez.</p>
+<p>Como a infraestrutura é compartilhada, sobra tempo: enquanto um grupo por vez prepara um dos 6 cartões (rodízio nas estações de gravação), os demais aprofundam a ficha — inclusive já pensando em como o grupo vai nomear seus containers e tópicos MQTT dentro dos nós compartilhados.</p>
 </div>
 </div>
 </div>
@@ -367,23 +369,23 @@ Ricardo Pasquati Pontarolli
 <li>Mesmo princípio usado em cidades inteligentes, indústria 4.0, IoT em geral</li>
 </ul>
 </section>
-<section id="roteiro-prático-gravar-o-cartão-sd" class="slide level2">
-<h2>Roteiro prático — gravar o cartão SD</h2>
-<p>Usar o <strong>Raspberry Pi Imager</strong> (<code>https://www.raspberrypi.com/software/</code>), já instalado/baixável nos PCs do laboratório.</p>
+<section id="roteiro-prático-preparar-os-nós-compartilhados" class="slide level2">
+<h2>Roteiro prático — preparar os nós compartilhados</h2>
+<p>Usar o <strong>Raspberry Pi Imager</strong> (<code>https://www.raspberrypi.com/software/</code>), já instalado/baixável nos PCs do laboratório. Só precisamos gravar até 6 cartões hoje — um por nó da infraestrutura, não um por grupo.</p>
 <ol type="1">
-<li><strong>Choose Device</strong> → o modelo de Raspberry Pi do grupo</li>
-<li><strong>Choose OS</strong> → <em>Raspberry Pi OS (other)</em> → <em>Raspberry Pi OS Lite (64-bit) — Legacy</em> — sem interface gráfica; usamos a versão Legacy porque o hardware do grupo é o Raspberry Pi 3B+</li>
-<li><strong>Choose Storage</strong> → o cartão SD do grupo</li>
+<li><strong>Choose Device</strong> → Raspberry Pi 3B+</li>
+<li><strong>Choose OS</strong> → <em>Raspberry Pi OS (other)</em> → <em>Raspberry Pi OS Lite (64-bit) — Legacy</em> — sem interface gráfica; usamos a versão Legacy porque o hardware da infraestrutura é o Raspberry Pi 3B+</li>
+<li><strong>Choose Storage</strong> → o próximo cartão SD disponível na estação</li>
 <li>Clique na engrenagem (⚙, ou <code>Ctrl+Shift+X</code>) para as <strong>opções avançadas</strong></li>
 </ol>
 </section>
 <section id="roteiro-prático-opções-avançadas" class="slide level2">
 <h2>Roteiro prático — opções avançadas</h2>
 <ul>
-<li><strong>Hostname:</strong> <code>rpi-&lt;veiculo&gt;</code> — o da tabela do grupo (ex.: <code>rpi-carro</code>, <code>rpi-onibus</code>). Sem sufixo de turma: como cada veículo é único entre a Turma A e a Turma B, não há colisão de nome</li>
+<li><strong>Hostname:</strong> o próximo número livre — <code>rpi-102</code>, <code>rpi-103</code>, … até <code>rpi-107</code>. O <code>rpi-101</code> fica reservado, é a máquina de testes do professor</li>
 <li><strong>Enable SSH</strong> → usar autenticação por senha</li>
-<li><strong>Usuário e senha:</strong> definir um usuário próprio do grupo (não usar <code>pi</code>/<code>raspberry</code> padrão)</li>
-<li><strong>Configurar WLAN:</strong> SSID/senha da rede do laboratório, país da rede Wi-Fi</li>
+<li><strong>Usuário e senha:</strong> usuário <code>pi</code>, senha <code>147</code> — igual em todos os nós, para facilitar o suporte em sala</li>
+<li><strong>Configurar WLAN:</strong> SSID <code>i4</code>, senha <code>147258369</code></li>
 <li><strong>Locale:</strong> fuso <code>America/Sao_Paulo</code>, layout de teclado <code>br</code></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -395,7 +397,7 @@ Ricardo Pasquati Pontarolli
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Anotem hostname, usuário e senha na ficha do grupo — vão precisar disso todas as próximas aulas.</p>
+<p>Anotem na lousa/ficha qual grupo preparou qual hostname — a turma toda (os 8 grupos) vai usar esses 6 nós nas próximas aulas.</p>
 </div>
 </div>
 </div>
@@ -405,8 +407,8 @@ Ricardo Pasquati Pontarolli
 <ol type="1">
 <li>Gravar (<em>Write</em>) e aguardar a verificação</li>
 <li>Colocar o cartão no Raspberry Pi e ligar</li>
-<li>No PC: <code>ping &lt;hostname&gt;.local</code> (ex.: <code>ping rpi-carro.local</code>)</li>
-<li>Se responder: <code>ssh &lt;usuario&gt;@&lt;hostname&gt;.local</code></li>
+<li>No PC: <code>ping &lt;hostname&gt;.local</code> (ex.: <code>ping rpi-102.local</code>)</li>
+<li>Se responder: <code>ssh pi@&lt;hostname&gt;.local</code></li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -418,6 +420,27 @@ Ricardo Pasquati Pontarolli
 </div>
 <div class="callout-content">
 <p>Sem Raspberry Pi disponível agora? Sem problema — terminem a gravação e guardem o cartão. O boot e o teste de SSH podem ficar para o começo da próxima estação livre ou da próxima aula.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="desafio-bônus-se-sobrar-tempo" class="slide level2">
+<h2>Desafio bônus — se sobrar tempo</h2>
+<ul>
+<li>A escola tem <strong>~500 TV boxes (2 GB de RAM)</strong> paradas — ainda <strong>não testamos</strong> se dá pra usar uma como nó da infraestrutura, no lugar de (ou além d)o Raspberry Pi</li>
+<li><strong>Desafio de hoje, só para quem terminar cedo:</strong> pegar 2 TV boxes, colocar um Linux nelas e fazer as duas se comunicarem (<code>ping</code> já vale como primeiro resultado)</li>
+<li>Não vale nota, não atrasa a ficha nem a rota do grupo — é experimental, é normal não dar certo de primeira</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Se o teste com essas 2 TV boxes funcionar, é o argumento pra pedir ao diretor mais unidades liberadas — a ideia é ampliar a infraestrutura compartilhada para 10 ou mais nós usando o estoque de TV boxes.</p>
 </div>
 </div>
 </div>

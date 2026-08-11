@@ -4041,17 +4041,15 @@ Nota
 <p>Cada grupo já tem um veículo definido pelo professor — não há repetição entre a Turma A e a Turma B. Encontrem o veículo do grupo na tabela e copiem a regra correspondente.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Turma</th>
 <th>Veículo</th>
 <th>Regra de velocidade</th>
-<th>Hostname</th>
 </tr>
 </thead>
 <tbody>
@@ -4059,49 +4057,41 @@ Nota
 <td>A</td>
 <td>Carro</td>
 <td>Segue o limite normal da via</td>
-<td><code>rpi-carro</code></td>
 </tr>
 <tr class="even">
 <td>A</td>
 <td>Ônibus</td>
 <td>Segue o limite da via, nunca acima de 90 km/h</td>
-<td><code>rpi-onibus</code></td>
 </tr>
 <tr class="odd">
 <td>A</td>
 <td>Caminhão</td>
 <td>Segue o limite da via, nunca acima de 80 km/h</td>
-<td><code>rpi-caminhao</code></td>
 </tr>
 <tr class="even">
 <td>A</td>
 <td>Patinete elétrico</td>
 <td>Só em vias até 60 km/h; teto próprio de 25 km/h</td>
-<td><code>rpi-patinete</code></td>
 </tr>
 <tr class="odd">
 <td>B</td>
 <td>Moto</td>
 <td>Segue o limite normal da via</td>
-<td><code>rpi-moto</code></td>
 </tr>
 <tr class="even">
 <td>B</td>
 <td>Mobilete a combustão</td>
 <td>Segue o limite da via, nunca acima de 60 km/h</td>
-<td><code>rpi-mobilete</code></td>
 </tr>
 <tr class="odd">
 <td>B</td>
 <td>Skate elétrico</td>
 <td>Só em vias até 60 km/h; teto próprio de 20 km/h</td>
-<td><code>rpi-skate</code></td>
 </tr>
 <tr class="even">
 <td>B</td>
 <td>Monociclo elétrico</td>
 <td>Só em vias até 60 km/h; teto próprio de 24 km/h</td>
-<td><code>rpi-monociclo</code></td>
 </tr>
 </tbody>
 </table>
@@ -4148,29 +4138,37 @@ Nota
 </tbody>
 </table>
 </section>
-<section id="configuração-do-raspberry-pi-raspberry-pi-imager" class="level2">
-<h2 class="anchored" data-anchor-id="configuração-do-raspberry-pi-raspberry-pi-imager">3. Configuração do Raspberry Pi (Raspberry Pi Imager)</h2>
-<p>Preencham <strong>antes de gravar</strong> o cartão — vão precisar disso nas próximas aulas.</p>
-<p><strong>Hostname:</strong> <code>rpi-</code> __________________ (o da tabela acima, ex.: <code>rpi-carro</code>)</p>
-<p><strong>Usuário SSH:</strong> ______________________________________________</p>
-<p><strong>Senha:</strong> ______________________________________________ <em>(anotem em local seguro do grupo — não aqui se a ficha for compartilhada)</em></p>
-<p><strong>SSID da rede Wi-Fi usada:</strong> ______________________________________________</p>
+<section id="infraestrutura-compartilhada" class="level2">
+<h2 class="anchored" data-anchor-id="infraestrutura-compartilhada">3. Infraestrutura compartilhada</h2>
+<p>O Raspberry Pi <strong>não é do grupo</strong> — são <strong>6 nós compartilhados</strong> pelos 8 grupos das duas turmas (<code>rpi-102</code> a <code>rpi-107</code>; o <code>rpi-101</code> é a máquina de testes do professor). Mesmo usuário/senha e mesma rede em todos:</p>
+<ul>
+<li><strong>Usuário SSH:</strong> <code>pi</code></li>
+<li><strong>Senha:</strong> <code>147</code></li>
+<li><strong>Rede Wi-Fi (SSID):</strong> <code>i4</code> — senha <code>147258369</code></li>
+</ul>
+<p><strong>Prefixo do nosso grupo</strong> (para nomear containers/tópicos MQTT mais pra frente, já que o nó é compartilhado): ______________________________________________ <em>(ex.: <code>carro</code>, <code>onibus</code>)</em></p>
+<p><strong>Nó(s) que testamos hoje:</strong> ______________________________________________</p>
 </section>
-<section id="checklist-da-estação-de-gravação" class="level2">
-<h2 class="anchored" data-anchor-id="checklist-da-estação-de-gravação">4. Checklist da estação de gravação</h2>
+<section id="checklist-só-para-o-grupo-responsável-por-preparar-um-nó-hoje" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-só-para-o-grupo-responsável-por-preparar-um-nó-hoje">4. Checklist — só para o grupo responsável por preparar um nó hoje</h2>
 <ul class="task-list">
 <li><label><input type="checkbox">Raspberry Pi Imager aberto, dispositivo (Raspberry Pi 3B+) e OS (<em>Raspberry Pi OS Lite 64-bit — Legacy</em>) selecionados</label></li>
-<li><label><input type="checkbox">Opções avançadas: hostname definido</label></li>
+<li><label><input type="checkbox">Opções avançadas: hostname definido (próximo número livre, 102 a 107)</label></li>
 <li><label><input type="checkbox">Opções avançadas: SSH habilitado (senha)</label></li>
-<li><label><input type="checkbox">Opções avançadas: usuário e senha definidos</label></li>
-<li><label><input type="checkbox">Opções avançadas: WLAN configurada</label></li>
+<li><label><input type="checkbox">Opções avançadas: usuário <code>pi</code> / senha <code>147</code> definidos</label></li>
+<li><label><input type="checkbox">Opções avançadas: WLAN <code>i4</code> configurada</label></li>
 <li><label><input type="checkbox">Locale: fuso <code>America/Sao_Paulo</code>, teclado <code>br</code></label></li>
 <li><label><input type="checkbox">Gravação concluída e verificada</label></li>
-<li><label><input type="checkbox">Cartão testado no Raspberry Pi (<code>ping</code> + <code>ssh</code>) <strong>ou</strong> guardado para testar na próxima estação livre</label></li>
+<li><label><input type="checkbox">Nó testado (<code>ping</code> + <code>ssh</code>) <strong>ou</strong> guardado para testar na próxima estação livre</label></li>
 </ul>
 </section>
+<section id="desafio-bônus-opcional-sem-nota-só-se-sobrar-tempo" class="level2">
+<h2 class="anchored" data-anchor-id="desafio-bônus-opcional-sem-nota-só-se-sobrar-tempo">5. Desafio bônus (opcional, sem nota) — só se sobrar tempo</h2>
+<p>A escola tem ~500 TV boxes (2 GB de RAM) ainda não testadas como nó de infraestrutura. Se terminarem tudo acima, peguem 2 TV boxes, instalem um Linux e tentem fazer as duas se comunicarem (<code>ping</code> já conta como resultado). Se der certo, é o argumento para pedir ao diretor mais unidades liberadas.</p>
+<p><strong>Conseguimos o quê?</strong> ______________________________________________</p>
+</section>
 <section id="para-a-próxima-aula-de-cnvi" class="level2">
-<h2 class="anchored" data-anchor-id="para-a-próxima-aula-de-cnvi">5. Para a próxima aula de CNVI</h2>
+<h2 class="anchored" data-anchor-id="para-a-próxima-aula-de-cnvi">6. Para a próxima aula de CNVI</h2>
 <p>O que falta terminar? ______________________________________________</p>
 <hr>
 
