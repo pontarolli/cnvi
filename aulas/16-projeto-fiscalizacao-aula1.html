@@ -133,7 +133,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Projeto Integrador — Fiscalização de Velocidade sem Radar</h1>
-  <p class="subtitle">Aula 1 · Fundamentos e Setup</p>
+  <p class="subtitle">Projeto 01</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -141,7 +141,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v37
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v38
           </p>
     </div>
 </div>
@@ -300,10 +300,10 @@ Ricardo Pasquati Pontarolli
 <section id="infraestrutura-compartilhada" class="slide level2">
 <h2>Infraestrutura compartilhada</h2>
 <ul>
-<li>O <strong>ESP32</strong> é individual: cada grupo tem o seu, é o veículo simulado</li>
-<li>O <strong>Raspberry Pi</strong> é diferente: <strong>não é 1 por grupo</strong> — são <strong>6 nós compartilhados</strong> (<code>rpi-102</code> a <code>rpi-107</code>) usados pelos 8 grupos das duas turmas</li>
-<li><code>rpi-101</code> fica de fora — é a máquina de testes do professor</li>
-<li>Isso é mais parecido com a nuvem municipal real: a prefeitura não compraria um servidor por veículo, ela compartilha uma infraestrutura pequena entre todos</li>
+<li><strong>Nem RPi nem ESP32 são 1 por grupo</strong> — os dois são infraestrutura compartilhada entre os 8 grupos das duas turmas</li>
+<li><strong>Raspberry Pi:</strong> 5 nós (<code>rpi-102</code> a <code>rpi-106</code>) — usados desde hoje. <code>rpi-101</code> fica de fora, é a máquina de testes do professor</li>
+<li><strong>ESP32:</strong> 6 unidades — entram em rodízio a partir da Aula 3, quando cada grupo o usa como veículo simulado</li>
+<li>Isso é mais parecido com a nuvem municipal real: a prefeitura não compraria um servidor (nem um sensor) por veículo, ela compartilha uma infraestrutura pequena entre todos</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -340,12 +340,35 @@ Ricardo Pasquati Pontarolli
           display:block!important;
       }</style></aside>
 </section>
+<section id="git-onde-vai-o-trabalho-do-grupo" class="slide level2">
+<h2>Git — onde vai o trabalho do grupo</h2>
+<ul>
+<li>Cada grupo cria um <strong>repositório no GitHub</strong> hoje — é onde tudo do projeto vai morar daqui pra frente (ficha, scripts, firmware, docker-compose…)</li>
+<li>Nome sugerido: <code>fiscalizacao-&lt;veiculo&gt;</code> (ex.: <code>fiscalizacao-carro</code>)</li>
+<li>Adicionem todos os integrantes do grupo como colaboradores</li>
+<li><strong>Entrega de hoje:</strong> subir (<code>commit</code> + <code>push</code>) a ficha do grupo preenchida, ainda durante a aula</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Não sabe git ainda? Tudo bem — vale o mínimo: <code>git init</code>, <code>git add</code>, <code>git commit</code>, criar o repositório no GitHub e <code>git push</code>. A prática de git entra com mais calma nas próximas aulas.</p>
+</div>
+</div>
+</div>
+</section>
 <section id="atividade-de-hoje" class="slide level2">
 <h2>Atividade de hoje</h2>
 <ol type="1">
 <li>Preencher a <strong>ficha do grupo</strong> (rota simulada, limites)</li>
-<li>Ajudar a preparar os <strong>6 nós compartilhados</strong> — só precisamos de 6 cartões no total, não 1 por grupo</li>
+<li>Ajudar a preparar os <strong>5 nós compartilhados</strong> — só precisamos de 5 cartões no total, não 1 por grupo</li>
 <li>Testar o acesso via SSH a pelo menos um dos nós</li>
+<li>Criar o repositório do grupo no GitHub e subir a ficha preenchida</li>
 </ol>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -356,10 +379,28 @@ Ricardo Pasquati Pontarolli
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Como a infraestrutura é compartilhada, sobra tempo: enquanto um grupo por vez prepara um dos 6 cartões (rodízio nas estações de gravação), os demais aprofundam a ficha — inclusive já pensando em como o grupo vai nomear seus containers e tópicos MQTT dentro dos nós compartilhados.</p>
+<p>Como a infraestrutura é compartilhada, sobra tempo: enquanto um grupo por vez prepara um dos 5 cartões (rodízio nas estações de gravação), os demais aprofundam a ficha e já deixam o repositório do GitHub pronto — inclusive pensando em como o grupo vai nomear seus containers e tópicos MQTT dentro dos nós compartilhados.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="mão-na-massa" class="slide level2">
+<h2>Mão na massa</h2>
+<p><strong>Agora preencham o Roteiro do Projeto 01, em grupo, e subam pro GitHub de vocês:</strong></p>
+<p><a href="../atividades/roteiro-projeto-fiscalizacao-aula1.html">Roteiro Projeto 01</a></p>
+<aside class="notes">
+<p>Mostrar o link no telão e dar tempo para os grupos abrirem a página antes de seguir para as instruções de gravação do cartão SD.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="raspberry-pi-como-nó-de-borda" class="slide level2">
 <h2>Raspberry Pi como nó de borda</h2>
@@ -371,7 +412,7 @@ Ricardo Pasquati Pontarolli
 </section>
 <section id="roteiro-prático-preparar-os-nós-compartilhados" class="slide level2">
 <h2>Roteiro prático — preparar os nós compartilhados</h2>
-<p>Usar o <strong>Raspberry Pi Imager</strong> (<code>https://www.raspberrypi.com/software/</code>), já instalado/baixável nos PCs do laboratório. Só precisamos gravar até 6 cartões hoje — um por nó da infraestrutura, não um por grupo.</p>
+<p>Usar o <strong>Raspberry Pi Imager</strong> (<code>https://www.raspberrypi.com/software/</code>), já instalado/baixável nos PCs do laboratório. Só precisamos gravar até 5 cartões hoje — um por nó da infraestrutura, não um por grupo.</p>
 <ol type="1">
 <li><strong>Choose Device</strong> → Raspberry Pi 3B+</li>
 <li><strong>Choose OS</strong> → <em>Raspberry Pi OS (other)</em> → <em>Raspberry Pi OS Lite (64-bit) — Legacy</em> — sem interface gráfica; usamos a versão Legacy porque o hardware da infraestrutura é o Raspberry Pi 3B+</li>
@@ -382,11 +423,11 @@ Ricardo Pasquati Pontarolli
 <section id="roteiro-prático-opções-avançadas" class="slide level2">
 <h2>Roteiro prático — opções avançadas</h2>
 <ul>
-<li><strong>Hostname:</strong> o próximo número livre — <code>rpi-102</code>, <code>rpi-103</code>, … até <code>rpi-107</code>. O <code>rpi-101</code> fica reservado, é a máquina de testes do professor</li>
+<li><strong>Hostname:</strong> o próximo número livre — <code>rpi-102</code>, <code>rpi-103</code>, … até <code>rpi-106</code>. O <code>rpi-101</code> fica reservado, é a máquina de testes do professor</li>
 <li><strong>Enable SSH</strong> → usar autenticação por senha</li>
 <li><strong>Usuário e senha:</strong> usuário <code>pi</code>, senha <code>147</code> — igual em todos os nós, para facilitar o suporte em sala</li>
 <li><strong>Configurar WLAN:</strong> SSID <code>i4</code>, senha <code>147258369</code></li>
-<li><strong>Locale:</strong> fuso <code>America/Sao_Paulo</code>, layout de teclado <code>br</code></li>
+<li><strong>Local:</strong> fuso <code>America/Sao_Paulo</code>, layout de teclado <code>br</code></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -397,7 +438,7 @@ Ricardo Pasquati Pontarolli
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Anotem na lousa/ficha qual grupo preparou qual hostname — a turma toda (os 8 grupos) vai usar esses 6 nós nas próximas aulas.</p>
+<p>Anotem na lousa/ficha qual grupo preparou qual hostname — a turma toda (os 8 grupos) vai usar esses 5 nós nas próximas aulas.</p>
 </div>
 </div>
 </div>

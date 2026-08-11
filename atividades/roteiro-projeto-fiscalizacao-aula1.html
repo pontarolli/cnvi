@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Roteiro em Grupo — Projeto Fiscalização de Velocidade – Computação em Nuvem e Virtualização</title>
+<title>Roteiro Projeto 01 – Computação em Nuvem e Virtualização</title>
 <style>
 
 code{white-space: pre-wrap;}
@@ -4002,8 +4002,8 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Roteiro em Grupo — Projeto Fiscalização de Velocidade</h1>
-<p class="subtitle lead">Aula 1 · Referente à Aula 16 — Em grupo, sem valor de nota</p>
+<h1 class="title">Roteiro Projeto 01</h1>
+<p class="subtitle lead">Fiscalização de Velocidade sem Radar — Em grupo, sem valor de nota</p>
 </div>
 
 
@@ -4038,7 +4038,7 @@ Nota
 <hr>
 <section id="regra-de-velocidade-do-grupo" class="level2">
 <h2 class="anchored" data-anchor-id="regra-de-velocidade-do-grupo">1. Regra de velocidade do grupo</h2>
-<p>Cada grupo já tem um veículo definido pelo professor — não há repetição entre a Turma A e a Turma B. Encontrem o veículo do grupo na tabela e copiem a regra correspondente.</p>
+<p>Cada grupo já tem um veículo definido pelo professor — não há repetição entre a Turma A e a Turma B. <strong>Cada veículo só pode ser usado por um grupo</strong>, ou seja, dois grupos não podem escolher o mesmo veículo. Encontrem o veículo do grupo na tabela e copiem a regra correspondente.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -4101,6 +4101,44 @@ Nota
 <section id="rota-simulada" class="level2">
 <h2 class="anchored" data-anchor-id="rota-simulada">2. Rota simulada</h2>
 <p>Definam uma sequência de 3 a 5 trechos pelos quais o veículo vai “passar”. Para cada trecho, anotem o tipo de via e o limite de velocidade.</p>
+<p><strong>Exemplo de preenchimento</strong> (grupo do Carro, rota fictícia):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Ordem</th>
+<th>Tipo de via</th>
+<th>Limite (km/h)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Via local (rua do bairro)</td>
+<td>40</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Via coletora</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Via arterial (avenida)</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Via coletora</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Via local (chegada)</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rota do nosso grupo:</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -4140,7 +4178,7 @@ Nota
 </section>
 <section id="infraestrutura-compartilhada" class="level2">
 <h2 class="anchored" data-anchor-id="infraestrutura-compartilhada">3. Infraestrutura compartilhada</h2>
-<p>O Raspberry Pi <strong>não é do grupo</strong> — são <strong>6 nós compartilhados</strong> pelos 8 grupos das duas turmas (<code>rpi-102</code> a <code>rpi-107</code>; o <code>rpi-101</code> é a máquina de testes do professor). Mesmo usuário/senha e mesma rede em todos:</p>
+<p>O Raspberry Pi <strong>não é do grupo</strong> — são <strong>5 nós compartilhados</strong> pelos 8 grupos das duas turmas (<code>rpi-102</code> a <code>rpi-106</code>; o <code>rpi-101</code> é a máquina de testes do professor). Mesmo usuário/senha e mesma rede em todos:</p>
 <ul>
 <li><strong>Usuário SSH:</strong> <code>pi</code></li>
 <li><strong>Senha:</strong> <code>147</code></li>
@@ -4153,22 +4191,33 @@ Nota
 <h2 class="anchored" data-anchor-id="checklist-só-para-o-grupo-responsável-por-preparar-um-nó-hoje">4. Checklist — só para o grupo responsável por preparar um nó hoje</h2>
 <ul class="task-list">
 <li><label><input type="checkbox">Raspberry Pi Imager aberto, dispositivo (Raspberry Pi 3B+) e OS (<em>Raspberry Pi OS Lite 64-bit — Legacy</em>) selecionados</label></li>
-<li><label><input type="checkbox">Opções avançadas: hostname definido (próximo número livre, 102 a 107)</label></li>
+<li><label><input type="checkbox">Opções avançadas: hostname definido (próximo número livre, 102 a 106)</label></li>
 <li><label><input type="checkbox">Opções avançadas: SSH habilitado (senha)</label></li>
 <li><label><input type="checkbox">Opções avançadas: usuário <code>pi</code> / senha <code>147</code> definidos</label></li>
 <li><label><input type="checkbox">Opções avançadas: WLAN <code>i4</code> configurada</label></li>
-<li><label><input type="checkbox">Locale: fuso <code>America/Sao_Paulo</code>, teclado <code>br</code></label></li>
+<li><label><input type="checkbox">Local: fuso <code>America/Sao_Paulo</code>, teclado <code>br</code></label></li>
 <li><label><input type="checkbox">Gravação concluída e verificada</label></li>
 <li><label><input type="checkbox">Nó testado (<code>ping</code> + <code>ssh</code>) <strong>ou</strong> guardado para testar na próxima estação livre</label></li>
 </ul>
 </section>
+<section id="repositório-github-do-grupo-entrega-de-hoje" class="level2">
+<h2 class="anchored" data-anchor-id="repositório-github-do-grupo-entrega-de-hoje">5. Repositório GitHub do grupo — entrega de hoje</h2>
+<p>Criem hoje um repositório no GitHub para o projeto do grupo — é onde vai morar tudo daqui pra frente (esta ficha, scripts, firmware, docker-compose…). Nome sugerido: <code>fiscalizacao-&lt;veiculo&gt;</code> (ex.: <code>fiscalizacao-carro</code>). Adicionem todos os integrantes como colaboradores, <strong>e adicionem também o professor</strong> (<a href="https://github.com/pontarolli">github.com/pontarolli</a>) como colaborador do repositório, para eu acompanhar os documentos do grupo.</p>
+<p><strong>Link do repositório:</strong> ______________________________________________</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Repositório criado no GitHub</label></li>
+<li><label><input type="checkbox">Todos os integrantes adicionados como colaboradores</label></li>
+<li><label><input type="checkbox">Professor (<code>pontarolli</code>) adicionado como colaborador</label></li>
+<li><label><input type="checkbox">Esta ficha commitada e enviada (<code>git push</code>) ainda durante a aula de hoje</label></li>
+</ul>
+</section>
 <section id="desafio-bônus-opcional-sem-nota-só-se-sobrar-tempo" class="level2">
-<h2 class="anchored" data-anchor-id="desafio-bônus-opcional-sem-nota-só-se-sobrar-tempo">5. Desafio bônus (opcional, sem nota) — só se sobrar tempo</h2>
+<h2 class="anchored" data-anchor-id="desafio-bônus-opcional-sem-nota-só-se-sobrar-tempo">6. Desafio bônus (opcional, sem nota) — só se sobrar tempo</h2>
 <p>A escola tem ~500 TV boxes (2 GB de RAM) ainda não testadas como nó de infraestrutura. Se terminarem tudo acima, peguem 2 TV boxes, instalem um Linux e tentem fazer as duas se comunicarem (<code>ping</code> já conta como resultado). Se der certo, é o argumento para pedir ao diretor mais unidades liberadas.</p>
 <p><strong>Conseguimos o quê?</strong> ______________________________________________</p>
 </section>
 <section id="para-a-próxima-aula-de-cnvi" class="level2">
-<h2 class="anchored" data-anchor-id="para-a-próxima-aula-de-cnvi">6. Para a próxima aula de CNVI</h2>
+<h2 class="anchored" data-anchor-id="para-a-próxima-aula-de-cnvi">7. Para a próxima aula de CNVI</h2>
 <p>O que falta terminar? ______________________________________________</p>
 <hr>
 
