@@ -4033,6 +4033,19 @@ Nota
 <p>Este roteiro <strong>não é uma atividade avaliativa</strong> — é o documento de trabalho do grupo para o projeto integrador. Preencham juntos; ele vai ser consultado nas próximas aulas.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dica
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Como preencher:</strong> esta página é só leitura. Para preencher, abram o <a href="https://github.com/pontarolli/cnvi-aulas/blob/master/atividades/roteiro-projeto-fiscalizacao-aula1.qmd">arquivo-fonte deste roteiro no GitHub</a>, copiem todo o texto e colem em um arquivo novo (ex.: <code>roteiro.md</code>) no repositório do próprio grupo — pelo botão <strong>Add file → Create new file</strong>, direto no navegador. Editem os <code>______</code> ali mesmo pelo editor web do GitHub e cliquem em <strong>Commit changes</strong> para salvar.</p>
+</div>
+</div>
 <p><strong>Grupo (tipo de veículo):</strong> ______________________________________________</p>
 <p><strong>Integrantes (máx. 5):</strong> ______________________________________________</p>
 <hr>
@@ -4298,7 +4311,7 @@ Nota
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/pontarolli\.github\.io\/cnvi-aulas\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
