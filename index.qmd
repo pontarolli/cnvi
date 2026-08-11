@@ -32,6 +32,13 @@ format:
 Nos slides, use as setas do teclado para navegar, **S** para abrir as notas do professor e **O** para visão geral dos slides.
 :::
 
+## Projeto Integrador — Fiscalização de Velocidade sem Radar
+
+Módulo prático com Raspberry Pi, em conjunto com Redes sem Fio (quinta-feira).
+
+1. [Aula 1 — Fundamentos e Setup](aulas/16-projeto-fiscalizacao-aula1.html)
+   · [Roteiro do grupo](atividades/roteiro-projeto-fiscalizacao-aula1.html)
+
 ## Atividades Avaliativas
 
 1. [Modelos de Nuvem](atividades/atividade-1-modelos-nuvem.html)

@@ -1,0 +1,137 @@
+---
+title: "Projeto Integrador — Fiscalização de Velocidade sem Radar"
+subtitle: "Aula 1 · Fundamentos e Setup"
+---
+
+## Objetivos desta aula
+
+- Apresentar o projeto que vamos construir nas próximas semanas
+- Formar os grupos, cada um representando um tipo de veículo
+- Preparar o Raspberry Pi do grupo como nó de borda da nuvem municipal
+
+::: {.notes}
+Primeira aula com esta turma no ano. Abrir com uma sondagem rápida e
+informal (sem nota, sem pressão): quem já ouviu falar de nuvem, modelos de
+serviço, virtualização, Docker? Isso calibra o ritmo das próximas aulas
+sem repetir o que a turma já viu com o professor anterior.
+:::
+
+---
+
+## O problema
+
+- A prefeitura quer saber se os veículos estão **acima do limite de velocidade**
+- Sem instalar radares nas vias
+- Usando apenas **GPS + velocidade instantânea** — que todo veículo já é obrigado a ter
+- A cada leitura: em que via o veículo está? Qual o limite desse trecho? Ele ultrapassou?
+
+## Como vamos simular isso
+
+- Cada grupo representa um **tipo de veículo**: carro, ônibus, moto ou patinete elétrico
+- Cada veículo "roda" uma **rota fixa e pré-cadastrada** — sequência de trechos com limite (ex.: via local 40 → coletora 60 → arterial 80)
+- Um **ESP32** vai simular o GPS/velocímetro do veículo (entra em uma aula futura)
+- Um **Raspberry Pi** é o **nó de borda da nuvem municipal**: recebe, processa e guarda os dados
+
+::: {.callout-note}
+Não é GPS real nem mapa real — é simulação da lógica. O foco do projeto é a
+infraestrutura de nuvem, rede e dados por trás do problema, não a
+geolocalização em si.
+:::
+
+## Onde entra a Computação em Nuvem
+
+- O Raspberry Pi vai rodar **Docker**, **Portainer**, um **broker MQTT** e, mais adiante, um microsserviço que compara velocidade x limite
+- É o mesmo conteúdo do curso (nuvem, virtualização de containers, gerenciamento) aplicado a um caso real
+- Quinta-feira, em **Redes sem Fio**, vocês tratam da configuração de rede desse mesmo Raspberry Pi
+
+## Cronograma do projeto (visão geral)
+
+1. **Hoje** — problema, grupos, Raspberry Pi headless
+2. Nuvem privada de borda — Docker, Portainer, broker MQTT
+3. Veículo conectado — ESP32 + microsserviço de comparação
+4. Persistência — banco de série temporal para as leituras
+5. Visualização — dashboard e apresentação final
+
+::: {.notes}
+Deixar claro para a turma: este é um módulo inicial de poucas aulas, não o
+conteúdo do ano inteiro — depois dele o curso segue com o restante do
+plano de CNVI.
+:::
+
+---
+
+## Os grupos de hoje
+
+- 4 grupos por turma, um por tipo de veículo: **Carro · Ônibus · Moto · Patinete elétrico**
+- Cada grupo define: nome do grupo, quem grava o cartão hoje, quem preenche a ficha
+- O tipo de veículo define a **regra de negócio** (limite de velocidade) que vocês vão simular
+
+| Veículo | Regra de velocidade |
+|---|---|
+| Carro / Ônibus / Moto | Segue o limite normal da via |
+| Patinete elétrico | Limitado a vias/ciclovias, 20–25 km/h |
+
+## Atividade de hoje
+
+1. Preencher a **ficha do grupo** (rota simulada, limites, hostname do Raspberry Pi)
+2. Gravar o cartão SD com Raspberry Pi OS Lite (headless), em rodízio pelas estações disponíveis
+3. Testar o acesso via SSH ao Raspberry Pi
+
+::: {.callout-note}
+Temos menos cartões/leitores do que grupos hoje. Vamos revezar nas
+estações de gravação — quem não estiver gravando, preenche a ficha do
+grupo e confere a configuração de outro grupo enquanto espera a vez.
+:::
+
+## Raspberry Pi como nó de borda
+
+- "Nó de borda" (*edge*) = o processamento acontece perto de onde o dado é gerado, não direto numa nuvem pública distante
+- Vantagens: menos latência, funciona mesmo com internet instável, o dado bruto não precisa sair do dispositivo
+- Mesmo princípio usado em cidades inteligentes, indústria 4.0, IoT em geral
+
+---
+
+## Roteiro prático — gravar o cartão SD
+
+Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já instalado/baixável nos PCs do laboratório.
+
+1. **Choose Device** → o modelo de Raspberry Pi do grupo
+2. **Choose OS** → *Raspberry Pi OS Lite (64-bit)* — sem interface gráfica, é um servidor
+3. **Choose Storage** → o cartão SD do grupo
+4. Clique na engrenagem (⚙, ou `Ctrl+Shift+X`) para as **opções avançadas**
+
+## Roteiro prático — opções avançadas
+
+- **Hostname:** `rpi-<veiculo>-<turma>` (ex.: `rpi-carro-a`, `rpi-onibus-b`)
+- **Enable SSH** → usar autenticação por senha
+- **Usuário e senha:** definir um usuário próprio do grupo (não usar `pi`/`raspberry` padrão)
+- **Configurar WLAN:** SSID/senha da rede do laboratório, país da rede Wi-Fi
+- **Locale:** fuso `America/Sao_Paulo`, layout de teclado `br`
+
+::: {.callout-note}
+Anotem hostname, usuário e senha na ficha do grupo — vão precisar disso
+todas as próximas aulas.
+:::
+
+## Roteiro prático — gravar e testar
+
+1. Gravar (*Write*) e aguardar a verificação
+2. Colocar o cartão no Raspberry Pi e ligar
+3. No PC: `ping rpi-<hostname>.local`
+4. Se responder: `ssh <usuario>@rpi-<hostname>.local`
+
+::: {.callout-note}
+Sem Raspberry Pi disponível agora? Sem problema — terminem a gravação e
+guardem o cartão. O boot e o teste de SSH podem ficar para o começo da
+próxima estação livre ou da próxima aula.
+:::
+
+---
+
+## Próxima aula
+
+- Trazer o cartão gravado e testado (quem não terminou, reveza no início da aula)
+- **Quinta (RSFI):** configuração e teste da rede sem fio do Raspberry Pi
+- **Próxima CNVI:** Docker + Portainer + broker MQTT rodando no Raspberry Pi
+
+## Obrigado!

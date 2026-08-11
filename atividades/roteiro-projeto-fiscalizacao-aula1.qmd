@@ -1,0 +1,70 @@
+---
+title: "Roteiro em Grupo — Projeto Fiscalização de Velocidade"
+subtitle: "Aula 1 · Referente à Aula 16 — Em grupo, sem valor de nota"
+lang: pt
+format:
+  html:
+    toc: false
+    embed-resources: true
+---
+
+::: {.callout-note}
+Este roteiro **não é uma atividade avaliativa** — é o documento de trabalho
+do grupo para o projeto integrador. Preencham juntos; ele vai ser
+consultado nas próximas aulas.
+:::
+
+**Grupo (tipo de veículo):** ______________________________________________
+
+**Integrantes:** ______________________________________________
+
+---
+
+## 1. Regra de velocidade do grupo
+
+Marquem a regra que se aplica ao veículo do grupo.
+
+- [ ] Carro / Ônibus / Moto — segue o limite normal de cada trecho da via
+- [ ] Patinete elétrico — limitado a 20–25 km/h, mesmo em vias com limite maior
+
+## 2. Rota simulada
+
+Definam uma sequência de 3 a 5 trechos pelos quais o veículo vai "passar". Para
+cada trecho, anotem o tipo de via e o limite de velocidade.
+
+| Ordem | Tipo de via | Limite (km/h) |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+| 4 | | |
+| 5 | | |
+
+## 3. Configuração do Raspberry Pi (Raspberry Pi Imager)
+
+Preencham **antes de gravar** o cartão — vão precisar disso nas próximas aulas.
+
+**Hostname:** `rpi-` __________________ (ex.: `rpi-carro-a`)
+
+**Usuário SSH:** ______________________________________________
+
+**Senha:** ______________________________________________ *(anotem em local seguro do grupo — não aqui se a ficha for compartilhada)*
+
+**SSID da rede Wi-Fi usada:** ______________________________________________
+
+## 4. Checklist da estação de gravação
+
+- [ ] Raspberry Pi Imager aberto, dispositivo e OS (*Raspberry Pi OS Lite 64-bit*) selecionados
+- [ ] Opções avançadas: hostname definido
+- [ ] Opções avançadas: SSH habilitado (senha)
+- [ ] Opções avançadas: usuário e senha definidos
+- [ ] Opções avançadas: WLAN configurada
+- [ ] Locale: fuso `America/Sao_Paulo`, teclado `br`
+- [ ] Gravação concluída e verificada
+- [ ] Cartão testado no Raspberry Pi (`ping` + `ssh`) **ou** guardado para testar na próxima estação livre
+
+## 5. Para a próxima aula de CNVI
+
+O que falta terminar? ______________________________________________
+
+______________________________________________
