@@ -1,45 +1,164 @@
 [
   {
-    "objectID": "atividades/atividade-5-dimensionamento-nuvem.html",
-    "href": "atividades/atividade-5-dimensionamento-nuvem.html",
-    "title": "Atividade Avaliativa 5 — Gerenciamento e Provedores de Nuvem",
+    "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html",
+    "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html",
+    "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma empresa passa a usar AWS para um sistema, Azure para outro e Google Cloud para um terceiro, ao mesmo tempo, para não depender de um único fornecedor. Como se chama esse modelo de gerenciamento?\n2. Um hospital público precisa manter os prontuários de pacientes com controle total sobre onde os dados ficam armazenados, por exigência de conformidade com a LGPD, e já possui equipe técnica própria e hardware disponível. Qual solução é mais coerente com esse cenário?"
+    "text": "Nota\n\n\n\nEste roteiro não é uma atividade avaliativa — é o documento de trabalho do grupo para o projeto integrador. Preencham juntos; ele vai ser consultado nas próximas aulas.\nGrupo (tipo de veículo): ______________________________________________\nIntegrantes: ______________________________________________"
   },
   {
-    "objectID": "atividades/atividade-5-dimensionamento-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-5-dimensionamento-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 5 — Gerenciamento e Provedores de Nuvem",
-    "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nCrie uma conta gratuita no AWS Free Tier (ou Azure/GCP, se preferir) e lance uma instância de VM no menor tamanho disponível gratuitamente (ex.: t2.micro na AWS). Não precisa fazer nada além de criar e depois encerrar/deletar a instância para não gerar cobrança. Print da instância rodando é suficiente — vale como bônus."
+    "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#regra-de-velocidade-do-grupo",
+    "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#regra-de-velocidade-do-grupo",
+    "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
+    "section": "1. Regra de velocidade do grupo",
+    "text": "1. Regra de velocidade do grupo\nMarquem a regra que se aplica ao veículo do grupo.\n\nCarro / Ônibus / Moto — segue o limite normal de cada trecho da via\nPatinete elétrico — limitado a 20–25 km/h, mesmo em vias com limite maior"
   },
   {
-    "objectID": "atividades/atividade-3-vmware-xen.html",
-    "href": "atividades/atividade-3-vmware-xen.html",
-    "title": "Atividade Avaliativa 3 — VMware x Xen",
+    "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#rota-simulada",
+    "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#rota-simulada",
+    "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
+    "section": "2. Rota simulada",
+    "text": "2. Rota simulada\nDefinam uma sequência de 3 a 5 trechos pelos quais o veículo vai “passar”. Para cada trecho, anotem o tipo de via e o limite de velocidade.\n\n\n\nOrdem\nTipo de via\nLimite (km/h)\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4\n\n\n\n\n5"
+  },
+  {
+    "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#configuração-do-raspberry-pi-raspberry-pi-imager",
+    "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#configuração-do-raspberry-pi-raspberry-pi-imager",
+    "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
+    "section": "3. Configuração do Raspberry Pi (Raspberry Pi Imager)",
+    "text": "3. Configuração do Raspberry Pi (Raspberry Pi Imager)\nPreencham antes de gravar o cartão — vão precisar disso nas próximas aulas.\nHostname: rpi- __________________ (ex.: rpi-carro-a)\nUsuário SSH: ______________________________________________\nSenha: ______________________________________________ (anotem em local seguro do grupo — não aqui se a ficha for compartilhada)\nSSID da rede Wi-Fi usada: ______________________________________________"
+  },
+  {
+    "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#checklist-da-estação-de-gravação",
+    "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#checklist-da-estação-de-gravação",
+    "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
+    "section": "4. Checklist da estação de gravação",
+    "text": "4. Checklist da estação de gravação\n\nRaspberry Pi Imager aberto, dispositivo e OS (Raspberry Pi OS Lite 64-bit) selecionados\nOpções avançadas: hostname definido\nOpções avançadas: SSH habilitado (senha)\nOpções avançadas: usuário e senha definidos\nOpções avançadas: WLAN configurada\nLocale: fuso America/Sao_Paulo, teclado br\nGravação concluída e verificada\nCartão testado no Raspberry Pi (ping + ssh) ou guardado para testar na próxima estação livre"
+  },
+  {
+    "objectID": "atividades/roteiro-projeto-fiscalizacao-aula1.html#para-a-próxima-aula-de-cnvi",
+    "href": "atividades/roteiro-projeto-fiscalizacao-aula1.html#para-a-próxima-aula-de-cnvi",
+    "title": "Roteiro em Grupo — Projeto Fiscalização de Velocidade",
+    "section": "5. Para a próxima aula de CNVI",
+    "text": "5. Para a próxima aula de CNVI\nO que falta terminar? ______________________________________________"
+  },
+  {
+    "objectID": "atividades/atividade-4-desafio-docker.html",
+    "href": "atividades/atividade-4-desafio-docker.html",
+    "title": "Atividade Avaliativa 4 — Docker",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma grande empresa precisa migrar uma VM em produção de um servidor físico para outro, sem interromper o serviço nem um segundo, para fazer manutenção de hardware. Qual recurso, nativo do VMware, resolve exatamente esse problema?\n2. Uma ONG de tecnologia educacional, com orçamento muito limitado mas equipe técnica competente, quer montar um pequeno data center próprio. Considerando o que foi visto sobre VMware e Xen, qual seria a escolha mais coerente e por quê?"
+    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Você criou um container chamado web-nginx e, depois de um tempo, parou ele com docker stop web-nginx. Agora você quer voltar a usar esse mesmo container (com tudo que já estava configurado nele), sem perder nada. Qual comando você deve usar?\n2. Qual comando lista todos os containers de um host, incluindo os que já estão parados (não só os em execução)?"
   },
   {
-    "objectID": "atividades/atividade-3-vmware-xen.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-3-vmware-xen.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 3 — VMware x Xen",
+    "objectID": "atividades/atividade-4-desafio-docker.html#desafio-opcional-sem-valor-obrigatório",
+    "href": "atividades/atividade-4-desafio-docker.html#desafio-opcional-sem-valor-obrigatório",
+    "title": "Atividade Avaliativa 4 — Docker",
     "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nPesquise rapidamente online: a AWS ainda usa Xen hoje em sua infraestrutura, ou migrou para outra tecnologia de virtualização própria? Escreva 3-4 linhas com o que encontrou e a fonte consultada — vale como bônus."
+    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nInstale o Docker Desktop no seu computador (ou use o Docker Playground de novo) e rode um container Nginx publicando a porta 8080: docker run -d -p 8080:80 nginx. Acesse http://localhost:8080 no navegador e print da página padrão do Nginx aparecendo — vale como bônus."
   },
   {
-    "objectID": "atividades/atividade-1-modelos-nuvem.html",
-    "href": "atividades/atividade-1-modelos-nuvem.html",
-    "title": "Atividade Avaliativa 1 — Modelos de Nuvem",
+    "objectID": "atividades/atividade-2-relatorio-virtualbox.html",
+    "href": "atividades/atividade-2-relatorio-virtualbox.html",
+    "title": "Atividade Avaliativa 2 — Virtualização",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma clínica médica precisa armazenar prontuários de pacientes (dados sensíveis, alta exigência de confidencialidade) e, ao mesmo tempo, hospedar um site institucional simples de agendamento, sem dado sensível algum. Qual estratégia de implantação melhor atende aos dois casos ao mesmo tempo?\n2. Uma startup quer lançar um aplicativo rapidamente, com uma equipe pequena de desenvolvedores que não quer administrar servidores, sistema operacional ou runtime — só escrever código e publicar. Qual modelo de serviço é mais adequado?"
+    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Você quer montar um pequeno laboratório de testes no seu próprio notebook, criando 2 ou 3 VMs com Linux para experimentar sem afetar o sistema operacional principal do computador. Qual tipo de hipervisor é o mais indicado para esse cenário?\n2. Depois de configurar uma VM no VirtualBox e instalar tudo que precisava, você quer garantir um “ponto de restauração” para poder desfazer alterações futuras caso algo dê errado. Qual recurso da VM você deve usar?"
   },
   {
-    "objectID": "atividades/atividade-1-modelos-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-1-modelos-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 1 — Modelos de Nuvem",
+    "objectID": "atividades/atividade-2-relatorio-virtualbox.html#desafio-opcional-sem-valor-obrigatório",
+    "href": "atividades/atividade-2-relatorio-virtualbox.html#desafio-opcional-sem-valor-obrigatório",
+    "title": "Atividade Avaliativa 2 — Virtualização",
     "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nCrie uma conta gratuita em um provedor de nuvem pública (AWS Free Tier, Azure Free Account ou Google Cloud Free Tier) e explore o console por alguns minutos. Tire um print mostrando 3 serviços diferentes disponíveis no painel (ex.: um de computação, um de armazenamento, um de banco de dados) e mande pro professor por curiosidade — vale como bônus."
+    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nNa VM do VirtualBox que você já criou na Aula 06, mude a configuração de rede para o modo Bridge (em vez de NAT) e verifique, com o comando ip a (ou ifconfig) dentro da VM, se ela recebeu um IP da mesma rede do seu roteador/computador físico. Print do resultado é suficiente — vale como bônus."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#objetivos-desta-aula",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#objetivos-desta-aula",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Objetivos desta aula",
+    "text": "Objetivos desta aula\n\nApresentar o projeto que vamos construir nas próximas semanas\nFormar os grupos, cada um representando um tipo de veículo\nPreparar o Raspberry Pi do grupo como nó de borda da nuvem municipal\n\n\nPrimeira aula com esta turma no ano. Abrir com uma sondagem rápida e informal (sem nota, sem pressão): quem já ouviu falar de nuvem, modelos de serviço, virtualização, Docker? Isso calibra o ritmo das próximas aulas sem repetir o que a turma já viu com o professor anterior."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#o-problema",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#o-problema",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "O problema",
+    "text": "O problema\n\nA prefeitura quer saber se os veículos estão acima do limite de velocidade\nSem instalar radares nas vias\nUsando apenas GPS + velocidade instantânea — que todo veículo já é obrigado a ter\nA cada leitura: em que via o veículo está? Qual o limite desse trecho? Ele ultrapassou?"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#como-vamos-simular-isso",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#como-vamos-simular-isso",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Como vamos simular isso",
+    "text": "Como vamos simular isso\n\nCada grupo representa um tipo de veículo: carro, ônibus, moto ou patinete elétrico\nCada veículo “roda” uma rota fixa e pré-cadastrada — sequência de trechos com limite (ex.: via local 40 → coletora 60 → arterial 80)\nUm ESP32 vai simular o GPS/velocímetro do veículo (entra em uma aula futura)\nUm Raspberry Pi é o nó de borda da nuvem municipal: recebe, processa e guarda os dados\n\n\n\n\n\n\n\nNota\n\n\nNão é GPS real nem mapa real — é simulação da lógica. O foco do projeto é a infraestrutura de nuvem, rede e dados por trás do problema, não a geolocalização em si."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#onde-entra-a-computação-em-nuvem",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#onde-entra-a-computação-em-nuvem",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Onde entra a Computação em Nuvem",
+    "text": "Onde entra a Computação em Nuvem\n\nO Raspberry Pi vai rodar Docker, Portainer, um broker MQTT e, mais adiante, um microsserviço que compara velocidade x limite\nÉ o mesmo conteúdo do curso (nuvem, virtualização de containers, gerenciamento) aplicado a um caso real\nQuinta-feira, em Redes sem Fio, vocês tratam da configuração de rede desse mesmo Raspberry Pi"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#cronograma-do-projeto-visão-geral",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#cronograma-do-projeto-visão-geral",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Cronograma do projeto (visão geral)",
+    "text": "Cronograma do projeto (visão geral)\n\nHoje — problema, grupos, Raspberry Pi headless\nNuvem privada de borda — Docker, Portainer, broker MQTT\nVeículo conectado — ESP32 + microsserviço de comparação\nPersistência — banco de série temporal para as leituras\nVisualização — dashboard e apresentação final\n\n\nDeixar claro para a turma: este é um módulo inicial de poucas aulas, não o conteúdo do ano inteiro — depois dele o curso segue com o restante do plano de CNVI."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#os-grupos-de-hoje",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#os-grupos-de-hoje",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Os grupos de hoje",
+    "text": "Os grupos de hoje\n\n4 grupos por turma, um por tipo de veículo: Carro · Ônibus · Moto · Patinete elétrico\nCada grupo define: nome do grupo, quem grava o cartão hoje, quem preenche a ficha\nO tipo de veículo define a regra de negócio (limite de velocidade) que vocês vão simular\n\n\n\n\nVeículo\nRegra de velocidade\n\n\n\n\nCarro / Ônibus / Moto\nSegue o limite normal da via\n\n\nPatinete elétrico\nLimitado a vias/ciclovias, 20–25 km/h"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#atividade-de-hoje",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#atividade-de-hoje",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Atividade de hoje",
+    "text": "Atividade de hoje\n\nPreencher a ficha do grupo (rota simulada, limites, hostname do Raspberry Pi)\nGravar o cartão SD com Raspberry Pi OS Lite (headless), em rodízio pelas estações disponíveis\nTestar o acesso via SSH ao Raspberry Pi\n\n\n\n\n\n\n\nNota\n\n\nTemos menos cartões/leitores do que grupos hoje. Vamos revezar nas estações de gravação — quem não estiver gravando, preenche a ficha do grupo e confere a configuração de outro grupo enquanto espera a vez."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#raspberry-pi-como-nó-de-borda",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#raspberry-pi-como-nó-de-borda",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Raspberry Pi como nó de borda",
+    "text": "Raspberry Pi como nó de borda\n\n“Nó de borda” (edge) = o processamento acontece perto de onde o dado é gerado, não direto numa nuvem pública distante\nVantagens: menos latência, funciona mesmo com internet instável, o dado bruto não precisa sair do dispositivo\nMesmo princípio usado em cidades inteligentes, indústria 4.0, IoT em geral"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-o-cartão-sd",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-o-cartão-sd",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Roteiro prático — gravar o cartão SD",
+    "text": "Roteiro prático — gravar o cartão SD\nUsar o Raspberry Pi Imager (https://www.raspberrypi.com/software/), já instalado/baixável nos PCs do laboratório.\n\nChoose Device → o modelo de Raspberry Pi do grupo\nChoose OS → Raspberry Pi OS Lite (64-bit) — sem interface gráfica, é um servidor\nChoose Storage → o cartão SD do grupo\nClique na engrenagem (⚙, ou Ctrl+Shift+X) para as opções avançadas"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-opções-avançadas",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-opções-avançadas",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Roteiro prático — opções avançadas",
+    "text": "Roteiro prático — opções avançadas\n\nHostname: rpi-&lt;veiculo&gt;-&lt;turma&gt; (ex.: rpi-carro-a, rpi-onibus-b)\nEnable SSH → usar autenticação por senha\nUsuário e senha: definir um usuário próprio do grupo (não usar pi/raspberry padrão)\nConfigurar WLAN: SSID/senha da rede do laboratório, país da rede Wi-Fi\nLocale: fuso America/Sao_Paulo, layout de teclado br\n\n\n\n\n\n\n\nNota\n\n\nAnotem hostname, usuário e senha na ficha do grupo — vão precisar disso todas as próximas aulas."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-e-testar",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#roteiro-prático-gravar-e-testar",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Roteiro prático — gravar e testar",
+    "text": "Roteiro prático — gravar e testar\n\nGravar (Write) e aguardar a verificação\nColocar o cartão no Raspberry Pi e ligar\nNo PC: ping rpi-&lt;hostname&gt;.local\nSe responder: ssh &lt;usuario&gt;@rpi-&lt;hostname&gt;.local\n\n\n\n\n\n\n\nNota\n\n\nSem Raspberry Pi disponível agora? Sem problema — terminem a gravação e guardem o cartão. O boot e o teste de SSH podem ficar para o começo da próxima estação livre ou da próxima aula."
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#próxima-aula",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#próxima-aula",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Próxima aula",
+    "text": "Próxima aula\n\nTrazer o cartão gravado e testado (quem não terminou, reveza no início da aula)\nQuinta (RSFI): configuração e teste da rede sem fio do Raspberry Pi\nPróxima CNVI: Docker + Portainer + broker MQTT rodando no Raspberry Pi"
+  },
+  {
+    "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#obrigado",
+    "href": "aulas/16-projeto-fiscalizacao-aula1.html#obrigado",
+    "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "section": "Obrigado!",
+    "text": "Obrigado!"
   },
   {
     "objectID": "aulas/14-analise-solucoes-nuvem.html#objetivos-da-aula",
@@ -1146,6 +1265,13 @@
     "title": "Computação em Nuvem e Virtualização",
     "section": "Aulas",
     "text": "Aulas\n\nApresentação da Disciplina e Critérios de Avaliação\nIntrodução à Computação em Nuvem\nModelos de Serviço em Nuvem e Arquitetura NIST\nGrades Computacionais e TI Verde\nVirtualização: Conceitos e Hipervisores\nMáquinas Virtuais\nPrática: VirtualBox\nData Centers, Dispositivos e Consolidação de Serviços\nVMware x Xen\nDocker: Conceitos e Arquitetura\nPrática Docker I\nPrática Docker II\nModelos de Gerenciamento em Nuvem\nAWS, Azure, Google Cloud e OpenStack\nProjeto: Análise Comparativa de Soluções de Nuvem\nRevisão Geral\n\n\n\n\n\n\n\nNota\n\n\n\nNos slides, use as setas do teclado para navegar, S para abrir as notas do professor e O para visão geral dos slides."
+  },
+  {
+    "objectID": "index.html#projeto-integrador-fiscalização-de-velocidade-sem-radar",
+    "href": "index.html#projeto-integrador-fiscalização-de-velocidade-sem-radar",
+    "title": "Computação em Nuvem e Virtualização",
+    "section": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
+    "text": "Projeto Integrador — Fiscalização de Velocidade sem Radar\nMódulo prático com Raspberry Pi, em conjunto com Redes sem Fio (quinta-feira).\n\nAula 1 — Fundamentos e Setup · Roteiro do grupo"
   },
   {
     "objectID": "index.html#atividades-avaliativas",
@@ -2359,31 +2485,45 @@
     "text": "Encerramento\nObrigado pela participação ao longo do curso!\nComputação em Nuvem e Virtualização — do conceito à prática."
   },
   {
-    "objectID": "atividades/atividade-2-relatorio-virtualbox.html",
-    "href": "atividades/atividade-2-relatorio-virtualbox.html",
-    "title": "Atividade Avaliativa 2 — Virtualização",
+    "objectID": "atividades/atividade-1-modelos-nuvem.html",
+    "href": "atividades/atividade-1-modelos-nuvem.html",
+    "title": "Atividade Avaliativa 1 — Modelos de Nuvem",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Você quer montar um pequeno laboratório de testes no seu próprio notebook, criando 2 ou 3 VMs com Linux para experimentar sem afetar o sistema operacional principal do computador. Qual tipo de hipervisor é o mais indicado para esse cenário?\n2. Depois de configurar uma VM no VirtualBox e instalar tudo que precisava, você quer garantir um “ponto de restauração” para poder desfazer alterações futuras caso algo dê errado. Qual recurso da VM você deve usar?"
+    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma clínica médica precisa armazenar prontuários de pacientes (dados sensíveis, alta exigência de confidencialidade) e, ao mesmo tempo, hospedar um site institucional simples de agendamento, sem dado sensível algum. Qual estratégia de implantação melhor atende aos dois casos ao mesmo tempo?\n2. Uma startup quer lançar um aplicativo rapidamente, com uma equipe pequena de desenvolvedores que não quer administrar servidores, sistema operacional ou runtime — só escrever código e publicar. Qual modelo de serviço é mais adequado?"
   },
   {
-    "objectID": "atividades/atividade-2-relatorio-virtualbox.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-2-relatorio-virtualbox.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 2 — Virtualização",
+    "objectID": "atividades/atividade-1-modelos-nuvem.html#desafio-opcional-sem-valor-obrigatório",
+    "href": "atividades/atividade-1-modelos-nuvem.html#desafio-opcional-sem-valor-obrigatório",
+    "title": "Atividade Avaliativa 1 — Modelos de Nuvem",
     "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nNa VM do VirtualBox que você já criou na Aula 06, mude a configuração de rede para o modo Bridge (em vez de NAT) e verifique, com o comando ip a (ou ifconfig) dentro da VM, se ela recebeu um IP da mesma rede do seu roteador/computador físico. Print do resultado é suficiente — vale como bônus."
+    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nCrie uma conta gratuita em um provedor de nuvem pública (AWS Free Tier, Azure Free Account ou Google Cloud Free Tier) e explore o console por alguns minutos. Tire um print mostrando 3 serviços diferentes disponíveis no painel (ex.: um de computação, um de armazenamento, um de banco de dados) e mande pro professor por curiosidade — vale como bônus."
   },
   {
-    "objectID": "atividades/atividade-4-desafio-docker.html",
-    "href": "atividades/atividade-4-desafio-docker.html",
-    "title": "Atividade Avaliativa 4 — Docker",
+    "objectID": "atividades/atividade-3-vmware-xen.html",
+    "href": "atividades/atividade-3-vmware-xen.html",
+    "title": "Atividade Avaliativa 3 — VMware x Xen",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Você criou um container chamado web-nginx e, depois de um tempo, parou ele com docker stop web-nginx. Agora você quer voltar a usar esse mesmo container (com tudo que já estava configurado nele), sem perder nada. Qual comando você deve usar?\n2. Qual comando lista todos os containers de um host, incluindo os que já estão parados (não só os em execução)?"
+    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma grande empresa precisa migrar uma VM em produção de um servidor físico para outro, sem interromper o serviço nem um segundo, para fazer manutenção de hardware. Qual recurso, nativo do VMware, resolve exatamente esse problema?\n2. Uma ONG de tecnologia educacional, com orçamento muito limitado mas equipe técnica competente, quer montar um pequeno data center próprio. Considerando o que foi visto sobre VMware e Xen, qual seria a escolha mais coerente e por quê?"
   },
   {
-    "objectID": "atividades/atividade-4-desafio-docker.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-4-desafio-docker.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 4 — Docker",
+    "objectID": "atividades/atividade-3-vmware-xen.html#desafio-opcional-sem-valor-obrigatório",
+    "href": "atividades/atividade-3-vmware-xen.html#desafio-opcional-sem-valor-obrigatório",
+    "title": "Atividade Avaliativa 3 — VMware x Xen",
     "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nInstale o Docker Desktop no seu computador (ou use o Docker Playground de novo) e rode um container Nginx publicando a porta 8080: docker run -d -p 8080:80 nginx. Acesse http://localhost:8080 no navegador e print da página padrão do Nginx aparecendo — vale como bônus."
+    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nPesquise rapidamente online: a AWS ainda usa Xen hoje em sua infraestrutura, ou migrou para outra tecnologia de virtualização própria? Escreva 3-4 linhas com o que encontrou e a fonte consultada — vale como bônus."
+  },
+  {
+    "objectID": "atividades/atividade-5-dimensionamento-nuvem.html",
+    "href": "atividades/atividade-5-dimensionamento-nuvem.html",
+    "title": "Atividade Avaliativa 5 — Gerenciamento e Provedores de Nuvem",
+    "section": "",
+    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma empresa passa a usar AWS para um sistema, Azure para outro e Google Cloud para um terceiro, ao mesmo tempo, para não depender de um único fornecedor. Como se chama esse modelo de gerenciamento?\n2. Um hospital público precisa manter os prontuários de pacientes com controle total sobre onde os dados ficam armazenados, por exigência de conformidade com a LGPD, e já possui equipe técnica própria e hardware disponível. Qual solução é mais coerente com esse cenário?"
+  },
+  {
+    "objectID": "atividades/atividade-5-dimensionamento-nuvem.html#desafio-opcional-sem-valor-obrigatório",
+    "href": "atividades/atividade-5-dimensionamento-nuvem.html#desafio-opcional-sem-valor-obrigatório",
+    "title": "Atividade Avaliativa 5 — Gerenciamento e Provedores de Nuvem",
+    "section": "Desafio (opcional, sem valor obrigatório)",
+    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nCrie uma conta gratuita no AWS Free Tier (ou Azure/GCP, se preferir) e lance uma instância de VM no menor tamanho disponível gratuitamente (ex.: t2.micro na AWS). Não precisa fazer nada além de criar e depois encerrar/deletar a instância para não gerar cobrança. Print da instância rodando é suficiente — vale como bônus."
   }
 ]
