@@ -36,13 +36,17 @@ Nos slides, use as setas do teclado para navegar, **S** para abrir as notas do p
 
 Módulo prático com Raspberry Pi, em conjunto com Redes sem Fio (quinta-feira).
 
-1. [Aula 1 — Fundamentos e Setup](aulas/16-projeto-fiscalizacao-aula1.html)
-   · [Roteiro do grupo](atividades/roteiro-projeto-fiscalizacao-aula1.html)
+1. [Projeto 01](aulas/16-projeto-fiscalizacao-aula1.html)
+   · [Roteiro Projeto 01](atividades/roteiro-projeto-fiscalizacao-aula1.html)
 
 ## Atividades Avaliativas
 
-1. [Modelos de Nuvem](atividades/atividade-1-modelos-nuvem.html)
-2. [Virtualização](atividades/atividade-2-relatorio-virtualbox.html)
-3. [VMware x Xen](atividades/atividade-3-vmware-xen.html)
-4. [Docker](atividades/atividade-4-desafio-docker.html)
-5. [Gerenciamento e Provedores de Nuvem](atividades/atividade-5-dimensionamento-nuvem.html)
+Entrega individual via GitHub. Comece pelas instruções abaixo.
+
+0. [Instruções e Regras de Entrega](atividades/0-instrucoes-entrega.html)
+1. [Técnicas de Virtualização em Infraestrutura de TI](atividades/atividade-1-virtualizacao-infraestrutura.html)
+2. [Dispositivos de Comunicação e Armazenamento](atividades/atividade-2-dispositivos-comunicacao-armazenamento.html)
+3. [Grades Computacionais e Computação em Nuvem](atividades/atividade-3-grades-nuvem.html)
+4. [TI Verde](atividades/atividade-4-ti-verde.html)
+5. [Virtualização em Data Centers: VMware e Xen](atividades/atividade-5-virtualizacao-data-centers.html)
+6. [Computação em Nuvem: NIST e Provedores](atividades/atividade-6-computacao-nuvem-nist-provedores.html)
