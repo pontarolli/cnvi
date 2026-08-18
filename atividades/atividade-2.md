@@ -1,0 +1,25 @@
+# Atividade Avaliativa 2, Dispositivos de Comunicação e Armazenamento
+
+**Instruções:** cada questão vale 5,0 pontos. Marque a alternativa correta com um `x` dentro do checkbox (`- [x]`) e escreva sua justificativa no campo indicado.
+
+---
+
+**1.** Uma empresa precisa que vários servidores diferentes acessem os mesmos arquivos, como se fosse uma pasta de rede compartilhada, sem exigir desempenho de acesso a blocos dedicado nem topologia de rede dedicada de armazenamento. Qual dispositivo de armazenamento é o mais adequado?
+
+- [ ] a) SAN (Storage Area Network), por ser sempre a opção mais barata
+- [ ] b) NAS (Network Attached Storage), pois oferece armazenamento em nível de arquivo, acessível via rede por múltiplos servidores
+- [ ] c) Um único HD externo USB conectado a um único servidor
+- [ ] d) SAN, porque é a única opção que permite acesso por mais de um servidor
+- [ ] e) Nenhum dispositivo de armazenamento em rede resolve esse cenário
+
+**Justificativa:** <escreva aqui sua justificativa>
+
+**2.** Uma pequena empresa tem 4 discos disponíveis e quer montar um arranjo de armazenamento que ofereça tolerância a falha de disco sem sacrificar metade da capacidade total, como aconteceria em um espelhamento simples. Qual nível de RAID atende melhor esse requisito?
+
+- [ ] a) RAID 0, pois maximiza o desempenho, mesmo sem redundância
+- [ ] b) RAID 1, pois espelha todos os discos, mas usa só 50% da capacidade útil
+- [ ] c) RAID 5, pois distribui a paridade entre os discos, unindo redundância com melhor aproveitamento de espaço que o RAID 1
+- [ ] d) Nenhum nível de RAID oferece tolerância a falhas
+- [ ] e) RAID 5 não pode ser usado com apenas 4 discos
+
+**Justificativa:** <escreva aqui sua justificativa>

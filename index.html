@@ -147,12 +147,15 @@ Nota
 </section>
 <section id="atividades-avaliativas" class="level2">
 <h2 class="anchored" data-anchor-id="atividades-avaliativas">Atividades Avaliativas</h2>
-<ol type="1">
-<li><a href="atividades/atividade-1-modelos-nuvem.html">Modelos de Nuvem</a></li>
-<li><a href="atividades/atividade-2-relatorio-virtualbox.html">Virtualização</a></li>
-<li><a href="atividades/atividade-3-vmware-xen.html">VMware x Xen</a></li>
-<li><a href="atividades/atividade-4-desafio-docker.html">Docker</a></li>
-<li><a href="atividades/atividade-5-dimensionamento-nuvem.html">Gerenciamento e Provedores de Nuvem</a></li>
+<p>Entrega individual via GitHub. Comece pelas instruções abaixo.</p>
+<ol start="0" type="1">
+<li><a href="atividades/0-instrucoes-entrega.html">Instruções e Regras de Entrega</a></li>
+<li><a href="atividades/atividade-1-virtualizacao-infraestrutura.html">Técnicas de Virtualização em Infraestrutura de TI</a></li>
+<li><a href="atividades/atividade-2-dispositivos-comunicacao-armazenamento.html">Dispositivos de Comunicação e Armazenamento</a></li>
+<li><a href="atividades/atividade-3-grades-nuvem.html">Grades Computacionais e Computação em Nuvem</a></li>
+<li><a href="atividades/atividade-4-ti-verde.html">TI Verde</a></li>
+<li><a href="atividades/atividade-5-virtualizacao-data-centers.html">Virtualização em Data Centers: VMware e Xen</a></li>
+<li><a href="atividades/atividade-6-computacao-nuvem-nist-provedores.html">Computação em Nuvem: NIST e Provedores</a></li>
 </ol>
 
 
@@ -232,7 +235,7 @@ Nota
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/pontarolli\.github\.io\/cnvi-aulas\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

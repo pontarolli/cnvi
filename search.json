@@ -56,32 +56,25 @@
     "text": "7. Para a próxima aula de CNVI\nO que falta terminar? ______________________________________________"
   },
   {
-    "objectID": "atividades/atividade-4-desafio-docker.html",
-    "href": "atividades/atividade-4-desafio-docker.html",
-    "title": "Atividade Avaliativa 4 — Docker",
+    "objectID": "atividades/atividade-5-virtualizacao-data-centers.html",
+    "href": "atividades/atividade-5-virtualizacao-data-centers.html",
+    "title": "Atividade Avaliativa 5, Virtualização em Data Centers: VMware e Xen",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Você criou um container chamado web-nginx e, depois de um tempo, parou ele com docker stop web-nginx. Agora você quer voltar a usar esse mesmo container (com tudo que já estava configurado nele), sem perder nada. Qual comando você deve usar?\n2. Qual comando lista todos os containers de um host, incluindo os que já estão parados (não só os em execução)?"
+    "text": "Dica\n\n\n\nComo entregar: use o mesmo repositório da Atividade 1 (veja as instruções e regras completas de entrega). Baixe o arquivo atividade-5.md, marque a alternativa correta no checkbox, preencha a justificativa de cada questão e faça o commit no mesmo dia em que a atividade for aplicada.\n\n\nInstruções: Cada questão vale 5,0 pontos. Marque a alternativa correta no checkbox e preencha o campo de justificativa.\n\n1. Um data center precisa consolidar 20 servidores físicos com aplicações críticas de diferentes clientes, e a empresa exige suporte técnico comercial formal, com SLA (acordo de nível de serviço), para o hipervisor usado. Qual escolha é mais coerente com esse requisito?\n\na) Xen puro, por ser gratuito e não exigir suporte comercial\nb) VMware ESXi, por ser uma solução comercial madura, com suporte enterprise e SLA formal\nc) Nenhum hipervisor tipo 1 atende esse cenário\nd) Apenas hipervisores tipo 2 oferecem suporte comercial com SLA\ne) A escolha do hipervisor não influencia o suporte oferecido pelo fabricante\n\nJustificativa: \n2. Uma empresa precisa migrar uma VM em produção de um servidor físico para outro, para fazer manutenção de hardware, sem interromper o serviço nem por um segundo. Qual recurso, nativo do VMware, resolve exatamente esse problema?\n\na) Docker Swarm\nb) vMotion: migração de VMs em execução entre hosts físicos, sem interrupção do serviço\nc) Paravirtualização\nd) Terraform\ne) Snapshot\n\nJustificativa:"
   },
   {
-    "objectID": "atividades/atividade-4-desafio-docker.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-4-desafio-docker.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 4 — Docker",
-    "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nInstale o Docker Desktop no seu computador (ou use o Docker Playground de novo) e rode um container Nginx publicando a porta 8080: docker run -d -p 8080:80 nginx. Acesse http://localhost:8080 no navegador e print da página padrão do Nginx aparecendo — vale como bônus."
-  },
-  {
-    "objectID": "atividades/atividade-2-relatorio-virtualbox.html",
-    "href": "atividades/atividade-2-relatorio-virtualbox.html",
-    "title": "Atividade Avaliativa 2 — Virtualização",
+    "objectID": "atividades/atividade-3-grades-nuvem.html",
+    "href": "atividades/atividade-3-grades-nuvem.html",
+    "title": "Atividade Avaliativa 3, Grades Computacionais e Computação em Nuvem",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Você quer montar um pequeno laboratório de testes no seu próprio notebook, criando 2 ou 3 VMs com Linux para experimentar sem afetar o sistema operacional principal do computador. Qual tipo de hipervisor é o mais indicado para esse cenário?\n2. Depois de configurar uma VM no VirtualBox e instalar tudo que precisava, você quer garantir um “ponto de restauração” para poder desfazer alterações futuras caso algo dê errado. Qual recurso da VM você deve usar?"
+    "text": "Dica\n\n\n\nComo entregar: use o mesmo repositório da Atividade 1 (veja as instruções e regras completas de entrega). Baixe o arquivo atividade-3.md, marque a alternativa correta no checkbox, preencha a justificativa de cada questão e faça o commit no mesmo dia em que a atividade for aplicada.\n\n\nInstruções: Cada questão vale 5,0 pontos. Marque a alternativa correta no checkbox e preencha o campo de justificativa.\n\n1. Um consórcio de universidades quer somar o poder de processamento ocioso dos computadores de vários laboratórios, em diferentes instituições, para rodar simulações científicas pesadas, sem que exista um provedor comercial centralizado cobrando por uso. Qual modelo de infraestrutura descreve melhor esse cenário?\n\na) Computação em nuvem pública, pois é sempre a opção mais barata\nb) Grade computacional (grid computing), pois integra recursos ociosos de várias instituições parceiras, sem um modelo comercial centralizado de cobrança por uso\nc) Um único supercomputador comprado por uma das universidades\nd) SaaS, pois o processamento é feito por um software de terceiros\ne) Nenhum modelo de infraestrutura distribuída se aplica a esse caso\n\nJustificativa: \n2. Um e-commerce tem picos de acesso muito maiores que o normal em datas como a Black Friday, e precisa aumentar e reduzir sua capacidade de servidores automaticamente conforme a demanda, pagando apenas pelo que usar em cada período. Qual modelo de infraestrutura atende melhor essa necessidade?\n\na) Grade computacional, pois é o modelo ideal para variações sazonais de tráfego\nb) Computação em nuvem, pela elasticidade sob demanda e pelo modelo de cobrança por uso (pay-as-you-go)\nc) Comprar servidores físicos suficientes para o pico do ano, mesmo que fiquem ociosos o resto do tempo\nd) Nenhuma infraestrutura resolve variações bruscas de tráfego\ne) Grade computacional, porque não tem custo de infraestrutura\n\nJustificativa:"
   },
   {
-    "objectID": "atividades/atividade-2-relatorio-virtualbox.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-2-relatorio-virtualbox.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 2 — Virtualização",
-    "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nNa VM do VirtualBox que você já criou na Aula 06, mude a configuração de rede para o modo Bridge (em vez de NAT) e verifique, com o comando ip a (ou ifconfig) dentro da VM, se ela recebeu um IP da mesma rede do seu roteador/computador físico. Print do resultado é suficiente — vale como bônus."
+    "objectID": "atividades/atividade-1-virtualizacao-infraestrutura.html",
+    "href": "atividades/atividade-1-virtualizacao-infraestrutura.html",
+    "title": "Atividade Avaliativa 1, Técnicas de Virtualização em Infraestrutura de TI",
+    "section": "",
+    "text": "Dica\n\n\n\nComo entregar: veja as instruções e regras completas de entrega antes de começar. Baixe o arquivo atividade-1.md, marque a alternativa correta no checkbox, preencha a justificativa de cada questão e faça o commit no mesmo dia em que a atividade for aplicada.\n\n\nInstruções: Cada questão vale 5,0 pontos. Marque a alternativa correta no checkbox e preencha o campo de justificativa.\n\n1. Uma empresa tem 10 servidores físicos, cada um rodando uma única aplicação e usando, em média, 15% da capacidade de CPU. A empresa quer reduzir o número de servidores físicos, os custos de energia e climatização, sem perder o isolamento entre as aplicações. Qual técnica resolve esse problema?\n\na) Comprar mais servidores físicos, um para cada nova aplicação\nb) Consolidar as aplicações em múltiplas VMs, rodando em um número menor de hosts físicos, usando um hipervisor\nc) Desligar permanentemente as aplicações menos usadas\nd) Substituir os servidores físicos por notebooks comuns\ne) Virtualização não permite reduzir o número de servidores físicos\n\nJustificativa: \n2. Um data center de produção precisa do máximo desempenho possível para as VMs, com isolamento forte entre elas e sem depender de um sistema operacional hospedeiro rodando por baixo do hipervisor. Qual tipo de hipervisor é o mais adequado?\n\na) Tipo 2 (hosted), pois é mais simples de instalar\nb) Tipo 1 (bare-metal), pois roda diretamente sobre o hardware, sem SO hospedeiro intermediário\nc) Nenhum hipervisor é necessário, pois apenas containers resolvem isso\nd) Tipo 2, porque tem sempre melhor desempenho que o Tipo 1\ne) É indiferente: os dois tipos entregam o mesmo desempenho em produção\n\nJustificativa:"
   },
   {
     "objectID": "aulas/16-projeto-fiscalizacao-aula1.html#objetivos-desta-aula",
@@ -1341,7 +1334,7 @@
     "href": "index.html#atividades-avaliativas",
     "title": "Computação em Nuvem e Virtualização",
     "section": "Atividades Avaliativas",
-    "text": "Atividades Avaliativas\n\nModelos de Nuvem\nVirtualização\nVMware x Xen\nDocker\nGerenciamento e Provedores de Nuvem"
+    "text": "Atividades Avaliativas\nEntrega individual via GitHub. Comece pelas instruções abaixo.\n\nInstruções e Regras de Entrega\nTécnicas de Virtualização em Infraestrutura de TI\nDispositivos de Comunicação e Armazenamento\nGrades Computacionais e Computação em Nuvem\nTI Verde\nVirtualização em Data Centers: VMware e Xen\nComputação em Nuvem: NIST e Provedores"
   },
   {
     "objectID": "aulas/01-introducao-computacao-nuvem.html#introdução",
@@ -2548,45 +2541,59 @@
     "text": "Encerramento\nObrigado pela participação ao longo do curso!\nComputação em Nuvem e Virtualização — do conceito à prática."
   },
   {
-    "objectID": "atividades/atividade-1-modelos-nuvem.html",
-    "href": "atividades/atividade-1-modelos-nuvem.html",
-    "title": "Atividade Avaliativa 1 — Modelos de Nuvem",
+    "objectID": "atividades/0-instrucoes-entrega.html",
+    "href": "atividades/0-instrucoes-entrega.html",
+    "title": "Instruções e Regras de Entrega",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma clínica médica precisa armazenar prontuários de pacientes (dados sensíveis, alta exigência de confidencialidade) e, ao mesmo tempo, hospedar um site institucional simples de agendamento, sem dado sensível algum. Qual estratégia de implantação melhor atende aos dois casos ao mesmo tempo?\n2. Uma startup quer lançar um aplicativo rapidamente, com uma equipe pequena de desenvolvedores que não quer administrar servidores, sistema operacional ou runtime — só escrever código e publicar. Qual modelo de serviço é mais adequado?"
+    "text": "Crie um repositório privado no GitHub, na sua conta pessoal, com o nome exatamente cnvi-atividades (todos os alunos devem usar esse mesmo nome, para facilitar a conferência).\nBaixe o arquivo README.md, salve-o na raiz do repositório e preencha o campo com seu nome completo.\nEm Settings → Collaborators → Add people, adicione o professor como colaborador: github.com/pontarolli.\n\nEsse repositório é único para a disciplina e será reaproveitado nas 6 atividades."
   },
   {
-    "objectID": "atividades/atividade-1-modelos-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-1-modelos-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 1 — Modelos de Nuvem",
-    "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nCrie uma conta gratuita em um provedor de nuvem pública (AWS Free Tier, Azure Free Account ou Google Cloud Free Tier) e explore o console por alguns minutos. Tire um print mostrando 3 serviços diferentes disponíveis no painel (ex.: um de computação, um de armazenamento, um de banco de dados) e mande pro professor por curiosidade — vale como bônus."
-  },
-  {
-    "objectID": "atividades/atividade-3-vmware-xen.html",
-    "href": "atividades/atividade-3-vmware-xen.html",
-    "title": "Atividade Avaliativa 3 — VMware x Xen",
+    "objectID": "atividades/0-instrucoes-entrega.html#repositório-fazer-uma-única-vez",
+    "href": "atividades/0-instrucoes-entrega.html#repositório-fazer-uma-única-vez",
+    "title": "Instruções e Regras de Entrega",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma grande empresa precisa migrar uma VM em produção de um servidor físico para outro, sem interromper o serviço nem um segundo, para fazer manutenção de hardware. Qual recurso, nativo do VMware, resolve exatamente esse problema?\n2. Uma ONG de tecnologia educacional, com orçamento muito limitado mas equipe técnica competente, quer montar um pequeno data center próprio. Considerando o que foi visto sobre VMware e Xen, qual seria a escolha mais coerente e por quê?"
+    "text": "Crie um repositório privado no GitHub, na sua conta pessoal, com o nome exatamente cnvi-atividades (todos os alunos devem usar esse mesmo nome, para facilitar a conferência).\nBaixe o arquivo README.md, salve-o na raiz do repositório e preencha o campo com seu nome completo.\nEm Settings → Collaborators → Add people, adicione o professor como colaborador: github.com/pontarolli.\n\nEsse repositório é único para a disciplina e será reaproveitado nas 6 atividades."
   },
   {
-    "objectID": "atividades/atividade-3-vmware-xen.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-3-vmware-xen.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 3 — VMware x Xen",
-    "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nPesquise rapidamente online: a AWS ainda usa Xen hoje em sua infraestrutura, ou migrou para outra tecnologia de virtualização própria? Escreva 3-4 linhas com o que encontrou e a fonte consultada — vale como bônus."
+    "objectID": "atividades/0-instrucoes-entrega.html#estrutura-final-do-repositório",
+    "href": "atividades/0-instrucoes-entrega.html#estrutura-final-do-repositório",
+    "title": "Instruções e Regras de Entrega",
+    "section": "Estrutura final do repositório",
+    "text": "Estrutura final do repositório\nAo final das 6 atividades, seu repositório cnvi-atividades deve ficar assim:\ncnvi-atividades/\n├── README.md\n├── atividade-1.md\n├── atividade-2.md\n├── atividade-3.md\n├── atividade-4.md\n├── atividade-5.md\n└── atividade-6.md\nTodos os arquivos direto na raiz do repositório, sem subpastas e sem mudar os nomes."
   },
   {
-    "objectID": "atividades/atividade-5-dimensionamento-nuvem.html",
-    "href": "atividades/atividade-5-dimensionamento-nuvem.html",
-    "title": "Atividade Avaliativa 5 — Gerenciamento e Provedores de Nuvem",
+    "objectID": "atividades/0-instrucoes-entrega.html#entrega-de-cada-atividade",
+    "href": "atividades/0-instrucoes-entrega.html#entrega-de-cada-atividade",
+    "title": "Instruções e Regras de Entrega",
+    "section": "Entrega de cada atividade",
+    "text": "Entrega de cada atividade\nPara cada uma das 6 atividades:\n\nBaixe o arquivo atividade-N.md correspondente (o link fica na página de cada atividade).\nSalve-o na raiz do repositório, sem mudar o nome do arquivo.\nMarque a alternativa correta de cada questão com um x dentro do checkbox (- [x]).\nPreencha o campo de justificativa de cada questão.\nFaça o commit e o push."
+  },
+  {
+    "objectID": "atividades/0-instrucoes-entrega.html#regra-de-prazo",
+    "href": "atividades/0-instrucoes-entrega.html#regra-de-prazo",
+    "title": "Instruções e Regras de Entrega",
+    "section": "Regra de prazo",
+    "text": "Regra de prazo\n\n\n\n\n\n\nAviso\n\n\n\nSó vale a entrega feita no mesmo dia em que a atividade for aplicada. O professor confere a data pelo histórico de commits do repositório no GitHub, entregas com commit em outro dia não serão consideradas."
+  },
+  {
+    "objectID": "atividades/atividade-2-dispositivos-comunicacao-armazenamento.html",
+    "href": "atividades/atividade-2-dispositivos-comunicacao-armazenamento.html",
+    "title": "Atividade Avaliativa 2, Dispositivos de Comunicação e Armazenamento",
     "section": "",
-    "text": "Nome: ______________________________________________\nInstruções: Cada questão vale 5,0 pontos. Marque apenas UMA alternativa por questão.\n1. Uma empresa passa a usar AWS para um sistema, Azure para outro e Google Cloud para um terceiro, ao mesmo tempo, para não depender de um único fornecedor. Como se chama esse modelo de gerenciamento?\n2. Um hospital público precisa manter os prontuários de pacientes com controle total sobre onde os dados ficam armazenados, por exigência de conformidade com a LGPD, e já possui equipe técnica própria e hardware disponível. Qual solução é mais coerente com esse cenário?"
+    "text": "Dica\n\n\n\nComo entregar: use o mesmo repositório da Atividade 1 (veja as instruções e regras completas de entrega). Baixe o arquivo atividade-2.md, marque a alternativa correta no checkbox, preencha a justificativa de cada questão e faça o commit no mesmo dia em que a atividade for aplicada.\n\n\nInstruções: Cada questão vale 5,0 pontos. Marque a alternativa correta no checkbox e preencha o campo de justificativa.\n\n1. Uma empresa precisa que vários servidores diferentes acessem os mesmos arquivos, como se fosse uma pasta de rede compartilhada, sem exigir desempenho de acesso a blocos dedicado nem topologia de rede dedicada de armazenamento. Qual dispositivo de armazenamento é o mais adequado?\n\na) SAN (Storage Area Network), por ser sempre a opção mais barata\nb) NAS (Network Attached Storage), pois oferece armazenamento em nível de arquivo, acessível via rede por múltiplos servidores\nc) Um único HD externo USB conectado a um único servidor\nd) SAN, porque é a única opção que permite acesso por mais de um servidor\ne) Nenhum dispositivo de armazenamento em rede resolve esse cenário\n\nJustificativa: \n2. Uma pequena empresa tem 4 discos disponíveis e quer montar um arranjo de armazenamento que ofereça tolerância a falha de disco sem sacrificar metade da capacidade total, como aconteceria em um espelhamento simples. Qual nível de RAID atende melhor esse requisito?\n\na) RAID 0, pois maximiza o desempenho, mesmo sem redundância\nb) RAID 1, pois espelha todos os discos, mas usa só 50% da capacidade útil\nc) RAID 5, pois distribui a paridade entre os discos, unindo redundância com melhor aproveitamento de espaço que o RAID 1\nd) Nenhum nível de RAID oferece tolerância a falhas\ne) RAID 5 não pode ser usado com apenas 4 discos\n\nJustificativa:"
   },
   {
-    "objectID": "atividades/atividade-5-dimensionamento-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "href": "atividades/atividade-5-dimensionamento-nuvem.html#desafio-opcional-sem-valor-obrigatório",
-    "title": "Atividade Avaliativa 5 — Gerenciamento e Provedores de Nuvem",
-    "section": "Desafio (opcional, sem valor obrigatório)",
-    "text": "Desafio (opcional, sem valor obrigatório)\n\n\n\n\n\n\nNota\n\n\n\nPara quem terminar a atividade rápido — não é obrigatório e não afeta a nota se não for feito.\nCrie uma conta gratuita no AWS Free Tier (ou Azure/GCP, se preferir) e lance uma instância de VM no menor tamanho disponível gratuitamente (ex.: t2.micro na AWS). Não precisa fazer nada além de criar e depois encerrar/deletar a instância para não gerar cobrança. Print da instância rodando é suficiente — vale como bônus."
+    "objectID": "atividades/atividade-4-ti-verde.html",
+    "href": "atividades/atividade-4-ti-verde.html",
+    "title": "Atividade Avaliativa 4, TI Verde",
+    "section": "",
+    "text": "Dica\n\n\n\nComo entregar: use o mesmo repositório da Atividade 1 (veja as instruções e regras completas de entrega). Baixe o arquivo atividade-4.md, marque a alternativa correta no checkbox, preencha a justificativa de cada questão e faça o commit no mesmo dia em que a atividade for aplicada.\n\n\nInstruções: Cada questão vale 5,0 pontos. Marque a alternativa correta no checkbox e preencha o campo de justificativa.\n\n1. Um data center quer reduzir seu consumo de energia e sua pegada de carbono. Entre as práticas abaixo, qual está mais alinhada aos princípios de TI Verde e usa diretamente um conceito visto na disciplina?\n\na) Manter servidores físicos subutilizados ligados 24 horas por dia, “por segurança”\nb) Consolidar cargas de trabalho em menos servidores físicos por meio de virtualização, reduzindo hardware ocioso e consumo energético\nc) Aumentar a temperatura do data center sem qualquer controle, ignorando as recomendações do fabricante\nd) Comprar mais servidores físicos para distribuir a carga de trabalho\ne) TI Verde não tem relação com virtualização\n\nJustificativa: \n2. O PUE (Power Usage Effectiveness) mede a eficiência energética de um data center: quanto mais próximo de 1,0, menor é o desperdício de energia com estruturas de apoio (refrigeração, perdas elétricas etc.) em relação ao consumo dos equipamentos de TI. O Data Center A tem PUE = 1,2 e o Data Center B tem PUE = 2,5. Qual é mais eficiente energeticamente, e por quê?\n\na) Data Center B, pois um PUE maior indica mais eficiência energética\nb) Data Center A, pois um PUE mais próximo de 1,0 indica menos energia desperdiçada em overhead além do consumo de TI\nc) Os dois são igualmente eficientes, pois PUE não mede eficiência energética\nd) Data Center B, porque consome mais energia no total\ne) O PUE não pode ser comparado entre data centers diferentes\n\nJustificativa:"
+  },
+  {
+    "objectID": "atividades/atividade-6-computacao-nuvem-nist-provedores.html",
+    "href": "atividades/atividade-6-computacao-nuvem-nist-provedores.html",
+    "title": "Atividade Avaliativa 6, Computação em Nuvem: NIST e Provedores",
+    "section": "",
+    "text": "Dica\n\n\n\nComo entregar: use o mesmo repositório da Atividade 1 (veja as instruções e regras completas de entrega). Baixe o arquivo atividade-6.md, marque a alternativa correta no checkbox, preencha a justificativa de cada questão e faça o commit no mesmo dia em que a atividade for aplicada.\n\n\nInstruções: Cada questão vale 5,0 pontos. Marque a alternativa correta no checkbox e preencha o campo de justificativa.\n\n1. Uma startup quer lançar um sistema rapidamente e precisa de controle total sobre o sistema operacional e o runtime das máquinas, mas não quer administrar nenhum hardware físico. Segundo o modelo de referência do NIST, qual modelo de serviço em nuvem atende melhor essa necessidade?\n\na) SaaS, pois entrega um software pronto de terceiros\nb) PaaS, pois o provedor cuida do runtime, deixando pouco controle ao cliente\nc) IaaS, pois fornece máquinas virtuais, armazenamento e rede, deixando o controle do SO e do runtime para o cliente\nd) Nenhum modelo de serviço em nuvem oferece esse nível de controle\ne) FaaS (Function as a Service), pois abstrai totalmente o servidor\n\nJustificativa: \n2. Uma empresa quer construir sua própria nuvem privada, rodando sobre hardware do próprio data center, usando uma plataforma open source compatível com os conceitos de provisionamento self-service e APIs vistos nos grandes provedores públicos. Qual solução atende esse cenário?\n\na) Contratar diretamente a AWS, hospedando fisicamente no próprio data center\nb) OpenStack, uma plataforma open source para construir nuvens privadas (ou públicas) sobre hardware próprio\nc) Apenas o Azure oferece essa opção\nd) Não existe software para montar uma nuvem privada open source\ne) Google Cloud, pois é sempre a opção mais barata para nuvem privada\n\nJustificativa:"
   }
 ]
