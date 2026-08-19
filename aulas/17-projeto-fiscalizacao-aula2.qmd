@@ -175,7 +175,7 @@ services:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: always
-    command: --admin-password '$$2b$$10$$i1C.w5dbHX9R7TRliYOBCeDAsaB74oSC3Jo5JVLY6fHGAHLxhvQR.'
+    command: --admin-password '$$2b$$10$$7nPyOAsha7uiMAeA55/6Z.muRIi5.jf8G7JPteVN9OtdIDuSS6vS2'
     ports:
       - "8000:8000"
       - "9443:9443"
@@ -190,15 +190,12 @@ volumes:
 ## `docker-compose.yml` — sobre o `--admin-password`
 
 ::: {.callout-note}
-`--admin-password` já vem com o usuário `admin` e a senha
-`MY#vzbut6XFC` provisionados (o texto no comando é só o **hash** bcrypt
-da senha, não a senha em texto puro). Com isso o Portainer sobe pronto
-pra login direto, sem passar pela tela de criar administrador nem pelo
-token do log.
+Não precisam entender essa linha pra usar — só o login importa: usuário
+`admin`, senha `147258369147` (próximo slide). O texto gigante no
+comando é só uma versão **criptografada** dessa senha, que o Portainer
+exige nesse formato específico. Com isso ele já sobe pronto pra login
+direto, sem tela de criar administrador nem token no log.
 :::
-
-Os `$$` duplicados no comando são só a forma do Docker Compose escapar
-um `$` literal dentro do arquivo — não fazem parte do hash.
 
 ## `docker-compose.yml` — node-red
 
@@ -248,7 +245,7 @@ sem afetar o outro, sem apagar os dados: entrar na pasta dele e rodar
 No Portainer, façam login direto (sem tela de cadastro nem token):
 
 - **Usuário:** `admin`
-- **Senha:** `MY#vzbut6XFC`
+- **Senha:** `147258369147`
 
 Selecionem o ambiente **local** — é o próprio Docker do Raspberry Pi. Na
 aba **Containers** dá pra iniciar, parar, reiniciar e ver logs com
