@@ -207,7 +207,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v40
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v41
           </p>
     </div>
 </div>
@@ -220,7 +220,7 @@ Ricardo Pasquati Pontarolli
 <li>Atualizar o sistema operacional (<code>apt update</code> / <code>apt upgrade</code>)</li>
 <li>Instalar o Docker e o Docker Compose</li>
 <li>Liberar o usuário <code>pi</code> para rodar Docker sem <code>sudo</code></li>
-<li>Instalar o Portainer e o Node-RED em cada nó, a partir de um <code>docker-compose.yml</code></li>
+<li>Instalar o Portainer e o Node-RED em cada nó, cada um com seu próprio <code>docker-compose.yml</code></li>
 </ul>
 <aside class="notes">
 <p>Retomada rápida: na aula passada os grupos gravaram o cartão, ligaram o nó e testaram o acesso via SSH. Hoje seguimos preparando esse mesmo nó compartilhado para rodar containers — ainda sem o broker MQTT, isso fica pra próxima.</p>
@@ -365,7 +365,7 @@ Ricardo Pasquati Pontarolli
 <ul>
 <li>Um comando <code>docker run</code> longo é fácil de esquecer ou digitar errado da próxima vez — e some do histórico se ninguém anotar</li>
 <li>Um arquivo <code>docker-compose.yml</code> <strong>documenta exatamente</strong> o que foi subido, com todas as opções — e fica salvo, versionado, no repositório do grupo</li>
-<li>A partir de hoje, todo container do projeto sobe por um arquivo <code>docker-compose.yml</code>, não por comando avulso no terminal</li>
+<li>A partir de hoje, todo container do projeto sobe por um arquivo <code>docker-compose.yml</code>, não por comando avulso no terminal — um arquivo por serviço, cada um na sua própria pasta</li>
 </ul>
 </section>
 <section id="por-que-instalar-o-portainer" class="slide level2">
@@ -405,41 +405,37 @@ Ricardo Pasquati Pontarolli
 <li>Ou seja: o “teste de hoje” já fica útil, em vez de descartável</li>
 </ul>
 </section>
-<section id="roteiro-prático-docker-compose.yml-do-nó" class="slide level2">
-<h2>Roteiro prático — <code>docker-compose.yml</code> do nó</h2>
+<section id="roteiro-prático-pastas-do-projeto" class="slide level2">
+<h2>Roteiro prático — pastas do projeto</h2>
 <ol type="1">
-<li>Criar uma pasta pro projeto: <code>mkdir ~/fiscalizacao &amp;&amp; cd ~/fiscalizacao</code></li>
-<li>Criar o arquivo <code>docker-compose.yml</code> com os dois serviços:</li>
+<li>Criar uma pasta pro projeto, com uma subpasta por serviço:</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="fu">services</span><span class="kw">:</span></span>
-<span id="cb8-2"><a></a><span class="at">  </span><span class="fu">portainer</span><span class="kw">:</span></span>
-<span id="cb8-3"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> portainer/portainer-ce:latest</span></span>
-<span id="cb8-4"><a></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> portainer</span></span>
-<span id="cb8-5"><a></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span>
-<span id="cb8-6"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb8-7"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"8000:8000"</span></span>
-<span id="cb8-8"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"9443:9443"</span></span>
-<span id="cb8-9"><a></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb8-10"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> /var/run/docker.sock:/var/run/docker.sock</span></span>
-<span id="cb8-11"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> portainer_data:/data</span></span>
-<span id="cb8-12"><a></a></span>
-<span id="cb8-13"><a></a><span class="at">  </span><span class="fu">node-red</span><span class="kw">:</span></span>
-<span id="cb8-14"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> nodered/node-red:latest</span></span>
-<span id="cb8-15"><a></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> node-red</span></span>
-<span id="cb8-16"><a></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span>
-<span id="cb8-17"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
-<span id="cb8-18"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"1880:1880"</span></span>
-<span id="cb8-19"><a></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb8-20"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> node_red_data:/data</span></span>
-<span id="cb8-21"><a></a></span>
-<span id="cb8-22"><a></a><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb8-23"><a></a><span class="at">  </span><span class="fu">portainer_data</span><span class="kw">:</span></span>
-<span id="cb8-24"><a></a><span class="at">  </span><span class="fu">node_red_data</span><span class="kw">:</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/fiscalizacao/portainer ~/fiscalizacao/node-red</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li>Cada serviço vai ter seu próprio <code>docker-compose.yml</code>, isolado na sua pasta — não um arquivo único com os dois</li>
+</ol>
 </section>
-<section id="roteiro-prático-subindo-com-docker-compose" class="slide level2">
-<h2>Roteiro prático — subindo com Docker Compose</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="ex">docker</span> compose up <span class="at">-d</span></span>
-<span id="cb9-2"><a></a><span class="ex">docker</span> compose ps</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="docker-compose.yml-portainer" class="slide level2">
+<h2><code>docker-compose.yml</code> — portainer</h2>
+<p><code>cd ~/fiscalizacao/portainer &amp;&amp; nano docker-compose.yml</code> — colar o conteúdo abaixo, salvar com <code>Ctrl+O</code>, <code>Enter</code> e sair com <code>Ctrl+X</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb9-2"><a></a><span class="at">  </span><span class="fu">portainer</span><span class="kw">:</span></span>
+<span id="cb9-3"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> portainer/portainer-ce:latest</span></span>
+<span id="cb9-4"><a></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> portainer</span></span>
+<span id="cb9-5"><a></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span>
+<span id="cb9-6"><a></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> --admin-password '$$2b$$10$$i1C.w5dbHX9R7TRliYOBCeDAsaB74oSC3Jo5JVLY6fHGAHLxhvQR.'</span></span>
+<span id="cb9-7"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb9-8"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"8000:8000"</span></span>
+<span id="cb9-9"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"9443:9443"</span></span>
+<span id="cb9-10"><a></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb9-11"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> /var/run/docker.sock:/var/run/docker.sock</span></span>
+<span id="cb9-12"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> portainer_data:/data</span></span>
+<span id="cb9-13"><a></a></span>
+<span id="cb9-14"><a></a><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb9-15"><a></a><span class="at">  </span><span class="fu">portainer_data</span><span class="kw">:</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="docker-compose.yml-sobre-o---admin-password" class="slide level2">
+<h2><code>docker-compose.yml</code> — sobre o <code>--admin-password</code></h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -449,7 +445,44 @@ Ricardo Pasquati Pontarolli
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><code>up -d</code> sobe os dois serviços do arquivo de uma vez, em segundo plano (<code>-d</code> de <em>detached</em>). Pra derrubar tudo depois, sem apagar os dados: <code>docker compose down</code>.</p>
+<p><code>--admin-password</code> já vem com o usuário <code>admin</code> e a senha <code>MY#vzbut6XFC</code> provisionados (o texto no comando é só o <strong>hash</strong> bcrypt da senha, não a senha em texto puro). Com isso o Portainer sobe pronto pra login direto, sem passar pela tela de criar administrador nem pelo token do log.</p>
+</div>
+</div>
+</div>
+<p>Os <code>$$</code> duplicados no comando são só a forma do Docker Compose escapar um <code>$</code> literal dentro do arquivo — não fazem parte do hash.</p>
+</section>
+<section id="docker-compose.yml-node-red" class="slide level2">
+<h2><code>docker-compose.yml</code> — node-red</h2>
+<p><code>cd ~/fiscalizacao/node-red &amp;&amp; nano docker-compose.yml</code> — colar o conteúdo abaixo, salvar com <code>Ctrl+O</code>, <code>Enter</code> e sair com <code>Ctrl+X</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb10-2"><a></a><span class="at">  </span><span class="fu">node-red</span><span class="kw">:</span></span>
+<span id="cb10-3"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> nodered/node-red:latest</span></span>
+<span id="cb10-4"><a></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> node-red</span></span>
+<span id="cb10-5"><a></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span>
+<span id="cb10-6"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb10-7"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"1880:1880"</span></span>
+<span id="cb10-8"><a></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb10-9"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> node_red_data:/data</span></span>
+<span id="cb10-10"><a></a></span>
+<span id="cb10-11"><a></a><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb10-12"><a></a><span class="at">  </span><span class="fu">node_red_data</span><span class="kw">:</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="roteiro-prático-subindo-com-docker-compose" class="slide level2">
+<h2>Roteiro prático — subindo com Docker Compose</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="bu">cd</span> ~/fiscalizacao/portainer <span class="kw">&amp;&amp;</span> <span class="ex">docker</span> compose up <span class="at">-d</span></span>
+<span id="cb11-2"><a></a><span class="bu">cd</span> ~/fiscalizacao/node-red <span class="kw">&amp;&amp;</span> <span class="ex">docker</span> compose up <span class="at">-d</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Conferir os dois juntos (<code>docker compose ps</code> só mostra os containers da pasta atual):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="ex">docker</span> ps</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Cada pasta é um projeto Compose independente. Pra derrubar um serviço sem afetar o outro, sem apagar os dados: entrar na pasta dele e rodar <code>docker compose down</code>.</p>
 </div>
 </div>
 </div>
@@ -460,13 +493,18 @@ Ricardo Pasquati Pontarolli
 <li><strong>Portainer:</strong> <code>https://rpi-10X:9443</code> — HTTPS com certificado próprio, o navegador vai avisar que “não é seguro”; cliquem em <strong>Avançado</strong> → <strong>Continuar mesmo assim</strong></li>
 <li><strong>Node-RED:</strong> <code>http://rpi-10X:1880</code></li>
 </ul>
-<p>No primeiro acesso ao Portainer: criem o usuário administrador (só na primeira vez em cada nó) e selecionem o ambiente <strong>local</strong> — é o próprio Docker do Raspberry Pi. Na aba <strong>Containers</strong> dá pra iniciar, parar, reiniciar e ver logs com botões, sem digitar nada.</p>
+<p>No Portainer, façam login direto (sem tela de cadastro nem token):</p>
+<ul>
+<li><strong>Usuário:</strong> <code>admin</code></li>
+<li><strong>Senha:</strong> <code>MY#vzbut6XFC</code></li>
+</ul>
+<p>Selecionem o ambiente <strong>local</strong> — é o próprio Docker do Raspberry Pi. Na aba <strong>Containers</strong> dá pra iniciar, parar, reiniciar e ver logs com botões, sem digitar nada.</p>
 </section>
 <section id="salvando-o-trabalho-no-repositório-do-grupo" class="slide level2">
 <h2>Salvando o trabalho no repositório do grupo</h2>
 <ul>
-<li>Façam o commit do <code>docker-compose.yml</code> no repositório do grupo (ex.: pasta <code>raspberrypi/</code>)</li>
-<li>Da próxima vez que precisarem subir os containers nesse nó (por exemplo, depois de um <code>reboot</code>), basta <code>docker compose up -d</code> de novo — sem reconstruir tudo de cabeça</li>
+<li>Façam o commit dos dois arquivos <code>docker-compose.yml</code> (pasta <code>portainer/</code> e pasta <code>node-red/</code>) no repositório do grupo (ex.: dentro de <code>raspberrypi/</code>)</li>
+<li>Da próxima vez que precisarem subir os containers nesse nó (por exemplo, depois de um <code>reboot</code>), basta <code>docker compose up -d</code> de novo em cada pasta — sem reconstruir tudo de cabeça</li>
 </ul>
 </section>
 <section id="checklist-de-hoje-por-nó" class="slide level2">
@@ -476,7 +514,7 @@ Ricardo Pasquati Pontarolli
 <li><label><input type="checkbox">Docker instalado (<code>docker --version</code> funcionando)</label></li>
 <li><label><input type="checkbox">Usuário <code>pi</code> no grupo <code>docker</code> (<code>docker run hello-world</code> funciona sem <code>sudo</code>)</label></li>
 <li><label><input type="checkbox"><code>docker compose version</code> funcionando</label></li>
-<li><label><input type="checkbox"><code>docker-compose.yml</code> criado e commitado no repositório do grupo</label></li>
+<li><label><input type="checkbox">Os dois <code>docker-compose.yml</code> (portainer e node-red) criados e commitados no repositório do grupo</label></li>
 <li><label><input type="checkbox">Portainer e Node-RED subiram via <code>docker compose up -d</code> e foram acessados pelo navegador</label></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
