@@ -45,9 +45,9 @@ Módulo prático com Raspberry Pi, em conjunto com Redes sem Fio (quinta-feira).
 Entrega individual via GitHub. Comece pelas instruções abaixo.
 
 0. [Instruções e Regras de Entrega](atividades/0-instrucoes-entrega.html)
-1. [Técnicas de Virtualização em Infraestrutura de TI](atividades/atividade-1-virtualizacao-infraestrutura.html)
-2. [Dispositivos de Comunicação e Armazenamento](atividades/atividade-2-dispositivos-comunicacao-armazenamento.html)
-3. [Grades Computacionais e Computação em Nuvem](atividades/atividade-3-grades-nuvem.html)
-4. [TI Verde](atividades/atividade-4-ti-verde.html)
-5. [Virtualização em Data Centers: VMware e Xen](atividades/atividade-5-virtualizacao-data-centers.html)
-6. [Computação em Nuvem: NIST e Provedores](atividades/atividade-6-computacao-nuvem-nist-provedores.html)
+1. [Técnicas de Virtualização em Infraestrutura de TI](atividades/atividade-1-virtualizacao-infraestrutura.html) (Entrega 19/08, das 8h00 às 12h00)
+2. Dispositivos de Comunicação e Armazenamento *(em breve)*
+3. Grades Computacionais e Computação em Nuvem *(em breve)*
+4. TI Verde *(em breve)*
+5. Virtualização em Data Centers: VMware e Xen *(em breve)*
+6. Computação em Nuvem: NIST e Provedores *(em breve)*

@@ -9,7 +9,7 @@ subtitle: "Projeto 01 · Etapa 02"
 - Atualizar o sistema operacional (`apt update` / `apt upgrade`)
 - Instalar o Docker e o Docker Compose
 - Liberar o usuário `pi` para rodar Docker sem `sudo`
-- Instalar o Portainer e o Node-RED em cada nó, a partir de um `docker-compose.yml`
+- Instalar o Portainer e o Node-RED em cada nó, cada um com seu próprio `docker-compose.yml`
 
 ::: {.notes}
 Retomada rápida: na aula passada os grupos gravaram o cartão, ligaram o
@@ -127,7 +127,7 @@ desuso.
 
 - Um comando `docker run` longo é fácil de esquecer ou digitar errado da próxima vez — e some do histórico se ninguém anotar
 - Um arquivo `docker-compose.yml` **documenta exatamente** o que foi subido, com todas as opções — e fica salvo, versionado, no repositório do grupo
-- A partir de hoje, todo container do projeto sobe por um arquivo `docker-compose.yml`, não por comando avulso no terminal
+- A partir de hoje, todo container do projeto sobe por um arquivo `docker-compose.yml`, não por comando avulso no terminal — um arquivo por serviço, cada um na sua própria pasta
 
 ## Por que instalar o Portainer
 
@@ -154,10 +154,20 @@ do veículo usado na ficha e nos tópicos MQTT).
 - É uma ferramenta de fluxos visuais muito usada em projetos de IoT — o projeto provavelmente vai usar de verdade mais pra frente, pra tratar as leituras que chegarem via MQTT
 - Ou seja: o "teste de hoje" já fica útil, em vez de descartável
 
-## Roteiro prático — `docker-compose.yml` do nó
+## Roteiro prático — pastas do projeto
 
-1. Criar uma pasta pro projeto: `mkdir ~/fiscalizacao && cd ~/fiscalizacao`
-2. Criar o arquivo `docker-compose.yml` com os dois serviços:
+1. Criar uma pasta pro projeto, com uma subpasta por serviço:
+
+```bash
+mkdir -p ~/fiscalizacao/portainer ~/fiscalizacao/node-red
+```
+
+2. Cada serviço vai ter seu próprio `docker-compose.yml`, isolado na sua pasta — não um arquivo único com os dois
+
+## `docker-compose.yml` — portainer
+
+`cd ~/fiscalizacao/portainer && nano docker-compose.yml` — colar o
+conteúdo abaixo, salvar com `Ctrl+O`, `Enter` e sair com `Ctrl+X`:
 
 ```yaml
 services:
@@ -165,6 +175,7 @@ services:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: always
+    command: --admin-password '$$2b$$10$$i1C.w5dbHX9R7TRliYOBCeDAsaB74oSC3Jo5JVLY6fHGAHLxhvQR.'
     ports:
       - "8000:8000"
       - "9443:9443"
@@ -172,6 +183,30 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
 
+volumes:
+  portainer_data:
+```
+
+## `docker-compose.yml` — sobre o `--admin-password`
+
+::: {.callout-note}
+`--admin-password` já vem com o usuário `admin` e a senha
+`MY#vzbut6XFC` provisionados (o texto no comando é só o **hash** bcrypt
+da senha, não a senha em texto puro). Com isso o Portainer sobe pronto
+pra login direto, sem passar pela tela de criar administrador nem pelo
+token do log.
+:::
+
+Os `$$` duplicados no comando são só a forma do Docker Compose escapar
+um `$` literal dentro do arquivo — não fazem parte do hash.
+
+## `docker-compose.yml` — node-red
+
+`cd ~/fiscalizacao/node-red && nano docker-compose.yml` — colar o
+conteúdo abaixo, salvar com `Ctrl+O`, `Enter` e sair com `Ctrl+X`:
+
+```yaml
+services:
   node-red:
     image: nodered/node-red:latest
     container_name: node-red
@@ -182,20 +217,26 @@ services:
       - node_red_data:/data
 
 volumes:
-  portainer_data:
   node_red_data:
 ```
 
 ## Roteiro prático — subindo com Docker Compose
 
 ```bash
-docker compose up -d
-docker compose ps
+cd ~/fiscalizacao/portainer && docker compose up -d
+cd ~/fiscalizacao/node-red && docker compose up -d
+```
+
+Conferir os dois juntos (`docker compose ps` só mostra os containers da
+pasta atual):
+
+```bash
+docker ps
 ```
 
 ::: {.callout-note}
-`up -d` sobe os dois serviços do arquivo de uma vez, em segundo plano
-(`-d` de *detached*). Pra derrubar tudo depois, sem apagar os dados:
+Cada pasta é um projeto Compose independente. Pra derrubar um serviço
+sem afetar o outro, sem apagar os dados: entrar na pasta dele e rodar
 `docker compose down`.
 :::
 
@@ -204,15 +245,19 @@ docker compose ps
 - **Portainer:** `https://rpi-10X:9443` — HTTPS com certificado próprio, o navegador vai avisar que "não é seguro"; cliquem em **Avançado** → **Continuar mesmo assim**
 - **Node-RED:** `http://rpi-10X:1880`
 
-No primeiro acesso ao Portainer: criem o usuário administrador (só na
-primeira vez em cada nó) e selecionem o ambiente **local** — é o próprio
-Docker do Raspberry Pi. Na aba **Containers** dá pra iniciar, parar,
-reiniciar e ver logs com botões, sem digitar nada.
+No Portainer, façam login direto (sem tela de cadastro nem token):
+
+- **Usuário:** `admin`
+- **Senha:** `MY#vzbut6XFC`
+
+Selecionem o ambiente **local** — é o próprio Docker do Raspberry Pi. Na
+aba **Containers** dá pra iniciar, parar, reiniciar e ver logs com
+botões, sem digitar nada.
 
 ## Salvando o trabalho no repositório do grupo
 
-- Façam o commit do `docker-compose.yml` no repositório do grupo (ex.: pasta `raspberrypi/`)
-- Da próxima vez que precisarem subir os containers nesse nó (por exemplo, depois de um `reboot`), basta `docker compose up -d` de novo — sem reconstruir tudo de cabeça
+- Façam o commit dos dois arquivos `docker-compose.yml` (pasta `portainer/` e pasta `node-red/`) no repositório do grupo (ex.: dentro de `raspberrypi/`)
+- Da próxima vez que precisarem subir os containers nesse nó (por exemplo, depois de um `reboot`), basta `docker compose up -d` de novo em cada pasta — sem reconstruir tudo de cabeça
 
 ## Checklist de hoje (por nó)
 
@@ -220,7 +265,7 @@ reiniciar e ver logs com botões, sem digitar nada.
 - [ ] Docker instalado (`docker --version` funcionando)
 - [ ] Usuário `pi` no grupo `docker` (`docker run hello-world` funciona sem `sudo`)
 - [ ] `docker compose version` funcionando
-- [ ] `docker-compose.yml` criado e commitado no repositório do grupo
+- [ ] Os dois `docker-compose.yml` (portainer e node-red) criados e commitados no repositório do grupo
 - [ ] Portainer e Node-RED subiram via `docker compose up -d` e foram acessados pelo navegador
 
 ::: {.callout-note}
