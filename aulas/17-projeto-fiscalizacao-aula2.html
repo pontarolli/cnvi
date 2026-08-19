@@ -207,7 +207,7 @@
 Ricardo Pasquati Pontarolli 
 </div>
         <p class="quarto-title-affiliation">
-            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v41
+            Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v42
           </p>
     </div>
 </div>
@@ -423,7 +423,7 @@ Ricardo Pasquati Pontarolli
 <span id="cb9-3"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> portainer/portainer-ce:latest</span></span>
 <span id="cb9-4"><a></a><span class="at">    </span><span class="fu">container_name</span><span class="kw">:</span><span class="at"> portainer</span></span>
 <span id="cb9-5"><a></a><span class="at">    </span><span class="fu">restart</span><span class="kw">:</span><span class="at"> always</span></span>
-<span id="cb9-6"><a></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> --admin-password '$$2b$$10$$i1C.w5dbHX9R7TRliYOBCeDAsaB74oSC3Jo5JVLY6fHGAHLxhvQR.'</span></span>
+<span id="cb9-6"><a></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> --admin-password '$$2b$$10$$7nPyOAsha7uiMAeA55/6Z.muRIi5.jf8G7JPteVN9OtdIDuSS6vS2'</span></span>
 <span id="cb9-7"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
 <span id="cb9-8"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"8000:8000"</span></span>
 <span id="cb9-9"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"9443:9443"</span></span>
@@ -445,11 +445,10 @@ Ricardo Pasquati Pontarolli
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><code>--admin-password</code> já vem com o usuário <code>admin</code> e a senha <code>MY#vzbut6XFC</code> provisionados (o texto no comando é só o <strong>hash</strong> bcrypt da senha, não a senha em texto puro). Com isso o Portainer sobe pronto pra login direto, sem passar pela tela de criar administrador nem pelo token do log.</p>
+<p>Não precisam entender essa linha pra usar — só o login importa: usuário <code>admin</code>, senha <code>147258369147</code> (próximo slide). O texto gigante no comando é só uma versão <strong>criptografada</strong> dessa senha, que o Portainer exige nesse formato específico. Com isso ele já sobe pronto pra login direto, sem tela de criar administrador nem token no log.</p>
 </div>
 </div>
 </div>
-<p>Os <code>$$</code> duplicados no comando são só a forma do Docker Compose escapar um <code>$</code> literal dentro do arquivo — não fazem parte do hash.</p>
 </section>
 <section id="docker-compose.yml-node-red" class="slide level2">
 <h2><code>docker-compose.yml</code> — node-red</h2>
@@ -496,7 +495,7 @@ Ricardo Pasquati Pontarolli
 <p>No Portainer, façam login direto (sem tela de cadastro nem token):</p>
 <ul>
 <li><strong>Usuário:</strong> <code>admin</code></li>
-<li><strong>Senha:</strong> <code>MY#vzbut6XFC</code></li>
+<li><strong>Senha:</strong> <code>147258369147</code></li>
 </ul>
 <p>Selecionem o ambiente <strong>local</strong> — é o próprio Docker do Raspberry Pi. Na aba <strong>Containers</strong> dá pra iniciar, parar, reiniciar e ver logs com botões, sem digitar nada.</p>
 </section>

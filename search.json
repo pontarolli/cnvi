@@ -179,14 +179,14 @@
     "href": "aulas/17-projeto-fiscalizacao-aula2.html#docker-compose.yml-portainer",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "docker-compose.yml — portainer",
-    "text": "docker-compose.yml — portainer\ncd ~/fiscalizacao/portainer && nano docker-compose.yml — colar o conteúdo abaixo, salvar com Ctrl+O, Enter e sair com Ctrl+X:\nservices:\n  portainer:\n    image: portainer/portainer-ce:latest\n    container_name: portainer\n    restart: always\n    command: --admin-password '$$2b$$10$$i1C.w5dbHX9R7TRliYOBCeDAsaB74oSC3Jo5JVLY6fHGAHLxhvQR.'\n    ports:\n      - \"8000:8000\"\n      - \"9443:9443\"\n    volumes:\n      - /var/run/docker.sock:/var/run/docker.sock\n      - portainer_data:/data\n\nvolumes:\n  portainer_data:"
+    "text": "docker-compose.yml — portainer\ncd ~/fiscalizacao/portainer && nano docker-compose.yml — colar o conteúdo abaixo, salvar com Ctrl+O, Enter e sair com Ctrl+X:\nservices:\n  portainer:\n    image: portainer/portainer-ce:latest\n    container_name: portainer\n    restart: always\n    command: --admin-password '$$2b$$10$$7nPyOAsha7uiMAeA55/6Z.muRIi5.jf8G7JPteVN9OtdIDuSS6vS2'\n    ports:\n      - \"8000:8000\"\n      - \"9443:9443\"\n    volumes:\n      - /var/run/docker.sock:/var/run/docker.sock\n      - portainer_data:/data\n\nvolumes:\n  portainer_data:"
   },
   {
     "objectID": "aulas/17-projeto-fiscalizacao-aula2.html#docker-compose.yml-sobre-o---admin-password",
     "href": "aulas/17-projeto-fiscalizacao-aula2.html#docker-compose.yml-sobre-o---admin-password",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "docker-compose.yml — sobre o --admin-password",
-    "text": "docker-compose.yml — sobre o --admin-password\n\n\n\n\n\n\nNota\n\n\n--admin-password já vem com o usuário admin e a senha MY#vzbut6XFC provisionados (o texto no comando é só o hash bcrypt da senha, não a senha em texto puro). Com isso o Portainer sobe pronto pra login direto, sem passar pela tela de criar administrador nem pelo token do log.\n\n\n\nOs $$ duplicados no comando são só a forma do Docker Compose escapar um $ literal dentro do arquivo — não fazem parte do hash."
+    "text": "docker-compose.yml — sobre o --admin-password\n\n\n\n\n\n\nNota\n\n\nNão precisam entender essa linha pra usar — só o login importa: usuário admin, senha 147258369147 (próximo slide). O texto gigante no comando é só uma versão criptografada dessa senha, que o Portainer exige nesse formato específico. Com isso ele já sobe pronto pra login direto, sem tela de criar administrador nem token no log."
   },
   {
     "objectID": "aulas/17-projeto-fiscalizacao-aula2.html#docker-compose.yml-node-red",
@@ -207,7 +207,7 @@
     "href": "aulas/17-projeto-fiscalizacao-aula2.html#roteiro-prático-acessando-portainer-e-node-red",
     "title": "Projeto Integrador — Fiscalização de Velocidade sem Radar",
     "section": "Roteiro prático — acessando Portainer e Node-RED",
-    "text": "Roteiro prático — acessando Portainer e Node-RED\n\nPortainer: https://rpi-10X:9443 — HTTPS com certificado próprio, o navegador vai avisar que “não é seguro”; cliquem em Avançado → Continuar mesmo assim\nNode-RED: http://rpi-10X:1880\n\nNo Portainer, façam login direto (sem tela de cadastro nem token):\n\nUsuário: admin\nSenha: MY#vzbut6XFC\n\nSelecionem o ambiente local — é o próprio Docker do Raspberry Pi. Na aba Containers dá pra iniciar, parar, reiniciar e ver logs com botões, sem digitar nada."
+    "text": "Roteiro prático — acessando Portainer e Node-RED\n\nPortainer: https://rpi-10X:9443 — HTTPS com certificado próprio, o navegador vai avisar que “não é seguro”; cliquem em Avançado → Continuar mesmo assim\nNode-RED: http://rpi-10X:1880\n\nNo Portainer, façam login direto (sem tela de cadastro nem token):\n\nUsuário: admin\nSenha: 147258369147\n\nSelecionem o ambiente local — é o próprio Docker do Raspberry Pi. Na aba Containers dá pra iniciar, parar, reiniciar e ver logs com botões, sem digitar nada."
   },
   {
     "objectID": "aulas/17-projeto-fiscalizacao-aula2.html#salvando-o-trabalho-no-repositório-do-grupo",
