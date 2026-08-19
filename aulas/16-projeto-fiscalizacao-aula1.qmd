@@ -1,6 +1,6 @@
 ---
 title: "Projeto Integrador — Fiscalização de Velocidade sem Radar"
-subtitle: "Aula 1 · Fundamentos e Setup"
+subtitle: "Projeto 01 · Etapa 01"
 ---
 
 ## Objetivos desta aula
@@ -87,10 +87,10 @@ plano de CNVI.
 
 ## Infraestrutura compartilhada
 
-- O **ESP32** é individual: cada grupo tem o seu, é o veículo simulado
-- O **Raspberry Pi** é diferente: **não é 1 por grupo** — são **6 nós compartilhados** (`rpi-102` a `rpi-107`) usados pelos 8 grupos das duas turmas
-- `rpi-101` fica de fora — é a máquina de testes do professor
-- Isso é mais parecido com a nuvem municipal real: a prefeitura não compraria um servidor por veículo, ela compartilha uma infraestrutura pequena entre todos
+- **Nem RPi nem ESP32 são 1 por grupo** — os dois são infraestrutura compartilhada entre os 8 grupos das duas turmas
+- **Raspberry Pi:** 5 nós (`rpi-102` a `rpi-106`) — usados desde hoje. `rpi-101` fica de fora, é a máquina de testes do professor
+- **ESP32:** 6 unidades — entram em rodízio a partir da Aula 3, quando cada grupo o usa como veículo simulado
+- Isso é mais parecido com a nuvem municipal real: a prefeitura não compraria um servidor (nem um sensor) por veículo, ela compartilha uma infraestrutura pequena entre todos
 
 ::: {.callout-note}
 Mesmo usuário/senha e mesma rede em todos os nós: usuário `pi`, senha
@@ -112,17 +112,43 @@ diferentes (não é só "trocar o número do limite"), o que fica rico lá na
 Aula 3 (microsserviço) e na apresentação final da Aula 5.
 :::
 
+## Git — onde vai o trabalho do grupo
+
+- Cada grupo cria um **repositório no GitHub** hoje — é onde tudo do projeto vai morar daqui pra frente (ficha, scripts, firmware, docker-compose...)
+- Nome sugerido: `fiscalizacao-<veiculo>` (ex.: `fiscalizacao-carro`)
+- Adicionem todos os integrantes do grupo como colaboradores
+- **Entrega de hoje:** subir (`commit` + `push`) a ficha do grupo preenchida, ainda durante a aula
+
+::: {.callout-note}
+Não sabe git ainda? Tudo bem — vale o mínimo: `git init`, `git add`,
+`git commit`, criar o repositório no GitHub e `git push`. A prática de
+git entra com mais calma nas próximas aulas.
+:::
+
 ## Atividade de hoje
 
 1. Preencher a **ficha do grupo** (rota simulada, limites)
-2. Ajudar a preparar os **6 nós compartilhados** — só precisamos de 6 cartões no total, não 1 por grupo
+2. Ajudar a preparar os **5 nós compartilhados** — só precisamos de 5 cartões no total, não 1 por grupo
 3. Testar o acesso via SSH a pelo menos um dos nós
+4. Criar o repositório do grupo no GitHub e subir a ficha preenchida
 
 ::: {.callout-note}
 Como a infraestrutura é compartilhada, sobra tempo: enquanto um grupo por
-vez prepara um dos 6 cartões (rodízio nas estações de gravação), os
-demais aprofundam a ficha — inclusive já pensando em como o grupo vai
-nomear seus containers e tópicos MQTT dentro dos nós compartilhados.
+vez prepara um dos 5 cartões (rodízio nas estações de gravação), os
+demais aprofundam a ficha e já deixam o repositório do GitHub pronto —
+inclusive pensando em como o grupo vai nomear seus containers e tópicos
+MQTT dentro dos nós compartilhados.
+:::
+
+## Mão na massa
+
+**Agora preencham o Roteiro do Projeto 01, em grupo, e subam pro GitHub de vocês:**
+
+[Roteiro Projeto 01](../atividades/roteiro-projeto-fiscalizacao-aula1.html)
+
+::: {.notes}
+Mostrar o link no telão e dar tempo para os grupos abrirem a página antes
+de seguir para as instruções de gravação do cartão SD.
 :::
 
 ## Raspberry Pi como nó de borda
@@ -135,7 +161,7 @@ nomear seus containers e tópicos MQTT dentro dos nós compartilhados.
 
 ## Roteiro prático — preparar os nós compartilhados
 
-Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já instalado/baixável nos PCs do laboratório. Só precisamos gravar até 6 cartões hoje — um por nó da infraestrutura, não um por grupo.
+Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já instalado/baixável nos PCs do laboratório. Só precisamos gravar até 5 cartões hoje — um por nó da infraestrutura, não um por grupo.
 
 1. **Choose Device** → Raspberry Pi 3B+
 2. **Choose OS** → *Raspberry Pi OS (other)* → *Raspberry Pi OS Lite (64-bit) — Legacy* — sem interface gráfica; usamos a versão Legacy porque o hardware da infraestrutura é o Raspberry Pi 3B+
@@ -144,15 +170,15 @@ Usar o **Raspberry Pi Imager** (`https://www.raspberrypi.com/software/`), já in
 
 ## Roteiro prático — opções avançadas
 
-- **Hostname:** o próximo número livre — `rpi-102`, `rpi-103`, ... até `rpi-107`. O `rpi-101` fica reservado, é a máquina de testes do professor
+- **Hostname:** o próximo número livre — `rpi-102`, `rpi-103`, ... até `rpi-106`. O `rpi-101` fica reservado, é a máquina de testes do professor
 - **Enable SSH** → usar autenticação por senha
 - **Usuário e senha:** usuário `pi`, senha `147` — igual em todos os nós, para facilitar o suporte em sala
 - **Configurar WLAN:** SSID `i4`, senha `147258369`
-- **Locale:** fuso `America/Sao_Paulo`, layout de teclado `br`
+- **Local:** fuso `America/Sao_Paulo`, layout de teclado `br`
 
 ::: {.callout-note}
 Anotem na lousa/ficha qual grupo preparou qual hostname — a turma toda
-(os 8 grupos) vai usar esses 6 nós nas próximas aulas.
+(os 8 grupos) vai usar esses 5 nós nas próximas aulas.
 :::
 
 ## Roteiro prático — gravar e testar

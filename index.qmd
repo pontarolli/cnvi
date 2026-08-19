@@ -36,8 +36,9 @@ Nos slides, use as setas do teclado para navegar, **S** para abrir as notas do p
 
 Módulo prático com Raspberry Pi, em conjunto com Redes sem Fio (quinta-feira).
 
-1. [Projeto 01](aulas/16-projeto-fiscalizacao-aula1.html)
+1. [Projeto 01 · Etapa 01](aulas/16-projeto-fiscalizacao-aula1.html)
    · [Roteiro Projeto 01](atividades/roteiro-projeto-fiscalizacao-aula1.html)
+2. [Projeto 01 · Etapa 02](aulas/17-projeto-fiscalizacao-aula2.html)
 
 ## Atividades Avaliativas
 
