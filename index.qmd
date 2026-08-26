@@ -47,7 +47,7 @@ Entrega individual via GitHub. Comece pelas instruções abaixo.
 
 0. [Instruções e Regras de Entrega](atividades/0-instrucoes-entrega.html)
 1. [Técnicas de Virtualização em Infraestrutura de TI](atividades/atividade-1-virtualizacao-infraestrutura.html) (Entrega 19/08, das 8h00 às 12h00)
-2. Dispositivos de Comunicação e Armazenamento *(em breve)*
+2. [Dispositivos de Comunicação e Armazenamento](atividades/atividade-2-dispositivos-comunicacao-armazenamento.html) (Entrega 26/08, das 8h00 às 12h00)
 3. Grades Computacionais e Computação em Nuvem *(em breve)*
 4. TI Verde *(em breve)*
 5. Virtualização em Data Centers: VMware e Xen *(em breve)*
