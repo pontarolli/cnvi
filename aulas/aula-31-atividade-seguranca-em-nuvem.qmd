@@ -1,0 +1,89 @@
+---
+title: "Aula 31 — Atividade: Segurança em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Consolidar os conceitos de **segurança em nuvem**.
+- Aplicar o **modelo de responsabilidade compartilhada**.
+- Praticar a análise de **riscos e controles**.
+- Preparar para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **CID:** confidencialidade, integridade, disponibilidade.
+- **Responsabilidade compartilhada** (cliente × provedor).
+- **IAM, MFA, menor privilégio, criptografia**.
+- **WAF, SIEM, CASB, ZTNA, FWaaS** e **Zero Trust**.
+
+## Estudo de Caso
+
+> Uma startup hospeda uma aplicação web na nuvem. Um bucket de armazenamento foi deixado **público** e vazou dados de clientes.
+
+- Quais **falhas** ocorreram?
+- De **quem** era a responsabilidade?
+- Que **controles** evitariam o incidente?
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Analise o caso sob a ótica de **CID** e responsabilidade compartilhada.
+- Proponha **controles** técnicos e de processo.
+- Apresente uma **lista de recomendações**.
+- Registre no **Moodle**.
+
+## Parte 1 — Diagnóstico
+
+- Identifique a **vulnerabilidade** central (configuração incorreta).
+- Aponte o impacto em **CID**.
+- Quem deveria proteger o **bucket**? (cliente ou provedor?)
+
+## Parte 2 — Controles Propostos
+
+- **Técnicos:** IAM, criptografia, monitoramento, WAF.
+- **Processo:** revisão de configurações, políticas, treinamento.
+- **Monitoramento:** SIEM e alertas.
+- **Governança:** auditoria e conformidade.
+
+## Parte 3 — Apresentação
+
+- Apresente o **plano de resposta** ao incidente.
+- Ordem de prioridade dos **controles**.
+- Tempo: **~5 minutos** por grupo.
+- Discussão com a turma.
+
+## Critérios de Avaliação
+
+- **Adequação** dos controles propostos.
+- Domínio do **modelo de responsabilidade compartilhada**.
+- **Clareza** e organização da apresentação.
+- **Participação** no grupo.
+
+::: {.callout-important}
+A **Avaliação 2 (GIFT, 10 questões)** cobre segurança, gerenciamento e contêineres. Revise antes de responder.
+:::
+
+## Checklist do Grupo
+
+- [ ] Vulnerabilidade identificada.
+- [ ] Impacto em CID analisado.
+- [ ] Responsabilidades definidas.
+- [ ] Controles técnicos e de processo listados.
+- [ ] Apresentação pronta.
+
+## Resumo da Aula
+
+- Aplicamos segurança em um **caso real**.
+- Reforçamos a **responsabilidade compartilhada**.
+- Praticamos **análise de risco** e resposta a incidentes.
+- Próxima aula: **modelos de gerenciamento em nuvem**.
+
+## Referências
+
+- NIST — *Cloud Security*.
+- CSA — *Cloud Controls Matrix*.
+- Material das aulas 26 a 28.
+
+## Próxima Aula
+
+- **Aula 30:** Modelos de gerenciamento em nuvem.

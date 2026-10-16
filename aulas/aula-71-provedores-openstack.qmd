@@ -1,0 +1,88 @@
+---
+title: "Aula 71 — Provedores: OpenStack"
+---
+
+## Objetivos da Aula
+
+- Conhecer a plataforma **OpenStack**.
+- Compreender seus **componentes** principais.
+- Diferenciar de **nuvens públicas comerciais**.
+- Reconhecer casos de uso (nuvem privada).
+
+## O que é OpenStack?
+
+- Conjunto de **software de código aberto** para construir nuvens.
+- Permite montar nuvens **privadas e públicas**.
+- Modular: cada serviço tem um papel específico.
+- Base de muitas nuvens corporativas.
+
+## Componentes Principais
+
+| Serviço | Função |
+|---------|--------|
+| Nova | Computação (VMs) |
+| Neutron | Rede |
+| Cinder | Armazenamento em bloco |
+| Swift | Armazenamento de objetos |
+| Keystone | Identidade/autenticação |
+| Glance | Imagens |
+| Horizon | Painel web |
+
+## Nova e Glance
+
+- **Nova:** gerencia instâncias (computação).
+- **Glance:** catálogo de **imagens** de VMs.
+- Integram-se a diferentes **hipervisores** (KVM é padrão).
+- Base do IaaS no OpenStack.
+
+## Neutron e Cinder/Swift
+
+- **Neutron:** rede definida por software (sub-redes, roteadores, IPs).
+- **Cinder:** volumes em bloco (como discos).
+- **Swift:** armazenamento de objetos.
+- Cobrem **rede e armazenamento** do IaaS.
+
+## Identidade e Painel
+
+- **Keystone:** autenticação e autorização.
+- **Horizon:** interface web de administração.
+- Integração com diretórios corporativos.
+
+## OpenStack × Nuvens Comerciais
+
+- OpenStack exige **operar a infraestrutura** você mesmo.
+- Nuvens comerciais entregam **serviço pronto**.
+- OpenStack dá **controle e customização**.
+- Comum em **nuvem privada** e provedores regionais.
+
+## Casos de Uso
+
+- **Nuvem privada** corporativa.
+- Provedores de nuvem **regionais**.
+- Laboratórios e **pesquisa**.
+- Requisitos de **soberania de dados**.
+
+::: {.callout-note}
+**OpenStack** é a base do IaaS de código aberto: você monta e opera sua própria nuvem, com **controle total**.
+:::
+
+## Resumo da Aula
+
+- **OpenStack** é software livre para construir nuvens.
+- Componentes: **Nova, Neutron, Cinder, Swift, Keystone**.
+- É base de **nuvens privadas** e de provedores regionais.
+- Exige **operação própria**, mas dá **controle** total.
+
+## Atividade Rápida
+
+- Associe componentes OpenStack às funções.
+- Compare OpenStack com uma nuvem comercial.
+- Cite um caso de uso ideal para OpenStack.
+
+## Referências
+
+- OpenStack — *Documentação oficial*.
+
+## Próxima Aula
+
+- **Aula 66:** Análise de soluções de nuvem selecionadas.

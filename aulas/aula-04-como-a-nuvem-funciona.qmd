@@ -1,5 +1,5 @@
 ---
-title: "Aula 04 — Como a Nuvem Funciona"
+title: "Aula 4 — Como a Nuvem Funciona"
 ---
 
 ## Objetivos da Aula

@@ -1,0 +1,88 @@
+---
+title: "Aula 42 — Big Data na Nuvem (Parte 1)"
+---
+
+## Objetivos da Aula
+
+- Definir **Big Data** e seus desafios.
+- Conhecer os **"V's"** dos dados.
+- Compreender por que a **nuvem** viabiliza Big Data.
+- Identificar fontes e tipos de dados.
+
+## O que é Big Data?
+
+- Conjuntos de dados **grandes e complexos** demais para ferramentas tradicionais.
+- Exigem **armazenamento distribuído** e **processamento paralelo**.
+- Presentes em redes sociais, sensores, logs, comércio.
+- A nuvem fornece a **escala** necessária.
+
+## Os "V's" do Big Data
+
+- **Volume:** quantidade massiva de dados.
+- **Velocidade:** geração e processamento em tempo real.
+- **Variedade:** estruturados, semiestruturados e não estruturados.
+- **Veracidade:** qualidade e confiabilidade.
+- **Valor:** utilidade para o negócio.
+
+## Tipos de Dados
+
+- **Estruturados:** tabelas com esquema definido.
+- **Semiestruturados:** JSON, XML, logs.
+- **Não estruturados:** texto, imagem, áudio, vídeo.
+- A nuvem armazena todos com **armazenamento de objetos**.
+
+## Por que a Nuvem?
+
+- **Escala elástica:** mais recursos sob demanda.
+- **Armazenamento barato:** data lakes em objetos (ex.: S3).
+- **Serviços gerenciados:** menos operação.
+- **Integração** com analytics e machine learning.
+
+## Fontes de Dados
+
+- **Web e redes sociais.**
+- **Sensores e IoT.**
+- **Logs de sistemas e aplicações.**
+- **Transações** de comércio.
+- **Dados abertos** governamentais.
+
+## Armazenamento Distribuído
+
+- **HDFS:** sistema de arquivos distribuído do Hadoop.
+- **Object storage:** S3, GCS, Azure Blob.
+- **Data lake:** dados brutos centralizados.
+- **Redundância** e tolerância a falhas.
+
+## Desafios
+
+- **Coleta e limpeza** de dados.
+- **Governança e privacidade** (LGPD).
+- **Custo** de armazenar e processar.
+- **Segurança** de dados sensíveis.
+
+::: {.callout-note}
+Big Data na nuvem combina **armazenamento de objetos + processamento distribuído + serviços gerenciados** para escalar conforme a demanda.
+:::
+
+## Resumo da Aula
+
+- **Big Data** é definido pelos "V's".
+- A nuvem resolve **escala, custo e gestão**.
+- Dados vêm de várias **fontes** e tipos.
+- **HDFS e object storage** são bases de armazenamento.
+
+## Atividade Rápida
+
+- Explique os **três V's** principais com exemplos.
+- Dê exemplos de dados **estruturados x não estruturados**.
+- Liste três motivos para usar a nuvem em Big Data.
+
+## Referências
+
+- Apache Hadoop — *Documentação*.
+- AWS — *Big Data*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+
+## Próxima Aula
+
+- **Aula 39:** Big Data na nuvem — Parte 2.

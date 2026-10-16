@@ -1,0 +1,88 @@
+---
+title: "Aula 46 — Atividade: Big Data e Machine Learning"
+---
+
+## Objetivos da Aula
+
+- Consolidar **Big Data e ML na nuvem**.
+- Aplicar os conceitos a um **cenário de negócio**.
+- Propor uma **arquitetura de dados**.
+- Preparar para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **Big Data:** os "V's"; HDFS, object storage, Spark.
+- **ETL/ELT** e data lakes/warehouses.
+- **ML:** tipos, ciclo de vida, MLOps.
+- Serviços gerenciados na nuvem.
+
+## Cenário
+
+> Uma rede de lojas quer **prever a demanda** de produtos por loja usando dados de vendas, clima e eventos locais.
+
+- Que **dados** são necessários?
+- Como **armazenar** e **processar**?
+- Que **modelo** de ML usar?
+- Como **implantar** e monitorar?
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Desenhe a **arquitetura** (fontes → armazenamento → processamento → ML → aplicação).
+- Justifique as **escolhas** de serviços.
+- Apresente para a turma.
+
+## Parte 1 — Dados e Armazenamento
+
+- Fontes de dados e formatos.
+- **Data lake x data warehouse**.
+- Serviço de armazenamento escolhido.
+
+## Parte 2 — Processamento e ML
+
+- Ferramenta de **ETL**.
+- Processamento: batch ou streaming?
+- Tipo de **aprendizado** e algoritmo.
+- Serviço de **ML** na nuvem.
+
+## Parte 3 — Operação
+
+- **Implantação** do modelo (API).
+- **Monitoramento** e re-treinamento (MLOps).
+- **Segurança e LGPD**.
+- **Estimativa de custo** aproximada.
+
+## Critérios de Avaliação
+
+- **Coerência** da arquitetura.
+- **Justificativa** das escolhas.
+- **Clareza** do diagrama e da apresentação.
+- **Participação** do grupo.
+
+::: {.callout-important}
+A **Avaliação 1 (GIFT, 10 questões)** do bimestre cobre Big Data, ML e redes em nuvem. Revise antes de responder.
+:::
+
+## Checklist do Grupo
+
+- [ ] Fontes de dados mapeadas.
+- [ ] Armazenamento definido.
+- [ ] Processamento e ML escolhidos.
+- [ ] Arquitetura desenhada.
+- [ ] Apresentação pronta.
+
+## Resumo da Aula
+
+- Aplicamos **Big Data + ML** a um cenário.
+- Desenhamos uma **arquitetura de dados** na nuvem.
+- Reforçamos **MLOps, custo e LGPD**.
+- Próxima aula: **redes em nuvem**.
+
+## Referências
+
+- AWS — *Big Data & Analytics*.
+- Material das aulas 38 a 41.
+
+## Próxima Aula
+
+- **Aula 43:** Redes em nuvem — conceitos.

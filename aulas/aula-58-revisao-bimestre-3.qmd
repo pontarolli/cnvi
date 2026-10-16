@@ -1,0 +1,91 @@
+---
+title: "Aula 58 — Revisão para a Avaliação Bimestral"
+---
+
+## Objetivos da Aula
+
+- Revisar **todos os tópicos** do 3º bimestre.
+- Consolidar Big Data, ML, redes, serverless e tópicos avançados.
+- Esclarecer dúvidas dos alunos.
+- Preparar para a **avaliação no Moodle**.
+
+## Mapa do Bimestre
+
+- **Kubernetes:** orquestração na prática.
+- **Big Data:** armazenamento e processamento.
+- **Machine Learning** na nuvem.
+- **Redes em nuvem:** VPC e conectividade.
+- **Serverless**, **grades**, **TI Verde**, **edge/IoT** e **hipervisores**.
+
+## Tópico 1 — Big Data e ML
+
+- **V's** dos dados; HDFS e object storage.
+- **MapReduce, Hadoop, Spark**.
+- **ETL/ELT**, data lake × warehouse.
+- ML: tipos, ciclo de vida, **MLOps**.
+
+## Tópico 2 — Redes em Nuvem
+
+- **VPC**, sub-redes **públicas/privadas**.
+- **IGW, NAT, tabelas de rotas**.
+- **Grupos de segurança** e isolamento.
+- **VPN** e **link dedicado** (híbrido).
+
+## Tópico 3 — Serverless e Grades
+
+- **Serverless/FaaS:** funções por evento; cold start.
+- Vantagens e limitações; provedores.
+- **Grades:** recursos distribuídos; grade × cluster × nuvem.
+
+## Tópico 4 — Sustentabilidade e Edge
+
+- **TI Verde** e **PUE**.
+- **Edge computing** e **IoT**: latência e processamento local.
+- **Fog computing** como camada intermediária.
+
+## Tópico 5 — Hipervisores em Data Centers
+
+- **VMware ESXi, Xen, KVM, Hyper-V** (tipo 1).
+- **Clusters, HA, vMotion/live migration**.
+- Armazenamento **compartilhado**.
+
+## Comparativos-Chave
+
+| Conceito | Lembrete |
+|----------|----------|
+| Data lake × warehouse | Bruto/flexível × estruturado/analítico |
+| VPN × link dedicado | Internet × circuito privado |
+| VM × contêiner × serverless | Gestão decrescente |
+| Edge × nuvem | Latência baixa × escala global |
+
+## Dúvidas Frequentes
+
+- "Por que Spark é mais rápido?" — Processa **em memória**.
+- "Serverless tem servidor?" — Existe, mas você **não gerencia**.
+- "VPC é um roteador?" — É uma **rede virtual** com vários componentes.
+- "Edge substitui a nuvem?" — Não; **complementa**.
+
+## Como se Preparar
+
+- Revise os **slides** das aulas 37 a 53.
+- Resuma cada tópico em **meia página**.
+- Refaça as **atividades** de fixação.
+- Tire dúvidas **antes** da avaliação.
+
+::: {.callout-tip}
+A avaliação tem **10 questões** no Moodle cobrindo os temas do bimestre. Leia com atenção e gerencie o tempo.
+:::
+
+## Síntese do Bimestre
+
+- A nuvem processa **dados em escala** (Big Data + ML).
+- **Redes virtuais e serverless** modernizam as arquiteturas.
+- **Sustentabilidade e edge** ampliam o olhar.
+- Base sólida para o 4º bimestre: **bancos, DevOps e provedores**.
+
+## Referências
+
+- Material das aulas 37 a 53.
+- Documentação dos provedores de nuvem.
+
+## Boa Prova!

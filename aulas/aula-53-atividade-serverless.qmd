@@ -1,0 +1,88 @@
+---
+title: "Aula 53 — Atividade: Computação sem Servidor"
+---
+
+## Objetivos da Aula
+
+- Consolidar os conceitos de **serverless**.
+- Projetar uma solução **orientada a eventos**.
+- Comparar serverless com outras abordagens.
+- Preparar para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **Serverless/FaaS:** funções por evento.
+- **Cold/warm start**, escalabilidade automática.
+- Provedores: Lambda, Functions, Cloud Functions.
+- Vantagens (custo/agilidade) e limites (lock-in/cold start).
+
+## Cenário
+
+> Uma empresa quer processar **imagens enviadas por usuários**: redimensionar e gerar miniaturas automaticamente, com custo baixo e sem servidores.
+
+- Desenhe o fluxo **orientado a eventos**.
+- Escolha os serviços.
+- Justifique a escolha por serverless.
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Desenhe o **arquitetura** (upload → evento → funções → armazenamento).
+- Defina gatilhos, funções e serviços.
+- Apresente para a turma.
+
+## Parte 1 — Fluxo de Eventos
+
+- **Upload** para o armazenamento de objetos.
+- **Evento** disparado na criação do objeto.
+- **Função** processa a imagem.
+- Resultado salvo e resultado registrado.
+
+## Parte 2 — Decisões Técnicas
+
+- Linguagem e **tempo de execução**.
+- Memória e **timeout** adequados.
+- Tratamento de **erros e reprocessamento**.
+- **Idempotência**.
+
+## Parte 3 — Comparação
+
+- E se fosse em **contêiner**? E em **VM**?
+- Tabela: custo, operação e escala.
+- Quando serverless **não** seria ideal?
+- Justificativa final.
+
+## Critérios de Avaliação
+
+- **Coerência** do fluxo event-driven.
+- **Justificativa** técnica das escolhas.
+- **Comparação** com as alternativas.
+- **Clareza** da apresentação.
+
+::: {.callout-important}
+A **Avaliação 2 (GIFT, 10 questões)** do bimestre cobre serverless, grades, TI verde, edge/IoT e hipervisores. Revise antes de responder.
+:::
+
+## Checklist do Grupo
+
+- [ ] Fluxo de eventos desenhado.
+- [ ] Serviços escolhidos.
+- [ ] Tratamento de erros previsto.
+- [ ] Comparação com contêiner/VM.
+- [ ] Apresentação pronta.
+
+## Resumo da Aula
+
+- Projetamos uma solução **serverless** event-driven.
+- Comparamos com **contêiner e VM**.
+- Reforçamos boas práticas (idempotência, timeout).
+- Próxima aula: **grades computacionais**.
+
+## Referências
+
+- AWS Lambda / S3 Events.
+- Material das aulas 47 e 48.
+
+## Próxima Aula
+
+- **Aula 50:** Grades computacionais — conceitos.

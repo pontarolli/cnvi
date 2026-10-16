@@ -1,0 +1,78 @@
+---
+title: "Aula 63 — Prática: Banco de Dados Gerenciado"
+---
+
+## Objetivos da Aula
+
+- Provisionar um **banco gerenciado** na nuvem.
+- Conectar uma aplicação ao banco.
+- Testar **backup e replicação**.
+- Consolidar DBaaS na prática.
+
+## Preparação
+
+- Conta no provedor (camada gratuita).
+- Grupo de segurança adequado para o banco.
+- Cliente de banco (linha de comando ou GUI).
+- Aplicação simples (opcional).
+
+## Passo 1 — Provisionar
+
+- Criar uma instância **RDS** (ex.: MySQL/PostgreSQL).
+- Escolher **classe, armazenamento e credenciais**.
+- Configurar **multi-AZ** (se disponível).
+- Anotar o **endpoint**.
+
+## Passo 2 — Segurança de Rede
+
+- Colocar o banco em **sub-rede privada**.
+- Ajustar o **grupo de segurança** (porta 3306/5432).
+- Permitir acesso **apenas** da camada de aplicação.
+- Nunca expor o banco à internet.
+
+## Passo 3 — Conexão e Dados
+
+- Conectar com o cliente (`mysql`/`psql`).
+- Criar **banco, tabela e registros**.
+- Executar **consultas** e validar.
+- (Opcional) conectar a aplicação.
+
+## Passo 4 — Backup e Recuperação
+
+- Verificar **backups automáticos**.
+- Criar um **snapshot** manual.
+- Simular **restauração** a partir do snapshot.
+- Documentar o processo.
+
+## Passo 5 — Escala (conceito)
+
+- Observar opções de **read replica**.
+- (Conceitual) escala vertical e horizontal.
+- Monitorar métricas do banco.
+- Estimar **custo**.
+
+## Verificação da Prática
+
+- [ ] Banco gerenciado provisionado.
+- [ ] Acesso restrito por grupo de segurança.
+- [ ] Tabela criada e consultada.
+- [ ] Snapshot criado e restaurado.
+
+::: {.callout-tip}
+Ao final, **remova** a instância (se não for gratuita) para evitar custos — prática importante de **FinOps**.
+:::
+
+## Resumo da Aula
+
+- Provisionamos um **banco gerenciado** na nuvem.
+- Configuramos **rede e segurança**.
+- Testamos **backup e recuperação**.
+- Próxima aula: **Cloud DevOps**.
+
+## Referências
+
+- AWS — *RDS Getting Started*.
+
+## Próxima Aula
+
+- **Aula 58:** Cloud DevOps — conceitos.

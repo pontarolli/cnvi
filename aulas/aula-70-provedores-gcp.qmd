@@ -1,0 +1,90 @@
+---
+title: "Aula 70 — Provedores: Google Cloud Platform"
+---
+
+## Objetivos da Aula
+
+- Conhecer a **Google Cloud Platform (GCP)**.
+- Identificar serviços **equivalentes** a AWS/Azure.
+- Destacar os pontos fortes: **Big Data e ML**.
+- Reconhecer casos de uso.
+
+## O que é o Google Cloud?
+
+- Plataforma de nuvem do **Google**.
+- Forte em **dados, analytics e machine learning**.
+- Baseado na infraestrutura interna do Google.
+- Modelo **pay-as-you-go**.
+
+## Infraestrutura Global
+
+- **Regiões e zonas** mundo afora.
+- Rede global de **alta performance** do Google.
+- **Edge** e CDN.
+- Pontos de presença no **Brasil**.
+
+## Serviços Principais
+
+| Categoria | Serviço GCP |
+|-----------|-------------|
+| Computação | Compute Engine, Cloud Functions |
+| Contêineres | GKE (Kubernetes) |
+| Armazenamento | Cloud Storage |
+| Banco de dados | Cloud SQL, Firestore, Bigtable |
+| Analítica | BigQuery |
+
+## Equivalentes com AWS/Azure
+
+| Função | AWS | Azure | GCP |
+|--------|-----|-------|-----|
+| VM | EC2 | VMs | Compute Engine |
+| Serverless | Lambda | Functions | Cloud Functions |
+| Objetos | S3 | Blob | Cloud Storage |
+| K8s | EKS | AKS | GKE |
+| BI/DW | Redshift | Synapse | BigQuery |
+
+## Big Data e ML — Destaques
+
+- **BigQuery:** data warehouse serverless e analítico.
+- **Vertex AI:** plataforma de ML.
+- **Dataflow:** processamento de dados.
+- **Pub/Sub:** mensageria e streaming.
+
+## GKE — Kubernetes
+
+- Serviço gerenciado de **Kubernetes**.
+- Referência de maturidade em orquestração.
+- **Autopilot** para gerenciamento simplificado.
+- Integração com o ecossistema **Kubernetes**.
+
+## Casos de Uso
+
+- **Analytics** em grande escala (BigQuery).
+- **Machine Learning** e IA (Vertex AI).
+- **Contêineres** e microsserviços (GKE).
+- Aplicações globais com rede do Google.
+
+::: {.callout-note}
+O GCP se diferencia em **dados e IA**: BigQuery e Vertex AI são referências de mercado para analytics e machine learning.
+:::
+
+## Resumo da Aula
+
+- **GCP** é a nuvem do Google, forte em **dados e ML**.
+- Serviços equivalentes aos de AWS/Azure.
+- **GKE** é referência em Kubernetes gerenciado.
+- Ideal para **analytics, IA e contêineres**.
+
+## Atividade Rápida
+
+- Complete a tabela de equivalentes (AWS/Azure/GCP).
+- O que é **BigQuery**?
+- Cite um caso de uso ideal para GCP.
+
+## Referências
+
+- Google Cloud — *Documentação*.
+
+## Próxima Aula
+
+- **Aula 65:** Provedores — OpenStack.

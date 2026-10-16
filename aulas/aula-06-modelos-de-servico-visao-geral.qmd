@@ -1,5 +1,5 @@
 ---
-title: "Aula 06 — Modelos de Serviço em Nuvem"
+title: "Aula 6 — Modelos de Serviço em Nuvem"
 ---
 
 ## Objetivos da Aula

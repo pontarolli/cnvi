@@ -1,0 +1,87 @@
+---
+title: "Aula 48 — VPC, Sub-redes e Conectividade Híbrida"
+---
+
+## Objetivos da Aula
+
+- Aprofundar o desenho de **VPCs**.
+- Entender **roteamento** entre sub-redes.
+- Conhecer **conectividade híbrida** (on-prem ↔ nuvem).
+- Compreender **balanceamento e alta disponibilidade** de rede.
+
+## Desenhando uma VPC
+
+- Definir a **faixa CIDR** (ex.: 10.0.0.0/16).
+- Criar sub-redes em **múltiplas zonas de disponibilidade**.
+- Associar **tabelas de rotas** adequadas.
+- Aplicar **grupos de segurança** por camada.
+
+## Tabelas de Rotas
+
+- Definem para onde o tráfego é **encaminhado**.
+- Rota `0.0.0.0/0` → Internet Gateway (sub-rede pública).
+- Rota `0.0.0.0/0` → NAT Gateway (saída da privada).
+- Rotas locais conectam sub-redes da mesma VPC.
+
+## Peering e Conexão entre VPCs
+
+- **VPC Peering:** conecta duas VPCs diretamente.
+- **Transit Gateway:** hub central para várias VPCs.
+- Cuidado com **sobreposição de faixas** de IP.
+- Útil para arquiteturas multi-conta/multi-projeto.
+
+## Conectividade Híbrida
+
+- **VPN site-to-site:** túnel criptografado pela internet.
+- **Link dedicado** (ex.: AWS Direct Connect, Azure ExpressRoute).
+- **SD-WAN** para gestão de múltiplos links.
+- Objetivo: integrar **on-premises** e nuvem.
+
+## VPN × Link Dedicado
+
+| Aspecto | VPN | Link dedicado |
+|---------|-----|---------------|
+| Meio | Internet | Circuito privado |
+| Custo | Menor | Maior |
+| Previsibilidade | Variável | Alta |
+| Implantação | Rápida | Mais lenta |
+
+## Balanceamento de Carga
+
+- Distribui o tráfego entre **instâncias**.
+- Camada 4 (TCP) ou camada 7 (HTTP).
+- Integração com **Auto Scaling**.
+- Aumenta **disponibilidade** e desempenho.
+
+## DNS e Distribuição Global
+
+- **Route 53 / Azure DNS / Cloud DNS**.
+- Roteamento por **latência** ou **geolocalização**.
+- **CDN** para conteúdo próximo do usuário.
+- Base para aplicações **globais**.
+
+::: {.callout-note}
+Espalhe sub-redes por várias **zonas de disponibilidade** e use balanceamento para obter **alta disponibilidade** de rede.
+:::
+
+## Resumo da Aula
+
+- **VPCs** são desenhadas com CIDR, sub-redes e rotas.
+- **Peering/Transit Gateway** conectam redes na nuvem.
+- **VPN e link dedicado** integram on-premises.
+- **Balanceamento e DNS** dão escala e desempenho.
+
+## Atividade Rápida
+
+- Explique o papel da **tabela de rotas**.
+- Compare **VPN** e **link dedicado**.
+- Para que serve um **balanceador de carga**?
+
+## Referências
+
+- AWS — *VPC, Direct Connect*.
+- Azure — *ExpressRoute*.
+
+## Próxima Aula
+
+- **Aula 45:** Atividade — Redes em Nuvem.

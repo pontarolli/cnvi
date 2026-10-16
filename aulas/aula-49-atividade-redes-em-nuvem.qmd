@@ -1,0 +1,88 @@
+---
+title: "Aula 49 — Atividade: Redes em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Consolidar os conceitos de **redes em nuvem**.
+- Projetar uma **VPC** para um cenário.
+- Aplicar **segmentação e segurança** de rede.
+- Preparar para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **VPC:** rede isolada definida por software.
+- **Sub-redes** públicas e privadas.
+- **Gateways, tabelas de rotas e grupos de segurança**.
+- **VPN** e **link dedicado** para híbrido.
+
+## Cenário
+
+> Uma escola técnica precisa de uma rede em nuvem para um portal web público e um banco de dados interno, com separação de camadas.
+
+- Desenhe a **VPC** e as sub-redes.
+- Defina **rotas** e **grupos de segurança**.
+- Explique o **isolamento** do banco.
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Monte o **diagrama** da VPC.
+- Defina CIDR, sub-redes e zonas.
+- Especifique regras de **firewall**.
+- Apresente para a turma.
+
+## Parte 1 — Endereçamento
+
+- Escolha a **faixa CIDR** da VPC.
+- Divida em sub-redes (web, app, banco).
+- Distribua entre **zonas de disponibilidade**.
+
+## Parte 2 — Roteamento e Acesso
+
+- Sub-rede pública → **Internet Gateway**.
+- Sub-rede privada → **NAT Gateway**.
+- **Tabelas de rotas** por sub-rede.
+- Endereços estáticos para serviços.
+
+## Parte 3 — Segurança
+
+- **Grupos de segurança** por camada.
+- Banco acessível **somente** pela camada de aplicação.
+- Princípio do **menor privilégio**.
+- (Opcional) conectividade **híbrida**.
+
+## Critérios de Avaliação
+
+- **Correção** do endereçamento e das rotas.
+- **Isolamento** e segurança adequados.
+- **Clareza** do diagrama.
+- **Participação** do grupo.
+
+::: {.callout-important}
+A **Avaliação 1 (GIFT, 10 questões)** do bimestre cobre Big Data, ML e redes. Revise antes de responder.
+:::
+
+## Checklist do Grupo
+
+- [ ] CIDR e sub-redes definidos.
+- [ ] Zonas de disponibilidade atribuídas.
+- [ ] Roteamento especificado.
+- [ ] Grupos de segurança configurados.
+- [ ] Diagrama pronto.
+
+## Resumo da Aula
+
+- Projetamos uma **VPC** para um cenário real.
+- Aplicamos **segmentação, rotas e segurança**.
+- Praticamos **desenho de rede em nuvem**.
+- Próxima aula: **prática de redes virtuais**.
+
+## Referências
+
+- AWS — *VPC Design*.
+- Material das aulas 43 e 44.
+
+## Próxima Aula
+
+- **Aula 46:** Configuração de redes virtuais em nuvem (prática).

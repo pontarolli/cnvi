@@ -1,5 +1,5 @@
 ---
-title: "Aula 02 — Introdução à Computação em Nuvem (Parte 1)"
+title: "Aula 2 — Introdução à Computação em Nuvem (Parte 1)"
 ---
 
 ## Objetivos da Aula

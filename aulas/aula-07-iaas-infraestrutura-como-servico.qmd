@@ -1,5 +1,5 @@
 ---
-title: "Aula 07 — IaaS: Infraestrutura como Serviço"
+title: "Aula 7 — IaaS: Infraestrutura como Serviço"
 ---
 
 ## Objetivos da Aula

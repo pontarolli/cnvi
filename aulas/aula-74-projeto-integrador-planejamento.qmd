@@ -1,0 +1,87 @@
+---
+title: "Aula 74 — Projeto Integrador: Planejamento"
+---
+
+## Objetivos da Aula
+
+- Compreender o **projeto integrador** da disciplina.
+- Formar equipes e **definir o tema**.
+- Planejar a **arquitetura** da solução.
+- Organizar o **cronograma** de entregas.
+
+## O que é o Projeto Integrador?
+
+- Aplicação prática dos conteúdos do curso.
+- Uma **solução em nuvem** para um problema real.
+- Une conceitos de virtualização, redes, banco, DevOps e segurança.
+- Desenvolvido em equipe ao longo do bimestre.
+
+## Objetivos do Projeto
+
+- Consolidar a aprendizagem.
+- Desenvolver trabalho em **equipe**.
+- Praticar **documentação** e apresentação.
+- Simular um projeto **real** de nuvem.
+
+## Formação das Equipes
+
+- Grupos de **3 a 4 alunos**.
+- Definição de **papéis** (líder, arquiteto, infra, docs).
+- Escolha do **tema/problema**.
+- Registro da equipe e do escopo.
+
+## Definição do Tema
+
+- Um **problema real** (escola, negócio, comunidade).
+- Escopo **viável** para o prazo.
+- Uso de serviços de **nuvem** de verdade.
+- **Requisitos** funcionais e não funcionais.
+
+## Arquitetura da Solução
+
+- **Diagrama** da solução.
+- Escolha de **serviços** (computação, banco, rede, storage).
+- **Segurança e governança**.
+- Estimativa de **custo**.
+
+## Cronograma de Entregas
+
+- **Semana 1:** planejamento e arquitetura.
+- **Semana 2:** desenvolvimento e provas de conceito.
+- **Semana final:** apresentação e documentação.
+- Definição de **marcos** e responsáveis.
+
+## Documentação
+
+- **README** com visão geral.
+- **Diagramas** e decisões de arquitetura.
+- **Como executar** a solução.
+- Evidências (capturas, links).
+
+::: {.callout-note}
+Um bom projeto começa com **escopo claro** e **requisitos definidos** — evite soluções grandes demais para o prazo.
+:::
+
+## Checklist de Planejamento
+
+- [ ] Equipe formada e papéis definidos.
+- [ ] Tema e escopo definidos.
+- [ ] Requisitos levantados.
+- [ ] Arquitetura inicial desenhada.
+- [ ] Cronograma e marcos acordados.
+
+## Resumo da Aula
+
+- Iniciamos o **projeto integrador**.
+- Definimos **equipe, tema, escopo e arquitetura**.
+- Organizamos o **cronograma** de entregas.
+- Próxima aula: **desenvolvimento** do projeto.
+
+## Referências
+
+- Material do curso (todas as aulas).
+- Documentação dos provedores.
+
+## Próxima Aula
+
+- **Aula 69:** Projeto integrador — desenvolvimento.

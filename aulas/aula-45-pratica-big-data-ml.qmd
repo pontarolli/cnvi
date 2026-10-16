@@ -1,0 +1,79 @@
+---
+title: "Aula 45 — Prática: Big Data e ML na Nuvem"
+---
+
+## Objetivos da Aula
+
+- Aplicar um **pipeline de dados** na nuvem.
+- Utilizar **armazenamento de objetos** e um serviço de processamento.
+- Treinar ou usar um **modelo simples**.
+- Consolidar Big Data + ML na prática.
+
+## Ambiente da Prática
+
+- Conta em um provedor (camada gratuita é suficiente).
+- **Armazenamento de objetos** para os dados (ex.: bucket).
+- Serviço de processamento (ex.: notebook gerenciado).
+- Biblioteca de ML (scikit-learn, pandas).
+
+## Passo 1 — Ingestão
+
+- Obter um **dataset** público (CSV).
+- Enviar para o **bucket** de armazenamento.
+- Verificar permissões de acesso.
+- Registrar origem e formato dos dados.
+
+## Passo 2 — Preparação (ETL)
+
+- Ler os dados em um **notebook** na nuvem.
+- Limpar: valores ausentes, tipos, duplicatas.
+- Transformar: criar/ajustar variáveis.
+- Salvar a versão **tratada** de volta no bucket.
+
+## Passo 3 — Análise/Modelagem
+
+- Análise exploratória (estatísticas, gráficos).
+- Dividir em **treino e teste**.
+- Treinar um modelo simples (ex.: classificação/regressão).
+- Avaliar com métricas (**acurácia, RMSE** etc.).
+
+## Passo 4 — Implantação (opcional)
+
+- Salvar o **modelo treinado**.
+- Expor como **API** ou endpoint gerenciado.
+- Testar uma predição.
+- Monitorar uso.
+
+## Verificação da Prática
+
+- [ ] Dataset no armazenamento de objetos.
+- [ ] ETL executado e versão tratada salva.
+- [ ] Modelo treinado e avaliado.
+- [ ] (Opcional) modelo implantado.
+
+::: {.callout-tip}
+Mantenha **notebooks versionados** e nomeie os buckets/datasets de forma clara — isso é a base do **MLOps**.
+:::
+
+## Problemas Comuns
+
+- Falta de permissão no bucket → revisar **IAM**.
+- Dados "sujos" → dedicar tempo ao **ETL**.
+- Modelo ruim → revisar **features** e algoritmo.
+- Custo inesperado → desligar recursos ao terminar.
+
+## Resumo da Aula
+
+- Montamos um **pipeline** ingestão → ETL → modelo.
+- Usamos **armazenamento e computação** na nuvem.
+- (Opcionalmente) implantamos o modelo.
+- Próxima aula: **atividade** sobre Big Data e ML.
+
+## Referências
+
+- AWS SageMaker / Google Vertex AI.
+- scikit-learn — *Documentação*.
+
+## Próxima Aula
+
+- **Aula 42:** Atividade — Big Data e Machine Learning.

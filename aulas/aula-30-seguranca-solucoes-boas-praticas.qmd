@@ -1,0 +1,96 @@
+---
+title: "Aula 30 — Segurança em Nuvem: Soluções e Boas Práticas"
+---
+
+## Objetivos da Aula
+
+- Conhecer as principais **soluções de segurança** em nuvem.
+- Entender siglas: **WAF, SIEM, CASB, ZTNA, FWaaS**.
+- Compreender o conceito de **Zero Trust**.
+- Consolidar **boas práticas** de segurança.
+
+## Panorama de Soluções
+
+- **WAF** — protege aplicações web.
+- **SIEM** — correlação de eventos de segurança.
+- **CASB** — controle de acesso a serviços de nuvem.
+- **ZTNA** — acesso de rede baseado em identidade.
+- **FWaaS** — firewall como serviço.
+
+## WAF — Web Application Firewall
+
+- Filtra e monitora o tráfego **HTTP/HTTPS**.
+- Protege contra **SQL Injection, XSS, bots**.
+- Pode operar na borda (**CDN**) ou junto à aplicação.
+- Exemplos: AWS WAF, Cloudflare.
+
+## SIEM
+
+- **Security Information and Event Management**.
+- Coleta e **correlaciona logs** de várias fontes.
+- Detecta **padrões suspeitos** e gera alertas.
+- Essencial para monitoramento e resposta a incidentes.
+
+## CASB e ZTNA
+
+- **CASB:** intermedeia e audita o acesso a SaaS; aplica políticas (**DLP**).
+- **ZTNA:** acesso "zero trust" — valida identidade e contexto **a cada acesso**.
+- Reduz a exposição da rede e substitui VPNs tradicionais.
+- Alinhados ao modelo **Zero Trust**.
+
+## FWaaS
+
+- **Firewall as a Service:** firewall entregue pela nuvem.
+- Aplica regras de **camada de rede e aplicação**.
+- Escalável e gerenciado centralmente.
+- Integra-se a políticas de **microssegmentação**.
+
+## Zero Trust
+
+- Princípio: **"nunca confie, sempre verifique"**.
+- Não assume que a rede interna é segura.
+- **Verificação contínua** de identidade e dispositivo.
+- **Menor privilégio** e microssegmentação.
+
+## Boas Práticas Consolidadas
+
+- MFA e IAM bem configurado.
+- Criptografia em trânsito e em repouso.
+- **Monitoramento** contínuo (SIEM) e alertas.
+- **Backups** e testes de restauração.
+- **Atualizações** e gestão de vulnerabilidades.
+
+## Resposta a Incidentes
+
+- **Preparação:** planos e ferramentas prontos.
+- **Detecção:** monitoramento e alertas.
+- **Contenção:** isolar o incidente.
+- **Erradicação e recuperação**.
+- **Lições aprendidas** após o incidente.
+
+::: {.callout-note}
+A segurança em nuvem é **contínua**: não basta configurar uma vez; é preciso monitorar, atualizar e revisar sempre.
+:::
+
+## Resumo da Aula
+
+- **WAF, SIEM, CASB, ZTNA e FWaaS** cobrem camadas distintas.
+- **Zero Trust** muda o paradigma do perímetro de rede.
+- Boas práticas incluem MFA, criptografia e monitoramento.
+- Resposta a incidentes é **cíclica** e planejada.
+
+## Atividade Rápida
+
+- Associe cada sigla (WAF, SIEM, CASB, ZTNA) à sua função.
+- Explique o princípio **Zero Trust**.
+- Liste três **boas práticas** de segurança em nuvem.
+
+## Referências
+
+- NIST — *Zero Trust Architecture*.
+- CSA — *Security Guidance*.
+- Documentação dos provedores de nuvem.
+
+## Próxima Aula
+
+- **Aula 29:** Atividade — Segurança em Nuvem.
