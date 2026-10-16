@@ -1,0 +1,93 @@
+---
+title: "Aula 40 — Machine Learning na Nuvem"
+---
+
+## Objetivos da Aula
+
+- Definir **Machine Learning (ML)** e seus tipos.
+- Entender o **ciclo de vida** de um modelo.
+- Conhecer **serviços de ML** na nuvem.
+- Relacionar ML com **Big Data** e nuvem.
+
+## O que é Machine Learning?
+
+- Ramo da IA em que sistemas **aprendem** com dados.
+- Em vez de programar regras, o modelo **descobre padrões**.
+- Requer dados, algoritmos e poder computacional.
+- A nuvem oferece **escala** para treinar e servir modelos.
+
+## Tipos de Aprendizado
+
+- **Supervisionado:** dados rotulados (classificação, regressão).
+- **Não supervisionado:** sem rótulos (agrupamento).
+- **Por reforço:** aprende por recompensa.
+- Escolha depende do **problema** e dos dados.
+
+## Ciclo de Vida de um Modelo
+
+1. **Coleta e preparação** dos dados.
+2. **Treinamento** do modelo.
+3. **Avaliação** e ajuste.
+4. **Implantação** (deploy) em produção.
+5. **Monitoramento** e re-treinamento.
+
+## Onde Entra a Nuvem?
+
+- **Dados** em armazenamento escalável (data lake).
+- **Treinamento** em GPUs/TPUs sob demanda.
+- **Serviços gerenciados** de ML.
+- **Implantação** como API escalável.
+
+## Serviços de ML na Nuvem
+
+- **Amazon SageMaker**.
+- **Google Vertex AI**.
+- **Azure Machine Learning**.
+- Serviços de **IA pronta** (visão, fala, linguagem).
+
+## MLOps
+
+- Práticas para operar ML de forma **confiável**.
+- Versionamento de dados e modelos.
+- **CI/CD** para modelos.
+- Monitoramento de **deriva (drift)**.
+
+## Casos de Uso
+
+- Recomendação de conteúdo.
+- Detecção de fraude.
+- Previsão de demanda.
+- Visão computacional e processamento de linguagem.
+
+## Segurança e Ética
+
+- **Privacidade** dos dados de treino (LGPD).
+- **Viés** algorítmico e justiça.
+- **Explicabilidade** dos modelos.
+- Uso responsável de IA.
+
+::: {.callout-note}
+ML na nuvem combina **Big Data (dados) + computação elástica (treino) + serviços gerenciados (deploy)** em um fluxo único.
+:::
+
+## Resumo da Aula
+
+- **ML** aprende padrões a partir de dados.
+- Tipos: supervisionado, não supervisionado, por reforço.
+- A nuvem oferece **escala, GPUs e serviços gerenciados**.
+- **MLOps** garante operação confiável dos modelos.
+
+## Atividade Rápida
+
+- Diferencie aprendizado **supervisionado** e **não supervisionado**.
+- Cite três **serviços de ML** na nuvem.
+- Explique o que é **deriva (drift)** de modelo.
+
+## Referências
+
+- AWS SageMaker / Google Vertex AI / Azure ML.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+
+## Próxima Aula
+
+- **Aula 41:** Prática — serviços de Big Data e ML na nuvem.

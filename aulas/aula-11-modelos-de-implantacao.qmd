@@ -1,0 +1,98 @@
+---
+title: "Aula 11 — Modelos de Implantação em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Conhecer os **quatro modelos de implantação** do NIST.
+- Comparar **pública, privada, híbrida e comunitária**.
+- Entender quando usar cada modelo.
+- Relacionar implantação com **segurança e custo**.
+
+## Os Quatro Modelos (NIST)
+
+- **Nuvem pública**
+- **Nuvem privada**
+- **Nuvem híbrida**
+- **Nuvem comunitária**
+
+## Nuvem Pública
+
+- Recursos oferecidos por um provedor a **qualquer cliente**.
+- Compartilhada (**multilocação**).
+- Alta escala e custo por uso.
+- Exemplos: AWS, Azure, Google Cloud.
+
+## Nuvem Privada
+
+- Infraestrutura dedicada a **uma única organização**.
+- Maior **controle** e personalização.
+- Pode ser on-premises ou operada por terceiros.
+- Exemplos: OpenStack, VMware Cloud, Azure Stack.
+
+## Nuvem Híbrida
+
+- Combina **pública + privada**, integradas.
+- Dados sensíveis na privada; picos na pública (cloud bursting).
+- Equilíbrio entre **controle e escalabilidade**.
+- Exige boa **integração de rede** (VPN, link dedicado).
+
+## Nuvem Comunitária
+
+- Compartilhada por organizações com **interesses comuns**.
+- Ex.: universidades, órgãos públicos, setor de saúde.
+- Regras e responsabilidades definidas entre os membros.
+- Menos comum no mercado, mas prevista pelo NIST.
+
+## Comparativo
+
+| Modelo | Compartilhamento | Controle | Custo relativo |
+|--------|------------------|----------|----------------|
+| Pública | Alto | Baixo | Menor |
+| Privada | Baixo | Alto | Maior |
+| Híbrida | Variável | Médio-alto | Médio |
+| Comunitária | Múltiplo | Médio | Menor |
+
+## Quando Usar Cada Um
+
+- **Pública:** startups, escala rápida, custo baixo.
+- **Privada:** dados sensíveis, requisitos rígidos de compliance.
+- **Híbrida:** equilíbrio entre controle e elasticidade.
+- **Comunitária:** cooperação entre instituições.
+
+::: {.callout-note}
+Não existe "melhor modelo" universal: a escolha depende de **segurança, custo, escala e requisitos legais**.
+:::
+
+## Escolhendo o Modelo
+
+- Quão **sensível** são os dados?
+- Qual o **orçamento** e o **prazo**?
+- Há exigência de **localização** dos dados (soberania)?
+- Necessidade de **escala imprevisível**?
+- Equipe interna disponível para operar?
+
+## Resumo da Aula
+
+- O NIST define quatro modelos de **implantação**.
+- **Pública** (compartilhada), **privada** (dedicada), **híbrida** (integrada) e **comunitária** (coletiva).
+- A escolha equilibra **controle, custo e segurança**.
+- Híbrida é muito comum em empresas em transição.
+
+## Atividade Rápida
+
+- Para cada cenário, indique o modelo:
+  - Banco com dados sensíveis.
+  - Startup de aplicativo móvel.
+  - Universidade em consórcio.
+- Justifique suas respostas.
+
+## Referências
+
+- NIST SP 800-145.
+- Gartner — *Hybrid Cloud*.
+- Documentação OpenStack e Azure Stack.
+
+## Próxima Aula
+
+- **Aula 12:** Atividade — Modelos de Serviço e Implantação.

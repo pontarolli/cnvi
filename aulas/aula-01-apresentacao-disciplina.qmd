@@ -1,0 +1,80 @@
+---
+title: "Aula 01 — Apresentação da Disciplina"
+---
+
+## Bem-vindos!
+
+- **Disciplina:** Computação em Nuvem e Virtualização (CNVI)
+- **Curso:** Técnico em Redes de Computadores — IFSP Boituva
+- **Carga horária:** 60 horas — 2 aulas por semana
+- **Professor:** Ricardo Pasquati Pontarolli
+- **Contato:** pasquati@ifsp.edu.br
+
+## Sobre a Disciplina
+
+- Estuda os fundamentos da **computação em nuvem** e da **virtualização**.
+- Aborda desde conceitos básicos até a implantação de serviços em provedores reais.
+- Combina teoria e prática com atividades, laboratórios e um projeto integrador.
+- Prepara o aluno para atuar com infraestrutura, redes e serviços em nuvem.
+
+## Objetivos de Aprendizagem
+
+- Compreender os conceitos de computação em nuvem e virtualização.
+- Identificar modelos de serviço (IaaS, PaaS, SaaS) e de implantação.
+- Criar e gerenciar máquinas virtuais e contêineres.
+- Aplicar segurança, redes e banco de dados em ambientes de nuvem.
+- Analisar e selecionar soluções de nuvem adequadas a cada cenário.
+
+## Conteúdo — 1º e 2º Bimestres
+
+- **1º Bimestre:** introdução à nuvem, modelos de serviço e implantação, virtualização.
+- **2º Bimestre:** hipervisores, máquinas virtuais, segurança, contêineres e Docker.
+
+## Conteúdo — 3º e 4º Bimestres
+
+- **3º Bimestre:** Big Data e ML na nuvem, redes em nuvem, serverless, edge computing.
+- **4º Bimestre:** banco de dados, DevOps/CI-CD, provedores, governança e projeto integrador.
+
+## Metodologia
+
+- Aulas expositivas com apoio de slides.
+- Atividades práticas em laboratório e no Moodle.
+- Estudo de casos e análise de soluções reais.
+- Projeto integrador desenvolvido ao longo do curso.
+
+## Avaliação
+
+- **2 avaliações por bimestre**, aplicadas no **Moodle** (10 questões cada).
+- Atividades e exercícios ao longo das aulas.
+- Projeto integrador avaliado ao final.
+- Critérios: acerto nas avaliações, participação e entregas.
+
+::: {.callout-note}
+Consulte o **Plano de Ensino** da disciplina para detalhes das datas e pesos.
+:::
+
+## Recomendações de Estudo
+
+- Revise o material das aulas antes da próxima.
+- Pratique no laboratório (VirtualBox, Docker, consoles de nuvem).
+- Anote dúvidas e traga-as para a aula.
+- Mantenha as atividades do Moodle em dia.
+
+## Referências
+
+- NIST — *The NIST Definition of Cloud Computing* (SP 800-145).
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- Documentação oficial: AWS, Microsoft Azure, Google Cloud.
+
+## Bons estudos!
+
+- "A nuvem não é um lugar, é uma forma de entregar recursos de TI."
+- Nos vemos nas próximas aulas: vamos começar pelos **fundamentos da nuvem**.
+
+## Contato e Materiais
+
+- **E-mail:** pasquati@ifsp.edu.br
+- **Site da disciplina:** slides e cronograma disponíveis online.
+- **Moodle:** atividades e avaliações.
+- **GitHub:** repositório com o material-fonte das aulas.

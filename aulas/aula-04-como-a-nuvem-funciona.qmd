@@ -1,0 +1,97 @@
+---
+title: "Aula 04 — Como a Nuvem Funciona"
+---
+
+## Objetivos da Aula
+
+- Entender o papel dos **data centers** na nuvem.
+- Compreender a **virtualização** como base técnica.
+- Relacionar **elasticidade** e **balanceamento de carga**.
+- Visualizar, em alto nível, a arquitetura de um serviço em nuvem.
+
+## O que Existe "Atrás da Nuvem"?
+
+- **Data centers:** instalações físicas com milhares de servidores.
+- **Infraestrutura de rede** de alta velocidade.
+- **Sistemas de energia** redundantes e **refrigeração**.
+- **Virtualização** sobre o hardware físico.
+- **Software de orquestração** que aloca recursos.
+
+## Data Centers
+
+- Locais projetados para hospedar **servidores e equipamentos de rede**.
+- Conectividade redundante, energia de backup e controle de temperatura.
+- Organizados em **racks** e **blades**.
+- Otimizados por métricas como o **PUE** (eficiência energética).
+
+## Virtualização (Visão Geral)
+
+- **Hipervisor:** software que cria e gerencia máquinas virtuais.
+- Vários **sistemas isolados** rodam no mesmo servidor físico.
+- Melhora o **aproveitamento** do hardware.
+- Permite **migrar**, **clonar** e **restaurar** máquinas com facilidade.
+
+::: {.callout-tip}
+Sem virtualização, a nuvem como conhecemos não existiria: ela é a "mágica" que transforma servidores físicos em recursos sob demanda.
+:::
+
+## Como um Recurso é Provisionado
+
+1. O usuário solicita uma instância (CPU, memória, disco, rede).
+2. O orquestrador encontra um **host físico** com capacidade.
+3. O **hipervisor** cria a máquina virtual.
+4. A VM recebe **IP, disco e conectividade** automaticamente.
+5. Em **minutos**, o servidor está pronto para uso.
+
+## Elasticidade na Prática
+
+- **Auto Scaling:** adiciona/remove instâncias conforme a carga.
+- **Balanceador de carga:** distribui o tráfego entre instâncias.
+- Em picos, mais servidores; em baixa, menos (economia).
+- Tudo isso **automaticamente**, sem intervenção manual.
+
+## Regiões e Zonas de Disponibilidade
+
+- **Região:** localização geográfica (ex.: São Paulo, Virgínia).
+- **Zona de disponibilidade (AZ):** data centers isolados dentro da região.
+- Distribuir recursos em várias AZs aumenta a **resiliência**.
+- Escolher a região certa reduz a **latência** para os usuários.
+
+## Visão Geral da Arquitetura
+
+- **Camada física:** servidores, rede, energia.
+- **Camada de virtualização:** hipervisores e VMs.
+- **Camada de orquestração:** alocação e automação.
+- **Camada de serviços:** IaaS, PaaS, SaaS, serverless.
+- **Camada de acesso:** consoles, APIs, CLI.
+
+## Da Requisição à Resposta
+
+- O usuário abre o navegador e acessa uma aplicação.
+- A requisição passa pelo **DNS**, chega a um **balanceador**.
+- O balanceador encaminha para uma **instância** saudável.
+- A instância acessa **banco de dados** e **armazenamento**.
+- A resposta volta ao usuário — tudo transparente.
+
+## Resumo da Aula
+
+- A nuvem é sustentada por **data centers + rede + virtualização**.
+- A **virtualização** transforma hardware em recursos sob demanda.
+- **Auto Scaling** e **balanceamento** entregam elasticidade.
+- **Regiões e AZs** dão escala global e resiliência.
+
+## Atividade Rápida
+
+- Desenhe, em blocos, o caminho de uma requisição até a aplicação.
+- Explique por que a **virtualização** é a base da nuvem.
+- Diferencie **região** de **zona de disponibilidade**.
+
+## Referências
+
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- AWS — *Well-Architected Framework*.
+- Documentação dos provedores sobre regiões e AZs.
+
+## Próxima Aula
+
+- **Aula 05:** Atividade — Computação em Nuvem (no Moodle).

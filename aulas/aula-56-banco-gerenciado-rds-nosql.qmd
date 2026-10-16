@@ -1,0 +1,84 @@
+---
+title: "Aula 56 — Bancos Gerenciados: RDS e NoSQL"
+---
+
+## Objetivos da Aula
+
+- Aprofundar o **Amazon RDS**.
+- Compreender o **DynamoDB** (NoSQL).
+- Comparar **modelos de dados** NoSQL.
+- Escolher o banco adequado ao cenário.
+
+## Amazon RDS
+
+- Serviço de bancos **relacionais gerenciados**.
+- Motores: **MySQL, PostgreSQL, MariaDB, SQL Server, Oracle**.
+- **Amazon Aurora:** compatível e de alto desempenho.
+- Backup automático, patches e **multi-AZ**.
+
+## Recursos do RDS
+
+- **Multi-AZ** para alta disponibilidade.
+- **Read replicas** para escala de leitura.
+- **Snapshots** e restauração point-in-time.
+- **Criptografia** em repouso.
+
+## DynamoDB
+
+- Banco **NoSQL** chave-valor e documento.
+- **Totalmente gerenciado** e serverless.
+- Escala automática e baixa latência.
+- Ideal para **altíssima escala** e padrões de acesso simples.
+
+## Modelos NoSQL
+
+- **Chave-valor:** DynamoDB, Redis.
+- **Documento:** MongoDB, DocumentDB, Firestore.
+- **Coluna:** Cassandra, Bigtable.
+- **Grafo:** Neo4j, Neptune.
+
+## Quando usar SQL × NoSQL?
+
+- **SQL:** dados relacionais, transações, consistência forte.
+- **NoSQL:** escala horizontal, esquema flexível, alta taxa de acesso.
+- **Polyglot persistence:** usar os dois conforme a necessidade.
+- Evite escolher por "moda".
+
+## Aurora
+
+- Banco relacional **compatível com MySQL/PostgreSQL**.
+- Alto desempenho e **replicação gerenciada**.
+- Separação de **armazenamento e computação**.
+- Boa opção de **serverless** (Aurora Serverless).
+
+## Prática Recomendada
+
+- Modelar o **acesso** antes de escolher o banco.
+- Considerar **consistência** necessária.
+- Planejar **backups e recuperação**.
+- Monitorar **custo** do serviço gerenciado.
+
+::: {.callout-tip}
+Comece por um **banco relacional gerenciado** (RDS) e migre para NoSQL **quando a escala exigir**.
+:::
+
+## Resumo da Aula
+
+- **RDS** gerencia bancos relacionais (com Aurora).
+- **DynamoDB** é NoSQL gerenciado e serverless.
+- Conhecer os **modelos NoSQL** ajuda na escolha.
+- A escolha vem do **padrão de acesso e consistência**.
+
+## Atividade Rápida
+
+- Cite os motores suportados pelo **RDS**.
+- Explique quando preferir **DynamoDB**.
+- Diferencie **chave-valor** de **documento**.
+
+## Referências
+
+- AWS — *RDS* e *DynamoDB*.
+
+## Próxima Aula
+
+- **Aula 57:** Prática — banco de dados gerenciado na nuvem.

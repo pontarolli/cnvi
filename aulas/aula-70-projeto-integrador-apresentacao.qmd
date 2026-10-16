@@ -1,0 +1,89 @@
+---
+title: "Aula 70 — Projeto Integrador: Apresentação"
+---
+
+## Objetivos da Aula
+
+- **Apresentar** a solução desenvolvida.
+- Demonstrar o **funcionamento** da aplicação.
+- Justificar as **decisões técnicas**.
+- Receber **feedback** e avaliar o aprendizado.
+
+## Estrutura da Apresentação
+
+- **Introdução:** problema e objetivos.
+- **Arquitetura:** diagrama e serviços.
+- **Demonstração:** funcionamento.
+- **Resultados:** aprendizados e desafios.
+- **Conclusão:** próximos passos.
+
+## O que Apresentar
+
+- **Problema** escolhido e requisitos.
+- **Diagrama** da solução.
+- **Serviços** de nuvem utilizados.
+- **Segurança e custos** previstos.
+- Evidências de **execução**.
+
+## Demonstração
+
+- Mostrar a aplicação **funcionando**.
+- Explicar o **fluxo** de dados.
+- Demonstrar (**se possível**) recursos de nuvem.
+- Ter plano B (vídeo/capturas) se a rede falhar.
+
+## Justificativa Técnica
+
+- Por que esses **serviços**?
+- Como resolveram **segurança e escalabilidade**?
+- Quais **trade-offs** foram feitos?
+- O que fariam **diferente** agora?
+
+## Critérios de Avaliação
+
+- **Domínio** do conteúdo.
+- **Qualidade** da solução.
+- **Clareza** da apresentação.
+- **Trabalho em equipe**.
+- **Documentação** entregue.
+
+## Feedback e Reflexão
+
+- Perguntas da turma e do professor.
+- Pontos fortes e **melhorias**.
+- Reflexão sobre o **processo**.
+- Aprendizados para o futuro profissional.
+
+::: {.callout-note}
+O mais importante não é a solução perfeita, mas a capacidade de **explicar as decisões** e aprender com o processo.
+:::
+
+## Entrega Final
+
+- Repositório com **código** e **README**.
+- **Diagrama** de arquitetura.
+- **Relatório** do projeto.
+- Entrega no **Moodle**.
+
+## Checklist de Apresentação
+
+- [ ] Slides preparados.
+- [ ] Demonstração testada.
+- [ ] Justificativas técnicas prontas.
+- [ ] Documentação entregue.
+- [ ] Divisão de fala entre a equipe.
+
+## Resumo da Aula
+
+- Apresentamos e demonstramos a **solução**.
+- Justificamos as **decisões técnicas**.
+- Recebemos **feedback** e refletimos.
+- Próxima aula: **revisão geral do curso**.
+
+## Referências
+
+- Roteiros de apresentação e documentação técnica.
+
+## Próxima Aula
+
+- **Aula 71:** Revisão geral do curso.

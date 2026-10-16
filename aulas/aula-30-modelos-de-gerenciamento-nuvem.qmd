@@ -1,0 +1,87 @@
+---
+title: "Aula 30 — Modelos de Gerenciamento em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Compreender o que é **gerenciamento de nuvem**.
+- Conhecer plataformas e **ferramentas** de gestão.
+- Entender **orquestração, automação e IaC**.
+- Relacionar gerenciamento com **custos e governança**.
+
+## O que é Gerenciamento de Nuvem?
+
+- Conjunto de práticas e ferramentas para **operar** recursos em nuvem.
+- Abrange: provisionamento, monitoramento, custos, segurança e política.
+- Objetivo: usar a nuvem de forma **eficiente e controlada**.
+- Envolve **pessoas, processos e tecnologia**.
+
+## Camadas de Gerenciamento
+
+- **Provisionamento:** criar recursos.
+- **Monitoramento:** observar desempenho e saúde.
+- **Custos (FinOps):** controlar gastos.
+- **Segurança e conformidade:** políticas e auditoria.
+- **Automação/orquestração:** reduzir trabalho manual.
+
+## Plataformas de Gerenciamento
+
+- **AWS Management Console / Azure Portal / GCP Console**.
+- **CLI e SDKs** para automação.
+- Ferramentas **multi-cloud**: Terraform, Ansible, Pulumi.
+- Painéis de monitoramento: CloudWatch, Azure Monitor.
+
+## Orquestração
+
+- Coordena múltiplos recursos e serviços.
+- Ex.: Kubernetes orquestra **contêineres**.
+- Define **desejado** e reconcilia com o **estado real**.
+- Base para **escalabilidade e resiliência**.
+
+## Automação e IaC
+
+- **Infraestrutura como Código (IaC):** definir recursos em arquivos versionáveis.
+- Ferramentas: **Terraform, CloudFormation, Ansible**.
+- Reproduzível, auditável e reutilizável.
+- Reduz erros manuais e acelera a entrega.
+
+## Monitoramento e Observabilidade
+
+- **Métricas, logs e traces**.
+- Alertas proativos sobre anomalias.
+- Objetivo: **observabilidade** do sistema.
+- Ex.: CloudWatch, Prometheus, Grafana.
+
+## FinOps — Gestão de Custos
+
+- Unir **finanças + operações + tecnologia**.
+- Visibilidade de gastos (tags, relatórios).
+- Otimização: **rightsizing**, desligar ociosos, reservas.
+- Cultura de responsabilidade sobre o custo.
+
+::: {.callout-note}
+Gerenciar nuvem é **governar**: equilibrar agilidade, segurança, custo e conformidade. IaC e orquestração são peças-chave.
+:::
+
+## Resumo da Aula
+
+- Gerenciamento cobre **provisionamento, monitoramento, custos e segurança**.
+- **Orquestração** coordena recursos; **IaC** automatiza.
+- **Monitoramento/observabilidade** garantem saúde e desempenho.
+- **FinOps** controla e otimiza custos.
+
+## Atividade Rápida
+
+- Cite **três funções** do gerenciamento de nuvem.
+- Explique o que é **Infraestrutura como Código**.
+- Dê um exemplo de **orquestração** (além de Kubernetes).
+
+## Referências
+
+- Terraform — *Documentação*.
+- FinOps Foundation.
+- Documentação dos provedores de nuvem.
+
+## Próxima Aula
+
+- **Aula 31:** Contêineres — conceitos e VM × contêiner.

@@ -1,0 +1,87 @@
+---
+title: "Aula 26 — Segurança em Nuvem: Fundamentos"
+---
+
+## Objetivos da Aula
+
+- Compreender os **fundamentos** de segurança em nuvem.
+- Entender o **modelo de responsabilidade compartilhada**.
+- Conhecer as principais **ameaças**.
+- Reconhecer os pilares da **segurança da informação**.
+
+## Segurança em Nuvem
+
+- Conjunto de políticas, tecnologias e controles para **proteger** dados e serviços na nuvem.
+- Envolve **confidencialidade, integridade e disponibilidade** (CID).
+- Não é apenas tecnologia: depende de **processos e pessoas**.
+
+## Modelo de Responsabilidade Compartilhada
+
+- **Segurança "da" nuvem:** do **cliente** (dados, acesso, configuração).
+- **Segurança "na" nuvem:** do **provedor** (infraestrutura física).
+- A divisão **varia** conforme o modelo (IaaS, PaaS, SaaS).
+- Mal-entendidos aqui são causa comum de **incidentes**.
+
+## Pilares da Segurança (CID)
+
+- **Confidencialidade:** só quem pode acessa.
+- **Integridade:** os dados não são alterados indevidamente.
+- **Disponibilidade:** os serviços estão acessíveis quando necessário.
+- Complementos: autenticidade e não repúdio.
+
+## Principais Ameaças
+
+- **Vazamento de dados** (breaches).
+- **Credenciais comprometidas** e má gestão de acessos.
+- **APIs inseguras** e configurações incorretas.
+- **Ataques de negação de serviço (DDoS)**.
+- **Malware** e engenharia social.
+
+## Configuração Incorreta
+
+- Erro humano é uma das **maiores causas** de incidentes.
+- Ex.: bucket de armazenamento **público** por engano.
+- Portas abertas e grupos de segurança **permissivos**.
+- A boa notícia: muitos problemas são evitáveis com **boas práticas**.
+
+## Fronteira de Confiança
+
+- A **identidade** é o novo perímetro de segurança.
+- Modelos tradicionais (firewall de rede) são insuficientes.
+- Abordagem **"zero trust"**: nunca confie, sempre verifique.
+- Autenticação forte e **menor privilégio**.
+
+## Boas Práticas Iniciais
+
+- **MFA** e senhas fortes.
+- Princípio do **menor privilégio**.
+- **Criptografia** em repouso e em trânsito.
+- **Monitoramento** e registro (logs).
+- **Backups** testados regularmente.
+
+::: {.callout-note}
+Segurança em nuvem é uma **responsabilidade conjunta**: o provedor garante a infraestrutura; o cliente protege dados, acessos e configurações.
+:::
+
+## Resumo da Aula
+
+- Segurança em nuvem protege **CID** dos dados.
+- A **responsabilidade é compartilhada** e varia por modelo.
+- **Configuração incorreta** e credenciais são ameaças comuns.
+- Base: identidade forte, criptografia e monitoramento.
+
+## Atividade Rápida
+
+- Explique o **modelo de responsabilidade compartilhada**.
+- Dê um exemplo de segurança "da" e "na" nuvem.
+- Liste três **ameaças** e como mitigá-las.
+
+## Referências
+
+- NIST — *Cloud Security*.
+- CSA — *Cloud Controls Matrix*.
+- AWS/Azure/Google — *Security Best Practices*.
+
+## Próxima Aula
+
+- **Aula 27:** Segurança em nuvem — identidade, acesso e criptografia.

@@ -1,0 +1,86 @@
+---
+title: "Aula 60 — Prática: Pipeline CI/CD"
+---
+
+## Objetivos da Aula
+
+- Criar um **repositório** com uma aplicação simples.
+- Configurar um **pipeline de CI/CD**.
+- Automatizar **build, teste e deploy**.
+- Consolidar DevOps na prática.
+
+## Preparação
+
+- Conta no **GitHub** (ou GitLab).
+- Aplicação simples (ex.: API, página, script).
+- Noções de **Git** (commit, push).
+- Ambiente onde publicar (ex.: contêiner, hospedagem).
+
+## Passo 1 — Repositório
+
+- Criar o repositório e enviar o código.
+- Adicionar **testes** automatizados.
+- Definir a **branch principal**.
+- Documentar no **README**.
+
+## Passo 2 — Configurar o Pipeline
+
+- Criar `.github/workflows/ci.yml` (exemplo).
+- Definir **gatilhos** (push, pull request).
+- Etapas: **checkout → setup → build → test**.
+- Rodar em um ambiente limpo.
+
+## Passo 3 — Testes Automatizados
+
+- Executar a suíte de testes no pipeline.
+- Falhar o pipeline se um teste falhar.
+- Adicionar verificação de **formatação/lint**.
+- Publicar **relatórios** de teste.
+
+## Passo 4 — Deploy
+
+- Adicionar etapa de **empacotamento** (ex.: imagem Docker).
+- Publicar no registro de imagens.
+- Deploy em **staging** e depois **produção**.
+- Configurar **segredos** com segurança.
+
+## Passo 5 — Validação
+
+- Fazer um **commit** e acompanhar o pipeline.
+- Introduzir um **erro** e ver o pipeline falhar.
+- Corrigir e ver o pipeline **passar**.
+- Observar o deploy.
+
+## Verificação da Prática
+
+- [ ] Repositório com testes.
+- [ ] Pipeline configurado e disparando.
+- [ ] Build e testes automáticos.
+- [ ] Deploy automatizado (staging/produção).
+
+::: {.callout-tip}
+Mantenha o pipeline **enxuto e rápido**. Feedback em poucos minutos acelera todo o ciclo de desenvolvimento.
+:::
+
+## Problemas Comuns
+
+- Pipeline lento → cachear dependências.
+- Falha por segredo exposto → usar **secrets**.
+- Testes instáveis → revisar ambientes.
+- Deploy quebrando → validar em **staging** primeiro.
+
+## Resumo da Aula
+
+- Criamos um **pipeline** do zero.
+- Automatizamos **build, teste e deploy**.
+- Usamos **segredos** e ambiente limpo.
+- Próxima aula: **atividade sobre DevOps**.
+
+## Referências
+
+- GitHub Actions — *Documentação*.
+- Material das aulas 58 e 59.
+
+## Próxima Aula
+
+- **Aula 61:** Atividade — Cloud DevOps e Integração Contínua.

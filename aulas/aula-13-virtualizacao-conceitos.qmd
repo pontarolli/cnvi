@@ -1,0 +1,94 @@
+---
+title: "Aula 13 — Virtualização: Conceitos e Fundamentos"
+---
+
+## Objetivos da Aula
+
+- Definir **virtualização** e seus princípios.
+- Entender o papel do **hipervisor**.
+- Compreender **máquina virtual** e **isolamento**.
+- Reconhecer a virtualização como base da nuvem.
+
+## O que é Virtualização?
+
+- Técnica que **abstrai** recursos de hardware.
+- Permite rodar **vários sistemas** sobre um único computador físico.
+- Cria a ilusão de hardware dedicado para cada sistema.
+- É a **base técnica** da computação em nuvem.
+
+## Por que Virtualizar?
+
+- Aproveitar melhor o hardware (evitar **ociosidade**).
+- Reduzir custos de energia, espaço e manutenção.
+- Isolar ambientes e aumentar a **segurança**.
+- Facilitar **backup, clonagem e migração**.
+
+## Conceitos-Chave
+
+- **Host:** máquina física que hospeda as VMs.
+- **Guest:** sistema convidado (a VM).
+- **Hipervisor (VMM):** software que gerencia as VMs.
+- **VM (máquina virtual):** computador virtual isolado.
+
+## Hipervisor
+
+- Camada que **aloca recursos** físicos às VMs.
+- Garante **isolamento** entre máquinas virtuais.
+- Tipos: **tipo 1** (bare-metal) e **tipo 2** (hospedado).
+- Exemplos: ESXi, Xen, KVM (tipo 1); VirtualBox, Workstation (tipo 2).
+
+## Máquina Virtual
+
+- Emula um computador completo: **CPU, memória, disco, rede**.
+- Possui **hardware virtual** próprio.
+- Isolada das demais VMs no mesmo host.
+- Estado armazenado em **arquivos** (disco virtual, config).
+
+## Isolamento e Consolidação
+
+- **Isolamento:** uma VM não interfere na outra.
+- **Consolidação:** várias VMs em um único servidor.
+- Maior densidade → menor custo por serviço.
+- Base para **multilocação** na nuvem.
+
+## Virtualização × Emulação
+
+- **Virtualização:** o guest roda instruções no hardware real (rápido).
+- **Emulação:** o software simula outro hardware (mais lento).
+- Virtualização exige suporte de hardware (**VT-x/AMD-V**).
+- Emulação é usada quando a arquitetura é diferente.
+
+::: {.callout-note}
+Sem virtualização não haveria **multilocação** nem **elasticidade** como conhecemos: ela é o alicerce da nuvem.
+:::
+
+## Benefícios da Virtualização
+
+- Melhor **utilização** dos recursos físicos.
+- **Redução de custos** (energia, espaço, hardware).
+- **Agilidade** para criar e destruir ambientes.
+- **Alta disponibilidade** e recuperação de desastres.
+- **Isolamento** e segurança entre ambientes.
+
+## Resumo da Aula
+
+- **Virtualização** abstrai o hardware e cria sistemas isolados.
+- O **hipervisor** gerencia as VMs (tipos 1 e 2).
+- **Consolidação** reduz custos e habilita a nuvem.
+- É a base técnica da **multilocação e elasticidade**.
+
+## Atividade Rápida
+
+- Defina **host, guest, hipervisor e VM** com suas palavras.
+- Cite **três vantagens** da virtualização em data centers.
+- Explique a diferença entre **virtualização e emulação**.
+
+## Referências
+
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- VMware — *Virtualization Basics*.
+- Red Hat — *What is virtualization?*.
+
+## Próxima Aula
+
+- **Aula 14:** Tipos de virtualização.

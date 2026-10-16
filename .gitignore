@@ -12,6 +12,12 @@
 # no repositório público até o professor decidir o contrário.
 /avaliacoes/
 
+# Material de trabalho do professor (planos, anotações) — não é conteúdo do aluno
+/BTV*.pdf
+/plano-de-aula.pdf
+/cnvi.txt
+/apresentações-cnvi-rsfi.txt
+
 __pycache__/
 *.pyc
 

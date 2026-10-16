@@ -1,0 +1,100 @@
+---
+title: "Aula 09 — SaaS: Software como Serviço"
+---
+
+## Objetivos da Aula
+
+- Definir o modelo **SaaS**.
+- Conhecer características, provedores e aplicações.
+- Entender o modelo de **assinatura** e o papel do usuário final.
+- Comparar SaaS com IaaS e PaaS.
+
+## O que é SaaS?
+
+- Modelo que entrega **software pronto** pela internet, sob demanda.
+- O usuário **não instala** nem mantém infraestrutura.
+- O provedor gerencia tudo: servidores, atualizações e segurança.
+- Exemplos: Gmail, Microsoft 365, Google Workspace, Salesforce, Dropbox.
+
+## O que o Cliente Controla
+
+- Basicamente o **uso** do software e seus **dados de configuração**.
+- Não administra SO, servidor, nem banco de dados.
+- Acesso via **navegador** ou aplicativo.
+- Pagamento geralmente por **assinatura** (mensal/anual).
+
+## Características do SaaS
+
+- **Acesso via internet** (navegador).
+- **Gerenciamento centralizado** (patches e updates pelo provedor).
+- **Modelo de assinatura** (recurring).
+- **Escalabilidade** automática.
+- **Multiplataforma** (PC, celular, tablet).
+
+## Principais Provedores
+
+| Área | Exemplos |
+|------|----------|
+| Produtividade | Google Workspace, Microsoft 365 |
+| CRM | Salesforce |
+| Armazenamento | Dropbox, OneDrive, Google Drive |
+| Comunicação | Zoom, Slack, Teams |
+| E-commerce | Shopify |
+
+## Casos de Uso
+
+- **Gestão empresarial:** ERP, CRM, RH.
+- **Colaboração:** documentos, reuniões, mensagens.
+- **E-commerce:** lojas virtuais prontas.
+- **Marketing digital:** automação de campanhas, e-mail marketing.
+- **Backup e armazenamento** em nuvem.
+
+## Vantagens do SaaS
+
+- **Sem instalação** — uso imediato.
+- **Redução de custos** com licenças e servidores.
+- **Atualizações automáticas** pelo provedor.
+- **Acesso remoto** de qualquer lugar.
+- **Segurança e backup** gerenciados.
+
+## Desafios do SaaS
+
+- **Dependência de internet** e de um navegador.
+- **Privacidade:** dados ficam em servidores do provedor.
+- **Customização limitada**.
+- **Custo recorrente** que pode crescer com o número de usuários.
+- **Lock-in** e portabilidade de dados.
+
+::: {.callout-note}
+**SaaS × PaaS × IaaS:** no SaaS você nem vê o software na infraestrutura — apenas **usa**. É o modelo mais gerenciado pela pilha.
+:::
+
+## SaaS na Prática
+
+- Você acessa `mail.google.com` e usa o serviço.
+- O provedor escala, atualiza e protege — **sem esforço seu**.
+- Assinaturas por usuário/ano.
+- Dados exportáveis (dependendo do provedor).
+
+## Resumo da Aula
+
+- **SaaS** entrega software pronto, acessado pela internet.
+- O usuário foca no **uso**; o provedor opera tudo.
+- Exemplos: Workspace, Microsoft 365, Salesforce.
+- Vantagens: simplicidade. Desafios: privacidade e recorrência.
+
+## Atividade Rápida
+
+- Cite **três SaaS** que sua escola ou casa usa.
+- Explique por que **atualizações** ficam com o provedor.
+- Compare o custo de um SaaS com o de um software instalado.
+
+## Referências
+
+- Microsoft — *What is SaaS?*.
+- Salesforce — *Documentação*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+
+## Próxima Aula
+
+- **Aula 10:** Comparativo IaaS × PaaS × SaaS e o Serverless.

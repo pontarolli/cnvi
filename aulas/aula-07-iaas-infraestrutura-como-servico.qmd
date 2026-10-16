@@ -1,0 +1,100 @@
+---
+title: "Aula 07 — IaaS: Infraestrutura como Serviço"
+---
+
+## Objetivos da Aula
+
+- Definir o modelo **IaaS**.
+- Conhecer suas **características** e **casos de uso**.
+- Identificar os principais **provedores** e serviços.
+- Comparar **vantagens** e **desafios** do modelo.
+
+## O que é IaaS?
+
+- Modelo que fornece **infraestrutura de TI virtualizada** pela internet.
+- Entrega: **servidores, armazenamento, rede e virtualização**.
+- O cliente gerencia o **sistema operacional** para cima.
+- Exemplos: AWS EC2, Azure Virtual Machines, Google Compute Engine.
+
+## O que o Cliente Controla
+
+- Sistema operacional e atualizações.
+- Middleware, runtime e aplicações.
+- Configuração de rede, firewall e armazenamento.
+- O provedor cuida do **hardware, virtualização e datacenter**.
+
+## Características do IaaS
+
+- **Escalabilidade:** recursos ajustáveis conforme a demanda.
+- **Pay-as-you-go:** paga-se pelo que se consome.
+- **Automação:** APIs e ferramentas de orquestração.
+- **Acesso remoto:** gestão total via internet.
+- **Multilocação:** recursos compartilhados com isolamento.
+
+## Principais Provedores
+
+| Provedor | Serviço de computação |
+|----------|----------------------|
+| AWS | EC2 |
+| Microsoft Azure | Virtual Machines |
+| Google Cloud | Compute Engine |
+| IBM Cloud | Virtual Servers |
+| OpenStack | Nova |
+
+## Casos de Uso
+
+- **Hospedagem** de aplicações e sites.
+- **Ambientes de desenvolvimento e teste** efêmeros.
+- **Migração** de sistemas legados (lift-and-shift).
+- **Backup e recuperação de desastres**.
+- **Big Data e HPC** (alta demanda computacional).
+
+## Vantagens do IaaS
+
+- Redução de investimento em hardware (CAPEX → OPEX).
+- Agilidade e flexibilidade no provisionamento.
+- Alta disponibilidade e redundância.
+- Foco no **core business**.
+- Controle total do ambiente pelo cliente.
+
+## Desafios do IaaS
+
+- **Gerenciamento de custos** (risco de gastos inesperados).
+- **Dependência do provedor** (vendor lock-in).
+- **Segurança e conformidade** sob responsabilidade compartilhada.
+- Exige **equipe especializada** para administrar o SO e a rede.
+
+::: {.callout-note}
+No IaaS a responsabilidade é **compartilhada**: o provedor cuida da infraestrutura física; o cliente, do SO, das aplicações e dos dados.
+:::
+
+## IaaS na Prática
+
+- Criação de uma instância **EC2** na AWS pelo console.
+- Escolha de **região, tipo de instância e imagem (AMI)**.
+- Configuração de **rede (VPC)**, disco e grupo de segurança.
+- Acesso via **SSH** e instalação das aplicações.
+- Pagamento por **hora/segundo** de uso.
+
+## Resumo da Aula
+
+- **IaaS** entrega infraestrutura virtualizada sob demanda.
+- Cliente gerencia **SO para cima**; provedor, o hardware.
+- Muito usado para **hospedagem, testes e migração**.
+- Vantagens: agilidade e economia. Desafios: custos e lock-in.
+
+## Atividade Rápida
+
+- Liste **três situações** em que IaaS é a melhor escolha.
+- Explique a diferença entre **IaaS e um servidor próprio**.
+- Pesquise o preço aproximado de uma instância pequena na AWS.
+
+## Referências
+
+- AWS — *Amazon EC2 User Guide*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- Microsoft Learn — *Azure Virtual Machines*.
+
+## Próxima Aula
+
+- **Aula 08:** PaaS — Plataforma como Serviço.

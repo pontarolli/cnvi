@@ -1,0 +1,87 @@
+---
+title: "Aula 39 — Big Data na Nuvem (Parte 2)"
+---
+
+## Objetivos da Aula
+
+- Compreender o modelo **MapReduce** e o **Hadoop**.
+- Conhecer **Spark** e o processamento em memória.
+- Entender **pipelines de dados** e **ETL**.
+- Identificar serviços gerenciados de Big Data.
+
+## Processamento Distribuído
+
+- Dividir o trabalho em **muitas máquinas**.
+- **Paralelismo** para processar dados em larga escala.
+- Tolerância a falhas por **replicação**.
+- Base: Hadoop, Spark e serviços gerenciados.
+
+## MapReduce
+
+- Modelo de programação do Hadoop.
+- **Map:** processa cada dado, gerando pares.
+- **Reduce:** agrega os resultados.
+- Divide-e-conquista em larga escala.
+
+## Hadoop
+
+- Ecossistema de **armazenamento (HDFS)** e processamento (MapReduce).
+- **YARN:** gerencia recursos do cluster.
+- Amplamente usado em data lakes.
+- Gerenciado na nuvem: **Amazon EMR**, Dataproc.
+
+## Apache Spark
+
+- Processamento **em memória** — muito mais rápido.
+- Suporta **batch, streaming, SQL e ML**.
+- APIs em Python (**PySpark**), Scala, Java.
+- Preferido para análises interativas e ML.
+
+## Pipelines e ETL
+
+- **ETL:** Extração, Transformação e Carregamento.
+- **ELT:** transformar dentro do destino (data warehouse).
+- Ferramentas: AWS Glue, Azure Data Factory.
+- Movem dados de fontes para análises.
+
+## Serviços Gerenciados
+
+| Necessidade | Serviço (exemplos) |
+|-------------|--------------------|
+| Armazenamento | S3, GCS, Azure Blob |
+| Processamento | EMR, Dataproc, Databricks |
+| ETL | Glue, Data Factory |
+| Streaming | Kinesis, Pub/Sub |
+
+## Data Warehouse x Data Lake
+
+- **Data lake:** dados brutos, flexível, barato.
+- **Data warehouse:** estruturado, otimizado para consultas (Redshift, BigQuery).
+- **Lakehouse:** combina ambos.
+- Escolha conforme o **caso de uso**.
+
+::: {.callout-note}
+**MapReduce** e **Spark** resolvem o mesmo problema de formas diferentes: Spark, em memória, tende a ser muito mais rápido para cargas interativas.
+:::
+
+## Resumo da Aula
+
+- **MapReduce/Hadoop** introduziram o processamento distribuído.
+- **Spark** acelera com processamento em memória.
+- **ETL/ELT** movem e preparam os dados.
+- Serviços **gerenciados** reduzem a operação na nuvem.
+
+## Atividade Rápida
+
+- Explique as fases **Map** e **Reduce**.
+- Cite vantagens do **Spark** sobre o MapReduce.
+- Diferencie **data lake** de **data warehouse**.
+
+## Referências
+
+- Apache Spark / Hadoop — *Documentação*.
+- AWS EMR / Google Dataproc.
+
+## Próxima Aula
+
+- **Aula 40:** Machine Learning na nuvem.

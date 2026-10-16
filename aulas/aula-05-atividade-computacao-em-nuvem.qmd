@@ -1,0 +1,88 @@
+---
+title: "Aula 05 — Atividade: Computação em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Revisar os conceitos das aulas 02, 03 e 04.
+- Aplicar o conhecimento em uma **atividade prática/avaliativa**.
+- Desenvolver análise crítica sobre casos reais de nuvem.
+- Preparar-se para a primeira avaliação do bimestre.
+
+## Revisão Rápida
+
+- **Definição (NIST):** recursos sob demanda, pela rede.
+- **5 características:** autoatendimento, acesso amplo, pool, elasticidade, medição.
+- **Como funciona:** data centers + virtualização + orquestração.
+- **Vantagens:** custo, agilidade, escala. **Desafios:** segurança, lock-in.
+
+## Roteiro da Atividade
+
+- Formem grupos de **3 a 4 alunos**.
+- Escolha um **serviço digital** que vocês usam (ex.: streaming, armazenamento, e-mail).
+- Identifiquem **quais características da nuvem** ele explora.
+- Apontem **vantagens e desafios** que o serviço enfrenta.
+- Apresentem as conclusões para a turma.
+
+## Parte 1 — Identificação
+
+- Qual é o **tipo de serviço de nuvem** (IaaS, PaaS ou SaaS)?
+- Quais **características essenciais** do NIST estão presentes?
+- Que **modelo de implantação** ele provavelmente usa?
+- Quais **provedores** poderiam hospedar esse serviço?
+
+## Parte 2 — Análise Crítica
+
+- Como o serviço lida com **picos de demanda** (elasticidade)?
+- Que **riscos de segurança** e **privacidade** existem?
+- Há risco de **lock-in** com o provedor escolhido?
+- Como a **latência** ou a **região** afetam os usuários no Brasil?
+
+## Parte 3 — Apresentação
+
+- Prepare **3 a 5 slides** (ou tópicos) com as conclusões.
+- Tempo de apresentação: **~5 minutos** por grupo.
+- A turma pode fazer perguntas ao final.
+- A atividade será registrada no **Moodle**.
+
+## Entrega no Moodle
+
+- A **Avaliação 1 (GIFT, 10 questões)** cobre estes conteúdos.
+- Responda com atenção às **características essenciais** e à **definição**.
+- Confira o prazo e leia o feedback de cada questão.
+
+::: {.callout-important}
+A atividade vale nota de participação e faz parte do **1º bimestre**. Combine com o professor em caso de falta.
+:::
+
+## Checklist do Grupo
+
+- [ ] Serviço escolhido e descrito.
+- [ ] Tipo de serviço de nuvem identificado.
+- [ ] Características do NIST apontadas.
+- [ ] Vantagens e desafios listados.
+- [ ] Apresentação preparada.
+
+## Avaliação entre Pares
+
+- Cada grupo avalia a apresentação dos colegas.
+- Critérios: **clareza**, **domínio do conteúdo** e **exemplos**.
+- Feedback construtivo e respeitoso.
+- O melhor grupo recebe destaque na próxima aula.
+
+## Resumo da Aula
+
+- Revisamos os **fundamentos da computação em nuvem**.
+- Aplicamos os conceitos em **casos reais**.
+- Praticamos **análise crítica** de serviços digitais.
+- Nos preparamos para os **modelos de serviço** (aula 06).
+
+## Referências
+
+- NIST SP 800-145.
+- Documentação dos provedores de nuvem.
+- Material das aulas 02 a 04.
+
+## Próxima Aula
+
+- **Aula 06:** Modelos de serviço em nuvem — visão geral e a pilha.

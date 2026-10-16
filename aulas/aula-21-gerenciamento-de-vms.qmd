@@ -1,0 +1,99 @@
+---
+title: "Aula 21 — Criação e Gerenciamento de Máquinas Virtuais"
+---
+
+## Objetivos da Aula
+
+- Aprender o ciclo de vida de uma **máquina virtual**.
+- Conhecer os **recursos** necessários para criar uma VM.
+- Entender **snapshots, clones e templates**.
+- Compreender operações de **gerenciamento** de VMs.
+
+## Ciclo de Vida de uma VM
+
+- **Criação** (provisionamento)
+- **Inicialização** (boot)
+- **Operação**
+- **Suspensão/salvamento de estado**
+- **Encerramento**
+- **Exclusão**
+
+## Recursos de uma VM
+
+- **CPU (vCPU):** número de núcleos virtuais.
+- **Memória:** quantidade de RAM alocada.
+- **Disco:** arquivo de disco virtual (VDI, VMDK, qcow2).
+- **Rede:** adaptador virtual (ponte, NAT, rede interna).
+- **Firmware:** BIOS/UEFI virtual.
+
+## Criando uma VM — Passos
+
+1. Escolher nome e **sistema operacional**.
+2. Definir **memória** e **processadores**.
+3. Criar ou selecionar o **disco virtual**.
+4. Configurar a **rede**.
+5. Anexar a **imagem ISO** de instalação.
+6. Iniciar e **instalar o SO convidado**.
+
+## Armazenamento Virtual
+
+- O disco da VM é um **arquivo** no host.
+- Formatos comuns: **VDI**, **VMDK**, **VHDX**, **qcow2**.
+- Modos: **dinâmico** (cresce conforme uso) ou **fixo**.
+- Facilita **backup, cópia e movimentação**.
+
+## Snapshots
+
+- Registram o **estado da VM** em um instante.
+- Úteis antes de atualizações ou testes.
+- Permitem **reverter** para o ponto salvo.
+- Consomem espaço e devem ser gerenciados.
+
+## Clones e Templates
+
+- **Clone:** cópia completa de uma VM (útil para replicar ambientes).
+- **Template:** modelo padronizado para criar novas VMs.
+- Aceleram o **provisionamento** e garantem consistência.
+- Base para automação e escalabilidade.
+
+## Configuração de Rede da VM
+
+- **NAT:** a VM acessa a internet via host (não é acessada de fora).
+- **Ponte (bridge):** a VM fica na rede física, com IP próprio.
+- **Rede interna/host-only:** comunicação isolada entre VMs e host.
+- A escolha afeta **acesso e segurança**.
+
+## Operações de Gerenciamento
+
+- Iniciar, pausar e desligar VMs.
+- Ajustar **recursos** (CPU, memória) — quando suportado.
+- **Migrar** entre hosts (live migration).
+- Monitorar **desempenho** e consumo.
+- **Backup** e restauração.
+
+::: {.callout-note}
+**Dimensionar bem** é essencial: recursos a menos → lentidão; recursos a mais → desperdício (na nuvem, custo).
+:::
+
+## Resumo da Aula
+
+- O ciclo de vida vai de **criação a exclusão**.
+- Toda VM precisa de **CPU, memória, disco e rede** virtuais.
+- **Snapshots, clones e templates** agilizam a administração.
+- O gerenciamento inclui migração, backup e monitoramento.
+
+## Atividade Rápida
+
+- Liste os **recursos** configuráveis de uma VM.
+- Explique a diferença entre **snapshot, clone e template**.
+- Compare os modos de rede **NAT, bridge e host-only**.
+
+## Referências
+
+- Oracle — *VirtualBox User Manual*.
+- VMware — *VM Administration*.
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+
+## Próxima Aula
+
+- **Aula 22:** Prática — VirtualBox: criando a primeira VM.

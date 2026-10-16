@@ -1,0 +1,80 @@
+---
+title: "Aula 46 — Prática: Redes Virtuais em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Criar uma **VPC** na prática.
+- Configurar **sub-redes, rotas e gateways**.
+- Lançar instâncias em camadas diferentes.
+- Validar **isolamento e conectividade**.
+
+## Preparação
+
+- Conta no provedor (camada gratuita).
+- Console de gerenciamento ou CLI.
+- Planejamento de **endereços** em mãos.
+- Definição do que testar.
+
+## Passo 1 — Criar a VPC
+
+- Definir nome e **CIDR** (ex.: 10.0.0.0/16).
+- Criar a VPC pelo console.
+- Criar **duas sub-redes** em zonas diferentes.
+- Registrar os IDs.
+
+## Passo 2 — Gateways e Rotas
+
+- Criar e anexar um **Internet Gateway**.
+- Criar tabela de rotas **pública** (`0.0.0.0/0` → IGW).
+- Criar **NAT Gateway** na sub-rede pública.
+- Tabela **privada** (`0.0.0.0/0` → NAT).
+
+## Passo 3 — Grupos de Segurança
+
+- **Web:** liberar 80/443 (HTTP/HTTPS) e SSH.
+- **Banco:** liberar apenas a porta do banco **da** camada web.
+- Aplicar **menor privilégio**.
+- Testar regras.
+
+## Passo 4 — Instâncias
+
+- Lançar uma instância na sub-rede **pública** (web).
+- Lançar uma instância na sub-rede **privada** (app/banco).
+- Associar os grupos de segurança corretos.
+- Verificar IPs.
+
+## Passo 5 — Validar
+
+- Acessar a instância web pela **internet**.
+- Testar saída da instância privada (**NAT**).
+- Confirmar que o banco **não** é acessível de fora.
+- Documentar os testes.
+
+## Verificação da Prática
+
+- [ ] VPC criada com CIDR definido.
+- [ ] Sub-redes pública e privada.
+- [ ] IGW e NAT configurados.
+- [ ] Grupos de segurança aplicados.
+- [ ] Isolamento validado.
+
+::: {.callout-tip}
+Ao terminar, **remova** os recursos (NAT Gateway tem custo) para evitar cobranças inesperadas.
+:::
+
+## Resumo da Aula
+
+- Criamos uma **VPC** completa na prática.
+- Configuramos **sub-redes, gateways e rotas**.
+- Aplicamos **grupos de segurança**.
+- Validamos o **isolamento** entre camadas.
+
+## Referências
+
+- AWS — *VPC Getting Started*.
+- Material das aulas 43 a 45.
+
+## Próxima Aula
+
+- **Aula 47:** Computação sem servidor (Serverless) — conceitos.

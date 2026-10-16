@@ -1,0 +1,93 @@
+---
+title: "Aula 22 — Prática: VirtualBox — Criando a Primeira VM"
+---
+
+## Objetivos da Aula
+
+- Instalar e conhecer o **Oracle VirtualBox**.
+- Criar uma **máquina virtual** do zero.
+- Configurar **recursos e rede**.
+- Iniciar a instalação de um sistema operacional.
+
+## O que é o VirtualBox?
+
+- Hipervisor **tipo 2**, gratuito e multiplataforma.
+- Roda sobre Windows, Linux e macOS.
+- Interface gráfica amigável.
+- Ideal para **laboratórios** e aprendizado.
+
+## Pré-requisitos
+
+- VirtualBox instalado (versão mais recente).
+- Imagem **ISO** do sistema a instalar (ex.: Ubuntu, Debian).
+- Espaço em disco e memória RAM suficientes.
+- **Virtualização habilitada** na BIOS/UEFI (VT-x/AMD-V).
+
+## Passo 1 — Criar a VM
+
+- Menu **Nova** → definir **nome** e **tipo/versão** do SO.
+- Escolher idioma e a **ISO** (pode anexar depois).
+- Definir **memória RAM** (ex.: 2048 MB).
+
+## Passo 2 — Disco Virtual
+
+- Criar um disco **virtual** agora.
+- Formato **VDI** (padrão do VirtualBox).
+- Armazenamento **dinamicamente alocado** (economiza espaço).
+- Tamanho sugerido: 20–25 GB.
+
+## Passo 3 — Recursos
+
+- Processadores: **1 a 2 vCPUs**.
+- Memória: adequada ao SO convidado.
+- Aceleração: **VT-x/AMD-V** habilitada.
+- Evite alocar mais da metade da RAM do host.
+
+## Passo 4 — Rede
+
+- **NAT:** acesso à internet com configuração simples (padrão).
+- **Placa em modo ponte:** IP na rede local.
+- **Host-only:** comunicação só entre host e VM.
+- Escolha conforme o objetivo da prática.
+
+## Passo 5 — Anexar ISO e Iniciar
+
+- Configurações → **Armazenamento** → anexar a ISO.
+- Iniciar a VM.
+- O boot inicia pelo instalador do **SO convidado**.
+- Prosseguir com a instalação.
+
+## Dicas e Boas Práticas
+
+- Nomeie VMs de forma **descritiva** (ex.: `ubuntu-aula22`).
+- Tire um **snapshot** antes de mudanças importantes.
+- Documente **recursos** alocados.
+- Mantenha as **Guest Additions** instaladas.
+
+::: {.callout-tip}
+**Guest Additions** melhora a integração (tela, clipboard, pastas compartilhadas) entre host e VM.
+:::
+
+## Verificação da Prática
+
+- [ ] VirtualBox instalado.
+- [ ] VM criada com nome e tipo corretos.
+- [ ] Disco virtual VDI configurado.
+- [ ] Memória e vCPUs definidos.
+- [ ] ISO anexada e boot iniciado.
+
+## Resumo da Aula
+
+- Criamos uma **VM** no VirtualBox passo a passo.
+- Configuramos **recursos, disco, rede e ISO**.
+- Aprendemos boas práticas (snapshots, nomes, Guest Additions).
+- Próxima aula: **instalar e configurar o SO convidado**.
+
+## Referências
+
+- Oracle — *VirtualBox User Manual*.
+- Documentação do sistema operacional escolhido.
+
+## Próxima Aula
+
+- **Aula 23:** Prática — instalando e configurando um SO convidado.

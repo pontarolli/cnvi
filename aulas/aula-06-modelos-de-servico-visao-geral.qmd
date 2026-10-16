@@ -1,0 +1,97 @@
+---
+title: "Aula 06 — Modelos de Serviço em Nuvem"
+---
+
+## Objetivos da Aula
+
+- Compreender o que são **modelos de serviço** em nuvem.
+- Conhecer a **pilha de serviços**: IaaS, PaaS e SaaS.
+- Entender a divisão de **responsabilidades** entre cliente e provedor.
+- Introduzir modelos complementares: **FaaS** e **CaaS**.
+
+## O que São Modelos de Serviço?
+
+- Definem **o que o provedor entrega** e **o que o cliente gerencia**.
+- Quanto mais "acima" na pilha, **menos gerenciamento** para o cliente.
+- Os três modelos clássicos:
+  - **IaaS** — Infrastructure as a Service
+  - **PaaS** — Platform as a Service
+  - **SaaS** — Software as a Service
+
+## Analogia da Pizza
+
+- **IaaS:** você aluga a cozinha e faz a pizza.
+- **PaaS:** você recebe a massa e os ingredientes; monta e assa.
+- **SaaS:** a pizza chega pronta na sua mesa.
+- Quanto mais alto o nível, **menos controle** e **menos trabalho**.
+
+## A Pilha de Serviços em Nuvem
+
+| Camada | Gerenciado por | Exemplos |
+|--------|----------------|----------|
+| SaaS | Provedor (tudo) | Gmail, Microsoft 365 |
+| PaaS | Provedor (plataforma) | App Engine, Heroku |
+| IaaS | Cliente (SO+) | EC2, Azure VM |
+
+## Escala de Responsabilidade
+
+- **IaaS:** cliente gerencia SO, middleware, runtime, aplicação e dados.
+- **PaaS:** cliente gerencia aplicação e dados; provedor cuida do resto.
+- **SaaS:** cliente apenas **usa** o software e gerencia seus dados de uso.
+- Quanto mais gerenciado, mais **simples** — e menos **flexível**.
+
+::: {.callout-note}
+Regra geral: mais controle → IaaS; mais simplicidade → SaaS. O PaaS equilibra os dois.
+:::
+
+## Modelos Complementares
+
+- **FaaS (Function as a Service):** executar funções sob demanda (ex.: AWS Lambda).
+- **CaaS (Container as a Service):** contêineres gerenciados (ex.: Google Kubernetes Engine).
+- **DaaS (Desktop as a Service):** desktops virtuais na nuvem.
+- **DBaaS (Database as a Service):** bancos de dados gerenciados.
+
+## Como Escolher o Modelo?
+
+- **Preciso controlar o SO?** → IaaS.
+- **Só quero desenvolver a aplicação?** → PaaS.
+- **Só quero usar um software pronto?** → SaaS.
+- **Quero executar só uma função?** → FaaS.
+- Depende de **controle, equipe, custo e prazo**.
+
+## Casos de Uso
+
+- **IaaS:** hospedar servidores, migrar sistemas legados, ambientes de teste.
+- **PaaS:** desenvolvimento ágil, APIs, aplicações web e móveis.
+- **SaaS:** e-mail, CRM, colaboração, produtividade.
+- **FaaS:** automações, processamento de eventos, integrações.
+
+## Benefícios Comuns
+
+- Redução de custos de infraestrutura.
+- Escalabilidade e disponibilidade.
+- Atualizações e segurança com o provedor.
+- Foco no **negócio**, não na operação de TI.
+
+## Resumo da Aula
+
+- **Modelos de serviço** definem a divisão de responsabilidades.
+- **IaaS, PaaS e SaaS** formam a pilha clássica.
+- **FaaS e CaaS** ampliam as opções.
+- A escolha depende de **controle, simplicidade e custo**.
+
+## Atividade Rápida
+
+- Classifique: Gmail, AWS EC2, Heroku, Docker (CaaS).
+- Desenhe a **pilha** marcando o que o cliente gerencia em cada nível.
+- Dê um exemplo de uso real para **cada modelo**.
+
+## Referências
+
+- NIST SP 800-145.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- Documentação dos provedores (AWS, Azure, Google Cloud).
+
+## Próxima Aula
+
+- **Aula 07:** IaaS — Infraestrutura como Serviço.

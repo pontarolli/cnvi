@@ -1,0 +1,91 @@
+---
+title: "Aula 10 — Comparativo: IaaS × PaaS × SaaS"
+---
+
+## Objetivos da Aula
+
+- Consolidar a diferença entre **IaaS, PaaS e SaaS**.
+- Entender o **modelo de responsabilidade compartilhada**.
+- Introduzir o **Serverless (FaaS)** como evolução.
+- Escolher o modelo adequado para cada cenário.
+
+## Revisão: A Pilha
+
+| Modelo | Você gerencia | O provedor gerencia |
+|--------|---------------|---------------------|
+| IaaS | SO, runtime, app, dados | Hardware, virtualização, rede |
+| PaaS | App, dados | SO, runtime, middleware |
+| SaaS | Apenas uso/dados | Tudo |
+
+## Comparativo Resumido
+
+**Controle:** IaaS > PaaS > SaaS
+**Simplicidade:** SaaS > PaaS > IaaS
+**Flexibilidade:** IaaS > PaaS > SaaS
+**Esforço de operação:** IaaS > PaaS > SaaS
+
+## Modelo de Responsabilidade Compartilhada
+
+- **Segurança "na" nuvem:** responsabilidade do **provedor**.
+- **Segurança "da" nuvem:** responsabilidade do **cliente** (dados, acesso, config).
+- A divisão **muda** conforme o modelo de serviço.
+- No SaaS, quase tudo é do provedor; no IaaS, quase tudo é do cliente.
+
+## Exemplo: Banco de Dados
+
+- **IaaS:** você instala e administra o MySQL numa VM.
+- **PaaS/DBaaS:** você usa um banco gerenciado (RDS) e só mantém o esquema.
+- **SaaS:** você usa um app que já traz o banco embutido.
+- Quanto mais gerenciado, menos operação — e menos controle.
+
+## Introdução ao Serverless (FaaS)
+
+- Você envia **funções**; o provedor executa **sob demanda**.
+- Sem servidores para gerenciar; escala automática.
+- Cobrança por **invocação e tempo de execução**.
+- Exemplos: AWS Lambda, Azure Functions, Google Cloud Functions.
+
+## Serverless no Contexto
+
+- **FaaS** é o "nível mais alto" de abstração de computação.
+- Ideal para **eventos, automações e APIs leves**.
+- Nem tudo é serverless: cargas longas e stateful podem não se encaixar.
+- Convive com IaaS, PaaS e SaaS.
+
+## Como Escolher?
+
+- **Controle e customização** → IaaS.
+- **Velocidade de desenvolvimento** → PaaS.
+- **Uso imediato de software** → SaaS.
+- **Eventos e escala imprevisível** → Serverless/FaaS.
+- Considere **custo, equipe, prazo e requisitos**.
+
+## Boas Práticas de Escolha
+
+- Comece pelo **problema de negócio**, não pela tecnologia.
+- Avalie **TCO** (custo total) e não só o preço.
+- Pense em **portabilidade** e evite aprisionamento.
+- Teste em pequena escala antes de decidir.
+
+## Resumo da Aula
+
+- A pilha vai de **IaaS (mais controle)** a **SaaS (menos controle)**.
+- A **responsabilidade é compartilhada** e varia por modelo.
+- **Serverless/FaaS** eleva o nível de abstração.
+- A escolha depende do **cenário** e dos requisitos.
+
+## Atividade Rápida
+
+- Classifique 6 serviços nos modelos (IaaS/PaaS/SaaS/FaaS).
+- Monte uma tabela de controle × simplicidade.
+- Justifique a escolha de um modelo para uma pequena empresa.
+
+## Referências
+
+- NIST SP 800-145.
+- Microsoft — *Shared Responsibility Model*.
+- AWS — *Serverless*.
+
+## Próxima Aula
+
+- **Aula 11:** Modelos de implantação (pública, privada, híbrida).

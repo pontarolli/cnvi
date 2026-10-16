@@ -1,0 +1,90 @@
+---
+title: "Aula 17 — Atividade: Virtualização e Data Centers"
+---
+
+## Objetivos da Aula
+
+- Revisar **virtualização** e **data centers**.
+- Aplicar os conceitos em uma **atividade prática**.
+- Consolidar o conteúdo para a avaliação bimestral.
+- Desenvolver raciocínio sobre infraestrutura.
+
+## Revisão Rápida
+
+- **Virtualização:** abstrai hardware; base da nuvem.
+- **Hipervisor:** gerencia as VMs (tipo 1 e 2).
+- **Tipos:** servidor, desktop, rede, armazenamento.
+- **Data center:** energia, refrigeração, rede e segurança.
+- **Regiões e AZs:** organizam a infraestrutura global.
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Planeje um **data center fictício** para uma escola técnica.
+- Defina **quantidade de servidores**, virtualização e serviços.
+- Justifique decisões de **energia, refrigeração e rede**.
+- Apresente o **projeto** para a turma.
+
+## Parte 1 — Dimensionamento
+
+- Quantos **servidores físicos** e **VMs** são necessários?
+- Que **serviços** serão hospedados (web, arquivos, laboratório)?
+- Qual o **hipervisor** escolhido e por quê?
+- Qual a necessidade de **armazenamento** e backup?
+
+## Parte 2 — Infraestrutura
+
+- **Energia:** fontes, UPS e gerador.
+- **Refrigeração:** corredores frios/quentes.
+- **Rede:** switches, VLANs e link de internet.
+- **Segurança física:** controle de acesso e monitoramento.
+
+## Parte 3 — Sustentabilidade
+
+- Como reduzir o **consumo de energia** (TI Verde)?
+- Que métrica usar para medir eficiência (**PUE**)?
+- Estratégias de **consolidação** com virtualização.
+- Uso de **energia renovável**, se possível.
+
+## Apresentação
+
+- Prepare uma **planta lógica** (diagrama de blocos) do data center.
+- Explique as escolhas técnicas com justificativa.
+- Tempo: **~5 minutos** por grupo.
+- A atividade será registrada no **Moodle**.
+
+## Critérios de Avaliação
+
+- **Coerência** do dimensionamento.
+- **Justificativa** das escolhas de infraestrutura.
+- **Atenção** à sustentabilidade.
+- **Clareza** da apresentação.
+
+::: {.callout-important}
+Esta atividade fecha o **1º bimestre**. Revise todo o conteúdo para a **Avaliação 2**.
+:::
+
+## Checklist do Grupo
+
+- [ ] Servidores e VMs dimensionados.
+- [ ] Hipervisor escolhido e justificado.
+- [ ] Energia, refrigeração e rede definidos.
+- [ ] Plano de sustentabilidade apresentado.
+- [ ] Diagrama pronto.
+
+## Resumo da Aula
+
+- Consolidamos **virtualização** e **data centers**.
+- Praticamos o **planejamento** de infraestrutura.
+- Refletimos sobre **eficiência energética**.
+- Próxima aula: **revisão geral do bimestre**.
+
+## Referências
+
+- Uptime Institute — *Data Center Tiers*.
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- Material das aulas 13 a 16.
+
+## Próxima Aula
+
+- **Aula 18:** Revisão para a avaliação bimestral.
