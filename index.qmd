@@ -37,18 +37,5 @@ Nos slides, use as setas do teclado para navegar, **S** para abrir as notas do p
 Módulo prático com Raspberry Pi, em conjunto com Redes sem Fio (quinta-feira).
 
 1. [Projeto 01 · Etapa 01](aulas/16-projeto-fiscalizacao-aula1.html)
-   · [Roteiro Projeto 01](atividades/roteiro-projeto-fiscalizacao-aula1.html)
 2. [Projeto 01 · Etapa 02](aulas/17-projeto-fiscalizacao-aula2.html)
 3. [Projeto 01 · Etapa 03](aulas/18-projeto-fiscalizacao-aula3.html)
-
-## Atividades Avaliativas
-
-Entrega individual via GitHub. Comece pelas instruções abaixo.
-
-0. [Instruções e Regras de Entrega](atividades/0-instrucoes-entrega.html)
-1. [Técnicas de Virtualização em Infraestrutura de TI](atividades/atividade-1-virtualizacao-infraestrutura.html) (Entrega 19/08, das 8h00 às 12h00)
-2. [Dispositivos de Comunicação e Armazenamento](atividades/atividade-2-dispositivos-comunicacao-armazenamento.html) (Entrega 26/08, das 8h00 às 12h00)
-3. Grades Computacionais e Computação em Nuvem *(em breve)*
-4. TI Verde *(em breve)*
-5. Virtualização em Data Centers: VMware e Xen *(em breve)*
-6. Computação em Nuvem: NIST e Provedores *(em breve)*
