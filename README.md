@@ -62,12 +62,14 @@ O componente curricular apresenta como os novos modelos de infraestruturas e arq
 
 ### Conteúdo Programático
 
-- Análise do uso de técnicas de virtualização em infraestrutura de TI;
-- Apresentação dos principais dispositivos para comunicação e armazenamento;
-- Estudo de novos modelos de infraestrutura: grades computacionais e computação em nuvem;
-- Conceitos e fundamentos de TI verde;
-- Virtualização em Data Centers: conceitos básicos e normas, modelos de virtualização, organização de Data Centers, consolidação de serviços, VMware e Xen;
-- Computação em Nuvem: conceitos básicos e normas, modelos de serviço e implantação, arquitetura de referência NIST, Amazon Web Services/Azure/Google Cloud/outros, OpenStack, análise de soluções de nuvem selecionadas.
+> Cada item indica entre parênteses as semanas (`sNN`) em que é trabalhado. Marque o checkbox ao confirmar a cobertura.
+
+- [ ] Análise do uso de técnicas de virtualização em infraestrutura de TI (s07 a s11)
+- [ ] Apresentação dos principais dispositivos para comunicação e armazenamento (s09, s24, s31)
+- [ ] Estudo de novos modelos de infraestrutura: grades computacionais (s28) e computação em nuvem (s01 a s06)
+- [ ] Conceitos e fundamentos de TI verde (s28)
+- [ ] Virtualização em Data Centers: conceitos básicos e normas, modelos de virtualização, organização de Data Centers, consolidação de serviços, VMware e Xen (s07 a s11, s29)
+- [ ] Computação em Nuvem: conceitos básicos e normas, modelos de serviço e implantação, arquitetura de referência NIST, Amazon Web Services/Azure/Google Cloud/outros, OpenStack, análise de soluções de nuvem selecionadas (s01 a s06, s31 a s37)
 
 ### Avaliação
 
