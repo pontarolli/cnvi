@@ -23,6 +23,17 @@ title: "Aula 52 — Serverless: Funções, Eventos e Provedores"
 - **Timeout:** limite de tempo de execução.
 - **Memória** define também a CPU alocada.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  b/.style={draw,rounded corners,minimum width=3.1cm,minimum height=0.95cm,align=center,inner sep=3pt}]
+  \node[b,fill=orange!20] (cold) {Cold start\\ \scriptsize cria o ambiente};
+  \node[b,right=of cold,fill=green!12] (warm) {Warm start\\ \scriptsize reaproveita o ambiente};
+  \draw[-{Latex}] (cold) -- (warm);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Padrões Comuns
 
 - **API + funções** (serverless backend).

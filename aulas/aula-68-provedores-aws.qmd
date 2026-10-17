@@ -23,6 +23,21 @@ title: "Aula 68 — Provedores: Amazon Web Services (AWS)"
 - **Edge locations** para CDN (CloudFront).
 - Base para **baixa latência** e resiliência.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=4mm and 8mm,
+  b/.style={draw,rounded corners,minimum height=0.7cm,minimum width=2.2cm,align=center,inner sep=3pt}]
+  \node[b,fill=blue!12,minimum width=3.2cm] (reg) {Região (ex.: sa-east-1)};
+  \node[b,fill=green!12,below left=8mm and 1mm of reg] (az1) {AZ-a};
+  \node[b,fill=green!12,below=of reg] (az2) {AZ-b};
+  \node[b,fill=green!12,below right=8mm and 1mm of reg] (az3) {AZ-c};
+  \draw (reg)--(az1); \draw (reg)--(az2); \draw (reg)--(az3);
+  \node[b,fill=orange!20,right=10mm of reg,minimum width=2.6cm] (edge) {Edge locations};
+  \node[font=\scriptsize,below=1mm of edge] {(CloudFront / CDN)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Serviços Principais
 
 | Categoria | Serviço |

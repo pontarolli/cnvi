@@ -17,6 +17,17 @@ title: "Aula 10 — Comparativo: IaaS × PaaS × SaaS"
 | PaaS | App, dados | SO, runtime, middleware |
 | SaaS | Apenas uso/dados | Tudo |
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=3.5mm,
+  l/.style={draw,rounded corners,minimum width=8.2cm,minimum height=0.62cm,align=center,inner sep=3pt}]
+  \node[l,fill=green!15] (s) {SaaS --- cliente só usa; provedor gerencia tudo};
+  \node[l,fill=orange!20,below=of s] (p) {PaaS --- cliente: aplicação e dados};
+  \node[l,fill=blue!12,below=of p] (i) {IaaS --- cliente: SO, aplicação e dados};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Comparativo Resumido
 
 **Controle:** IaaS > PaaS > SaaS

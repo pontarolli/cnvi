@@ -37,6 +37,18 @@ title: "Aula 48 — VPC, Sub-redes e Conectividade Híbrida"
 - **SD-WAN** para gestão de múltiplos links.
 - Objetivo: integrar **on-premises** e nuvem.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  b/.style={draw,rounded corners,fill=blue!10,minimum width=2.6cm,minimum height=1cm,align=center,inner sep=3pt}]
+  \node[b] (on) {On-premises\\ \scriptsize data center};
+  \node[b,right=of on,fill=green!12,minimum width=3.2cm] (link) {VPN / Link dedicado\\ \scriptsize túnel ou circuito};
+  \node[b,right=of link,fill=orange!20] (cl) {Nuvem\\ \scriptsize VPC};
+  \draw[<->] (on)--(link); \draw[<->] (link)--(cl);
+\end{tikzpicture}
+\end{center}
+```
+
 ## VPN × Link Dedicado
 
 | Aspecto | VPN | Link dedicado |

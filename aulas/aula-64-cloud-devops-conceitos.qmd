@@ -30,6 +30,22 @@ title: "Aula 64 — Cloud DevOps: Conceitos"
 - **Feedback** contínuo em todas as etapas.
 - Representado como um **infinito (∞)**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,
+  b/.style={draw,ellipse,fill=blue!12,minimum width=2.1cm,minimum height=0.8cm,align=center,inner sep=2pt}]
+  \node[b] (p) at (0,1.5) {Planejar};
+  \node[b] (c) at (2.6,1.5) {Codificar};
+  \node[b] (b2) at (4.2,0) {Construir};
+  \node[b] (t) at (3.4,-1.5) {Testar};
+  \node[b] (l) at (0.8,-1.5) {Liberar};
+  \node[b] (o) at (-0.8,0) {Operar};
+  \draw[-{Latex}] (p)--(c); \draw[-{Latex}] (c)--(b2); \draw[-{Latex}] (b2)--(t);
+  \draw[-{Latex}] (t)--(l); \draw[-{Latex}] (l)--(o); \draw[-{Latex}] (o)--(p);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Automação
 
 - Reduz **erros manuais** e acelera entregas.

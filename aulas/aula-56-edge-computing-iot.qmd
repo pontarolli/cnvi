@@ -37,6 +37,18 @@ title: "Aula 56 — Edge Computing e Internet das Coisas"
 - **Nuvem:** armazenamento, analytics e ML em escala.
 - Dados fluem entre as camadas conforme a necessidade.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=8.6cm,minimum height=0.7cm,align=center,inner sep=3pt}]
+  \node[l,fill=green!12] (d) {Dispositivos (borda do dispositivo) — sensores/atuadores};
+  \node[l,below=of d,fill=orange!20] (e) {Edge (borda de rede) — gateways e servidores locais};
+  \node[l,below=of e,fill=blue!12] (c) {Nuvem — armazenamento, analytics e ML em escala};
+  \draw[-{Latex}] (d)--(e); \draw[-{Latex}] (e)--(c);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Fog Computing
 
 - Camada intermediária entre **borda e nuvem**.

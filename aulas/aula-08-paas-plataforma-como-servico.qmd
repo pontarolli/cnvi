@@ -23,6 +23,16 @@ title: "Aula 8 — PaaS: Plataforma como Serviço"
 - O cliente **não** administra SO, servidor de aplicação nem patches.
 - Ideal para **equipes de desenvolvimento** ágeis.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=4mm,
+  l/.style={draw,rounded corners,minimum width=8cm,minimum height=0.65cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (cli) {Cliente: aplicação e dados};
+  \node[l,fill=orange!20,below=of cli] (prov) {Provedor: SO, runtime, servidor, banco e patches};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Características do PaaS
 
 - **Ambiente integrado** (IDE, deploy, logs).

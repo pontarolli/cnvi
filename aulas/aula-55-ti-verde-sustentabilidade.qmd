@@ -30,6 +30,18 @@ title: "Aula 55 — TI Verde e Sustentabilidade"
 - PUE típico: 1,2 a 2,0.
 - Provedores de nuvem buscam PUE **baixo**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,y=1cm]
+  \draw[fill=blue!30] (0,0) rectangle (2.4,0.6);
+  \node[right] at (2.5,0.3) {Provedor eficiente: PUE $\approx$ 1,1};
+  \draw[fill=orange!40] (0,-1.0) rectangle (4.2,-0.4);
+  \node[right] at (4.3,-0.7) {DC legado: PUE $\approx$ 1,8};
+  \draw[gray] (0,0.72)--(7.6,0.72);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Estratégias de Eficiência
 
 - **Virtualização e consolidação** de servidores.

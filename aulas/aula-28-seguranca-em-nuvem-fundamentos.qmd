@@ -29,6 +29,17 @@ title: "Aula 28 — Segurança em Nuvem: Fundamentos"
 - **Disponibilidade:** os serviços estão acessíveis quando necessário.
 - Complementos: autenticidade e não repúdio.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=8mm,
+  c/.style={draw,rounded corners,minimum width=2.9cm,minimum height=1cm,align=center,inner sep=3pt}]
+  \node[c,fill=blue!12] (a) {Confidencialidade\\ \scriptsize só quem pode acessa};
+  \node[c,fill=green!12,right=of a] (b) {Integridade\\ \scriptsize sem alteração};
+  \node[c,fill=orange!20,right=of b] (d) {Disponibilidade\\ \scriptsize sempre acessível};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Principais Ameaças
 
 - **Vazamento de dados** (breaches).

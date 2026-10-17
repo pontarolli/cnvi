@@ -30,6 +30,19 @@ title: "Aula 38 — Orquestração de Contêineres com Kubernetes"
 - **Scheduler:** decide onde rodar os Pods.
 - **Controller Manager:** mantém o estado desejado.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=10mm,
+  b/.style={draw,rounded corners,minimum width=3.4cm,minimum height=0.7cm,align=center,inner sep=3pt}]
+  \node[b,fill=orange!20] (cp) {Control Plane: API Server, etcd, Scheduler, Controller};
+  \node[b,fill=green!12,below left=10mm and 3mm of cp] (n1) {Node 1: kubelet, kube-proxy};
+  \node[b,fill=green!12,below right=10mm and 3mm of cp] (n2) {Node 2: kubelet, kube-proxy};
+  \draw[-{Latex}] (cp) -- (n1);
+  \draw[-{Latex}] (cp) -- (n2);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Arquitetura — Nodes
 
 - **Node:** máquina (física/VM) que executa os Pods.

@@ -30,6 +30,19 @@ title: "Aula 47 — Redes em Nuvem: Conceitos"
 - Segmentam a VPC por **função** (web, app, banco).
 - Melhoram **segurança e organização**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize]
+  \node[draw,rounded corners,fill=gray!8,minimum width=9.4cm,minimum height=1.9cm] (vpc) {};
+  \node[font=\scriptsize] at (0,0.68) {VPC 10.0.0.0/16};
+  \node[draw,rounded corners,fill=green!15,align=center,inner sep=4pt] (pub) at (-2.3,0) {Sub-rede pública\\ \scriptsize web};
+  \node[draw,rounded corners,fill=blue!12,align=center,inner sep=4pt] (pri) at (2.3,0) {Sub-rede privada\\ \scriptsize banco};
+  \node[font=\scriptsize] at (-2.3,-1.25) {rota p/ Internet GW};
+  \node[font=\scriptsize] at (2.3,-1.25) {saída via NAT};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Componentes de Rede
 
 - **Internet Gateway:** conecta a VPC à internet.

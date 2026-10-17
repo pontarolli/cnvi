@@ -24,6 +24,18 @@ title: "Aula 15 — Virtualização na Nuvem"
 - **Console/API** permite criar recursos em minutos.
 - A nuvem "esconde" toda essa complexidade.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=7.5cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (c) {Console / API};
+  \node[l,fill=green!12,below=of c] (o) {Orquestrador};
+  \node[l,fill=orange!20,below=of o] (h) {Hipervisor (VMs)};
+  \node[l,fill=gray!20,below=of h] (hw) {Hardware físico (data center)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Como a Nuvem Usa a Virtualização
 
 - **Instâncias** são, na prática, máquinas virtuais.

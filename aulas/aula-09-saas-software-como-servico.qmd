@@ -23,6 +23,16 @@ title: "Aula 9 — SaaS: Software como Serviço"
 - Acesso via **navegador** ou aplicativo.
 - Pagamento geralmente por **assinatura** (mensal/anual).
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=4mm,
+  l/.style={draw,rounded corners,minimum width=8.2cm,minimum height=0.65cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (cli) {Cliente: apenas uso e seus dados};
+  \node[l,fill=orange!20,below=of cli] (prov) {Provedor: software, SO, servidor, updates e segurança};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Características do SaaS
 
 - **Acesso via internet** (navegador).

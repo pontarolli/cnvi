@@ -17,6 +17,19 @@ title: "Aula 30 — Segurança em Nuvem: Soluções e Boas Práticas"
 - **ZTNA** — acesso de rede baseado em identidade.
 - **FWaaS** — firewall como serviço.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm and 5mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=3.1cm,minimum height=0.8cm,align=center,inner sep=3pt}]
+  \node[c] (w) {WAF\\ \scriptsize web};
+  \node[c,right=of w] (s) {SIEM\\ \scriptsize eventos};
+  \node[c,right=of s] (ca) {CASB\\ \scriptsize SaaS};
+  \node[c,below=of w] (z) {ZTNA\\ \scriptsize acesso};
+  \node[c,below=of s] (fw) {FWaaS\\ \scriptsize firewall};
+\end{tikzpicture}
+\end{center}
+```
+
 ## WAF — Web Application Firewall
 
 - Filtra e monitora o tráfego **HTTP/HTTPS**.

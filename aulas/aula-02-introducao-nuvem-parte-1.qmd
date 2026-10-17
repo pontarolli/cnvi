@@ -17,6 +17,19 @@ title: "Aula 2 — Introdução à Computação em Nuvem (Parte 1)"
 - **Anos 2000–2010:** **virtualização** e data centers escaláveis.
 - **Anos 2010+:** **computação em nuvem** como serviço sob demanda.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize]
+  \draw[-{Latex},thick] (0,0) -- (11.6,0);
+  \foreach \x/\l/\t in {1.0/{1960--70}/Mainframe, 3.3/{1980--90}/PCs, 5.6/{1990--00}/Internet, 7.9/{2000--10}/Virtualização, 10.2/{2010+}/Nuvem}{
+    \fill (\x,0) circle (2pt);
+    \node[above,align=center] at (\x,0.18) {\textbf{\t}};
+    \node[below,align=center] at (\x,-0.18) {\l};
+  }
+\end{tikzpicture}
+\end{center}
+```
+
 ## Da Centralização à Distribuição
 
 - Mainframe: um computador central, muitos **terminais "burros"**.

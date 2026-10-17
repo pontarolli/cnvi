@@ -54,6 +54,19 @@ title: "Aula 57 — VMware e Xen em Data Centers"
 - **vMotion/live migration** movem VMs sem parar.
 - **Armazenamento compartilhado** viabiliza a migração.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  b/.style={draw,rounded corners,minimum width=2.6cm,minimum height=0.8cm,align=center,inner sep=3pt}]
+  \node[b,fill=blue!12] (h1) at (0,1.2) {Host 1};
+  \node[b,fill=blue!12] (h2) at (4.4,1.2) {Host 2};
+  \node[b,fill=gray!15,minimum width=7.8cm] (st) at (2.2,0) {Armazenamento compartilhado};
+  \draw[-{Latex}] (h1)--(st); \draw[-{Latex}] (h2)--(st);
+  \draw[-{Latex},dashed] (h1) to[bend right=25] node[above,font=\scriptsize]{vMotion / HA} (h2);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Gestão em Data Centers
 
 - **Consoles centrais** (vCenter, XCP-ng Center).

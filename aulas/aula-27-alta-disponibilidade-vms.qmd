@@ -30,6 +30,17 @@ title: "Aula 27 — Alta Disponibilidade e Mobilidade de VMs"
 - **Redundância** de hosts, energia e rede.
 - Detecção de falha e **failover** automático.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=6mm,
+  h/.style={draw,rounded corners,fill=blue!10,minimum width=2.6cm,minimum height=1.4cm,align=center}]
+  \node[h] (h1) {Host 1\\ \scriptsize (falhou)};
+  \node[h,right=24mm of h1,fill=green!12] (h2) {Host 2\\ \scriptsize (assume a VM)};
+  \draw[-{Latex},thick] (h1) -- node[above,font=\scriptsize]{failover} (h2);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Live Migration
 
 - Migra uma VM **em execução** entre hosts físicos.

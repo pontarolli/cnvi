@@ -38,6 +38,20 @@ title: "Aula 73 — Governança e FinOps na Nuvem"
 - **Operar:** cultura e processos permanentes.
 - Ciclo iterativo com métricas.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  b/.style={draw,circle,fill=blue!12,minimum size=1.7cm,align=center,inner sep=1pt}]
+  \node[b] (i) at (0,1.2) {Inform};
+  \node[b] (o) at (3.4,1.2) {Otimizar};
+  \node[b] (p) at (1.7,-1.1) {Operar};
+  \draw[-{Latex}] (i)--(o);
+  \draw[-{Latex}] (o) to[bend left=22] (p);
+  \draw[-{Latex}] (p) to[bend left=22] (i);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Visibilidade de Custos
 
 - **Tags** por projeto, dono, centro de custo.

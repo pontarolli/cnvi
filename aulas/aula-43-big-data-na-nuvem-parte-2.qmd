@@ -23,6 +23,19 @@ title: "Aula 43 — Big Data na Nuvem (Parte 2)"
 - **Reduce:** agrega os resultados.
 - Divide-e-conquista em larga escala.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=6mm,
+  b/.style={draw,rounded corners,fill=blue!10,minimum width=2.2cm,minimum height=0.95cm,align=center,inner sep=3pt}]
+  \node[b] (in) {Dados};
+  \node[b,right=of in,fill=green!12] (map) {Map\\ \scriptsize pares (k,v)};
+  \node[b,right=of map,fill=orange!20] (red) {Reduce\\ \scriptsize agregação};
+  \node[b,right=of red,fill=gray!15] (out) {Resultado};
+  \draw[-{Latex}] (in)--(map); \draw[-{Latex}] (map)--(red); \draw[-{Latex}] (red)--(out);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Hadoop
 
 - Ecossistema de **armazenamento (HDFS)** e processamento (MapReduce).

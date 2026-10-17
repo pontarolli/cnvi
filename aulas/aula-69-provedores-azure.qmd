@@ -43,6 +43,24 @@ title: "Aula 69 — Provedores: Microsoft Azure"
 | Relacional | RDS | Azure SQL |
 | NoSQL | DynamoDB | Cosmos DB |
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=5mm,
+  b/.style={draw,rounded corners,minimum width=2.7cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[b,fill=orange!20] (aws) {AWS};
+  \node[b,fill=blue!12,right=of aws] (az) {Azure};
+  \node[b,fill=orange!15,below=of aws] (e1) {EC2};
+  \node[b,fill=blue!15,below=of az] (a1) {Virtual Machines};
+  \node[b,fill=orange!15,below=of e1] (e2) {Lambda};
+  \node[b,fill=blue!15,below=of a1] (a2) {Functions};
+  \node[b,fill=orange!15,below=of e2] (e3) {S3};
+  \node[b,fill=blue!15,below=of a2] (a3) {Blob Storage};
+  \draw[-{Latex}] (aws)--(az);
+  \draw[<->] (e1)--(a1); \draw[<->] (e2)--(a2); \draw[<->] (e3)--(a3);
+\end{tikzpicture}
+\end{center}
+```
+
 ## Identidade e Híbrido
 
 - **Entra ID** (antigo Azure AD) centraliza identidade.

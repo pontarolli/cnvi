@@ -11,3 +11,9 @@ author: "Ricardo Pasquati Pontarolli"
 subtitle: "Computação em Nuvem e Virtualização"
 institute_base: "Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br"
 institute: "Técnico em Redes de Computadores · IFSP Boituva · pasquati@ifsp.edu.br · v44"
+
+header-includes: |
+  \usepackage{tikz}
+  \usetikzlibrary{positioning,arrows.meta,shapes.geometric,shapes.misc,fit,backgrounds,calc}
+  \usepackage{pgfplots}
+  \pgfplotsset{compat=1.18}

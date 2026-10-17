@@ -16,6 +16,17 @@ title: "Aula 21 — Hipervisores: Conceitos e Funcionamento"
 - Cria, executa e gerencia as VMs.
 - Garante **isolamento** e **alocação de recursos**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[node distance=2.5mm,font=\small,
+  layer/.style={draw,rounded corners,minimum width=8.5cm,minimum height=0.75cm,align=center}]
+  \node[layer,fill=blue!12]  (vms) {Máquinas Virtuais (\textit{guest})};
+  \node[layer,fill=orange!25,below=of vms] (hv) {\textbf{Hipervisor} (VMM)};
+  \node[layer,fill=gray!20,below=of hv]  (hw) {Hardware físico (CPU, memória, disco, rede)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Principais Responsabilidades
 
 - **Alocação** de CPU, memória, disco e rede às VMs.
@@ -39,6 +50,23 @@ title: "Aula 21 — Hipervisores: Conceitos e Funcionamento"
 - As VMs rodam em modo **menos privilegiado**.
 - Instruções sensíveis são **interceptadas** pelo hipervisor.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small]
+  \fill[blue!12]   (0,0) circle (2.3);
+  \fill[yellow!30] (0,0) circle (1.7);
+  \fill[orange!25] (0,0) circle (1.1);
+  \fill[green!30]  (0,0) circle (0.5);
+  \node at (0,2.0) {Ring 3 -- aplicações};
+  \node at (0,1.4) {Ring 2};
+  \node at (0,0.8) {Ring 1};
+  \node at (0,0)   {Ring 0};
+
+  {\footnotesize Ring 0 é o mais privilegiado: o \textbf{hipervisor} roda nele; as VMs, em anéis menores.}
+\end{tikzpicture}
+\end{center}
+```
+
 ## Técnicas de Virtualização
 
 - **Virtualização completa:** guest não sabe que é virtualizado.
@@ -51,6 +79,23 @@ title: "Aula 21 — Hipervisores: Conceitos e Funcionamento"
 - **Tipo 1 (bare-metal):** roda direto no hardware.
 - **Tipo 2 (hospedado):** roda sobre um sistema operacional.
 - Aula 22 detalha as diferenças.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=1.6mm,
+  l/.style={draw,rounded corners,minimum width=4.2cm,minimum height=0.6cm,align=center}]
+  \node (t1) at (0,1.0) {\textbf{Tipo 1 (bare-metal)}};
+  \node[l,fill=blue!12,below=of t1]   (a1) {VMs (\textit{guest})};
+  \node[l,fill=orange!25,below=of a1] (a2) {\textbf{Hipervisor}};
+  \node[l,fill=gray!20,below=of a2]   (a3) {Hardware};
+  \node (t2) at (6,1.0) {\textbf{Tipo 2 (hospedado)}};
+  \node[l,fill=blue!12,below=of t2]   (b1) {VMs (\textit{guest})};
+  \node[l,fill=orange!25,below=of b1] (b2) {\textbf{Hipervisor}};
+  \node[l,fill=green!18,below=of b2]  (b3) {Sistema Operacional};
+  \node[l,fill=gray!20,below=of b3]   (b4) {Hardware};
+\end{tikzpicture}
+\end{center}
+```
 
 ## Exemplos de Hipervisores
 

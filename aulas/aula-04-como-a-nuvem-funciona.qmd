@@ -65,6 +65,19 @@ Sem virtualização, a nuvem como conhecemos não existiria: ela é a "mágica" 
 - **Camada de serviços:** IaaS, PaaS, SaaS, serverless.
 - **Camada de acesso:** consoles, APIs, CLI.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=4mm,
+  l/.style={draw,rounded corners,minimum width=8.2cm,minimum height=0.62cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (ac) {Camada de acesso (consoles, APIs, CLI)};
+  \node[l,fill=green!12,below=of ac] (se) {Camada de serviços (IaaS, PaaS, SaaS, serverless)};
+  \node[l,fill=orange!20,below=of se] (or) {Camada de orquestração (alocação e automação)};
+  \node[l,fill=yellow!25,below=of or] (vi) {Camada de virtualização (hipervisores e VMs)};
+  \node[l,fill=gray!20,below=of vi] (fi) {Camada física (servidores, rede, energia)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Da Requisição à Resposta
 
 - O usuário abre o navegador e acessa uma aplicação.
@@ -72,6 +85,21 @@ Sem virtualização, a nuvem como conhecemos não existiria: ela é a "mágica" 
 - O balanceador encaminha para uma **instância** saudável.
 - A instância acessa **banco de dados** e **armazenamento**.
 - A resposta volta ao usuário — tudo transparente.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm,
+  b/.style={draw,rounded corners,fill=blue!10,minimum height=0.62cm,align=center,inner sep=4pt}]
+  \node[b] (u) {Usuário};
+  \node[b,right=of u] (dns) {DNS};
+  \node[b,right=of dns] (lb) {Balanceador};
+  \node[b,right=of lb] (in) {Instância};
+  \node[b,right=of in,fill=green!12] (db) {BD};
+  \draw[-{Latex}] (u)--(dns); \draw[-{Latex}] (dns)--(lb);
+  \draw[-{Latex}] (lb)--(in); \draw[-{Latex}] (in)--(db);
+\end{tikzpicture}
+\end{center}
+```
 
 ## Resumo da Aula
 

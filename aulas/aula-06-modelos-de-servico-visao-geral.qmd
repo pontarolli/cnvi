@@ -33,6 +33,17 @@ title: "Aula 6 — Modelos de Serviço em Nuvem"
 | PaaS | Provedor (plataforma) | App Engine, Heroku |
 | IaaS | Cliente (SO+) | EC2, Azure VM |
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=4mm,
+  l/.style={draw,rounded corners,minimum width=7.8cm,minimum height=0.62cm,align=center,inner sep=3pt}]
+  \node[l,fill=green!15] (s) {SaaS --- provedor gerencia tudo};
+  \node[l,fill=orange!20,below=of s] (p) {PaaS --- provedor cuida da plataforma};
+  \node[l,fill=blue!12,below=of p] (i) {IaaS --- cliente gerencia SO e acima};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Escala de Responsabilidade
 
 - **IaaS:** cliente gerencia SO, middleware, runtime, aplicação e dados.

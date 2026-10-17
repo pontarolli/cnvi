@@ -33,6 +33,23 @@ title: "Aula 22 — Hipervisores: Tipo 1 × Tipo 2"
 | Uso típico | Data center | Desktop/lab |
 | Exemplos | ESXi, Xen, KVM | VirtualBox, Workstation |
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=2mm,
+  l/.style={draw,rounded corners,minimum width=4cm,minimum height=0.55cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (a1) at (0,0.7) {VMs};
+  \node[l,fill=orange!25,below=of a1] (a2) {Hipervisor 1};
+  \node[l,fill=gray!20,below=of a2] (a3) {Hardware};
+  \node[l,fill=blue!12] (b1) at (5.6,0.7) {VMs};
+  \node[l,fill=orange!25,below=of b1] (b2) {Hipervisor 2};
+  \node[l,fill=green!15,below=of b2] (b3) {SO hospedeiro};
+  \node[l,fill=gray!20,below=of b3] (b4) {Hardware};
+  \node[font=\scriptsize] at (0,1.35) {Tipo 1 (bare-metal)};
+  \node[font=\scriptsize] at (5.6,1.35) {Tipo 2 (hospedado)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Vantagens do Tipo 1
 
 - Melhor **desempenho** e menor overhead.

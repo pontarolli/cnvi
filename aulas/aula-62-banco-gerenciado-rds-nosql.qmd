@@ -37,6 +37,18 @@ title: "Aula 62 — Bancos Gerenciados: RDS e NoSQL"
 - **Coluna:** Cassandra, Bigtable.
 - **Grafo:** Neo4j, Neptune.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm and 5mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.8cm,minimum height=1cm,align=center,inner sep=3pt}]
+  \node[c] (a) {Chave-valor\\ \scriptsize DynamoDB, Redis};
+  \node[c,right=of a,fill=green!12] (b) {Documento\\ \scriptsize MongoDB, Firestore};
+  \node[c,below=of a,fill=orange!20] (c) {Coluna\\ \scriptsize Cassandra, Bigtable};
+  \node[c,below=of b,fill=yellow!25] (d) {Grafo\\ \scriptsize Neo4j, Neptune};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Quando usar SQL × NoSQL?
 
 - **SQL:** dados relacionais, transações, consistência forte.

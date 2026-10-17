@@ -33,6 +33,16 @@ title: "Aula 61 — Serviços de Banco de Dados em Nuvem"
   - Ex.: documento, chave-valor, coluna, grafo.
 - Escolha depende do **modelo de dados** e da **carga**.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  b/.style={draw,rounded corners,minimum width=3.9cm,minimum height=1.4cm,align=center,inner sep=3pt}]
+  \node[b,fill=blue!12] (sql) {SQL (relacional)\\ \scriptsize esquema fixo\\ \scriptsize transações ACID};
+  \node[b,right=of sql,fill=green!12] (ns) {NoSQL\\ \scriptsize esquema flexível\\ \scriptsize escala horizontal};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Exemplos de Serviços
 
 | Tipo | AWS | Azure | GCP |

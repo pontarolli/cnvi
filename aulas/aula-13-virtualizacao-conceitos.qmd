@@ -37,6 +37,17 @@ title: "Aula 13 — Virtualização: Conceitos e Fundamentos"
 - Tipos: **tipo 1** (bare-metal) e **tipo 2** (hospedado).
 - Exemplos: ESXi, Xen, KVM (tipo 1); VirtualBox, Workstation (tipo 2).
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=8cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (vms) {Guest: VM 1, VM 2, VM 3 ...};
+  \node[l,fill=orange!25,below=of vms] (hv) {Hipervisor (VMM)};
+  \node[l,fill=gray!20,below=of hv] (hw) {Host: hardware físico};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Máquina Virtual
 
 - Emula um computador completo: **CPU, memória, disco, rede**.

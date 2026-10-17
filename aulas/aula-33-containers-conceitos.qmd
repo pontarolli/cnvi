@@ -40,6 +40,24 @@ title: "Aula 33 — Contêineres: Conceitos e VM × Contêiner"
 | Isolamento | Forte (hardware) | Por processos |
 | Densidade | Menor | Maior |
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=2mm,
+  l/.style={draw,rounded corners,minimum width=3.2cm,minimum height=0.5cm,align=center,inner sep=2pt}]
+  \node[l,fill=blue!12] (v1) at (0,1.5) {App};
+  \node[l,fill=blue!12,below=of v1] (v2) {SO convidado};
+  \node[l,fill=orange!20,below=of v2] (v3) {Hipervisor};
+  \node[l,fill=gray!20,below=of v3] (v4) {Hardware};
+  \node[font=\scriptsize] at (0,2.05) {Máquina Virtual};
+  \node[l,fill=green!12] (c1) at (5.4,1.5) {App A};
+  \node[l,fill=green!12,below=of c1] (c2) {App B};
+  \node[l,fill=yellow!25,below=of c2] (c3) {Motor de contêineres};
+  \node[l,fill=gray!20,below=of c3] (c4) {SO do host (kernel)};
+  \node[font=\scriptsize] at (5.4,2.05) {Contêineres};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Vantagens dos Contêineres
 
 - **Leveza** e baixo consumo de recursos.

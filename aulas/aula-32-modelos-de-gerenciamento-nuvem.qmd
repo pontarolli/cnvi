@@ -24,6 +24,19 @@ title: "Aula 32 — Modelos de Gerenciamento em Nuvem"
 - **Segurança e conformidade:** políticas e auditoria.
 - **Automação/orquestração:** reduzir trabalho manual.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=7.6cm,minimum height=0.58cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (p) {Provisionamento};
+  \node[l,fill=green!12,below=of p] (m) {Monitoramento};
+  \node[l,fill=orange!20,below=of m] (f) {Custos (FinOps)};
+  \node[l,fill=yellow!25,below=of f] (s) {Segurança e conformidade};
+  \node[l,fill=gray!20,below=of s] (a) {Automação / orquestração};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Plataformas de Gerenciamento
 
 - **AWS Management Console / Azure Portal / GCP Console**.

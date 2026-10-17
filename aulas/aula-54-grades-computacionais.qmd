@@ -31,6 +31,27 @@ title: "Aula 54 — Grades Computacionais"
 | Grade | Distribuído | Baixa | Científico/cooperação |
 | Nuvem | Global | Abstraída | Serviços sob demanda |
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,
+  n/.style={draw,circle,fill=blue!15,minimum size=6mm,inner sep=0pt}]
+  \node[n] (c1) at (0,0) {};
+  \node[n] at (0.7,0) (c2) {};
+  \node[n] at (0.35,-0.7) (c3) {};
+  \draw (c1)--(c2); \draw (c1)--(c3); \draw (c2)--(c3);
+  \node[font=\scriptsize,below] at (0.35,-1.05) {Cluster (local)};
+  \node[n,fill=green!15] at (3.5,0.3) (g1) {};
+  \node[n,fill=green!15] at (4.7,-0.3) (g2) {};
+  \node[n,fill=green!15] at (3.2,-0.9) (g3) {};
+  \node[n,fill=green!15] at (5.3,0.6) (g4) {};
+  \draw[dashed] (g1)--(g2); \draw[dashed] (g1)--(g4); \draw[dashed] (g2)--(g3); \draw[dashed] (g1)--(g3);
+  \node[font=\scriptsize,below] at (4.2,-1.05) {Grade (distribuída)};
+  \node[draw,ellipse,fill=gray!12,minimum width=1.9cm,minimum height=0.95cm] at (7.8,0) {Nuvem};
+  \node[font=\scriptsize,below] at (7.8,-1.05) {Nuvem (global)};
+\end{tikzpicture}
+\end{center}
+```
+
 ## Aplicações Típicas
 
 - Cálculos **científicos** e simulações.

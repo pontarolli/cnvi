@@ -23,6 +23,19 @@ title: "Aula 29 — Segurança: Identidade, Acesso e Criptografia"
 - Autenticação vem **antes** da autorização.
 - Ambas são necessárias para o controle de acesso.
 
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  b/.style={draw,rounded corners,fill=blue!10,minimum height=0.75cm,align=center,inner sep=4pt}]
+  \node[b] (u) {Usuário};
+  \node[b,right=of u] (a) {Autenticação\\ \scriptsize quem é você?};
+  \node[b,right=of a] (z) {Autorização\\ \scriptsize o que pode fazer?};
+  \node[b,right=of z,fill=green!12] (r) {Recurso};
+  \draw[-{Latex}] (u)--(a); \draw[-{Latex}] (a)--(z); \draw[-{Latex}] (z)--(r);
+\end{tikzpicture}
+\end{center}
+```
+
 ## MFA — Autenticação Multifator
 
 - Combina **dois ou mais fatores**:
