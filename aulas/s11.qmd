@@ -1,0 +1,360 @@
+---
+title: "Semana 11 — Conteúdo de 2 aulas"
+---
+
+## Semana 11 — Conteúdo de 2 aulas
+
+- **Aula 17:** Hipervisores: conceitos e tipos
+- **Aula 18:** Criação e Gerenciamento de Máquinas Virtuais
+
+## Aula 17 — Hipervisores: conceitos e tipos
+
+## Objetivos da Aula
+
+- Definir o que é um **hipervisor** (VMM).
+- Compreender seu **funcionamento** e responsabilidades.
+- Conhecer exemplos de hipervisores.
+- Relacionar o hipervisor à **virtualização** e à nuvem.
+
+## O que é um Hipervisor?
+
+- **Monitor de Máquina Virtual (VMM)**.
+- Camada de software entre o **hardware** e as **máquinas virtuais**.
+- Cria, executa e gerencia as VMs.
+- Garante **isolamento** e **alocação de recursos**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[node distance=2.5mm,font=\small,
+  layer/.style={draw,rounded corners,minimum width=8.5cm,minimum height=0.75cm,align=center}]
+  \node[layer,fill=blue!12]  (vms) {Máquinas Virtuais (\textit{guest})};
+  \node[layer,fill=orange!25,below=of vms] (hv) {\textbf{Hipervisor} (VMM)};
+  \node[layer,fill=gray!20,below=of hv]  (hw) {Hardware físico (CPU, memória, disco, rede)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Principais Responsabilidades
+
+- **Alocação** de CPU, memória, disco e rede às VMs.
+- **Isolamento** entre máquinas virtuais.
+- **Escalonamento** e emulação de dispositivos.
+- **Migração** de VMs e snapshots.
+- Interface de **gerenciamento**.
+
+## Como Funciona
+
+1. O hipervisor inicia sobre o hardware (ou sobre um SO).
+2. Cria um **ambiente virtual** com hardware emulado.
+3. Instala o **sistema convidado** (guest).
+4. Intercepta e traduz as instruções privilegiadas.
+5. Distribui os recursos físicos entre as VMs.
+
+## Anéis de Proteção
+
+- A CPU tem **níveis de privilégio** (rings).
+- O hipervisor roda em modo **privilegiado** (ring 0 / modo raiz).
+- As VMs rodam em modo **menos privilegiado**.
+- Instruções sensíveis são **interceptadas** pelo hipervisor.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small]
+  \fill[blue!12]   (0,0) circle (2.3);
+  \fill[yellow!30] (0,0) circle (1.7);
+  \fill[orange!25] (0,0) circle (1.1);
+  \fill[green!30]  (0,0) circle (0.5);
+  \node at (0,2.0) {Ring 3 -- aplicações};
+  \node at (0,1.4) {Ring 2};
+  \node at (0,0.8) {Ring 1};
+  \node at (0,0)   {Ring 0};
+
+  {\footnotesize Ring 0 é o mais privilegiado: o \textbf{hipervisor} roda nele; as VMs, em anéis menores.}
+\end{tikzpicture}
+\end{center}
+```
+
+## Técnicas de Virtualização
+
+- **Virtualização completa:** guest não sabe que é virtualizado.
+- **Paravirtualização:** guest colabora com o hipervisor.
+- **Assistida por hardware:** CPU/IOMMU auxiliam (VT-x/AMD-V).
+- Cada técnica troca **desempenho**, **compatibilidade** e **complexidade**.
+
+## Tipos de Hipervisor (visão)
+
+- **Tipo 1 (bare-metal):** roda direto no hardware.
+- **Tipo 2 (hospedado):** roda sobre um sistema operacional.
+- Aula 22 detalha as diferenças.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=1.6mm,
+  l/.style={draw,rounded corners,minimum width=4.2cm,minimum height=0.6cm,align=center}]
+  \node (t1) at (0,1.0) {\textbf{Tipo 1 (bare-metal)}};
+  \node[l,fill=blue!12,below=of t1]   (a1) {VMs (\textit{guest})};
+  \node[l,fill=orange!25,below=of a1] (a2) {\textbf{Hipervisor}};
+  \node[l,fill=gray!20,below=of a2]   (a3) {Hardware};
+  \node (t2) at (6,1.0) {\textbf{Tipo 2 (hospedado)}};
+  \node[l,fill=blue!12,below=of t2]   (b1) {VMs (\textit{guest})};
+  \node[l,fill=orange!25,below=of b1] (b2) {\textbf{Hipervisor}};
+  \node[l,fill=green!18,below=of b2]  (b3) {Sistema Operacional};
+  \node[l,fill=gray!20,below=of b3]   (b4) {Hardware};
+\end{tikzpicture}
+\end{center}
+```
+
+## Exemplos de Hipervisores
+
+| Hipervisor | Tipo | Uso típico |
+|------------|------|------------|
+| VMware ESXi | 1 | Empresas/data centers |
+| Xen | 1 | Cloud providers |
+| KVM | 1 | Linux/OpenStack |
+| Hyper-V | 1 | Windows Server |
+| VirtualBox | 2 | Laboratório/desktop |
+
+## Hipervisor e Nuvem
+
+- Toda **instância** de nuvem é uma VM em um hipervisor.
+- **Live migration** depende do hipervisor.
+- **Isolamento** entre clientes (multilocação).
+- Base para **elasticidade** e **alta densidade**.
+
+::: {.callout-note}
+O hipervisor é o componente que torna possível **rodar muitos sistemas em um servidor** — a essência da nuvem.
+:::
+
+## Resumo da Aula
+
+- O **hipervisor (VMM)** gerencia as máquinas virtuais.
+- Aloca recursos, isola VMs e intercepta instruções privilegiadas.
+- Existem três **técnicas** de virtualização.
+- É a base técnica da nuvem e do IaaS.
+
+## Atividade Rápida
+
+- Explique, com suas palavras, o papel do **hipervisor**.
+- Cite **dois** hipervisores tipo 1 e **um** tipo 2.
+- Como o hipervisor contribui para o **isolamento** na nuvem?
+
+## Referências
+
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- VMware — *Understanding Hypervisors*.
+- Red Hat — *KVM*.
+
+## Objetivos da Aula
+
+- Diferenciar hipervisores **tipo 1** e **tipo 2**.
+- Conhecer vantagens e desvantagens de cada tipo.
+- Identificar casos de uso adequados.
+- Reconhecer produtos de cada categoria.
+
+## Hipervisor Tipo 1 (Bare-Metal)
+
+- Executa **diretamente sobre o hardware**.
+- Não depende de um sistema operacional hospedeiro.
+- Maior **desempenho** e **segurança**.
+- Usado em **data centers** e provedores de nuvem.
+
+## Hipervisor Tipo 2 (Hospedado)
+
+- Executa **sobre um sistema operacional** já instalado.
+- Mais **fácil de instalar** e usar.
+- Desempenho um pouco menor (passa pelo SO hospedeiro).
+- Comum em **laboratórios, estudos e desktops**.
+
+## Comparativo
+
+| Característica | Tipo 1 | Tipo 2 |
+|----------------|--------|--------|
+| Base | Hardware | SO hospedeiro |
+| Desempenho | Maior | Menor |
+| Segurança | Maior | Menor |
+| Uso típico | Data center | Desktop/lab |
+| Exemplos | ESXi, Xen, KVM | VirtualBox, Workstation |
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=2mm,
+  l/.style={draw,rounded corners,minimum width=4cm,minimum height=0.55cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (a1) at (0,0.7) {VMs};
+  \node[l,fill=orange!25,below=of a1] (a2) {Hipervisor 1};
+  \node[l,fill=gray!20,below=of a2] (a3) {Hardware};
+  \node[l,fill=blue!12] (b1) at (5.6,0.7) {VMs};
+  \node[l,fill=orange!25,below=of b1] (b2) {Hipervisor 2};
+  \node[l,fill=green!15,below=of b2] (b3) {SO hospedeiro};
+  \node[l,fill=gray!20,below=of b3] (b4) {Hardware};
+  \node[font=\scriptsize] at (0,1.35) {Tipo 1 (bare-metal)};
+  \node[font=\scriptsize] at (5.6,1.35) {Tipo 2 (hospedado)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Vantagens do Tipo 1
+
+- Melhor **desempenho** e menor overhead.
+- Maior **isolamento e segurança**.
+- Ideal para **produção** e alta densidade.
+- Base de nuvens privadas e públicas.
+
+## Vantagens do Tipo 2
+
+- Instalação **simples**, como um aplicativo.
+- Não exige formatar a máquina.
+- Ótimo para **aprendizado** e testes.
+- Roda no seu **computador pessoal**.
+
+## Uso no Curso
+
+- Vamos praticar com **VirtualBox** (tipo 2), pela facilidade.
+- Os conceitos se aplicam aos hipervisores tipo 1 (ESXi/KVM).
+- Em nuvem, você usará tipo 1 sem perceber (instâncias = VMs).
+
+## Exemplos Práticos
+
+- **VMware ESXi:** hipervisor bare-metal corporativo.
+- **KVM:** embutido no Linux, base do OpenStack.
+- **Xen:** muito usado por provedores de nuvem.
+- **VirtualBox/Workstation/Hyper-V (desktop):** laboratório.
+
+::: {.callout-note}
+**Hyper-V** é oferecido como papel do Windows Server (tipo 1), mas também há versão para Windows desktop.
+:::
+
+## Como Escolher?
+
+- **Produção/data center** → tipo 1.
+- **Estudo e laboratório** → tipo 2.
+- **Já tenho um SO e quero testar VMs** → tipo 2.
+- **Preciso de máxima performance** → tipo 1.
+
+## Resumo da Aula
+
+- **Tipo 1:** roda no hardware; desempenho e segurança maiores.
+- **Tipo 2:** roda sobre um SO; simplicidade e uso em laboratório.
+- Produtos: ESXi, Xen, KVM (tipo 1); VirtualBox (tipo 2).
+- A escolha depende do **objetivo** (produção × aprendizado).
+
+## Atividade Rápida
+
+- Classifique: KVM, VirtualBox, ESXi, Workstation.
+- Dê um cenário ideal para cada tipo.
+- Explique por que o tipo 1 é preferido em data centers.
+
+## Referências
+
+- VMware — *ESXi*.
+- Oracle — *VirtualBox User Manual*.
+- Red Hat — *KVM e Virtualização*.
+
+## Aula 18 — Criação e Gerenciamento de Máquinas Virtuais
+
+## Objetivos da Aula
+
+- Aprender o ciclo de vida de uma **máquina virtual**.
+- Conhecer os **recursos** necessários para criar uma VM.
+- Entender **snapshots, clones e templates**.
+- Compreender operações de **gerenciamento** de VMs.
+
+## Ciclo de Vida de uma VM
+
+- **Criação** (provisionamento)
+- **Inicialização** (boot)
+- **Operação**
+- **Suspensão/salvamento de estado**
+- **Encerramento**
+- **Exclusão**
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=8mm,
+  s/.style={draw,rounded corners,fill=blue!10,minimum height=0.6cm,align=center,inner sep=4pt}]
+  \node[s] (cr) {Criação};
+  \node[s,right=of cr] (in) {Boot};
+  \node[s,right=of in] (op) {Operação};
+  \node[s,below=of op] (su) {Suspender};
+  \node[s,left=of su] (en) {Encerrar};
+  \node[s,left=of en] (ex) {Excluir};
+  \draw[-{Latex}] (cr)--(in); \draw[-{Latex}] (in)--(op);
+  \draw[-{Latex}] (op)--(su); \draw[-{Latex}] (su)--(en); \draw[-{Latex}] (en)--(ex);
+\end{tikzpicture}
+\end{center}
+```
+
+## Recursos de uma VM
+
+- **CPU (vCPU):** número de núcleos virtuais.
+- **Memória:** quantidade de RAM alocada.
+- **Disco:** arquivo de disco virtual (VDI, VMDK, qcow2).
+- **Rede:** adaptador virtual (ponte, NAT, rede interna).
+- **Firmware:** BIOS/UEFI virtual.
+
+## Criando uma VM — Passos
+
+1. Escolher nome e **sistema operacional**.
+2. Definir **memória** e **processadores**.
+3. Criar ou selecionar o **disco virtual**.
+4. Configurar a **rede**.
+5. Anexar a **imagem ISO** de instalação.
+6. Iniciar e **instalar o SO convidado**.
+
+## Armazenamento Virtual
+
+- O disco da VM é um **arquivo** no host.
+- Formatos comuns: **VDI**, **VMDK**, **VHDX**, **qcow2**.
+- Modos: **dinâmico** (cresce conforme uso) ou **fixo**.
+- Facilita **backup, cópia e movimentação**.
+
+## Snapshots
+
+- Registram o **estado da VM** em um instante.
+- Úteis antes de atualizações ou testes.
+- Permitem **reverter** para o ponto salvo.
+- Consomem espaço e devem ser gerenciados.
+
+## Clones e Templates
+
+- **Clone:** cópia completa de uma VM (útil para replicar ambientes).
+- **Template:** modelo padronizado para criar novas VMs.
+- Aceleram o **provisionamento** e garantem consistência.
+- Base para automação e escalabilidade.
+
+## Configuração de Rede da VM
+
+- **NAT:** a VM acessa a internet via host (não é acessada de fora).
+- **Ponte (bridge):** a VM fica na rede física, com IP próprio.
+- **Rede interna/host-only:** comunicação isolada entre VMs e host.
+- A escolha afeta **acesso e segurança**.
+
+## Operações de Gerenciamento
+
+- Iniciar, pausar e desligar VMs.
+- Ajustar **recursos** (CPU, memória) — quando suportado.
+- **Migrar** entre hosts (live migration).
+- Monitorar **desempenho** e consumo.
+- **Backup** e restauração.
+
+::: {.callout-note}
+**Dimensionar bem** é essencial: recursos a menos → lentidão; recursos a mais → desperdício (na nuvem, custo).
+:::
+
+## Resumo da Aula
+
+- O ciclo de vida vai de **criação a exclusão**.
+- Toda VM precisa de **CPU, memória, disco e rede** virtuais.
+- **Snapshots, clones e templates** agilizam a administração.
+- O gerenciamento inclui migração, backup e monitoramento.
+
+## Atividade Rápida
+
+- Liste os **recursos** configuráveis de uma VM.
+- Explique a diferença entre **snapshot, clone e template**.
+- Compare os modos de rede **NAT, bridge e host-only**.
+
+## Referências
+
+- Oracle — *VirtualBox User Manual*.
+- VMware — *VM Administration*.
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.

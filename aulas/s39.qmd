@@ -1,0 +1,170 @@
+---
+title: "Semana 39 — Conteúdo de 2 aulas"
+---
+
+## Semana 39 — Conteúdo de 2 aulas
+
+- **Aula 63:** Projeto Integrador: Apresentação
+- **Aula 64:** Encerramento e Avaliação Final
+
+## Aula 63 — Projeto Integrador: Apresentação
+
+## Objetivos da Aula
+
+- **Apresentar** a solução desenvolvida.
+- Demonstrar o **funcionamento** da aplicação.
+- Justificar as **decisões técnicas**.
+- Receber **feedback** e avaliar o aprendizado.
+
+## Estrutura da Apresentação
+
+- **Introdução:** problema e objetivos.
+- **Arquitetura:** diagrama e serviços.
+- **Demonstração:** funcionamento.
+- **Resultados:** aprendizados e desafios.
+- **Conclusão:** próximos passos.
+
+## O que Apresentar
+
+- **Problema** escolhido e requisitos.
+- **Diagrama** da solução.
+- **Serviços** de nuvem utilizados.
+- **Segurança e custos** previstos.
+- Evidências de **execução**.
+
+## Demonstração
+
+- Mostrar a aplicação **funcionando**.
+- Explicar o **fluxo** de dados.
+- Demonstrar (**se possível**) recursos de nuvem.
+- Ter plano B (vídeo/capturas) se a rede falhar.
+
+## Justificativa Técnica
+
+- Por que esses **serviços**?
+- Como resolveram **segurança e escalabilidade**?
+- Quais **trade-offs** foram feitos?
+- O que fariam **diferente** agora?
+
+## Critérios de Avaliação
+
+- **Domínio** do conteúdo.
+- **Qualidade** da solução.
+- **Clareza** da apresentação.
+- **Trabalho em equipe**.
+- **Documentação** entregue.
+
+## Feedback e Reflexão
+
+- Perguntas da turma e do professor.
+- Pontos fortes e **melhorias**.
+- Reflexão sobre o **processo**.
+- Aprendizados para o futuro profissional.
+
+::: {.callout-note}
+O mais importante não é a solução perfeita, mas a capacidade de **explicar as decisões** e aprender com o processo.
+:::
+
+## Entrega Final
+
+- Repositório com **código** e **README**.
+- **Diagrama** de arquitetura.
+- **Relatório** do projeto.
+- Entrega no **Moodle**.
+
+## Checklist de Apresentação
+
+- [ ] Slides preparados.
+- [ ] Demonstração testada.
+- [ ] Justificativas técnicas prontas.
+- [ ] Documentação entregue.
+- [ ] Divisão de fala entre a equipe.
+
+## Resumo da Aula
+
+- Apresentamos e demonstramos a **solução**.
+- Justificamos as **decisões técnicas**.
+- Recebemos **feedback** e refletimos.
+- Próxima aula: **revisão geral do curso**.
+
+## Referências
+
+- Roteiros de apresentação e documentação técnica.
+
+## Aula 64 — Encerramento e Avaliação Final
+
+## Objetivos da Aula
+
+- **Encerrar** a disciplina.
+- Revisar **orientações** para a avaliação final.
+- Reconhecer as **competências** desenvolvidas.
+- Refletir sobre **próximos passos**.
+
+## Chegamos ao Fim!
+
+- Foram **72 aulas** de conteúdo + avaliações.
+- Do **conceito de nuvem** ao **projeto integrador**.
+- Você construiu uma base sólida em **computação em nuvem e virtualização**.
+- Parabéns pelo percurso!
+
+## Competências Desenvolvidas
+
+- Compreender **fundamentos** de nuvem e virtualização.
+- Criar e gerenciar **VMs e contêineres**.
+- Aplicar **segurança e redes** em nuvem.
+- Trabalhar com **dados, ML e DevOps**.
+- Analisar e **selecionar soluções** de nuvem.
+
+## Orientações para a Avaliação
+
+- Revise os **resumos** de cada bimestre.
+- Foque nos **conceitos-chave** e comparações.
+- Avaliação no **Moodle** (10 questões).
+- Gerencie o **tempo** e leia com atenção.
+
+## Recuperação e Pendências
+
+- Verifique **notas** e entregas no Moodle.
+- Atividades em falta devem ser regularizadas.
+- Converse com o professor sobre **recuperação**.
+- Prazos finais da instituição.
+
+## Próximos Passos
+
+- **Certificações** (AWS, Azure, GCP, Kubernetes).
+- Praticar em **projetos pessoais** e laboratórios.
+- Explorar **áreas**: cloud, DevOps, segurança, dados.
+- Manter-se **atualizado** (a nuvem evolui rápido).
+
+## Recursos para Continuar
+
+- Documentação oficial dos provedores.
+- Ambientes de **camada gratuita** para praticar.
+- Comunidades e fóruns.
+- Repositório do curso (slides e materiais).
+
+## Agradecimentos
+
+- Obrigado pela **dedicação** ao longo do curso.
+- Bom trabalho no **projeto integrador**.
+- Sucesso na **avaliação final**.
+- Boa sorte na **carreira**!
+
+::: {.callout-note}
+"Na nuvem, aprender é como escalar: quanto mais você pratica, mais capacidade você ganha."
+:::
+
+## Contato
+
+- **Professor:** Ricardo Pasquati Pontarolli
+- **E-mail:** pasquati@ifsp.edu.br
+- **Site da disciplina:** materiais e cronograma.
+- **Moodle:** avaliações e notas.
+
+## Avaliação Final
+
+- A **Avaliação (GIFT, 10 questões)** encerra a disciplina.
+- Cobre temas de **todo o curso**.
+- Leia com atenção e boa prova!
+
+## Obrigado!

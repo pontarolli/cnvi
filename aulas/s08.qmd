@@ -1,0 +1,207 @@
+---
+title: "Semana 08 — Conteúdo de 2 aulas"
+---
+
+## Semana 08 — Conteúdo de 2 aulas
+
+- **Aula 13:** Tipos de Virtualização
+- **Aula 14:** Virtualização na Nuvem
+
+## Aula 13 — Tipos de Virtualização
+
+## Objetivos da Aula
+
+- Conhecer os principais **tipos de virtualização**.
+- Entender virtualização de **servidor, desktop, rede e armazenamento**.
+- Diferenciar virtualização **completa** e **paravirtualização**.
+- Relacionar cada tipo a casos de uso.
+
+## Panorama dos Tipos
+
+- **Servidor** (server virtualization)
+- **Desktop** (VDI)
+- **Aplicação**
+- **Rede** (NFV)
+- **Armazenamento**
+- **Dados** e **memória**
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=5mm and 5mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.6cm,minimum height=0.7cm,align=center,inner sep=3pt}]
+  \node[c] (a) {Servidor};
+  \node[c,right=of a] (b) {Desktop};
+  \node[c,right=of b] (c) {Aplicação};
+  \node[c,below=of a] (d) {Rede};
+  \node[c,below=of b] (e) {Armazenamento};
+  \node[c,below=of c] (f) {Dados/memória};
+\end{tikzpicture}
+\end{center}
+```
+
+## Virtualização de Servidor
+
+- Vários **servidores virtuais** em um hardware físico.
+- Tipo mais comum em data centers e nuvem.
+- Reduz custos e facilita o gerenciamento.
+- Exemplos: ESXi, KVM, Hyper-V, Xen.
+
+## Virtualização de Desktop (VDI)
+
+- Desktops virtuais entregues **remotamente** ao usuário.
+- Centraliza a gestão e melhora a segurança.
+- Acesso de qualquer dispositivo (**thin client**).
+- Exemplos: VMware Horizon, Citrix, Azure Virtual Desktop.
+
+## Virtualização de Rede (NFV)
+
+- Funções de rede (roteador, firewall) como **software**.
+- Reduz dependência de equipamentos dedicados.
+- Flexibilidade e automação de serviços de rede.
+- Base para **SDN** (Software-Defined Networking).
+
+## Virtualização de Armazenamento
+
+- Agrupa dispositivos físicos em um **pool** lógico.
+- Facilita a alocação, replicação e snapshots.
+- Serviços: SAN, NAS, armazenamento de objetos (S3).
+- Melhora disponibilidade e utilização.
+
+## Virtualização de Aplicação
+
+- Executa aplicações em ambientes **isolados** do SO.
+- Empacota dependências sem afetar o restante do sistema.
+- Relaciona-se com **contêineres**.
+- Exemplos: sandboxes de aplicação, containers.
+
+## Completa × Paravirtualização
+
+- **Virtualização completa:** o guest não sabe que é virtualizado.
+- **Paravirtualização:** o guest sabe e colabora com o hipervisor (mais eficiente).
+- **Virtualização assistida por hardware:** CPU/IOMMU ajudam o hipervisor.
+- Cada abordagem troca **desempenho** e **compatibilidade**.
+
+## Contêiner × Máquina Virtual
+
+| Aspecto | VM | Contêiner |
+|---------|----|-----------|
+| Kernel | Próprio | Compartilhado |
+| Peso | Pesado | Leve |
+| Início | Minutos | Segundos |
+| Isolamento | Forte | Processos |
+
+## Resumo da Aula
+
+- Há virtualização de **servidor, desktop, rede, armazenamento e aplicação**.
+- **Completa, para e assistida por hardware** diferem no desempenho.
+- **Contêineres** são uma forma mais leve de virtualização.
+- Cada tipo atende a **casos de uso** específicos.
+
+## Atividade Rápida
+
+- Associe: VDI, NFV, S3, ESXi — a cada tipo de virtualização.
+- Explique a diferença entre **VM e contêiner**.
+- Dê um exemplo de uso de **VDI** em uma empresa.
+
+## Referências
+
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- VMware, Red Hat e Microsoft — documentação.
+- Cisco — *NFV e SDN*.
+
+## Aula 14 — Virtualização na Nuvem
+
+## Objetivos da Aula
+
+- Relacionar **virtualização** e **computação em nuvem**.
+- Entender como a virtualização habilita a nuvem.
+- Analisar **benefícios e desafios** da virtualização em nuvem.
+- Discutir tendências (contêineres, serverless).
+
+## Virtualização como Base da Nuvem
+
+- A nuvem entrega recursos **virtuais** sob demanda.
+- Sem a virtualização, não haveria **multilocação** nem **elasticidade**.
+- O provedor virtualiza seus data centers e revende a capacidade.
+- O cliente "aluga" VMs, não servidores físicos.
+
+## Do Hipervisor ao Serviço
+
+- **Hardware físico** no data center.
+- **Hipervisor** cria e isola as VMs.
+- **Orquestrador** aloca VMs aos clientes.
+- **Console/API** permite criar recursos em minutos.
+- A nuvem "esconde" toda essa complexidade.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=7.5cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (c) {Console / API};
+  \node[l,fill=green!12,below=of c] (o) {Orquestrador};
+  \node[l,fill=orange!20,below=of o] (h) {Hipervisor (VMs)};
+  \node[l,fill=gray!20,below=of h] (hw) {Hardware físico (data center)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Como a Nuvem Usa a Virtualização
+
+- **Instâncias** são, na prática, máquinas virtuais.
+- **Snapshots e imagens (AMIs)** aceleram o provisionamento.
+- **Live migration** permite manutenção sem parar serviços.
+- **Auto Scaling** cria e destrói VMs conforme a carga.
+- **Isolamento** garante separação entre clientes.
+
+## Benefícios na Nuvem
+
+- **Multilocação** segura e eficiente.
+- **Elasticidade** e provisionamento rápido.
+- **Redução de custos** por consolidação.
+- **Resiliência** com migração e replicação.
+- **Portabilidade** de cargas entre hosts.
+
+## Desafios na Nuvem
+
+- **Overhead** de desempenho do hipervisor.
+- **Complexidade** de gestão em larga escala.
+- **Segurança** do isolamento entre VMs.
+- **Dependência** da infraestrutura do provedor.
+- **Gestão de capacidade** e custos.
+
+::: {.callout-note}
+Contêineres e **serverless** surgem como alternativas mais leves que a virtualização tradicional de VMs.
+:::
+
+## A Evolução: da VM ao Contêiner
+
+- **VM:** sistema completo virtualizado (pesada, isolamento forte).
+- **Contêiner:** compartilha o kernel (leve, rápido).
+- **Serverless:** nem a VM nem o contêiner são gerenciados.
+- A nuvem combina as três abordagens conforme a necessidade.
+
+## Estudo de Caso
+
+- Uma aplicação simples em um servidor físico.
+- Migrada para **VM** no IaaS → melhor utilização.
+- Reempacotada em **contêiner** → mais leve e portátil.
+- Serviço de evento reescrito como **função serverless** → escala automática.
+
+## Resumo da Aula
+
+- A virtualização **habilita** a computação em nuvem.
+- Instâncias, snapshots e migração dependem dela.
+- Benefícios: multilocação, elasticidade, custo.
+- Desafios: overhead, segurança, gestão.
+
+## Atividade Rápida
+
+- Explique como a nuvem usa a **virtualização** para o cliente.
+- Liste **dois benefícios** e **dois desafios** na nuvem.
+- Compare VM, contêiner e serverless em uma tabela.
+
+## Referências
+
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- NIST SP 800-145.
+- Documentação dos provedores.

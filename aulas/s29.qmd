@@ -1,0 +1,199 @@
+---
+title: "Semana 29 — Conteúdo de 2 aulas"
+---
+
+## Semana 29 — Conteúdo de 2 aulas
+
+- **Aula 47:** Edge Computing e Internet das Coisas
+- **Aula 48:** VMware e Xen em Data Centers
+
+## Aula 47 — Edge Computing e Internet das Coisas
+
+## Objetivos da Aula
+
+- Definir **Internet das Coisas (IoT)**.
+- Compreender **edge computing** e sua necessidade.
+- Conhecer a relação **IoT × nuvem × borda**.
+- Reconhecer aplicações e desafios.
+
+## Internet das Coisas (IoT)
+
+- Objetos físicos com **sensores e conectividade**.
+- Coletam e transmitem **dados** continuamente.
+- Exemplos: sensores, câmeras, wearables, veículos.
+- Geram **volumes enormes** de dados.
+
+## Por que Edge Computing?
+
+- Enviar tudo para a **nuvem central** tem custo e **latência**.
+- Algumas decisões precisam ser **imediatas**.
+- Processar **na borda** reduz tráfego e latência.
+- A nuvem continua sendo o **núcleo de análise**.
+
+## O que é Edge Computing?
+
+- Processamento **próximo da origem** dos dados.
+- Locais: gateways, servidores locais, dispositivos.
+- Reduz **latência** e uso de banda.
+- Aumenta **resiliência** (funciona mesmo offline).
+
+## Arquitetura em Camadas
+
+- **Dispositivos (borda do dispositivo):** sensores/atuadores.
+- **Edge (borda de rede):** gateways e servidores locais.
+- **Nuvem:** armazenamento, analytics e ML em escala.
+- Dados fluem entre as camadas conforme a necessidade.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=8.6cm,minimum height=0.7cm,align=center,inner sep=3pt}]
+  \node[l,fill=green!12] (d) {Dispositivos (borda do dispositivo) — sensores/atuadores};
+  \node[l,below=of d,fill=orange!20] (e) {Edge (borda de rede) — gateways e servidores locais};
+  \node[l,below=of e,fill=blue!12] (c) {Nuvem — armazenamento, analytics e ML em escala};
+  \draw[-{Latex}] (d)--(e); \draw[-{Latex}] (e)--(c);
+\end{tikzpicture}
+\end{center}
+```
+
+## Fog Computing
+
+- Camada intermediária entre **borda e nuvem**.
+- Distribui processamento, armazenamento e rede.
+- Complementa o edge computing.
+- Coordena muitos dispositivos.
+
+## Aplicações
+
+- **Indústria 4.0** e manutenção preditiva.
+- **Cidades inteligentes** (trânsito, iluminação).
+- **Saúde** (monitoramento remoto).
+- **Agricultura** de precisão.
+- **Veículos** conectados e autônomos.
+
+## Desafios
+
+- **Segurança** de dispositivos e dados.
+- **Conectividade** e interoperabilidade.
+- **Energia** e autonomia dos dispositivos.
+- **Gestão** de milhões de dispositivos.
+- **Privacidade** (LGPD).
+
+::: {.callout-note}
+**Nuvem + borda** trabalham juntas: a borda decide rápido; a nuvem analisa em escala e treina modelos.
+:::
+
+## Resumo da Aula
+
+- **IoT** conecta objetos que geram dados continuamente.
+- **Edge** processa perto da origem (latência e banda).
+- Arquitetura em camadas: dispositivo, borda e nuvem.
+- Desafios: segurança, energia e privacidade.
+
+## Atividade Rápida
+
+- Explique por que **edge** reduz latência.
+- Dê dois **exemplos** de aplicação IoT.
+- Cite dois **desafios** de segurança em IoT.
+
+## Referências
+
+- NIST — *Edge Computing*.
+- Material das aulas 04 e 51.
+
+## Aula 48 — VMware e Xen em Data Centers
+
+## Objetivos da Aula
+
+- Conhecer os hipervisores **VMware ESXi** e **Xen**.
+- Compreender o uso em **data centers**.
+- Comparar com **KVM** e **Hyper-V**.
+- Entender **clusters, vMotion e HA** na prática.
+
+## VMware ESXi
+
+- Hipervisor **tipo 1** corporativo.
+- **Bare-metal**, alta performance e confiabilidade.
+- Base do **vSphere** (gerenciamento corporativo).
+- Amplamente usado em empresas e provedores.
+
+## Ecossistema VMware
+
+- **vCenter:** gerencia hosts e VMs.
+- **vMotion:** live migration de VMs.
+- **DRS:** balanceamento automático de recursos.
+- **HA:** alta disponibilidade.
+- **vSAN:** armazenamento distribuído.
+
+## Xen
+
+- Hipervisor **tipo 1** de **código aberto**.
+- Arquitetura **paravirtualizada** e por virtualização completa.
+- Base do **XenServer** e da **XCP-ng**.
+- Usado historicamente por grandes provedores de nuvem.
+
+## KVM e Hyper-V (comparação)
+
+- **KVM:** hipervisor tipo 1 **embutido no Linux** (módulo do kernel).
+- Base de **OpenStack** e de muitas nuvens.
+- **Hyper-V:** hipervisor tipo 1 da **Microsoft** (Windows Server).
+- Todos resolvem: **consolidar e isolar** cargas.
+
+## Comparativo
+
+| Hipervisor | Tipo | Plataforma | Uso |
+|------------|------|------------|-----|
+| ESXi | 1 | Próprio | Empresas |
+| Xen | 1 | Próprio | Provedores |
+| KVM | 1 | Linux | OpenStack/nuvem |
+| Hyper-V | 1 | Windows | Corporativo |
+
+## Clusters e Alta Disponibilidade
+
+- Vários **hosts** formam um **cluster**.
+- **HA** reinicia VMs em hosts saudáveis.
+- **vMotion/live migration** movem VMs sem parar.
+- **Armazenamento compartilhado** viabiliza a migração.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  b/.style={draw,rounded corners,minimum width=2.6cm,minimum height=0.8cm,align=center,inner sep=3pt}]
+  \node[b,fill=blue!12] (h1) at (0,1.2) {Host 1};
+  \node[b,fill=blue!12] (h2) at (4.4,1.2) {Host 2};
+  \node[b,fill=gray!15,minimum width=7.8cm] (st) at (2.2,0) {Armazenamento compartilhado};
+  \draw[-{Latex}] (h1)--(st); \draw[-{Latex}] (h2)--(st);
+  \draw[-{Latex},dashed] (h1) to[bend right=25] node[above,font=\scriptsize]{vMotion / HA} (h2);
+\end{tikzpicture}
+\end{center}
+```
+
+## Gestão em Data Centers
+
+- **Consoles centrais** (vCenter, XCP-ng Center).
+- Automação via **APIs**.
+- Monitoramento de **recursos e desempenho**.
+- Padronização de **imagens e templates**.
+
+::: {.callout-note}
+VMware e Xen são a base de muitos data centers **on-premises**; KVM é muito comum em nuvens **open source** (OpenStack).
+:::
+
+## Resumo da Aula
+
+- **ESXi** e **Xen** são hipervisores tipo 1 para data centers.
+- Ecossistemas oferecem **HA, migração e gestão**.
+- **KVM** e **Hyper-V** são alternativas importantes.
+- Clusters + armazenamento compartilhado = **alta disponibilidade**.
+
+## Atividade Rápida
+
+- Situe ESXi, Xen, KVM e Hyper-V por plataforma.
+- Explique o papel do **vMotion**.
+- O que é necessário para **live migration**?
+
+## Referências
+
+- VMware — *vSphere/ESXi*.
+- Xen Project / XCP-ng.
+- Red Hat — *KVM*.

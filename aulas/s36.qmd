@@ -1,0 +1,304 @@
+---
+title: "Semana 36 — Conteúdo de 2 aulas"
+---
+
+## Semana 36 — Conteúdo de 2 aulas
+
+- **Aula 57:** Provedores: Microsoft Azure
+- **Aula 58:** Provedores: Google Cloud Platform e OpenStack
+
+## Aula 57 — Provedores: Microsoft Azure
+
+## Objetivos da Aula
+
+- Conhecer a plataforma **Microsoft Azure**.
+- Identificar os **serviços equivalentes** à AWS.
+- Compreender a **integração com o ecossistema Microsoft**.
+- Reconhecer casos de uso corporativos.
+
+## O que é o Azure?
+
+- Plataforma de nuvem da **Microsoft**.
+- Forte presença em **empresas** e ambientes híbridos.
+- Integração com **Windows Server, Active Directory, Microsoft 365**.
+- Modelo **pay-as-you-go**.
+
+## Infraestrutura Global
+
+- **Regiões** e **zonas de disponibilidade**.
+- Datacenters em vários países (incluindo **Brasil**).
+- Serviços de **edge** e CDN.
+- Opções de **soberania de dados**.
+
+## Serviços Principais
+
+| Categoria | Serviço Azure |
+|-----------|---------------|
+| Computação | Virtual Machines, Functions |
+| Armazenamento | Blob Storage, Disks |
+| Banco de dados | Azure SQL, Cosmos DB |
+| Rede | Virtual Network, DNS |
+| Identidade | Microsoft Entra ID |
+
+## Equivalentes com a AWS
+
+| Função | AWS | Azure |
+|--------|-----|-------|
+| VM | EC2 | Virtual Machines |
+| Serverless | Lambda | Functions |
+| Objetos | S3 | Blob Storage |
+| Relacional | RDS | Azure SQL |
+| NoSQL | DynamoDB | Cosmos DB |
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=5mm,
+  b/.style={draw,rounded corners,minimum width=2.7cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[b,fill=orange!20] (aws) {AWS};
+  \node[b,fill=blue!12,right=of aws] (az) {Azure};
+  \node[b,fill=orange!15,below=of aws] (e1) {EC2};
+  \node[b,fill=blue!15,below=of az] (a1) {Virtual Machines};
+  \node[b,fill=orange!15,below=of e1] (e2) {Lambda};
+  \node[b,fill=blue!15,below=of a1] (a2) {Functions};
+  \node[b,fill=orange!15,below=of e2] (e3) {S3};
+  \node[b,fill=blue!15,below=of a2] (a3) {Blob Storage};
+  \draw[-{Latex}] (aws)--(az);
+  \draw[<->] (e1)--(a1); \draw[<->] (e2)--(a2); \draw[<->] (e3)--(a3);
+\end{tikzpicture}
+\end{center}
+```
+
+## Identidade e Híbrido
+
+- **Entra ID** (antigo Azure AD) centraliza identidade.
+- **Azure Arc** gerencia recursos híbridos.
+- **Azure Stack** leva serviços ao on-premises.
+- Forte apelo para empresas **já Microsoft**.
+
+## Computação e Contêineres
+
+- **Virtual Machines** (IaaS).
+- **Azure Functions** (serverless).
+- **AKS** — Azure Kubernetes Service.
+- **Container Apps** para contêineres gerenciados.
+
+## Casos de Uso
+
+- Ambientes **corporativos** e híbridos.
+- Migração de **aplicações Windows**.
+- Analytics e IA (**Azure ML**).
+- Produtividade integrada ao **Microsoft 365**.
+
+::: {.callout-note}
+Azure se destaca em cenários **corporativos e híbridos**, graças à integração com o ecossistema **Microsoft**.
+:::
+
+## Resumo da Aula
+
+- **Azure** é a nuvem da Microsoft, forte no corporativo.
+- Oferece serviços **equivalentes** aos de outros provedores.
+- **Entra ID e Arc** reforçam identidade e híbrido.
+- Excelente para ambientes **Microsoft**.
+
+## Atividade Rápida
+
+- Monte uma tabela AWS × Azure para 5 serviços.
+- O que é o **Entra ID**?
+- Cite um caso de uso ideal para Azure.
+
+## Referências
+
+- Microsoft Learn — *Azure*.
+
+## Aula 58 — Provedores: Google Cloud Platform e OpenStack
+
+## Objetivos da Aula
+
+- Conhecer a **Google Cloud Platform (GCP)**.
+- Identificar serviços **equivalentes** a AWS/Azure.
+- Destacar os pontos fortes: **Big Data e ML**.
+- Reconhecer casos de uso.
+
+## O que é o Google Cloud?
+
+- Plataforma de nuvem do **Google**.
+- Forte em **dados, analytics e machine learning**.
+- Baseado na infraestrutura interna do Google.
+- Modelo **pay-as-you-go**.
+
+## Infraestrutura Global
+
+- **Regiões e zonas** mundo afora.
+- Rede global de **alta performance** do Google.
+- **Edge** e CDN.
+- Pontos de presença no **Brasil**.
+
+## Serviços Principais
+
+| Categoria | Serviço GCP |
+|-----------|-------------|
+| Computação | Compute Engine, Cloud Functions |
+| Contêineres | GKE (Kubernetes) |
+| Armazenamento | Cloud Storage |
+| Banco de dados | Cloud SQL, Firestore, Bigtable |
+| Analítica | BigQuery |
+
+## Equivalentes com AWS/Azure
+
+| Função | AWS | Azure | GCP |
+|--------|-----|-------|-----|
+| VM | EC2 | VMs | Compute Engine |
+| Serverless | Lambda | Functions | Cloud Functions |
+| Objetos | S3 | Blob | Cloud Storage |
+| K8s | EKS | AKS | GKE |
+| BI/DW | Redshift | Synapse | BigQuery |
+
+## Big Data e ML — Destaques
+
+- **BigQuery:** data warehouse serverless e analítico.
+- **Vertex AI:** plataforma de ML.
+- **Dataflow:** processamento de dados.
+- **Pub/Sub:** mensageria e streaming.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm and 5mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.9cm,minimum height=0.9cm,align=center,inner sep=3pt}]
+  \node[c] (a) {BigQuery\\ \scriptsize data warehouse};
+  \node[c,right=of a,fill=green!12] (b) {Vertex AI\\ \scriptsize machine learning};
+  \node[c,below=of a,fill=orange!20] (c) {Dataflow\\ \scriptsize processamento};
+  \node[c,below=of b,fill=yellow!25] (d) {Pub/Sub\\ \scriptsize streaming};
+\end{tikzpicture}
+\end{center}
+```
+
+## GKE — Kubernetes
+
+- Serviço gerenciado de **Kubernetes**.
+- Referência de maturidade em orquestração.
+- **Autopilot** para gerenciamento simplificado.
+- Integração com o ecossistema **Kubernetes**.
+
+## Casos de Uso
+
+- **Analytics** em grande escala (BigQuery).
+- **Machine Learning** e IA (Vertex AI).
+- **Contêineres** e microsserviços (GKE).
+- Aplicações globais com rede do Google.
+
+::: {.callout-note}
+O GCP se diferencia em **dados e IA**: BigQuery e Vertex AI são referências de mercado para analytics e machine learning.
+:::
+
+## Resumo da Aula
+
+- **GCP** é a nuvem do Google, forte em **dados e ML**.
+- Serviços equivalentes aos de AWS/Azure.
+- **GKE** é referência em Kubernetes gerenciado.
+- Ideal para **analytics, IA e contêineres**.
+
+## Atividade Rápida
+
+- Complete a tabela de equivalentes (AWS/Azure/GCP).
+- O que é **BigQuery**?
+- Cite um caso de uso ideal para GCP.
+
+## Referências
+
+- Google Cloud — *Documentação*.
+
+## Objetivos da Aula
+
+- Conhecer a plataforma **OpenStack**.
+- Compreender seus **componentes** principais.
+- Diferenciar de **nuvens públicas comerciais**.
+- Reconhecer casos de uso (nuvem privada).
+
+## O que é OpenStack?
+
+- Conjunto de **software de código aberto** para construir nuvens.
+- Permite montar nuvens **privadas e públicas**.
+- Modular: cada serviço tem um papel específico.
+- Base de muitas nuvens corporativas.
+
+## Componentes Principais
+
+| Serviço | Função |
+|---------|--------|
+| Nova | Computação (VMs) |
+| Neutron | Rede |
+| Cinder | Armazenamento em bloco |
+| Swift | Armazenamento de objetos |
+| Keystone | Identidade/autenticação |
+| Glance | Imagens |
+| Horizon | Painel web |
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,
+  b/.style={draw,rounded corners,fill=blue!10,minimum width=2.9cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[b] (nova) at (0,0) {Nova (VM)};
+  \node[b] (neu) at (0,-0.9) {Neutron (rede)};
+  \node[b] (cin) at (0,-1.8) {Cinder (bloco)};
+  \node[b] (swi) at (0,-2.7) {Swift (objetos)};
+  \node[b] (keo) at (4.1,0) {Keystone (IAM)};
+  \node[b] (gla) at (4.1,-0.9) {Glance (imagens)};
+  \node[b] (hor) at (4.1,-1.8) {Horizon (painel)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Nova e Glance
+
+- **Nova:** gerencia instâncias (computação).
+- **Glance:** catálogo de **imagens** de VMs.
+- Integram-se a diferentes **hipervisores** (KVM é padrão).
+- Base do IaaS no OpenStack.
+
+## Neutron e Cinder/Swift
+
+- **Neutron:** rede definida por software (sub-redes, roteadores, IPs).
+- **Cinder:** volumes em bloco (como discos).
+- **Swift:** armazenamento de objetos.
+- Cobrem **rede e armazenamento** do IaaS.
+
+## Identidade e Painel
+
+- **Keystone:** autenticação e autorização.
+- **Horizon:** interface web de administração.
+- Integração com diretórios corporativos.
+
+## OpenStack × Nuvens Comerciais
+
+- OpenStack exige **operar a infraestrutura** você mesmo.
+- Nuvens comerciais entregam **serviço pronto**.
+- OpenStack dá **controle e customização**.
+- Comum em **nuvem privada** e provedores regionais.
+
+## Casos de Uso
+
+- **Nuvem privada** corporativa.
+- Provedores de nuvem **regionais**.
+- Laboratórios e **pesquisa**.
+- Requisitos de **soberania de dados**.
+
+::: {.callout-note}
+**OpenStack** é a base do IaaS de código aberto: você monta e opera sua própria nuvem, com **controle total**.
+:::
+
+## Resumo da Aula
+
+- **OpenStack** é software livre para construir nuvens.
+- Componentes: **Nova, Neutron, Cinder, Swift, Keystone**.
+- É base de **nuvens privadas** e de provedores regionais.
+- Exige **operação própria**, mas dá **controle** total.
+
+## Atividade Rápida
+
+- Associe componentes OpenStack às funções.
+- Compare OpenStack com uma nuvem comercial.
+- Cite um caso de uso ideal para OpenStack.
+
+## Referências
+
+- OpenStack — *Documentação oficial*.

@@ -1,0 +1,211 @@
+---
+title: "Semana 02 — Conteúdo de 2 aulas"
+---
+
+## Semana 02 — Conteúdo de 2 aulas
+
+- **Aula 3:** Como a Nuvem Funciona
+- **Aula 4:** Atividade: Computação em Nuvem
+
+## Aula 3 — Como a Nuvem Funciona
+
+## Objetivos da Aula
+
+- Entender o papel dos **data centers** na nuvem.
+- Compreender a **virtualização** como base técnica.
+- Relacionar **elasticidade** e **balanceamento de carga**.
+- Visualizar, em alto nível, a arquitetura de um serviço em nuvem.
+
+## O que Existe "Atrás da Nuvem"?
+
+- **Data centers:** instalações físicas com milhares de servidores.
+- **Infraestrutura de rede** de alta velocidade.
+- **Sistemas de energia** redundantes e **refrigeração**.
+- **Virtualização** sobre o hardware físico.
+- **Software de orquestração** que aloca recursos.
+
+## Data Centers
+
+- Locais projetados para hospedar **servidores e equipamentos de rede**.
+- Conectividade redundante, energia de backup e controle de temperatura.
+- Organizados em **racks** e **blades**.
+- Otimizados por métricas como o **PUE** (eficiência energética).
+
+## Virtualização (Visão Geral)
+
+- **Hipervisor:** software que cria e gerencia máquinas virtuais.
+- Vários **sistemas isolados** rodam no mesmo servidor físico.
+- Melhora o **aproveitamento** do hardware.
+- Permite **migrar**, **clonar** e **restaurar** máquinas com facilidade.
+
+::: {.callout-tip}
+Sem virtualização, a nuvem como conhecemos não existiria: ela é a "mágica" que transforma servidores físicos em recursos sob demanda.
+:::
+
+## Como um Recurso é Provisionado
+
+1. O usuário solicita uma instância (CPU, memória, disco, rede).
+2. O orquestrador encontra um **host físico** com capacidade.
+3. O **hipervisor** cria a máquina virtual.
+4. A VM recebe **IP, disco e conectividade** automaticamente.
+5. Em **minutos**, o servidor está pronto para uso.
+
+## Elasticidade na Prática
+
+- **Auto Scaling:** adiciona/remove instâncias conforme a carga.
+- **Balanceador de carga:** distribui o tráfego entre instâncias.
+- Em picos, mais servidores; em baixa, menos (economia).
+- Tudo isso **automaticamente**, sem intervenção manual.
+
+## Regiões e Zonas de Disponibilidade
+
+- **Região:** localização geográfica (ex.: São Paulo, Virgínia).
+- **Zona de disponibilidade (AZ):** data centers isolados dentro da região.
+- Distribuir recursos em várias AZs aumenta a **resiliência**.
+- Escolher a região certa reduz a **latência** para os usuários.
+
+## Visão Geral da Arquitetura
+
+- **Camada física:** servidores, rede, energia.
+- **Camada de virtualização:** hipervisores e VMs.
+- **Camada de orquestração:** alocação e automação.
+- **Camada de serviços:** IaaS, PaaS, SaaS, serverless.
+- **Camada de acesso:** consoles, APIs, CLI.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=4mm,
+  l/.style={draw,rounded corners,minimum width=8.2cm,minimum height=0.62cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (ac) {Camada de acesso (consoles, APIs, CLI)};
+  \node[l,fill=green!12,below=of ac] (se) {Camada de serviços (IaaS, PaaS, SaaS, serverless)};
+  \node[l,fill=orange!20,below=of se] (or) {Camada de orquestração (alocação e automação)};
+  \node[l,fill=yellow!25,below=of or] (vi) {Camada de virtualização (hipervisores e VMs)};
+  \node[l,fill=gray!20,below=of vi] (fi) {Camada física (servidores, rede, energia)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Da Requisição à Resposta
+
+- O usuário abre o navegador e acessa uma aplicação.
+- A requisição passa pelo **DNS**, chega a um **balanceador**.
+- O balanceador encaminha para uma **instância** saudável.
+- A instância acessa **banco de dados** e **armazenamento**.
+- A resposta volta ao usuário — tudo transparente.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm,
+  b/.style={draw,rounded corners,fill=blue!10,minimum height=0.62cm,align=center,inner sep=4pt}]
+  \node[b] (u) {Usuário};
+  \node[b,right=of u] (dns) {DNS};
+  \node[b,right=of dns] (lb) {Balanceador};
+  \node[b,right=of lb] (in) {Instância};
+  \node[b,right=of in,fill=green!12] (db) {BD};
+  \draw[-{Latex}] (u)--(dns); \draw[-{Latex}] (dns)--(lb);
+  \draw[-{Latex}] (lb)--(in); \draw[-{Latex}] (in)--(db);
+\end{tikzpicture}
+\end{center}
+```
+
+## Resumo da Aula
+
+- A nuvem é sustentada por **data centers + rede + virtualização**.
+- A **virtualização** transforma hardware em recursos sob demanda.
+- **Auto Scaling** e **balanceamento** entregam elasticidade.
+- **Regiões e AZs** dão escala global e resiliência.
+
+## Atividade Rápida
+
+- Desenhe, em blocos, o caminho de uma requisição até a aplicação.
+- Explique por que a **virtualização** é a base da nuvem.
+- Diferencie **região** de **zona de disponibilidade**.
+
+## Referências
+
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- AWS — *Well-Architected Framework*.
+- Documentação dos provedores sobre regiões e AZs.
+
+## Aula 4 — Atividade: Computação em Nuvem
+
+## Objetivos da Aula
+
+- Revisar os conceitos das aulas 02, 03 e 04.
+- Aplicar o conhecimento em uma **atividade prática/avaliativa**.
+- Desenvolver análise crítica sobre casos reais de nuvem.
+- Preparar-se para a primeira avaliação do bimestre.
+
+## Revisão Rápida
+
+- **Definição (NIST):** recursos sob demanda, pela rede.
+- **5 características:** autoatendimento, acesso amplo, pool, elasticidade, medição.
+- **Como funciona:** data centers + virtualização + orquestração.
+- **Vantagens:** custo, agilidade, escala. **Desafios:** segurança, lock-in.
+
+## Roteiro da Atividade
+
+- Formem grupos de **3 a 4 alunos**.
+- Escolha um **serviço digital** que vocês usam (ex.: streaming, armazenamento, e-mail).
+- Identifiquem **quais características da nuvem** ele explora.
+- Apontem **vantagens e desafios** que o serviço enfrenta.
+- Apresentem as conclusões para a turma.
+
+## Parte 1 — Identificação
+
+- Qual é o **tipo de serviço de nuvem** (IaaS, PaaS ou SaaS)?
+- Quais **características essenciais** do NIST estão presentes?
+- Que **modelo de implantação** ele provavelmente usa?
+- Quais **provedores** poderiam hospedar esse serviço?
+
+## Parte 2 — Análise Crítica
+
+- Como o serviço lida com **picos de demanda** (elasticidade)?
+- Que **riscos de segurança** e **privacidade** existem?
+- Há risco de **lock-in** com o provedor escolhido?
+- Como a **latência** ou a **região** afetam os usuários no Brasil?
+
+## Parte 3 — Apresentação
+
+- Prepare **3 a 5 slides** (ou tópicos) com as conclusões.
+- Tempo de apresentação: **~5 minutos** por grupo.
+- A turma pode fazer perguntas ao final.
+- A atividade será registrada no **Moodle**.
+
+## Entrega no Moodle
+
+- A **Avaliação 1 (GIFT, 10 questões)** cobre estes conteúdos.
+- Responda com atenção às **características essenciais** e à **definição**.
+- Confira o prazo e leia o feedback de cada questão.
+
+::: {.callout-important}
+A atividade vale nota de participação e faz parte do **1º bimestre**. Combine com o professor em caso de falta.
+:::
+
+## Checklist do Grupo
+
+- [ ] Serviço escolhido e descrito.
+- [ ] Tipo de serviço de nuvem identificado.
+- [ ] Características do NIST apontadas.
+- [ ] Vantagens e desafios listados.
+- [ ] Apresentação preparada.
+
+## Avaliação entre Pares
+
+- Cada grupo avalia a apresentação dos colegas.
+- Critérios: **clareza**, **domínio do conteúdo** e **exemplos**.
+- Feedback construtivo e respeitoso.
+- O melhor grupo recebe destaque na próxima aula.
+
+## Resumo da Aula
+
+- Revisamos os **fundamentos da computação em nuvem**.
+- Aplicamos os conceitos em **casos reais**.
+- Praticamos **análise crítica** de serviços digitais.
+- Nos preparamos para os **modelos de serviço** (aula 06).
+
+## Referências
+
+- NIST SP 800-145.
+- Documentação dos provedores de nuvem.
+- Material das aulas 02 a 04.

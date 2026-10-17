@@ -1,0 +1,213 @@
+---
+title: "Semana 09 — Conteúdo de 2 aulas"
+---
+
+## Semana 09 — Conteúdo de 2 aulas
+
+- **Aula 15:** Data Centers e Infraestrutura
+- **Aula 16:** Atividade: Virtualização e Data Centers
+
+## Aula 15 — Data Centers e Infraestrutura
+
+## Objetivos da Aula
+
+- Definir **data center** e suas funções.
+- Conhecer a **organização física** e lógica.
+- Entender **energia, refrigeração e conectividade**.
+- Relacionar data centers com nuvem e **TI Verde**.
+
+## O que é um Data Center?
+
+- Instalação que **concentra** servidores, armazenamento e rede.
+- Projetada para **disponibilidade**, **segurança** e **eficiência**.
+- Base física de toda a nuvem.
+- Pode ser próprio (**on-premises**) ou de terceiros (**colocation**).
+
+## Organização Física
+
+- **Racks:** estruturas que abrigam os equipamentos.
+- **Servidores blade:** módulos compactos e densos.
+- **Cabeamento estruturado** e bandejas de fibra.
+- **Salas frias/quentes** para eficiência energética.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize]
+  \draw[thick,rounded corners,fill=gray!8] (0,0) rectangle (1.2,3.0);
+  \foreach \y in {0.15,0.75,1.35,1.95,2.55}{
+    \draw[fill=blue!15] (0.1,\y) rectangle (1.1,\y+0.5);
+  }
+  \node[right=4mm] at (1.3,2.4) {\textbf{Rack}: servidores \textit{blade} empilhados};
+  \node[right=4mm] at (1.3,1.5) {\footnotesize corredores frios/quentes};
+  \node[right=4mm] at (1.3,0.6) {\footnotesize cabeamento estruturado};
+\end{tikzpicture}
+\end{center}
+```
+
+## Energia
+
+- **Fontes redundantes** (duas concessionárias ou mais).
+- **UPS** (nobreak) para curtas interrupções.
+- **Geradores** a diesel para quedas prolongadas.
+- Monitoramento contínuo do consumo.
+
+## Refrigeração
+
+- Controle de **temperatura e umidade**.
+- Corredores **frios e quentes** (containment).
+- Sistemas de ar-condicionado de precisão.
+- Impacto direto no **PUE** (eficiência).
+
+## Conectividade
+
+- Múltiplas operadoras (**multihoming**).
+- Links redundantes e rotas alternativas.
+- Conexões de **alta velocidade** (100 Gbps+).
+- Pontos de troca de tráfego (**IX.br**).
+
+## Organização Lógica
+
+- **Regiões** e **zonas de disponibilidade**.
+- **Clusters** de servidores e virtualização.
+- **Redes** segmentadas (VLANs, sub-redes).
+- **Armazenamento** em camadas (SSD/HDD, SAN/NAS).
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=4mm and 10mm,
+  b/.style={draw,rounded corners,align=center,inner sep=4pt}]
+  \node[b,fill=blue!12] (reg) {Região (ex.: São Paulo)};
+  \node[b,fill=green!12,below left=of reg] (az1) {AZ-1};
+  \node[b,fill=green!12,below=of reg] (az2) {AZ-2};
+  \node[b,fill=green!12,below right=of reg] (az3) {AZ-3};
+  \draw (reg) -- (az1); \draw (reg) -- (az2); \draw (reg) -- (az3);
+\end{tikzpicture}
+\end{center}
+```
+
+## Classificação de Níveis (Tiers)
+
+| Tier | Disponibilidade | Característica |
+|------|-----------------|----------------|
+| I | ~99,671% | Sem redundância |
+| II | ~99,741% | Componentes redundantes |
+| III | ~99,982% | Manutenção sem parada |
+| IV | ~99,995% | Tolerante a falhas |
+
+## Segurança e Operação
+
+- **Controle de acesso** físico (biometria, crachá).
+- Monitoramento por câmeras e sensores.
+- **Detecção e combate a incêndio**.
+- Equipes 24×7 e processos de operação.
+
+## Sustentabilidade (TI Verde)
+
+- Data centers consomem **muita energia**.
+- Provedores buscam **energia renovável** e PUE baixo.
+- Virtualização e consolidação reduzem o consumo.
+- Refrigeração eficiente e reuso de calor.
+
+## Resumo da Aula
+
+- O data center é a **base física** da nuvem.
+- Envolve **energia, refrigeração, conectividade e segurança**.
+- **Regiões e AZs** organizam a infraestrutura global.
+- Sustentabilidade (**TI Verde**) é prioridade crescente.
+
+## Atividade Rápida
+
+- Liste os **componentes essenciais** de um data center.
+- Explique o que é **PUE** e por que importa.
+- Diferencie **região** de **zona de disponibilidade**.
+
+## Referências
+
+- Uptime Institute — *Tier Classification*.
+- Cisco/APC — guias de data center.
+- AWS — *Regions and Availability Zones*.
+
+## Aula 16 — Atividade: Virtualização e Data Centers
+
+## Objetivos da Aula
+
+- Revisar **virtualização** e **data centers**.
+- Aplicar os conceitos em uma **atividade prática**.
+- Consolidar o conteúdo para a avaliação bimestral.
+- Desenvolver raciocínio sobre infraestrutura.
+
+## Revisão Rápida
+
+- **Virtualização:** abstrai hardware; base da nuvem.
+- **Hipervisor:** gerencia as VMs (tipo 1 e 2).
+- **Tipos:** servidor, desktop, rede, armazenamento.
+- **Data center:** energia, refrigeração, rede e segurança.
+- **Regiões e AZs:** organizam a infraestrutura global.
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Planeje um **data center fictício** para uma escola técnica.
+- Defina **quantidade de servidores**, virtualização e serviços.
+- Justifique decisões de **energia, refrigeração e rede**.
+- Apresente o **projeto** para a turma.
+
+## Parte 1 — Dimensionamento
+
+- Quantos **servidores físicos** e **VMs** são necessários?
+- Que **serviços** serão hospedados (web, arquivos, laboratório)?
+- Qual o **hipervisor** escolhido e por quê?
+- Qual a necessidade de **armazenamento** e backup?
+
+## Parte 2 — Infraestrutura
+
+- **Energia:** fontes, UPS e gerador.
+- **Refrigeração:** corredores frios/quentes.
+- **Rede:** switches, VLANs e link de internet.
+- **Segurança física:** controle de acesso e monitoramento.
+
+## Parte 3 — Sustentabilidade
+
+- Como reduzir o **consumo de energia** (TI Verde)?
+- Que métrica usar para medir eficiência (**PUE**)?
+- Estratégias de **consolidação** com virtualização.
+- Uso de **energia renovável**, se possível.
+
+## Apresentação
+
+- Prepare uma **planta lógica** (diagrama de blocos) do data center.
+- Explique as escolhas técnicas com justificativa.
+- Tempo: **~5 minutos** por grupo.
+- A atividade será registrada no **Moodle**.
+
+## Critérios de Avaliação
+
+- **Coerência** do dimensionamento.
+- **Justificativa** das escolhas de infraestrutura.
+- **Atenção** à sustentabilidade.
+- **Clareza** da apresentação.
+
+::: {.callout-important}
+Esta atividade fecha o **1º bimestre**. Revise todo o conteúdo para a **Avaliação 2**.
+:::
+
+## Checklist do Grupo
+
+- [ ] Servidores e VMs dimensionados.
+- [ ] Hipervisor escolhido e justificado.
+- [ ] Energia, refrigeração e rede definidos.
+- [ ] Plano de sustentabilidade apresentado.
+- [ ] Diagrama pronto.
+
+## Resumo da Aula
+
+- Consolidamos **virtualização** e **data centers**.
+- Praticamos o **planejamento** de infraestrutura.
+- Refletimos sobre **eficiência energética**.
+- Próxima aula: **revisão geral do bimestre**.
+
+## Referências
+
+- Uptime Institute — *Data Center Tiers*.
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- Material das aulas 13 a 16.

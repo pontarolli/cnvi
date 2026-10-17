@@ -1,0 +1,204 @@
+---
+title: "Semana 28 — Conteúdo de 2 aulas"
+---
+
+## Semana 28 — Conteúdo de 2 aulas
+
+- **Aula 45:** Grades Computacionais
+- **Aula 46:** TI Verde e Sustentabilidade
+
+## Aula 45 — Grades Computacionais
+
+## Objetivos da Aula
+
+- Definir **computação em grade (grid)**.
+- Comparar **grade, cluster e nuvem**.
+- Conhecer aplicações típicas.
+- Entender a evolução para a nuvem.
+
+## O que é uma Grade?
+
+- Conjunto de recursos **distribuídos e heterogêneos** que cooperam.
+- Recursos de **várias organizações** (geograficamente dispersos).
+- Voltada a tarefas de **grande porte** (científicas).
+- Exemplo: projetos de computação voluntária.
+
+## Características
+
+- **Distribuição geográfica** dos recursos.
+- **Heterogeneidade** de hardware e software.
+- **Compartilhamento** entre instituições.
+- **Escalonamento** e tolerância a falhas.
+
+## Grade × Cluster × Nuvem
+
+| Modelo | Escopo | Homogeneidade | Uso |
+|--------|--------|---------------|-----|
+| Cluster | Local | Alta | Alto desempenho |
+| Grade | Distribuído | Baixa | Científico/cooperação |
+| Nuvem | Global | Abstraída | Serviços sob demanda |
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,
+  n/.style={draw,circle,fill=blue!15,minimum size=6mm,inner sep=0pt}]
+  \node[n] (c1) at (0,0) {};
+  \node[n] at (0.7,0) (c2) {};
+  \node[n] at (0.35,-0.7) (c3) {};
+  \draw (c1)--(c2); \draw (c1)--(c3); \draw (c2)--(c3);
+  \node[font=\scriptsize,below] at (0.35,-1.05) {Cluster (local)};
+  \node[n,fill=green!15] at (3.5,0.3) (g1) {};
+  \node[n,fill=green!15] at (4.7,-0.3) (g2) {};
+  \node[n,fill=green!15] at (3.2,-0.9) (g3) {};
+  \node[n,fill=green!15] at (5.3,0.6) (g4) {};
+  \draw[dashed] (g1)--(g2); \draw[dashed] (g1)--(g4); \draw[dashed] (g2)--(g3); \draw[dashed] (g1)--(g3);
+  \node[font=\scriptsize,below] at (4.2,-1.05) {Grade (distribuída)};
+  \node[draw,ellipse,fill=gray!12,minimum width=1.9cm,minimum height=0.95cm] at (7.8,0) {Nuvem};
+  \node[font=\scriptsize,below] at (7.8,-1.05) {Nuvem (global)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Aplicações Típicas
+
+- Cálculos **científicos** e simulações.
+- Processamento de **imagens** e dados astronômicos.
+- **Genômica** e bioinformática.
+- Pesquisa em **física de partículas**.
+
+## Computação Voluntária
+
+- Usuários cedem **tempo ocioso** de seus computadores.
+- Exemplos: **SETI@home**, **Folding@home**.
+- Grande poder agregado para tarefas específicas.
+- Modelo comunitário de computação.
+
+## Middleware de Grade
+
+- Software que **coordena** os recursos.
+- Autenticação e **agendamento** de tarefas.
+- Exemplos históricos: **Globus Toolkit**, gLite.
+- Base conceitual que influenciou a nuvem.
+
+## Da Grade à Nuvem
+
+- A nuvem **comercializa** e **simplifica** a ideia de grade.
+- Recursos virtualizados, sob demanda e padronizados.
+- Interface de autoatendimento e pagamento pelo uso.
+- Grade = cooperação; nuvem = serviço.
+
+::: {.callout-note}
+A **grade** enfatiza a cooperação entre instituições; a **nuvem** transformou esse conceito em um **serviço comercial** sob demanda.
+:::
+
+## Resumo da Aula
+
+- **Grade:** recursos distribuídos e heterogêneos cooperando.
+- Difere de **cluster** (local) e **nuvem** (serviço).
+- Aplicações científicas e computação voluntária.
+- Evoluiu para o modelo de **nuvem**.
+
+## Atividade Rápida
+
+- Compare **grade, cluster e nuvem** em uma tabela.
+- Cite duas **aplicações** típicas de grade.
+- Explique a relação entre **grade e nuvem**.
+
+## Referências
+
+- FOSTER, I.; KESSELMAN, C. *The Grid*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+
+## Aula 46 — TI Verde e Sustentabilidade
+
+## Objetivos da Aula
+
+- Definir **TI Verde (Green IT)**.
+- Compreender o **consumo energético** de data centers.
+- Conhecer métricas como o **PUE**.
+- Relacionar nuvem e **sustentabilidade**.
+
+## O que é TI Verde?
+
+- Práticas que reduzem o **impacto ambiental** da TI.
+- Foco em **eficiência energética** e descarte responsável.
+- Abrange hardware, software, data centers e uso.
+- Alinhada a metas de **ESG** das organizações.
+
+## Consumo em Data Centers
+
+- Servidores consomem energia **24×7**.
+- Refrigeração é uma **grande parcela** do consumo.
+- Servidores **ociosos** desperdiçam energia.
+- Virtualização e consolidação reduzem o desperdício.
+
+## Métrica PUE
+
+- **PUE** = energia total do DC ÷ energia dos equipamentos de TI.
+- PUE ideal = **1,0** (toda a energia vai para TI).
+- PUE típico: 1,2 a 2,0.
+- Provedores de nuvem buscam PUE **baixo**.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,y=1cm]
+  \draw[fill=blue!30] (0,0) rectangle (2.4,0.6);
+  \node[right] at (2.5,0.3) {Provedor eficiente: PUE $\approx$ 1,1};
+  \draw[fill=orange!40] (0,-1.0) rectangle (4.2,-0.4);
+  \node[right] at (4.3,-0.7) {DC legado: PUE $\approx$ 1,8};
+  \draw[gray] (0,0.72)--(7.6,0.72);
+\end{tikzpicture}
+\end{center}
+```
+
+## Estratégias de Eficiência
+
+- **Virtualização e consolidação** de servidores.
+- Corredores **frios/quentes** (containment).
+- **Refrigeração** eficiente (free cooling).
+- **Energia renovável** (solar, eólica).
+- Desligar recursos ociosos.
+
+## A Nuvem é Sustentável?
+
+- **Escala** permite melhor PUE que servidores locais.
+- **Multilocação** eleva a utilização do hardware.
+- Mas a nuvem **cresce rápido** → demanda energética.
+- Sustentabilidade depende das **práticas** do provedor.
+
+## Green Computing no Dia a Dia
+
+- Desligar equipamentos ociosos.
+- **Consolidar** VMs e serviços.
+- Escolher **regiões** com energia limpa.
+- Otimizar **código** e uso de recursos.
+- Descarte **responsável** de equipamentos.
+
+## Economia Circular
+
+- **Reutilizar** e **recondicionar** equipamentos.
+- **Reciclar** componentes eletrônicos.
+- Reduzir lixo eletrônico (**e-waste**).
+- Extensão da vida útil do hardware.
+
+::: {.callout-note}
+TI Verde não é só tecnologia: envolve **políticas, cultura e escolhas** de projetos na nuvem.
+:::
+
+## Resumo da Aula
+
+- **TI Verde** reduz o impacto ambiental da TI.
+- **PUE** mede a eficiência dos data centers.
+- **Virtualização, renováveis e consolidação** reduzem o consumo.
+- A nuvem pode ser sustentável — depende das **práticas**.
+
+## Atividade Rápida
+
+- Explique o que é **PUE** e o valor ideal.
+- Cite três **estratégias** de eficiência energética.
+- Argumente: a nuvem é sempre mais sustentável?
+
+## Referências
+
+- The Green Grid — *PUE*.
+- Documentos de sustentabilidade dos provedores.

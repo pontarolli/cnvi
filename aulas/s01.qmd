@@ -1,0 +1,301 @@
+---
+title: "Semana 01 — Conteúdo de 2 aulas"
+---
+
+## Semana 01 — Conteúdo de 2 aulas
+
+- **Aula 1:** Apresentação da Disciplina
+- **Aula 2:** Introdução à computação em nuvem
+
+## Aula 1 — Apresentação da Disciplina
+
+## Bem-vindos!
+
+- **Disciplina:** Computação em Nuvem e Virtualização (CNVI)
+- **Curso:** Técnico em Redes de Computadores — IFSP Boituva
+- **Carga horária:** 60 horas — 2 aulas por semana
+- **Professor:** Ricardo Pasquati Pontarolli
+- **Contato:** pasquati@ifsp.edu.br
+
+## Sobre a Disciplina
+
+- Estuda os fundamentos da **computação em nuvem** e da **virtualização**.
+- Aborda desde conceitos básicos até a implantação de serviços em provedores reais.
+- Combina teoria e prática com atividades, laboratórios e um projeto integrador.
+- Prepara o aluno para atuar com infraestrutura, redes e serviços em nuvem.
+
+## Objetivos de Aprendizagem
+
+- Compreender os conceitos de computação em nuvem e virtualização.
+- Identificar modelos de serviço (IaaS, PaaS, SaaS) e de implantação.
+- Criar e gerenciar máquinas virtuais e contêineres.
+- Aplicar segurança, redes e banco de dados em ambientes de nuvem.
+- Analisar e selecionar soluções de nuvem adequadas a cada cenário.
+
+## Conteúdo — 1º e 2º Bimestres
+
+- **1º Bimestre:** introdução à nuvem, modelos de serviço e implantação, virtualização.
+- **2º Bimestre:** hipervisores, máquinas virtuais, segurança, contêineres e Docker.
+
+## Conteúdo — 3º e 4º Bimestres
+
+- **3º Bimestre:** Big Data e ML na nuvem, redes em nuvem, serverless, edge computing.
+- **4º Bimestre:** banco de dados, DevOps/CI-CD, provedores, governança e projeto integrador.
+
+## Metodologia
+
+- Aulas expositivas com apoio de slides.
+- Atividades práticas em laboratório e no Moodle.
+- Estudo de casos e análise de soluções reais.
+- Projeto integrador desenvolvido ao longo do curso.
+
+## Avaliação
+
+- **2 avaliações por bimestre**, aplicadas no **Moodle** (10 questões cada).
+- Atividades e exercícios ao longo das aulas.
+- Projeto integrador avaliado ao final.
+- Critérios: acerto nas avaliações, participação e entregas.
+
+::: {.callout-note}
+Consulte o **Plano de Ensino** da disciplina para detalhes das datas e pesos.
+:::
+
+## Recomendações de Estudo
+
+- Revise o material das aulas antes da próxima.
+- Pratique no laboratório (VirtualBox, Docker, consoles de nuvem).
+- Anote dúvidas e traga-as para a aula.
+- Mantenha as atividades do Moodle em dia.
+
+## Referências
+
+- NIST — *The NIST Definition of Cloud Computing* (SP 800-145).
+- TANENBAUM, A.; BOS, H. *Sistemas Operacionais Modernos*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- Documentação oficial: AWS, Microsoft Azure, Google Cloud.
+
+## Bons estudos!
+
+- "A nuvem não é um lugar, é uma forma de entregar recursos de TI."
+- Nos vemos nas próximas aulas: vamos começar pelos **fundamentos da nuvem**.
+
+## Contato e Materiais
+
+- **E-mail:** pasquati@ifsp.edu.br
+- **Site da disciplina:** slides e cronograma disponíveis online.
+- **Moodle:** atividades e avaliações.
+- **GitHub:** repositório com o material-fonte das aulas.
+
+## Aula 2 — Introdução à computação em nuvem
+
+## Objetivos da Aula
+
+- Compreender a **evolução histórica** da computação.
+- Entender como chegamos do mainframe à nuvem.
+- Reconhecer os **problemas** que a nuvem resolve.
+- Situar a nuvem no contexto das redes de computadores.
+
+## Breve História da Computação
+
+- **Anos 1960–70:** era dos **mainframes** — computação centralizada e cara.
+- **Anos 1980–90:** popularização dos **computadores pessoais** (PCs).
+- **Anos 1990–2000:** **redes e internet** conectam máquinas e dados.
+- **Anos 2000–2010:** **virtualização** e data centers escaláveis.
+- **Anos 2010+:** **computação em nuvem** como serviço sob demanda.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize]
+  \draw[-{Latex},thick] (0,0) -- (11.6,0);
+  \foreach \x/\l/\t in {1.0/{1960--70}/Mainframe, 3.3/{1980--90}/PCs, 5.6/{1990--00}/Internet, 7.9/{2000--10}/Virtualização, 10.2/{2010+}/Nuvem}{
+    \fill (\x,0) circle (2pt);
+    \node[above,align=center] at (\x,0.18) {\textbf{\t}};
+    \node[below,align=center] at (\x,-0.18) {\l};
+  }
+\end{tikzpicture}
+\end{center}
+```
+
+## Da Centralização à Distribuição
+
+- Mainframe: um computador central, muitos **terminais "burros"**.
+- PC: poder de processamento **descentralizado**.
+- Cliente-servidor: aplicações divididas entre cliente e servidor.
+- Internet: aplicações acessíveis de **qualquer lugar**.
+- Nuvem: recursos **virtuais** fornecidos sob demanda pela rede.
+
+## O Problema do Modelo Tradicional
+
+- Comprar servidores exige **alto investimento inicial** (CAPEX).
+- Capacidade dimensionada para o **pico** → recursos ociosos.
+- Manutenção, energia, refrigeração e espaço físico.
+- Provisionamento **lento** (semanas ou meses).
+- Dificuldade de lidar com **picos repentinos** de demanda.
+
+## A Motivação da Nuvem
+
+- **Sob demanda:** recursos quando e onde forem necessários.
+- **Pagamento pelo uso:** sem investimento inicial pesado.
+- **Elasticidade:** crescer e diminuir conforme a demanda.
+- **Agilidade:** servidores em minutos, não meses.
+- **Foco no negócio:** menos tempo cuidando de infraestrutura.
+
+## Marcos Importantes
+
+- **1969:** J.C.R. Licklider propõe a "rede intergaláctica" de computadores.
+- **1969:** John McCarthy sugere a computação como utilidade (como energia).
+- **2006:** Amazon lança o **EC2** e o **S3** — marco da nuvem moderna.
+- **2008+:** Google, Microsoft e outros entram no mercado.
+- **Hoje:** a nuvem é base de grande parte dos serviços digitais.
+
+## Analogia das "Redes Elétricas"
+
+- Ninguém constrói uma usina para ter luz em casa.
+- Você **liga o interruptor** e paga pelo que consome.
+- A nuvem segue a mesma ideia: **computação como serviço**.
+- Recursos de TI sob demanda, medidos e cobrados pelo uso.
+
+::: {.callout-tip}
+A expressão "computação como utilidade" (utility computing) resume a ideia: TI como um serviço público, pago pelo consumo.
+:::
+
+## Por que Estudar Nuvem?
+
+- É a **infraestrutura padrão** da maioria das aplicações atuais.
+- Alta demanda de profissionais de **redes, cloud e DevOps**.
+- Base para tecnologias modernas: contêineres, serverless, IA.
+- Fundamental para o **Técnico em Redes de Computadores**.
+
+## Resumo da Aula
+
+- A computação evoluiu de **centralizada** (mainframe) para **sob demanda** (nuvem).
+- O modelo tradicional tem custos altos e pouca flexibilidade.
+- A nuvem resolve isso com **elasticidade, autoatendimento e pay-as-you-go**.
+- Na próxima aula: **o que é, exatamente, a nuvem?**
+
+## Para Refletir
+
+- Quais serviços que você usa hoje funcionam na nuvem?
+- O que aconteceria se todos voltassem a usar apenas servidores locais?
+- Discuta com um colega: a nuvem é mais **barata** ou apenas mais **flexível**?
+
+## Referências
+
+- NIST — *The NIST Definition of Cloud Computing*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- KAVUTZ, A. *Architecting the Cloud*.
+
+## Objetivos da Aula
+
+- Apresentar a **definição formal** de computação em nuvem (NIST).
+- Conhecer as **cinco características essenciais** do modelo.
+- Diferenciar **características** de **benefícios**.
+- Refletir sobre **vantagens e desafios** da adoção da nuvem.
+
+## Definição do NIST
+
+> "Computação em nuvem é um modelo para permitir acesso de rede ubíquo, conveniente e sob demanda a um conjunto compartilhado de recursos computacionais configuráveis que podem ser rapidamente provisionados e liberados com mínimo esforço de gerenciamento."
+
+- Fonte: **NIST Special Publication 800-145** (2011).
+
+## As Cinco Características Essenciais (NIST)
+
+- **1. Autoatendimento sob demanda** (self-service)
+- **2. Ampla acesso à rede**
+- **3. Pool de recursos** (multilocação)
+- **4. Elasticidade rápida**
+- **5. Serviço medido** (medição/cobrança automática)
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm and 5mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=3.3cm,minimum height=0.8cm,align=center,inner sep=3pt}]
+  \node[c] (a) {1. Autoatendimento};
+  \node[c,right=of a] (b) {2. Ampla acesso à rede};
+  \node[c,right=of b] (c) {3. Pool de recursos};
+  \node[c,below=of a] (d) {4. Elasticidade rápida};
+  \node[c,below=of b] (e) {5. Serviço medido};
+\end{tikzpicture}
+\end{center}
+```
+
+## 1. Autoatendimento sob demanda
+
+- O usuário provisiona recursos **sem interação humana** do provedor.
+- Ex.: criar um servidor virtual pelo console/painel em minutos.
+- Reduz a dependência de chamados e processos manuais.
+
+## 2. Ampla Acesso à Rede
+
+- Recursos acessíveis **pela rede** por mecanismos padronizados.
+- Disponíveis para diversos dispositivos: PCs, notebooks, celulares.
+- Independe da plataforma do cliente (heterogeneidade).
+
+## 3. Pool de Recursos (Multilocação)
+
+- Recursos são **compartilhados** entre vários clientes.
+- O cliente geralmente **não sabe** exatamente onde está o recurso físico.
+- A multilocação (multi-tenancy) melhora a **eficiência** e reduz custos.
+
+## 4. Elasticidade Rápida
+
+- Recursos podem ser **aumentados ou reduzidos** rapidamente.
+- Para o cliente, parecem **ilimitados**.
+- Ajusta-se automaticamente a picos de demanda.
+- É diferente de **escalabilidade** (ver detalhes a seguir).
+
+::: {.callout-note}
+**Elasticidade × Escalabilidade:** escalabilidade é a capacidade de crescer; elasticidade é ajustar dinamicamente para cima e para baixo conforme a demanda.
+:::
+
+## 5. Serviço Medido
+
+- O uso dos recursos é **monitorado, controlado e cobrado** automaticamente.
+- Transparência: o cliente paga **apenas o que consome**.
+- Base do modelo **pay-as-you-go**.
+- Permite relatórios de consumo por recurso.
+
+## Vantagens da Nuvem
+
+- Redução de investimento inicial (CAPEX → OPEX).
+- Elasticidade e agilidade no provisionamento.
+- Alta disponibilidade e redundância.
+- Acesso global e colaboração facilitada.
+- Atualizações e manutenção a cargo do provedor.
+
+## Desafios da Nuvem
+
+- **Dependência de conectividade** com a internet.
+- **Segurança e privacidade** dos dados.
+- **Vendor lock-in** (dependência do provedor).
+- **Conformidade** com leis e regulamentos.
+- **Gestão de custos** sem monitoramento adequado.
+
+## Nuvem × Modelo Tradicional
+
+| Aspecto | On-premises | Nuvem |
+|---------|-------------|-------|
+| Investimento | Alto (CAPEX) | Sob demanda (OPEX) |
+| Provisionamento | Semanas/meses | Minutos |
+| Escalabilidade | Limitada | Alta |
+| Manutenção | Própria | Do provedor |
+| Cobrança | Fixa | Pelo uso |
+
+## Resumo da Aula
+
+- A definição do NIST e as **cinco características essenciais**.
+- A nuvem entrega recursos por **autoatendimento, medição e elasticidade**.
+- Vantagens: custo, agilidade e escala; desafios: segurança e lock-in.
+- Próxima aula: **como a nuvem funciona** (data centers e virtualização).
+
+## Atividade Rápida
+
+- Cite **três serviços** que você usa e classifique o tipo de nuvem.
+- Explique, com suas palavras, o que é **pool de recursos**.
+- Dê um exemplo do mundo real de **elasticidade rápida**.
+
+## Referências
+
+- NIST SP 800-145 — *The NIST Definition of Cloud Computing*.
+- MELL, P.; GRANCE, T. (2011).
+- Apostilas e documentação dos provedores de nuvem.

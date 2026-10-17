@@ -1,0 +1,183 @@
+---
+title: "Semana 27 — Conteúdo de 2 aulas"
+---
+
+## Semana 27 — Conteúdo de 2 aulas
+
+- **Aula 43:** Serverless: Funções, Eventos e Provedores
+- **Aula 44:** Atividade: Computação sem Servidor
+
+## Aula 43 — Serverless: Funções, Eventos e Provedores
+
+## Objetivos da Aula
+
+- Compreender a **arquitetura orientada a eventos**.
+- Conhecer o **ciclo de execução** de uma função.
+- Comparar serviços **serverless** de provedores.
+- Aplicar boas práticas de serverless.
+
+## Arquitetura Orientada a Eventos
+
+- Componentes **reagem** a eventos, em vez de esperar requisições.
+- **Desacoplamento** entre produtores e consumidores.
+- **Filas e streams** (SQS, Kinesis, Pub/Sub).
+- Escala e resiliência naturais.
+
+## Ciclo de Execução
+
+- **Cold start:** primeira invocação cria o ambiente.
+- **Warm start:** invocações seguintes reaproveitam o ambiente.
+- **Timeout:** limite de tempo de execução.
+- **Memória** define também a CPU alocada.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=7mm,
+  b/.style={draw,rounded corners,minimum width=3.1cm,minimum height=0.95cm,align=center,inner sep=3pt}]
+  \node[b,fill=orange!20] (cold) {Cold start\\ \scriptsize cria o ambiente};
+  \node[b,right=of cold,fill=green!12] (warm) {Warm start\\ \scriptsize reaproveita o ambiente};
+  \draw[-{Latex}] (cold) -- (warm);
+\end{tikzpicture}
+\end{center}
+```
+
+## Padrões Comuns
+
+- **API + funções** (serverless backend).
+- **Event-driven ETL**.
+- **Fan-out** (um evento, várias funções).
+- **Orquestração** de funções (Step Functions / Durable Functions).
+
+## Provedores e Serviços
+
+| Provedor | FaaS | API | Fila/Stream |
+|----------|------|-----|-------------|
+| AWS | Lambda | API Gateway | SQS/Kinesis |
+| Azure | Functions | API Management | Service Bus |
+| Google | Cloud Functions | API Gateway | Pub/Sub |
+
+## Boas Práticas
+
+- Funções **pequenas e específicas**.
+- **Idempotência** no processamento de eventos.
+- Gerenciar **segredos** fora do código.
+- **Observabilidade** (logs, métricas, tracing).
+- Controlar **concorrência**.
+
+## Segurança
+
+- **IAM** com menor privilégio por função.
+- Isolamento de **rede** e acesso a recursos.
+- Proteção de **variáveis de ambiente** sensíveis.
+- Monitoramento de execuções anômalas.
+
+## Custos
+
+- Cobrança por **invocações** e **tempo** (ms).
+- Filas e API podem ter custo separado.
+- Monitorar para evitar **laços** infinitos.
+- Comparar com contêiner para cargas constantes.
+
+::: {.callout-tip}
+Para cargas **constantes**, contêineres podem sair mais baratos; para cargas **intermitentes**, serverless tende a vencer.
+:::
+
+## Resumo da Aula
+
+- Serverless favorece arquiteturas **orientadas a eventos**.
+- Conhecer **cold/warm start** e limites é essencial.
+- Cada provedor tem serviços equivalentes.
+- Boas práticas: funções pequenas, idempotência e observabilidade.
+
+## Atividade Rápida
+
+- Explique **cold start** e **warm start**.
+- Descreva um padrão **event-driven** de ETL.
+- Compare o custo de serverless x contêiner.
+
+## Referências
+
+- AWS Lambda / Azure Functions / Cloud Functions.
+
+## Aula 44 — Atividade: Computação sem Servidor
+
+## Objetivos da Aula
+
+- Consolidar os conceitos de **serverless**.
+- Projetar uma solução **orientada a eventos**.
+- Comparar serverless com outras abordagens.
+- Preparar para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **Serverless/FaaS:** funções por evento.
+- **Cold/warm start**, escalabilidade automática.
+- Provedores: Lambda, Functions, Cloud Functions.
+- Vantagens (custo/agilidade) e limites (lock-in/cold start).
+
+## Cenário
+
+> Uma empresa quer processar **imagens enviadas por usuários**: redimensionar e gerar miniaturas automaticamente, com custo baixo e sem servidores.
+
+- Desenhe o fluxo **orientado a eventos**.
+- Escolha os serviços.
+- Justifique a escolha por serverless.
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Desenhe o **arquitetura** (upload → evento → funções → armazenamento).
+- Defina gatilhos, funções e serviços.
+- Apresente para a turma.
+
+## Parte 1 — Fluxo de Eventos
+
+- **Upload** para o armazenamento de objetos.
+- **Evento** disparado na criação do objeto.
+- **Função** processa a imagem.
+- Resultado salvo e resultado registrado.
+
+## Parte 2 — Decisões Técnicas
+
+- Linguagem e **tempo de execução**.
+- Memória e **timeout** adequados.
+- Tratamento de **erros e reprocessamento**.
+- **Idempotência**.
+
+## Parte 3 — Comparação
+
+- E se fosse em **contêiner**? E em **VM**?
+- Tabela: custo, operação e escala.
+- Quando serverless **não** seria ideal?
+- Justificativa final.
+
+## Critérios de Avaliação
+
+- **Coerência** do fluxo event-driven.
+- **Justificativa** técnica das escolhas.
+- **Comparação** com as alternativas.
+- **Clareza** da apresentação.
+
+::: {.callout-important}
+A **Avaliação 2 (GIFT, 10 questões)** do bimestre cobre serverless, grades, TI verde, edge/IoT e hipervisores. Revise antes de responder.
+:::
+
+## Checklist do Grupo
+
+- [ ] Fluxo de eventos desenhado.
+- [ ] Serviços escolhidos.
+- [ ] Tratamento de erros previsto.
+- [ ] Comparação com contêiner/VM.
+- [ ] Apresentação pronta.
+
+## Resumo da Aula
+
+- Projetamos uma solução **serverless** event-driven.
+- Comparamos com **contêiner e VM**.
+- Reforçamos boas práticas (idempotência, timeout).
+- Próxima aula: **grades computacionais**.
+
+## Referências
+
+- AWS Lambda / S3 Events.
+- Material das aulas 51 e 52.

@@ -1,0 +1,183 @@
+---
+title: "Semana 22 — Conteúdo de 2 aulas"
+---
+
+## Semana 22 — Conteúdo de 2 aulas
+
+- **Aula 35:** Machine Learning na Nuvem
+- **Aula 36:** Prática: Big Data e ML na Nuvem
+
+## Aula 35 — Machine Learning na Nuvem
+
+## Objetivos da Aula
+
+- Definir **Machine Learning (ML)** e seus tipos.
+- Entender o **ciclo de vida** de um modelo.
+- Conhecer **serviços de ML** na nuvem.
+- Relacionar ML com **Big Data** e nuvem.
+
+## O que é Machine Learning?
+
+- Ramo da IA em que sistemas **aprendem** com dados.
+- Em vez de programar regras, o modelo **descobre padrões**.
+- Requer dados, algoritmos e poder computacional.
+- A nuvem oferece **escala** para treinar e servir modelos.
+
+## Tipos de Aprendizado
+
+- **Supervisionado:** dados rotulados (classificação, regressão).
+- **Não supervisionado:** sem rótulos (agrupamento).
+- **Por reforço:** aprende por recompensa.
+- Escolha depende do **problema** e dos dados.
+
+## Ciclo de Vida de um Modelo
+
+1. **Coleta e preparação** dos dados.
+2. **Treinamento** do modelo.
+3. **Avaliação** e ajuste.
+4. **Implantação** (deploy) em produção.
+5. **Monitoramento** e re-treinamento.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=3mm,
+  l/.style={draw,rounded corners,fill=blue!10,minimum width=9cm,minimum height=0.55cm,align=center,inner sep=3pt}]
+  \node[l] (a) {1. Coleta e preparação dos dados};
+  \node[l,below=of a,fill=green!12] (b) {2. Treinamento};
+  \node[l,below=of b,fill=yellow!25] (c) {3. Avaliação e ajuste};
+  \node[l,below=of c,fill=orange!20] (d) {4. Implantação (deploy)};
+  \node[l,below=of d,fill=gray!15] (e) {5. Monitoramento e re-treinamento};
+\end{tikzpicture}
+\end{center}
+```
+
+## Onde Entra a Nuvem?
+
+- **Dados** em armazenamento escalável (data lake).
+- **Treinamento** em GPUs/TPUs sob demanda.
+- **Serviços gerenciados** de ML.
+- **Implantação** como API escalável.
+
+## Serviços de ML na Nuvem
+
+- **Amazon SageMaker**.
+- **Google Vertex AI**.
+- **Azure Machine Learning**.
+- Serviços de **IA pronta** (visão, fala, linguagem).
+
+## MLOps
+
+- Práticas para operar ML de forma **confiável**.
+- Versionamento de dados e modelos.
+- **CI/CD** para modelos.
+- Monitoramento de **deriva (drift)**.
+
+## Casos de Uso
+
+- Recomendação de conteúdo.
+- Detecção de fraude.
+- Previsão de demanda.
+- Visão computacional e processamento de linguagem.
+
+## Segurança e Ética
+
+- **Privacidade** dos dados de treino (LGPD).
+- **Viés** algorítmico e justiça.
+- **Explicabilidade** dos modelos.
+- Uso responsável de IA.
+
+::: {.callout-note}
+ML na nuvem combina **Big Data (dados) + computação elástica (treino) + serviços gerenciados (deploy)** em um fluxo único.
+:::
+
+## Resumo da Aula
+
+- **ML** aprende padrões a partir de dados.
+- Tipos: supervisionado, não supervisionado, por reforço.
+- A nuvem oferece **escala, GPUs e serviços gerenciados**.
+- **MLOps** garante operação confiável dos modelos.
+
+## Atividade Rápida
+
+- Diferencie aprendizado **supervisionado** e **não supervisionado**.
+- Cite três **serviços de ML** na nuvem.
+- Explique o que é **deriva (drift)** de modelo.
+
+## Referências
+
+- AWS SageMaker / Google Vertex AI / Azure ML.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+
+## Aula 36 — Prática: Big Data e ML na Nuvem
+
+## Objetivos da Aula
+
+- Aplicar um **pipeline de dados** na nuvem.
+- Utilizar **armazenamento de objetos** e um serviço de processamento.
+- Treinar ou usar um **modelo simples**.
+- Consolidar Big Data + ML na prática.
+
+## Ambiente da Prática
+
+- Conta em um provedor (camada gratuita é suficiente).
+- **Armazenamento de objetos** para os dados (ex.: bucket).
+- Serviço de processamento (ex.: notebook gerenciado).
+- Biblioteca de ML (scikit-learn, pandas).
+
+## Passo 1 — Ingestão
+
+- Obter um **dataset** público (CSV).
+- Enviar para o **bucket** de armazenamento.
+- Verificar permissões de acesso.
+- Registrar origem e formato dos dados.
+
+## Passo 2 — Preparação (ETL)
+
+- Ler os dados em um **notebook** na nuvem.
+- Limpar: valores ausentes, tipos, duplicatas.
+- Transformar: criar/ajustar variáveis.
+- Salvar a versão **tratada** de volta no bucket.
+
+## Passo 3 — Análise/Modelagem
+
+- Análise exploratória (estatísticas, gráficos).
+- Dividir em **treino e teste**.
+- Treinar um modelo simples (ex.: classificação/regressão).
+- Avaliar com métricas (**acurácia, RMSE** etc.).
+
+## Passo 4 — Implantação (opcional)
+
+- Salvar o **modelo treinado**.
+- Expor como **API** ou endpoint gerenciado.
+- Testar uma predição.
+- Monitorar uso.
+
+## Verificação da Prática
+
+- [ ] Dataset no armazenamento de objetos.
+- [ ] ETL executado e versão tratada salva.
+- [ ] Modelo treinado e avaliado.
+- [ ] (Opcional) modelo implantado.
+
+::: {.callout-tip}
+Mantenha **notebooks versionados** e nomeie os buckets/datasets de forma clara — isso é a base do **MLOps**.
+:::
+
+## Problemas Comuns
+
+- Falta de permissão no bucket → revisar **IAM**.
+- Dados "sujos" → dedicar tempo ao **ETL**.
+- Modelo ruim → revisar **features** e algoritmo.
+- Custo inesperado → desligar recursos ao terminar.
+
+## Resumo da Aula
+
+- Montamos um **pipeline** ingestão → ETL → modelo.
+- Usamos **armazenamento e computação** na nuvem.
+- (Opcionalmente) implantamos o modelo.
+- Próxima aula: **atividade** sobre Big Data e ML.
+
+## Referências
+
+- AWS SageMaker / Google Vertex AI.
+- scikit-learn — *Documentação*.

@@ -1,0 +1,210 @@
+---
+title: "Semana 06 — Conteúdo de 2 aulas"
+---
+
+## Semana 06 — Conteúdo de 2 aulas
+
+- **Aula 9:** Comparativo: IaaS × PaaS × SaaS
+- **Aula 10:** Modelos de Implantação em Nuvem
+
+## Aula 9 — Comparativo: IaaS × PaaS × SaaS
+
+## Objetivos da Aula
+
+- Consolidar a diferença entre **IaaS, PaaS e SaaS**.
+- Entender o **modelo de responsabilidade compartilhada**.
+- Introduzir o **Serverless (FaaS)** como evolução.
+- Escolher o modelo adequado para cada cenário.
+
+## Revisão: A Pilha
+
+| Modelo | Você gerencia | O provedor gerencia |
+|--------|---------------|---------------------|
+| IaaS | SO, runtime, app, dados | Hardware, virtualização, rede |
+| PaaS | App, dados | SO, runtime, middleware |
+| SaaS | Apenas uso/dados | Tudo |
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=3.5mm,
+  l/.style={draw,rounded corners,minimum width=8.2cm,minimum height=0.62cm,align=center,inner sep=3pt}]
+  \node[l,fill=green!15] (s) {SaaS --- cliente só usa; provedor gerencia tudo};
+  \node[l,fill=orange!20,below=of s] (p) {PaaS --- cliente: aplicação e dados};
+  \node[l,fill=blue!12,below=of p] (i) {IaaS --- cliente: SO, aplicação e dados};
+\end{tikzpicture}
+\end{center}
+```
+
+## Comparativo Resumido
+
+**Controle:** IaaS > PaaS > SaaS
+**Simplicidade:** SaaS > PaaS > IaaS
+**Flexibilidade:** IaaS > PaaS > SaaS
+**Esforço de operação:** IaaS > PaaS > SaaS
+
+## Modelo de Responsabilidade Compartilhada
+
+- **Segurança "na" nuvem:** responsabilidade do **provedor**.
+- **Segurança "da" nuvem:** responsabilidade do **cliente** (dados, acesso, config).
+- A divisão **muda** conforme o modelo de serviço.
+- No SaaS, quase tudo é do provedor; no IaaS, quase tudo é do cliente.
+
+## Exemplo: Banco de Dados
+
+- **IaaS:** você instala e administra o MySQL numa VM.
+- **PaaS/DBaaS:** você usa um banco gerenciado (RDS) e só mantém o esquema.
+- **SaaS:** você usa um app que já traz o banco embutido.
+- Quanto mais gerenciado, menos operação — e menos controle.
+
+## Introdução ao Serverless (FaaS)
+
+- Você envia **funções**; o provedor executa **sob demanda**.
+- Sem servidores para gerenciar; escala automática.
+- Cobrança por **invocação e tempo de execução**.
+- Exemplos: AWS Lambda, Azure Functions, Google Cloud Functions.
+
+## Serverless no Contexto
+
+- **FaaS** é o "nível mais alto" de abstração de computação.
+- Ideal para **eventos, automações e APIs leves**.
+- Nem tudo é serverless: cargas longas e stateful podem não se encaixar.
+- Convive com IaaS, PaaS e SaaS.
+
+## Como Escolher?
+
+- **Controle e customização** → IaaS.
+- **Velocidade de desenvolvimento** → PaaS.
+- **Uso imediato de software** → SaaS.
+- **Eventos e escala imprevisível** → Serverless/FaaS.
+- Considere **custo, equipe, prazo e requisitos**.
+
+## Boas Práticas de Escolha
+
+- Comece pelo **problema de negócio**, não pela tecnologia.
+- Avalie **TCO** (custo total) e não só o preço.
+- Pense em **portabilidade** e evite aprisionamento.
+- Teste em pequena escala antes de decidir.
+
+## Resumo da Aula
+
+- A pilha vai de **IaaS (mais controle)** a **SaaS (menos controle)**.
+- A **responsabilidade é compartilhada** e varia por modelo.
+- **Serverless/FaaS** eleva o nível de abstração.
+- A escolha depende do **cenário** e dos requisitos.
+
+## Atividade Rápida
+
+- Classifique 6 serviços nos modelos (IaaS/PaaS/SaaS/FaaS).
+- Monte uma tabela de controle × simplicidade.
+- Justifique a escolha de um modelo para uma pequena empresa.
+
+## Referências
+
+- NIST SP 800-145.
+- Microsoft — *Shared Responsibility Model*.
+- AWS — *Serverless*.
+
+## Aula 10 — Modelos de Implantação em Nuvem
+
+## Objetivos da Aula
+
+- Conhecer os **quatro modelos de implantação** do NIST.
+- Comparar **pública, privada, híbrida e comunitária**.
+- Entender quando usar cada modelo.
+- Relacionar implantação com **segurança e custo**.
+
+## Os Quatro Modelos (NIST)
+
+- **Nuvem pública**
+- **Nuvem privada**
+- **Nuvem híbrida**
+- **Nuvem comunitária**
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=8mm and 10mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=3.2cm,minimum height=1cm,align=center,inner sep=3pt}]
+  \node[c] (pu) {Pública\\ \scriptsize multilocação};
+  \node[c,right=of pu] (pr) {Privada\\ \scriptsize dedicada};
+  \node[c,below=of pu] (hi) {Híbrida\\ \scriptsize integrada};
+  \node[c,below=of pr] (co) {Comunitária\\ \scriptsize coletiva};
+\end{tikzpicture}
+\end{center}
+```
+
+## Nuvem Pública
+
+- Recursos oferecidos por um provedor a **qualquer cliente**.
+- Compartilhada (**multilocação**).
+- Alta escala e custo por uso.
+- Exemplos: AWS, Azure, Google Cloud.
+
+## Nuvem Privada
+
+- Infraestrutura dedicada a **uma única organização**.
+- Maior **controle** e personalização.
+- Pode ser on-premises ou operada por terceiros.
+- Exemplos: OpenStack, VMware Cloud, Azure Stack.
+
+## Nuvem Híbrida
+
+- Combina **pública + privada**, integradas.
+- Dados sensíveis na privada; picos na pública (cloud bursting).
+- Equilíbrio entre **controle e escalabilidade**.
+- Exige boa **integração de rede** (VPN, link dedicado).
+
+## Nuvem Comunitária
+
+- Compartilhada por organizações com **interesses comuns**.
+- Ex.: universidades, órgãos públicos, setor de saúde.
+- Regras e responsabilidades definidas entre os membros.
+- Menos comum no mercado, mas prevista pelo NIST.
+
+## Comparativo
+
+| Modelo | Compartilhamento | Controle | Custo relativo |
+|--------|------------------|----------|----------------|
+| Pública | Alto | Baixo | Menor |
+| Privada | Baixo | Alto | Maior |
+| Híbrida | Variável | Médio-alto | Médio |
+| Comunitária | Múltiplo | Médio | Menor |
+
+## Quando Usar Cada Um
+
+- **Pública:** startups, escala rápida, custo baixo.
+- **Privada:** dados sensíveis, requisitos rígidos de compliance.
+- **Híbrida:** equilíbrio entre controle e elasticidade.
+- **Comunitária:** cooperação entre instituições.
+
+::: {.callout-note}
+Não existe "melhor modelo" universal: a escolha depende de **segurança, custo, escala e requisitos legais**.
+:::
+
+## Escolhendo o Modelo
+
+- Quão **sensível** são os dados?
+- Qual o **orçamento** e o **prazo**?
+- Há exigência de **localização** dos dados (soberania)?
+- Necessidade de **escala imprevisível**?
+- Equipe interna disponível para operar?
+
+## Resumo da Aula
+
+- O NIST define quatro modelos de **implantação**.
+- **Pública** (compartilhada), **privada** (dedicada), **híbrida** (integrada) e **comunitária** (coletiva).
+- A escolha equilibra **controle, custo e segurança**.
+- Híbrida é muito comum em empresas em transição.
+
+## Atividade Rápida
+
+- Para cada cenário, indique o modelo:
+  - Banco com dados sensíveis.
+  - Startup de aplicativo móvel.
+  - Universidade em consórcio.
+- Justifique suas respostas.
+
+## Referências
+
+- NIST SP 800-145.
+- Gartner — *Hybrid Cloud*.
+- Documentação OpenStack e Azure Stack.

@@ -1,0 +1,180 @@
+---
+title: "Semana 12 — Conteúdo de 2 aulas"
+---
+
+## Semana 12 — Conteúdo de 2 aulas
+
+- **Aula 19:** Prática: VirtualBox — Criando a Primeira VM
+- **Aula 20:** Prática: Instalando um Sistema Convidado
+
+## Aula 19 — Prática: VirtualBox — Criando a Primeira VM
+
+## Objetivos da Aula
+
+- Instalar e conhecer o **Oracle VirtualBox**.
+- Criar uma **máquina virtual** do zero.
+- Configurar **recursos e rede**.
+- Iniciar a instalação de um sistema operacional.
+
+## O que é o VirtualBox?
+
+- Hipervisor **tipo 2**, gratuito e multiplataforma.
+- Roda sobre Windows, Linux e macOS.
+- Interface gráfica amigável.
+- Ideal para **laboratórios** e aprendizado.
+
+## Pré-requisitos
+
+- VirtualBox instalado (versão mais recente).
+- Imagem **ISO** do sistema a instalar (ex.: Ubuntu, Debian).
+- Espaço em disco e memória RAM suficientes.
+- **Virtualização habilitada** na BIOS/UEFI (VT-x/AMD-V).
+
+## Passo 1 — Criar a VM
+
+- Menu **Nova** → definir **nome** e **tipo/versão** do SO.
+- Escolher idioma e a **ISO** (pode anexar depois).
+- Definir **memória RAM** (ex.: 2048 MB).
+
+## Passo 2 — Disco Virtual
+
+- Criar um disco **virtual** agora.
+- Formato **VDI** (padrão do VirtualBox).
+- Armazenamento **dinamicamente alocado** (economiza espaço).
+- Tamanho sugerido: 20–25 GB.
+
+## Passo 3 — Recursos
+
+- Processadores: **1 a 2 vCPUs**.
+- Memória: adequada ao SO convidado.
+- Aceleração: **VT-x/AMD-V** habilitada.
+- Evite alocar mais da metade da RAM do host.
+
+## Passo 4 — Rede
+
+- **NAT:** acesso à internet com configuração simples (padrão).
+- **Placa em modo ponte:** IP na rede local.
+- **Host-only:** comunicação só entre host e VM.
+- Escolha conforme o objetivo da prática.
+
+## Passo 5 — Anexar ISO e Iniciar
+
+- Configurações → **Armazenamento** → anexar a ISO.
+- Iniciar a VM.
+- O boot inicia pelo instalador do **SO convidado**.
+- Prosseguir com a instalação.
+
+## Dicas e Boas Práticas
+
+- Nomeie VMs de forma **descritiva** (ex.: `ubuntu-aula24`).
+- Tire um **snapshot** antes de mudanças importantes.
+- Documente **recursos** alocados.
+- Mantenha as **Guest Additions** instaladas.
+
+::: {.callout-tip}
+**Guest Additions** melhora a integração (tela, clipboard, pastas compartilhadas) entre host e VM.
+:::
+
+## Verificação da Prática
+
+- [ ] VirtualBox instalado.
+- [ ] VM criada com nome e tipo corretos.
+- [ ] Disco virtual VDI configurado.
+- [ ] Memória e vCPUs definidos.
+- [ ] ISO anexada e boot iniciado.
+
+## Resumo da Aula
+
+- Criamos uma **VM** no VirtualBox passo a passo.
+- Configuramos **recursos, disco, rede e ISO**.
+- Aprendemos boas práticas (snapshots, nomes, Guest Additions).
+- Próxima aula: **instalar e configurar o SO convidado**.
+
+## Referências
+
+- Oracle — *VirtualBox User Manual*.
+- Documentação do sistema operacional escolhido.
+
+## Aula 20 — Prática: Instalando um Sistema Convidado
+
+## Objetivos da Aula
+
+- Instalar um **sistema operacional** na VM.
+- Configurar **rede, usuários e atualizações**.
+- Instalar as **Guest Additions**.
+- Validar o funcionamento da VM.
+
+## Escolhendo o Sistema Convidado
+
+- **Ubuntu/Debian:** leves, ideais para aprender Linux.
+- **Windows:** para softwares específicos.
+- **Distribuições leves:** Xubuntu, Lubuntu, Alpine.
+- Escolha conforme o **objetivo** da disciplina.
+
+## Instalação — Etapas
+
+1. Boot pela **ISO**.
+2. Escolher idioma e layout de teclado (**pt-BR**).
+3. Definir tipo de instalação (mínima/completa).
+4. Particionar o **disco virtual** (automático é suficiente).
+5. Criar **usuário e senha**.
+6. Aguardar a cópia e reiniciar.
+
+## Configuração Inicial
+
+- Atualizar o sistema (**apt update && apt upgrade** ou equivalente).
+- Configurar **rede** (DHCP ou IP fixo).
+- Ajustar **fuso horário** e idioma.
+- Instalar ferramentas essenciais.
+
+## Guest Additions
+
+- Aumentam a integração host × VM.
+- **Tela em resolução adequada**, clipboard bidirecional.
+- **Pastas compartilhadas** e arrastar-e-soltar.
+- Instalar via menu **Dispositivos → Inserir CD das Guest Additions**.
+
+## Rede na Prática
+
+- Testar conectividade com a internet (`ping`).
+- Identificar o **IP** da VM (`ip a` / `ipconfig`).
+- Comparar comportamento dos modos **NAT** e **ponte**.
+- Testar acesso SSH à VM (se aplicável).
+
+## Snapshot do Ambiente Pronto
+
+- Após instalar e configurar, tirar um **snapshot**.
+- Nomeie como `base-limpa` ou `pos-instalacao`.
+- Serve de ponto de partida para as próximas práticas.
+- Permite **reverter** se algo der errado.
+
+## Verificação da Prática
+
+- [ ] SO instalado e inicializando corretamente.
+- [ ] Usuário criado e atualizações aplicadas.
+- [ ] Rede funcionando (internet/rede local).
+- [ ] Guest Additions instaladas.
+- [ ] Snapshot do ambiente base criado.
+
+## Problemas Comuns
+
+- VM lenta → aumentar recursos ou habilitar VT-x/AMD-V.
+- Sem internet → revisar modo de **rede**.
+- Tela pequena → instalar **Guest Additions**.
+- Erro de boot → verificar ordem de boot e ISO.
+
+::: {.callout-tip}
+Mantenha uma **cópia do VDI base** ou um snapshot para clonar ambientes rapidamente nas demais aulas.
+:::
+
+## Resumo da Aula
+
+- Instalamos e configuramos o **SO convidado**.
+- Ajustamos **rede, usuários e atualizações**.
+- Instalamos as **Guest Additions**.
+- Criamos um **snapshot base** reutilizável.
+
+## Referências
+
+- Oracle — *VirtualBox User Manual*.
+- Documentação oficial da distribuição utilizada.
