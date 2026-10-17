@@ -81,8 +81,8 @@ A **Avaliação 1 (GIFT, 10 questões)** do bimestre cobre Big Data, ML e redes.
 ## Referências
 
 - AWS — *VPC Design*.
-- Material das aulas 43 e 44.
+- Material das aulas 47 e 48.
 
 ## Próxima Aula
 
-- **Aula 46:** Configuração de redes virtuais em nuvem (prática).
+- **Aula 50:** Configuração de redes virtuais em nuvem (prática).

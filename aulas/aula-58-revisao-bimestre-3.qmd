@@ -67,7 +67,7 @@ title: "Aula 58 — Revisão para a Avaliação Bimestral"
 
 ## Como se Preparar
 
-- Revise os **slides** das aulas 37 a 53.
+- Revise os **slides** das aulas 41 a 57.
 - Resuma cada tópico em **meia página**.
 - Refaça as **atividades** de fixação.
 - Tire dúvidas **antes** da avaliação.
@@ -85,7 +85,7 @@ A avaliação tem **10 questões** no Moodle cobrindo os temas do bimestre. Leia
 
 ## Referências
 
-- Material das aulas 37 a 53.
+- Material das aulas 41 a 57.
 - Documentação dos provedores de nuvem.
 
 ## Boa Prova!

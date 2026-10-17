@@ -96,4 +96,4 @@ title: "Aula 23 — Criação e Gerenciamento de Máquinas Virtuais"
 
 ## Próxima Aula
 
-- **Aula 22:** Prática — VirtualBox: criando a primeira VM.
+- **Aula 24:** Prática — VirtualBox: criando a primeira VM.

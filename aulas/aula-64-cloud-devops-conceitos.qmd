@@ -41,7 +41,7 @@ title: "Aula 64 — Cloud DevOps: Conceitos"
 
 - **Integração Contínua (CI):** integrar e testar frequentemente.
 - **Entrega/Deploy Contínuo (CD):** publicar automaticamente.
-- Aula 59 aprofunda CI/CD.
+- Aula 65 aprofunda CI/CD.
 
 ## Infraestrutura como Código (IaC)
 
@@ -81,4 +81,4 @@ DevOps = **cultura + automação**. A nuvem fornece as ferramentas (pipelines, I
 
 ## Próxima Aula
 
-- **Aula 59:** Integração e entrega contínua (CI/CD).
+- **Aula 65:** Integração e entrega contínua (CI/CD).

@@ -84,4 +84,4 @@ Gerenciar nuvem é **governar**: equilibrar agilidade, segurança, custo e confo
 
 ## Próxima Aula
 
-- **Aula 31:** Contêineres — conceitos e VM × contêiner.
+- **Aula 33:** Contêineres — conceitos e VM × contêiner.

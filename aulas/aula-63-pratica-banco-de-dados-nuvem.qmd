@@ -75,4 +75,4 @@ Ao final, **remova** a instância (se não for gratuita) para evitar custos — 
 
 ## Próxima Aula
 
-- **Aula 58:** Cloud DevOps — conceitos.
+- **Aula 64:** Cloud DevOps — conceitos.

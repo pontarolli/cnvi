@@ -84,4 +84,4 @@ Cultura de custo: trate **gasto como métrica de engenharia**. Tag tudo, monitor
 
 ## Próxima Aula
 
-- **Aula 68:** Projeto integrador — planejamento.
+- **Aula 74:** Projeto integrador — planejamento.

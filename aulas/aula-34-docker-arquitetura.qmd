@@ -63,7 +63,7 @@ CMD ["python", "app.py"]
 - **Volumes:** persistência de dados fora do contêiner.
 - **Redes:** comunicação entre contêineres (bridge, host, overlay).
 - Contêineres são **efêmeros**: dados persistentes vão em volumes.
-- Aula 34 detalha volumes e redes.
+- Aula 36 detalha volumes e redes.
 
 ## Registro de Imagens
 
@@ -93,8 +93,8 @@ Use **imagens base enxutas** (slim/alpine) e fixe **versões** nas tags para bui
 
 - Docker — *Documentação oficial*.
 - Docker Hub.
-- Material da aula 31.
+- Material da aula 33.
 
 ## Próxima Aula
 
-- **Aula 33:** Prática — Docker 1: imagens e contêineres.
+- **Aula 35:** Prática — Docker 1: imagens e contêineres.

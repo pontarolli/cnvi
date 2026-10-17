@@ -83,8 +83,8 @@ Não existe "melhor nuvem" universal. A melhor solução é a que **atende aos r
 ## Referências
 
 - Gartner — *Cloud Comparison*.
-- Material das aulas 62 a 65.
+- Material das aulas 68 a 71.
 
 ## Próxima Aula
 
-- **Aula 67:** Governança em TI e custos na nuvem (FinOps).
+- **Aula 73:** Governança em TI e custos na nuvem (FinOps).

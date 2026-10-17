@@ -93,4 +93,4 @@ A segurança em nuvem é **contínua**: não basta configurar uma vez; é precis
 
 ## Próxima Aula
 
-- **Aula 29:** Atividade — Segurança em Nuvem.
+- **Aula 31:** Atividade — Segurança em Nuvem.

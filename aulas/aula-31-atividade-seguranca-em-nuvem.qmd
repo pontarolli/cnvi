@@ -82,8 +82,8 @@ A **Avaliação 2 (GIFT, 10 questões)** cobre segurança, gerenciamento e cont�
 
 - NIST — *Cloud Security*.
 - CSA — *Cloud Controls Matrix*.
-- Material das aulas 26 a 28.
+- Material das aulas 28 a 30.
 
 ## Próxima Aula
 
-- **Aula 30:** Modelos de gerenciamento em nuvem.
+- **Aula 32:** Modelos de gerenciamento em nuvem.

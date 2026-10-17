@@ -86,4 +86,4 @@ Contêiner e VM **não são rivais**: muitas vezes o contêiner roda **dentro** 
 
 ## Próxima Aula
 
-- **Aula 32:** Docker — conceitos e arquitetura.
+- **Aula 34:** Docker — conceitos e arquitetura.

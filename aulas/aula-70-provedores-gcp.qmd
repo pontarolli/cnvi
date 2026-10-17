@@ -87,4 +87,4 @@ O GCP se diferencia em **dados e IA**: BigQuery e Vertex AI são referências de
 
 ## Próxima Aula
 
-- **Aula 65:** Provedores — OpenStack.
+- **Aula 71:** Provedores — OpenStack.

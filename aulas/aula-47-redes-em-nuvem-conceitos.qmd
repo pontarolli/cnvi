@@ -83,4 +83,4 @@ A VPC é o "data center virtual" do cliente: nela vivem sub-redes, rotas, gatewa
 
 ## Próxima Aula
 
-- **Aula 44:** Redes em nuvem — VPC, sub-redes e conectividade híbrida.
+- **Aula 48:** Redes em nuvem — VPC, sub-redes e conectividade híbrida.

@@ -90,4 +90,4 @@ A AWS **inspira** os nomes de muitos serviços da indústria; conhecer seus equi
 
 ## Próxima Aula
 
-- **Aula 63:** Provedores — Microsoft Azure.
+- **Aula 69:** Provedores — Microsoft Azure.

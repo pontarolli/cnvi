@@ -81,8 +81,8 @@ A **Avaliação 1 (GIFT, 10 questões)** do bimestre cobre Big Data, ML e redes 
 ## Referências
 
 - AWS — *Big Data & Analytics*.
-- Material das aulas 38 a 41.
+- Material das aulas 42 a 45.
 
 ## Próxima Aula
 
-- **Aula 43:** Redes em nuvem — conceitos.
+- **Aula 47:** Redes em nuvem — conceitos.

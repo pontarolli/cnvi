@@ -85,4 +85,4 @@ Documente **enquanto** desenvolve: capturas de tela, decisões e dificuldades se
 
 ## Próxima Aula
 
-- **Aula 70:** Projeto integrador — apresentação.
+- **Aula 76:** Projeto integrador — apresentação.

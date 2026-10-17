@@ -50,7 +50,7 @@ title: "Aula 21 — Hipervisores: Conceitos e Funcionamento"
 
 - **Tipo 1 (bare-metal):** roda direto no hardware.
 - **Tipo 2 (hospedado):** roda sobre um sistema operacional.
-- Aula 20 detalha as diferenças.
+- Aula 22 detalha as diferenças.
 
 ## Exemplos de Hipervisores
 
@@ -94,4 +94,4 @@ O hipervisor é o componente que torna possível **rodar muitos sistemas em um s
 
 ## Próxima Aula
 
-- **Aula 20:** Hipervisores tipo 1 × tipo 2.
+- **Aula 22:** Hipervisores tipo 1 × tipo 2.

@@ -83,4 +83,4 @@ A **grade** enfatiza a cooperação entre instituições; a **nuvem** transformo
 
 ## Próxima Aula
 
-- **Aula 51:** TI Verde e sustentabilidade na nuvem.
+- **Aula 55:** TI Verde e sustentabilidade na nuvem.

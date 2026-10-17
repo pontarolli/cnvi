@@ -86,4 +86,4 @@ VMware e Xen são a base de muitos data centers **on-premises**; KVM é muito co
 
 ## Próxima Aula
 
-- **Aula 54:** Revisão para a avaliação bimestral.
+- **Aula 58:** Revisão para a avaliação bimestral.

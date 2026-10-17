@@ -88,8 +88,8 @@ Serverless é o nível mais alto de abstração: você paga por **execução**, 
 ## Referências
 
 - AWS Lambda / Azure Functions / Cloud Functions.
-- Material das aulas 30 e 31.
+- Material das aulas 32 e 33.
 
 ## Próxima Aula
 
-- **Aula 48:** Serverless — funções, eventos e provedores.
+- **Aula 52:** Serverless — funções, eventos e provedores.

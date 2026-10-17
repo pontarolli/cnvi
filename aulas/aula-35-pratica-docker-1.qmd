@@ -77,4 +77,4 @@ Mapeamento de portas `-p host:container` é essencial para acessar serviços do 
 
 ## Próxima Aula
 
-- **Aula 34:** Prática — Docker 2: volumes e redes.
+- **Aula 36:** Prática — Docker 2: volumes e redes.

@@ -88,4 +88,4 @@ Nomeie volumes e redes de forma **descritiva** e use o Compose para documentar o
 
 ## Próxima Aula
 
-- **Aula 35:** Atividade — Contêineres e Docker.
+- **Aula 37:** Atividade — Contêineres e Docker.

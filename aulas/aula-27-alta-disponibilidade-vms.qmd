@@ -85,4 +85,4 @@ title: "Aula 27 — Alta Disponibilidade e Mobilidade de VMs"
 
 ## Próxima Aula
 
-- **Aula 26:** Segurança em nuvem — fundamentos.
+- **Aula 28:** Segurança em nuvem — fundamentos.

@@ -85,4 +85,4 @@ Big Data na nuvem combina **armazenamento de objetos + processamento distribuíd
 
 ## Próxima Aula
 
-- **Aula 39:** Big Data na nuvem — Parte 2.
+- **Aula 43:** Big Data na nuvem — Parte 2.

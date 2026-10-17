@@ -80,8 +80,8 @@ A **Avaliação 1 (GIFT, 10 questões)** do bimestre cobre bancos de dados e Dev
 ## Referências
 
 - GitHub Actions / GitLab CI.
-- Material das aulas 58 a 60.
+- Material das aulas 64 a 66.
 
 ## Próxima Aula
 
-- **Aula 62:** Provedores — AWS.
+- **Aula 68:** Provedores — AWS.

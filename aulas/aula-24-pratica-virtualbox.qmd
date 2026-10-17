@@ -59,7 +59,7 @@ title: "Aula 24 — Prática: VirtualBox — Criando a Primeira VM"
 
 ## Dicas e Boas Práticas
 
-- Nomeie VMs de forma **descritiva** (ex.: `ubuntu-aula22`).
+- Nomeie VMs de forma **descritiva** (ex.: `ubuntu-aula24`).
 - Tire um **snapshot** antes de mudanças importantes.
 - Documente **recursos** alocados.
 - Mantenha as **Guest Additions** instaladas.
@@ -90,4 +90,4 @@ title: "Aula 24 — Prática: VirtualBox — Criando a Primeira VM"
 
 ## Próxima Aula
 
-- **Aula 23:** Prática — instalando e configurando um SO convidado.
+- **Aula 25:** Prática — instalando e configurando um SO convidado.

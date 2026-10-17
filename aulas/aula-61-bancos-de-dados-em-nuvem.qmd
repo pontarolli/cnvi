@@ -83,8 +83,8 @@ Banco gerenciado **reduz operação**, mas **diminui controle**. Avalie o equil�
 ## Referências
 
 - AWS RDS/DynamoDB; Azure SQL/Cosmos DB; GCP Cloud SQL.
-- Material da aula 42.
+- Material da aula 46.
 
 ## Próxima Aula
 
-- **Aula 56:** Bancos gerenciados — RDS e NoSQL.
+- **Aula 62:** Bancos gerenciados — RDS e NoSQL.

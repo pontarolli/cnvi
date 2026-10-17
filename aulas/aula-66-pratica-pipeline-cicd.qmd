@@ -79,8 +79,8 @@ Mantenha o pipeline **enxuto e rápido**. Feedback em poucos minutos acelera tod
 ## Referências
 
 - GitHub Actions — *Documentação*.
-- Material das aulas 58 e 59.
+- Material das aulas 64 e 65.
 
 ## Próxima Aula
 
-- **Aula 61:** Atividade — Cloud DevOps e Integração Contínua.
+- **Aula 67:** Atividade — Cloud DevOps e Integração Contínua.

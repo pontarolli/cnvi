@@ -84,4 +84,4 @@ TI Verde não é só tecnologia: envolve **políticas, cultura e escolhas** de p
 
 ## Próxima Aula
 
-- **Aula 52:** Edge computing e Internet das Coisas.
+- **Aula 56:** Edge computing e Internet das Coisas.

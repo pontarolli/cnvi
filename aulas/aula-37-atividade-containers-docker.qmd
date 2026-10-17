@@ -80,8 +80,8 @@ A **Avaliação 2 (GIFT, 10 questões)** do bimestre cobre segurança, gerenciam
 ## Referências
 
 - Docker — *Get Started*.
-- Material das aulas 31 a 34.
+- Material das aulas 33 a 36.
 
 ## Próxima Aula
 
-- **Aula 36:** Orquestração de contêineres com Kubernetes.
+- **Aula 38:** Orquestração de contêineres com Kubernetes.

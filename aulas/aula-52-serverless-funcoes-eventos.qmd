@@ -83,4 +83,4 @@ Para cargas **constantes**, contêineres podem sair mais baratos; para cargas **
 
 ## Próxima Aula
 
-- **Aula 49:** Atividade — Computação sem Servidor.
+- **Aula 53:** Atividade — Computação sem Servidor.

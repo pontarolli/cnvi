@@ -94,4 +94,4 @@ Um bom pipeline é **rápido e confiável**: é a espinha dorsal da entrega cont
 
 ## Próxima Aula
 
-- **Aula 60:** Prática — pipeline CI/CD.
+- **Aula 66:** Prática — pipeline CI/CD.

@@ -87,4 +87,4 @@ Azure se destaca em cenários **corporativos e híbridos**, graças à integraç
 
 ## Próxima Aula
 
-- **Aula 64:** Provedores — Google Cloud Platform.
+- **Aula 70:** Provedores — Google Cloud Platform.

@@ -86,4 +86,4 @@ Mantenha uma **cópia do VDI base** ou um snapshot para clonar ambientes rapidam
 
 ## Próxima Aula
 
-- **Aula 24:** Atividade — Máquinas Virtuais.
+- **Aula 26:** Atividade — Máquinas Virtuais.

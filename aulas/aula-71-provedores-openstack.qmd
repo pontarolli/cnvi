@@ -85,4 +85,4 @@ title: "Aula 71 — Provedores: OpenStack"
 
 ## Próxima Aula
 
-- **Aula 66:** Análise de soluções de nuvem selecionadas.
+- **Aula 72:** Análise de soluções de nuvem selecionadas.

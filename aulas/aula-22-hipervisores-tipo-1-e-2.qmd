@@ -92,4 +92,4 @@ title: "Aula 22 — Hipervisores: Tipo 1 × Tipo 2"
 
 ## Próxima Aula
 
-- **Aula 21:** Criação e gerenciamento de máquinas virtuais.
+- **Aula 23:** Criação e gerenciamento de máquinas virtuais.

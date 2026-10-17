@@ -83,4 +83,4 @@ Pense na nuvem como um **sistema integrado**: cada tema do curso é uma peça qu
 
 ## Próxima Aula
 
-- **Aula 72:** Encerramento e avaliação final.
+- **Aula 78:** Encerramento e avaliação final.

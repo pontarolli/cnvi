@@ -80,8 +80,8 @@ title: "Aula 56 — Edge Computing e Internet das Coisas"
 ## Referências
 
 - NIST — *Edge Computing*.
-- Material das aulas 04 e 47.
+- Material das aulas 04 e 51.
 
 ## Próxima Aula
 
-- **Aula 53:** Virtualização em data centers — VMware e Xen.
+- **Aula 57:** Virtualização em data centers — VMware e Xen.

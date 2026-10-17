@@ -76,4 +76,4 @@ Mantenha **notebooks versionados** e nomeie os buckets/datasets de forma clara �
 
 ## Próxima Aula
 
-- **Aula 42:** Atividade — Big Data e Machine Learning.
+- **Aula 46:** Atividade — Big Data e Machine Learning.

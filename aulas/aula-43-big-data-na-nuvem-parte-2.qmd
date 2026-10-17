@@ -84,4 +84,4 @@ title: "Aula 43 — Big Data na Nuvem (Parte 2)"
 
 ## Próxima Aula
 
-- **Aula 40:** Machine Learning na nuvem.
+- **Aula 44:** Machine Learning na nuvem.

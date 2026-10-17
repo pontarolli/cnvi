@@ -84,4 +84,4 @@ Segurança em nuvem é uma **responsabilidade conjunta**: o provedor garante a i
 
 ## Próxima Aula
 
-- **Aula 27:** Segurança em nuvem — identidade, acesso e criptografia.
+- **Aula 29:** Segurança em nuvem — identidade, acesso e criptografia.

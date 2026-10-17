@@ -86,8 +86,8 @@ title: "Aula 38 — Orquestração de Contêineres com Kubernetes"
 
 - Kubernetes — *Documentação oficial*.
 - CNCF — *Cloud Native*.
-- Material das aulas 31 a 35.
+- Material das aulas 33 a 37.
 
 ## Próxima Aula
 
-- **Aula 37:** Revisão e prática de Kubernetes (3º bimestre).
+- **Aula 41:** Revisão e prática de Kubernetes (3º bimestre).

@@ -84,4 +84,4 @@ Espalhe sub-redes por várias **zonas de disponibilidade** e use balanceamento p
 
 ## Próxima Aula
 
-- **Aula 45:** Atividade — Redes em Nuvem.
+- **Aula 49:** Atividade — Redes em Nuvem.

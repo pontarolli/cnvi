@@ -80,8 +80,8 @@ A **Avaliação 1 (GIFT, 10 questões)** do bimestre cobre hipervisores, VMs e g
 ## Referências
 
 - Oracle — *VirtualBox User Manual*.
-- Material das aulas 21 a 23.
+- Material das aulas 23 a 25.
 
 ## Próxima Aula
 
-- **Aula 25:** Alta disponibilidade e mobilidade de VMs.
+- **Aula 27:** Alta disponibilidade e mobilidade de VMs.

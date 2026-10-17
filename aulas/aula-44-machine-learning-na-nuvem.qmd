@@ -90,4 +90,4 @@ ML na nuvem combina **Big Data (dados) + computação elástica (treino) + servi
 
 ## Próxima Aula
 
-- **Aula 41:** Prática — serviços de Big Data e ML na nuvem.
+- **Aula 45:** Prática — serviços de Big Data e ML na nuvem.

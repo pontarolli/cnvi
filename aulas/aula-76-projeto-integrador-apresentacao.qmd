@@ -86,4 +86,4 @@ O mais importante não é a solução perfeita, mas a capacidade de **explicar a
 
 ## Próxima Aula
 
-- **Aula 71:** Revisão geral do curso.
+- **Aula 77:** Revisão geral do curso.

@@ -92,8 +92,8 @@ Kubernetes mantém o **estado desejado**: você declara; ele reconcilia. Essa é
 ## Referências
 
 - Kubernetes — *Documentação oficial*.
-- Material das aulas 31 a 36.
+- Material das aulas 33 a 38.
 
 ## Próxima Aula
 
-- **Aula 38:** Computação em nuvem para Big Data — Parte 1.
+- **Aula 42:** Computação em nuvem para Big Data — Parte 1.

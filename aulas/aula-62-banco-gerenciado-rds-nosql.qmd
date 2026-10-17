@@ -81,4 +81,4 @@ Comece por um **banco relacional gerenciado** (RDS) e migre para NoSQL **quando 
 
 ## Próxima Aula
 
-- **Aula 57:** Prática — banco de dados gerenciado na nuvem.
+- **Aula 63:** Prática — banco de dados gerenciado na nuvem.

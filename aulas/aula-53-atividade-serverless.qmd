@@ -81,8 +81,8 @@ A **Avaliação 2 (GIFT, 10 questões)** do bimestre cobre serverless, grades, T
 ## Referências
 
 - AWS Lambda / S3 Events.
-- Material das aulas 47 e 48.
+- Material das aulas 51 e 52.
 
 ## Próxima Aula
 
-- **Aula 50:** Grades computacionais — conceitos.
+- **Aula 54:** Grades computacionais — conceitos.

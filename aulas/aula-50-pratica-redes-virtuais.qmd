@@ -73,8 +73,8 @@ Ao terminar, **remova** os recursos (NAT Gateway tem custo) para evitar cobranç
 ## Referências
 
 - AWS — *VPC Getting Started*.
-- Material das aulas 43 a 45.
+- Material das aulas 47 a 49.
 
 ## Próxima Aula
 
-- **Aula 47:** Computação sem servidor (Serverless) — conceitos.
+- **Aula 51:** Computação sem servidor (Serverless) — conceitos.
