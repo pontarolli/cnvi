@@ -1,0 +1,101 @@
+---
+title: "Aula 74 — Governança e FinOps na Nuvem"
+---
+
+## Objetivos da Aula
+
+- Compreender **governança em nuvem**.
+- Entender o que é **FinOps**.
+- Conhecer estratégias de **otimização de custos**.
+- Aplicar boas práticas de **controle e responsabilidade**.
+
+## Governança em Nuvem
+
+- Conjunto de **políticas, papéis e controles**.
+- Alinha o uso da nuvem aos **objetivos e à conformidade**.
+- Equilibra **agilidade, segurança, custo e risco**.
+- Envolve **pessoas, processos e tecnologia**.
+
+## Pilares da Governança
+
+- **Políticas** de uso e segurança.
+- **Controle de acesso** (IAM) e auditoria.
+- **Gestão de custos**.
+- **Conformidade** (LGPD, certificações).
+- **Padronização** de arquitetura.
+
+## O que é FinOps?
+
+- União de **Finanças + Operações + Tecnologia**.
+- Torna o **custo** uma métrica de engenharia.
+- Cultura de **responsabilidade** sobre gastos.
+- Prática **contínua**, não um evento único.
+
+## Fases do FinOps
+
+- **Inform:** visibilidade dos gastos.
+- **Otimizar:** reduzir desperdício.
+- **Operar:** cultura e processos permanentes.
+- Ciclo iterativo com métricas.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,
+  b/.style={draw,circle,fill=blue!12,minimum size=1.7cm,align=center,inner sep=1pt}]
+  \node[b] (i) at (0,1.2) {Inform};
+  \node[b] (o) at (3.4,1.2) {Otimizar};
+  \node[b] (p) at (1.7,-1.1) {Operar};
+  \draw[-{Latex}] (i)--(o);
+  \draw[-{Latex}] (o) to[bend left=22] (p);
+  \draw[-{Latex}] (p) to[bend left=22] (i);
+\end{tikzpicture}
+\end{center}
+```
+
+## Visibilidade de Custos
+
+- **Tags** por projeto, dono, centro de custo.
+- Relatórios e **dashboards**.
+- **Alertas** de orçamento.
+- Ferramentas: Cost Explorer, Budgets.
+
+## Otimização de Custos
+
+- **Rightsizing:** ajustar recursos à demanda.
+- Desligar **recursos ociosos**.
+- **Instâncias reservadas/Spot**.
+- **Auto Scaling** para acompanhar a demanda.
+- Escolher **armazenamento** adequado por classe.
+
+## Governança na Prática
+
+- Contas/organizações com **políticas**.
+- **Orçamentos** e limites por projeto.
+- Processo de **revisão** de arquitetura.
+- **Auditoria** e trilhas de uso.
+
+::: {.callout-tip}
+Cultura de custo: trate **gasto como métrica de engenharia**. Tag tudo, monitore sempre e otimize continuamente.
+:::
+
+## Resumo da Aula
+
+- **Governança** equilibra agilidade, segurança e custo.
+- **FinOps** une finanças e operações em torno do custo.
+- Otimização: **rightsizing, desligar ociosos, reservas**.
+- **Tags, alertas e auditoria** dão controle.
+
+## Atividade Rápida
+
+- Defina **governança em nuvem**.
+- Explique as fases do **FinOps**.
+- Cite três **estratégias de otimização** de custo.
+
+## Referências
+
+- FinOps Foundation.
+- AWS — *Cost Management*.
+
+## Próxima Aula
+
+- **Aula 75:** Projeto integrador — planejamento.

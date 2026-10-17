@@ -1,0 +1,90 @@
+---
+title: "Aula 13 — Atividade: Modelos de Serviço e Implantação"
+---
+
+## Objetivos da Aula
+
+- Revisar **IaaS, PaaS, SaaS** e **modelos de implantação**.
+- Aplicar os conceitos em um **estudo de caso**.
+- Desenvolver a capacidade de **recomendar soluções**.
+- Consolidar o conteúdo para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **IaaS:** infraestrutura virtualizada (cliente gerencia o SO).
+- **PaaS:** plataforma pronta (foco no código).
+- **SaaS:** software pronto (foco no uso).
+- **Implantação:** pública, privada, híbrida, comunitária.
+
+## Estudo de Caso — "EcoTech Ltda."
+
+> A EcoTech é uma pequena empresa de logística verde que precisa de um sistema de gestão e quer **baixo custo inicial** e **escala para crescer**.
+
+- Qual **modelo de serviço** para o sistema de gestão?
+- Qual **modelo de implantação** é mais adequado?
+- Que **desafios de segurança e custo** considerar?
+
+## Roteiro da Atividade
+
+- Grupos de **3 a 4 alunos**.
+- Analise o caso e **recomende** modelos de serviço e implantação.
+- Justifique cada escolha com base no conteúdo.
+- Prepare uma **proposta** de 3 a 5 slides.
+- Apresente para a turma (~5 minutos).
+
+## Parte 1 — Diagnóstico
+
+- Quais são as **necessidades** da empresa?
+- Qual o **orçamento** e o **prazo**?
+- Há dados sensíveis? Existem exigências legais?
+- Qual a **previsibilidade** de demanda?
+
+## Parte 2 — Recomendação
+
+- **Modelo de serviço:** IaaS, PaaS ou SaaS? Por quê?
+- **Modelo de implantação:** pública, privada ou híbrida? Por quê?
+- **Provedor sugerido** e justificativa.
+- **Riscos** e mitigações.
+
+## Parte 3 — Apresentação
+
+- Defenda sua recomendação com argumentos técnicos.
+- Apresente uma **tabela comparativa** dos modelos considerados.
+- Esteja pronto para perguntas da turma e do professor.
+- A atividade será registrada no **Moodle**.
+
+## Critérios de Avaliação
+
+- **Adequação** da solução ao caso.
+- **Justificativa** técnica e consistente.
+- **Clareza** da apresentação.
+- **Trabalho em equipe** e participação.
+
+::: {.callout-important}
+A **Avaliação 2 (GIFT, 10 questões)** do bimestre cobre modelos de serviço, implantação e virtualização. Revise antes de responder.
+:::
+
+## Checklist do Grupo
+
+- [ ] Caso analisado e necessidades levantadas.
+- [ ] Modelo de serviço justificado.
+- [ ] Modelo de implantação justificado.
+- [ ] Riscos e mitigações listados.
+- [ ] Apresentação pronta.
+
+## Resumo da Aula
+
+- Consolidamos **modelos de serviço e implantação**.
+- Praticamos a **recomendação de soluções** com base em requisitos.
+- Desenvolvemos argumentação técnica.
+- Próxima etapa: **virtualização** na prática.
+
+## Referências
+
+- NIST SP 800-145.
+- Documentação dos provedores de nuvem.
+- Material das aulas 06 a 11.
+
+## Próxima Aula
+
+- **Aula 14:** Virtualização — conceitos e fundamentos.

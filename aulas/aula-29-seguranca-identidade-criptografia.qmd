@@ -99,4 +99,4 @@ Use **variáveis de ambiente** ou cofres de segredos para credenciais — nunca 
 
 ## Próxima Aula
 
-- **Aula 30:** Segurança em nuvem — soluções e boas práticas.
+- **Aula 31:** Segurança em nuvem — soluções e boas práticas.

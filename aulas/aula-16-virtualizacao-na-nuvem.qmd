@@ -1,0 +1,102 @@
+---
+title: "Aula 16 — Virtualização na Nuvem"
+---
+
+## Objetivos da Aula
+
+- Relacionar **virtualização** e **computação em nuvem**.
+- Entender como a virtualização habilita a nuvem.
+- Analisar **benefícios e desafios** da virtualização em nuvem.
+- Discutir tendências (contêineres, serverless).
+
+## Virtualização como Base da Nuvem
+
+- A nuvem entrega recursos **virtuais** sob demanda.
+- Sem a virtualização, não haveria **multilocação** nem **elasticidade**.
+- O provedor virtualiza seus data centers e revende a capacidade.
+- O cliente "aluga" VMs, não servidores físicos.
+
+## Do Hipervisor ao Serviço
+
+- **Hardware físico** no data center.
+- **Hipervisor** cria e isola as VMs.
+- **Orquestrador** aloca VMs aos clientes.
+- **Console/API** permite criar recursos em minutos.
+- A nuvem "esconde" toda essa complexidade.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\small,node distance=3mm,
+  l/.style={draw,rounded corners,minimum width=7.5cm,minimum height=0.6cm,align=center,inner sep=3pt}]
+  \node[l,fill=blue!12] (c) {Console / API};
+  \node[l,fill=green!12,below=of c] (o) {Orquestrador};
+  \node[l,fill=orange!20,below=of o] (h) {Hipervisor (VMs)};
+  \node[l,fill=gray!20,below=of h] (hw) {Hardware físico (data center)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Como a Nuvem Usa a Virtualização
+
+- **Instâncias** são, na prática, máquinas virtuais.
+- **Snapshots e imagens (AMIs)** aceleram o provisionamento.
+- **Live migration** permite manutenção sem parar serviços.
+- **Auto Scaling** cria e destrói VMs conforme a carga.
+- **Isolamento** garante separação entre clientes.
+
+## Benefícios na Nuvem
+
+- **Multilocação** segura e eficiente.
+- **Elasticidade** e provisionamento rápido.
+- **Redução de custos** por consolidação.
+- **Resiliência** com migração e replicação.
+- **Portabilidade** de cargas entre hosts.
+
+## Desafios na Nuvem
+
+- **Overhead** de desempenho do hipervisor.
+- **Complexidade** de gestão em larga escala.
+- **Segurança** do isolamento entre VMs.
+- **Dependência** da infraestrutura do provedor.
+- **Gestão de capacidade** e custos.
+
+::: {.callout-note}
+Contêineres e **serverless** surgem como alternativas mais leves que a virtualização tradicional de VMs.
+:::
+
+## A Evolução: da VM ao Contêiner
+
+- **VM:** sistema completo virtualizado (pesada, isolamento forte).
+- **Contêiner:** compartilha o kernel (leve, rápido).
+- **Serverless:** nem a VM nem o contêiner são gerenciados.
+- A nuvem combina as três abordagens conforme a necessidade.
+
+## Estudo de Caso
+
+- Uma aplicação simples em um servidor físico.
+- Migrada para **VM** no IaaS → melhor utilização.
+- Reempacotada em **contêiner** → mais leve e portátil.
+- Serviço de evento reescrito como **função serverless** → escala automática.
+
+## Resumo da Aula
+
+- A virtualização **habilita** a computação em nuvem.
+- Instâncias, snapshots e migração dependem dela.
+- Benefícios: multilocação, elasticidade, custo.
+- Desafios: overhead, segurança, gestão.
+
+## Atividade Rápida
+
+- Explique como a nuvem usa a **virtualização** para o cliente.
+- Liste **dois benefícios** e **dois desafios** na nuvem.
+- Compare VM, contêiner e serverless em uma tabela.
+
+## Referências
+
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+- NIST SP 800-145.
+- Documentação dos provedores.
+
+## Próxima Aula
+
+- **Aula 17:** Data centers e organização da infraestrutura.

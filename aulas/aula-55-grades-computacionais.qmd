@@ -1,0 +1,107 @@
+---
+title: "Aula 55 — Grades Computacionais"
+---
+
+## Objetivos da Aula
+
+- Definir **computação em grade (grid)**.
+- Comparar **grade, cluster e nuvem**.
+- Conhecer aplicações típicas.
+- Entender a evolução para a nuvem.
+
+## O que é uma Grade?
+
+- Conjunto de recursos **distribuídos e heterogêneos** que cooperam.
+- Recursos de **várias organizações** (geograficamente dispersos).
+- Voltada a tarefas de **grande porte** (científicas).
+- Exemplo: projetos de computação voluntária.
+
+## Características
+
+- **Distribuição geográfica** dos recursos.
+- **Heterogeneidade** de hardware e software.
+- **Compartilhamento** entre instituições.
+- **Escalonamento** e tolerância a falhas.
+
+## Grade × Cluster × Nuvem
+
+| Modelo | Escopo | Homogeneidade | Uso |
+|--------|--------|---------------|-----|
+| Cluster | Local | Alta | Alto desempenho |
+| Grade | Distribuído | Baixa | Científico/cooperação |
+| Nuvem | Global | Abstraída | Serviços sob demanda |
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,
+  n/.style={draw,circle,fill=blue!15,minimum size=6mm,inner sep=0pt}]
+  \node[n] (c1) at (0,0) {};
+  \node[n] at (0.7,0) (c2) {};
+  \node[n] at (0.35,-0.7) (c3) {};
+  \draw (c1)--(c2); \draw (c1)--(c3); \draw (c2)--(c3);
+  \node[font=\scriptsize,below] at (0.35,-1.05) {Cluster (local)};
+  \node[n,fill=green!15] at (3.5,0.3) (g1) {};
+  \node[n,fill=green!15] at (4.7,-0.3) (g2) {};
+  \node[n,fill=green!15] at (3.2,-0.9) (g3) {};
+  \node[n,fill=green!15] at (5.3,0.6) (g4) {};
+  \draw[dashed] (g1)--(g2); \draw[dashed] (g1)--(g4); \draw[dashed] (g2)--(g3); \draw[dashed] (g1)--(g3);
+  \node[font=\scriptsize,below] at (4.2,-1.05) {Grade (distribuída)};
+  \node[draw,ellipse,fill=gray!12,minimum width=1.9cm,minimum height=0.95cm] at (7.8,0) {Nuvem};
+  \node[font=\scriptsize,below] at (7.8,-1.05) {Nuvem (global)};
+\end{tikzpicture}
+\end{center}
+```
+
+## Aplicações Típicas
+
+- Cálculos **científicos** e simulações.
+- Processamento de **imagens** e dados astronômicos.
+- **Genômica** e bioinformática.
+- Pesquisa em **física de partículas**.
+
+## Computação Voluntária
+
+- Usuários cedem **tempo ocioso** de seus computadores.
+- Exemplos: **SETI@home**, **Folding@home**.
+- Grande poder agregado para tarefas específicas.
+- Modelo comunitário de computação.
+
+## Middleware de Grade
+
+- Software que **coordena** os recursos.
+- Autenticação e **agendamento** de tarefas.
+- Exemplos históricos: **Globus Toolkit**, gLite.
+- Base conceitual que influenciou a nuvem.
+
+## Da Grade à Nuvem
+
+- A nuvem **comercializa** e **simplifica** a ideia de grade.
+- Recursos virtualizados, sob demanda e padronizados.
+- Interface de autoatendimento e pagamento pelo uso.
+- Grade = cooperação; nuvem = serviço.
+
+::: {.callout-note}
+A **grade** enfatiza a cooperação entre instituições; a **nuvem** transformou esse conceito em um **serviço comercial** sob demanda.
+:::
+
+## Resumo da Aula
+
+- **Grade:** recursos distribuídos e heterogêneos cooperando.
+- Difere de **cluster** (local) e **nuvem** (serviço).
+- Aplicações científicas e computação voluntária.
+- Evoluiu para o modelo de **nuvem**.
+
+## Atividade Rápida
+
+- Compare **grade, cluster e nuvem** em uma tabela.
+- Cite duas **aplicações** típicas de grade.
+- Explique a relação entre **grade e nuvem**.
+
+## Referências
+
+- FOSTER, I.; KESSELMAN, C. *The Grid*.
+- BUYYA, R. et al. *Mastering Cloud Computing*.
+
+## Próxima Aula
+
+- **Aula 56:** TI Verde e sustentabilidade na nuvem.

@@ -1,0 +1,86 @@
+---
+title: "Aula 78 — Revisão Geral do Curso"
+---
+
+## Objetivos da Aula
+
+- Revisar os **grandes temas** do curso.
+- Conectar os conteúdos em uma **visão integrada**.
+- Preparar para a **avaliação final**.
+- Refletir sobre a **carreira** em nuvem.
+
+## Visão Geral do Curso
+
+- **Bim 1:** fundamentos, modelos de serviço e virtualização.
+- **Bim 2:** hipervisores, VMs, segurança e contêineres.
+- **Bim 3:** Big Data, ML, redes e serverless.
+- **Bim 4:** bancos, DevOps, provedores e governança.
+
+## Fundamentos e Virtualização
+
+- **Definição NIST** e características.
+- **IaaS, PaaS, SaaS** e implantação.
+- **Virtualização** como base da nuvem.
+
+## Máquinas Virtuais e Contêineres
+
+- **Hipervisores** (tipo 1 e 2).
+- **VMs:** criação, snapshots, HA, migração.
+- **Contêineres:** Docker e **Kubernetes**.
+
+## Segurança e Redes
+
+- **Responsabilidade compartilhada**, IAM, criptografia.
+- **Zero Trust** e soluções (WAF, SIEM, CASB, ZTNA).
+- **VPC**, sub-redes, gateways e híbrido.
+
+## Dados e Automação
+
+- **Big Data** (HDFS, Spark) e **ML** na nuvem.
+- **Bancos** gerenciados (RDS/NoSQL).
+- **DevOps, CI/CD e IaC**.
+
+## Serverless e Tendências
+
+- **Serverless/FaaS** e arquiteturas de eventos.
+- **Edge computing** e **IoT**.
+- **Sustentabilidade (TI Verde)**.
+
+## Provedores e Governança
+
+- **AWS, Azure, GCP, OpenStack**.
+- **Análise de soluções** e **TCO**.
+- **Governança e FinOps**.
+
+## Integrando os Conhecimentos
+
+- Uma aplicação real usa **rede + computação + dados + segurança + automação**.
+- Virtualização e contêineres entregam **escala**.
+- DevOps acelera a **entrega**.
+- Governança mantém **custo e risco** sob controle.
+
+::: {.callout-tip}
+Pense na nuvem como um **sistema integrado**: cada tema do curso é uma peça que se conecta às demais.
+:::
+
+## Carreira em Nuvem
+
+- Certificações: **AWS, Azure, GCP**, Kubernetes.
+- Áreas: **cloud, DevOps, segurança, dados**.
+- Alta **demanda** por profissionais qualificados.
+- Aprendizado **contínuo** é essencial.
+
+## Resumo da Aula
+
+- Revisamos todo o **percurso** do curso.
+- Conectamos os temas em uma **visão integrada**.
+- Refletimos sobre **carreira e certificações**.
+- Próxima aula: **encerramento e avaliação final**.
+
+## Referências
+
+- Material completo do curso.
+
+## Próxima Aula
+
+- **Aula 79:** Encerramento e avaliação final.

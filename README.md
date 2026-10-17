@@ -42,16 +42,16 @@ Cronograma com **72 aulas de conteúdo** (18 por bimestre) e **8 avaliações** 
 | 07 | IaaS — Infraestrutura como Serviço | [aula-07](aulas/aula-07.pdf) | [.qmd](aulas/aula-07-iaas-infraestrutura-como-servico.qmd) |
 | 08 | PaaS — Plataforma como Serviço | [aula-08](aulas/aula-08.pdf) | [.qmd](aulas/aula-08-paas-plataforma-como-servico.qmd) |
 | 09 | SaaS — Software como Serviço | [aula-09](aulas/aula-09.pdf) | [.qmd](aulas/aula-09-saas-software-como-servico.qmd) |
-| 10 | Comparativo IaaS × PaaS × SaaS e o Serverless | [aula-10](aulas/aula-10.pdf) | [.qmd](aulas/aula-10-comparativo-iaas-paas-saas.qmd) |
-| 11 | Modelos de implantação: pública, privada e híbrida | [aula-11](aulas/aula-11.pdf) | [.qmd](aulas/aula-11-modelos-de-implantacao.qmd) |
-| 12 | Atividade — Modelos de Serviço e Implantação | [aula-12](aulas/aula-12.pdf) | [.qmd](aulas/aula-12-atividade-modelos-de-servico.qmd) |
-| 13 | Virtualização: conceitos e fundamentos | [aula-13](aulas/aula-13.pdf) | [.qmd](aulas/aula-13-virtualizacao-conceitos.qmd) |
-| 14 | Tipos de virtualização | [aula-14](aulas/aula-14.pdf) | [.qmd](aulas/aula-14-tipos-de-virtualizacao.qmd) |
-| 15 | Virtualização na nuvem: benefícios e desafios | [aula-15](aulas/aula-15.pdf) | [.qmd](aulas/aula-15-virtualizacao-na-nuvem.qmd) |
-| 16 | Data centers e organização da infraestrutura | [aula-16](aulas/aula-16.pdf) | [.qmd](aulas/aula-16-data-centers.qmd) |
-| 17 | Atividade — Virtualização e Data Centers | [aula-17](aulas/aula-17.pdf) | [.qmd](aulas/aula-17-atividade-virtualizacao-data-centers.qmd) |
-| 18 | Revisão para a avaliação bimestral | [aula-18](aulas/aula-18.pdf) | [.qmd](aulas/aula-18-revisao-bimestre-1.qmd) |
-| 19 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-19-avaliacao-b1-av1.gift` |
+| 10 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-10-avaliacao-b1-av1.gift` |
+| 11 | Comparativo IaaS × PaaS × SaaS e o Serverless | [aula-11](aulas/aula-11.pdf) | [.qmd](aulas/aula-11-comparativo-iaas-paas-saas.qmd) |
+| 12 | Modelos de implantação: pública, privada e híbrida | [aula-12](aulas/aula-12.pdf) | [.qmd](aulas/aula-12-modelos-de-implantacao.qmd) |
+| 13 | Atividade — Modelos de Serviço e Implantação | [aula-13](aulas/aula-13.pdf) | [.qmd](aulas/aula-13-atividade-modelos-de-servico.qmd) |
+| 14 | Virtualização: conceitos e fundamentos | [aula-14](aulas/aula-14.pdf) | [.qmd](aulas/aula-14-virtualizacao-conceitos.qmd) |
+| 15 | Tipos de virtualização | [aula-15](aulas/aula-15.pdf) | [.qmd](aulas/aula-15-tipos-de-virtualizacao.qmd) |
+| 16 | Virtualização na nuvem: benefícios e desafios | [aula-16](aulas/aula-16.pdf) | [.qmd](aulas/aula-16-virtualizacao-na-nuvem.qmd) |
+| 17 | Data centers e organização da infraestrutura | [aula-17](aulas/aula-17.pdf) | [.qmd](aulas/aula-17-data-centers.qmd) |
+| 18 | Atividade — Virtualização e Data Centers | [aula-18](aulas/aula-18.pdf) | [.qmd](aulas/aula-18-atividade-virtualizacao-data-centers.qmd) |
+| 19 | Revisão para a avaliação bimestral | [aula-19](aulas/aula-19.pdf) | [.qmd](aulas/aula-19-revisao-bimestre-1.qmd) |
 | 20 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-20-avaliacao-b1-av2.gift` |
 
 ### 2º Bimestre — Hipervisores, Máquinas Virtuais, Segurança e Contêineres
@@ -67,16 +67,16 @@ Cronograma com **72 aulas de conteúdo** (18 por bimestre) e **8 avaliações** 
 | 27 | Alta disponibilidade e mobilidade de VMs | [aula-27](aulas/aula-27.pdf) | [.qmd](aulas/aula-27-alta-disponibilidade-vms.qmd) |
 | 28 | Segurança em nuvem: fundamentos | [aula-28](aulas/aula-28.pdf) | [.qmd](aulas/aula-28-seguranca-em-nuvem-fundamentos.qmd) |
 | 29 | Segurança em nuvem: identidade, acesso e criptografia | [aula-29](aulas/aula-29.pdf) | [.qmd](aulas/aula-29-seguranca-identidade-criptografia.qmd) |
-| 30 | Segurança em nuvem: soluções e boas práticas | [aula-30](aulas/aula-30.pdf) | [.qmd](aulas/aula-30-seguranca-solucoes-boas-praticas.qmd) |
-| 31 | Atividade — Segurança em Nuvem | [aula-31](aulas/aula-31.pdf) | [.qmd](aulas/aula-31-atividade-seguranca-em-nuvem.qmd) |
-| 32 | Modelos de gerenciamento em nuvem | [aula-32](aulas/aula-32.pdf) | [.qmd](aulas/aula-32-modelos-de-gerenciamento-nuvem.qmd) |
-| 33 | Contêineres: conceitos e VM × contêiner | [aula-33](aulas/aula-33.pdf) | [.qmd](aulas/aula-33-containers-conceitos.qmd) |
-| 34 | Docker: conceitos e arquitetura | [aula-34](aulas/aula-34.pdf) | [.qmd](aulas/aula-34-docker-arquitetura.qmd) |
-| 35 | Prática: Docker 1 — imagens e contêineres | [aula-35](aulas/aula-35.pdf) | [.qmd](aulas/aula-35-pratica-docker-1.qmd) |
-| 36 | Prática: Docker 2 — volumes e redes | [aula-36](aulas/aula-36.pdf) | [.qmd](aulas/aula-36-pratica-docker-2.qmd) |
-| 37 | Atividade — Contêineres e Docker | [aula-37](aulas/aula-37.pdf) | [.qmd](aulas/aula-37-atividade-containers-docker.qmd) |
-| 38 | Orquestração de contêineres com Kubernetes | [aula-38](aulas/aula-38.pdf) | [.qmd](aulas/aula-38-orquestracao-kubernetes.qmd) |
-| 39 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-39-avaliacao-b2-av1.gift` |
+| 30 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-30-avaliacao-b2-av1.gift` |
+| 31 | Segurança em nuvem: soluções e boas práticas | [aula-31](aulas/aula-31.pdf) | [.qmd](aulas/aula-31-seguranca-solucoes-boas-praticas.qmd) |
+| 32 | Atividade — Segurança em Nuvem | [aula-32](aulas/aula-32.pdf) | [.qmd](aulas/aula-32-atividade-seguranca-em-nuvem.qmd) |
+| 33 | Modelos de gerenciamento em nuvem | [aula-33](aulas/aula-33.pdf) | [.qmd](aulas/aula-33-modelos-de-gerenciamento-nuvem.qmd) |
+| 34 | Contêineres: conceitos e VM × contêiner | [aula-34](aulas/aula-34.pdf) | [.qmd](aulas/aula-34-containers-conceitos.qmd) |
+| 35 | Docker: conceitos e arquitetura | [aula-35](aulas/aula-35.pdf) | [.qmd](aulas/aula-35-docker-arquitetura.qmd) |
+| 36 | Prática: Docker 1 — imagens e contêineres | [aula-36](aulas/aula-36.pdf) | [.qmd](aulas/aula-36-pratica-docker-1.qmd) |
+| 37 | Prática: Docker 2 — volumes e redes | [aula-37](aulas/aula-37.pdf) | [.qmd](aulas/aula-37-pratica-docker-2.qmd) |
+| 38 | Atividade — Contêineres e Docker | [aula-38](aulas/aula-38.pdf) | [.qmd](aulas/aula-38-atividade-containers-docker.qmd) |
+| 39 | Orquestração de contêineres com Kubernetes | [aula-39](aulas/aula-39.pdf) | [.qmd](aulas/aula-39-orquestracao-kubernetes.qmd) |
 | 40 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-40-avaliacao-b2-av2.gift` |
 
 ### 3º Bimestre — Big Data, Redes em Nuvem e Serverless
@@ -92,16 +92,16 @@ Cronograma com **72 aulas de conteúdo** (18 por bimestre) e **8 avaliações** 
 | 47 | Redes em nuvem: conceitos | [aula-47](aulas/aula-47.pdf) | [.qmd](aulas/aula-47-redes-em-nuvem-conceitos.qmd) |
 | 48 | Redes em nuvem: VPC, sub-redes e conectividade híbrida | [aula-48](aulas/aula-48.pdf) | [.qmd](aulas/aula-48-redes-vpc-sub-redes.qmd) |
 | 49 | Atividade — Redes em Nuvem | [aula-49](aulas/aula-49.pdf) | [.qmd](aulas/aula-49-atividade-redes-em-nuvem.qmd) |
-| 50 | Configuração de redes virtuais em nuvem (prática) | [aula-50](aulas/aula-50.pdf) | [.qmd](aulas/aula-50-pratica-redes-virtuais.qmd) |
-| 51 | Computação sem servidor (Serverless): conceitos | [aula-51](aulas/aula-51.pdf) | [.qmd](aulas/aula-51-serverless-conceitos.qmd) |
-| 52 | Serverless: funções, eventos e provedores | [aula-52](aulas/aula-52.pdf) | [.qmd](aulas/aula-52-serverless-funcoes-eventos.qmd) |
-| 53 | Atividade — Computação sem Servidor | [aula-53](aulas/aula-53.pdf) | [.qmd](aulas/aula-53-atividade-serverless.qmd) |
-| 54 | Grades computacionais: conceitos | [aula-54](aulas/aula-54.pdf) | [.qmd](aulas/aula-54-grades-computacionais.qmd) |
-| 55 | TI Verde e sustentabilidade na nuvem | [aula-55](aulas/aula-55.pdf) | [.qmd](aulas/aula-55-ti-verde-sustentabilidade.qmd) |
-| 56 | Edge computing e Internet das Coisas | [aula-56](aulas/aula-56.pdf) | [.qmd](aulas/aula-56-edge-computing-iot.qmd) |
-| 57 | Virtualização em data centers: VMware e Xen | [aula-57](aulas/aula-57.pdf) | [.qmd](aulas/aula-57-vmware-xen-data-centers.qmd) |
-| 58 | Revisão para a avaliação bimestral | [aula-58](aulas/aula-58.pdf) | [.qmd](aulas/aula-58-revisao-bimestre-3.qmd) |
-| 59 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-59-avaliacao-b3-av1.gift` |
+| 50 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-50-avaliacao-b3-av1.gift` |
+| 51 | Configuração de redes virtuais em nuvem (prática) | [aula-51](aulas/aula-51.pdf) | [.qmd](aulas/aula-51-pratica-redes-virtuais.qmd) |
+| 52 | Computação sem servidor (Serverless): conceitos | [aula-52](aulas/aula-52.pdf) | [.qmd](aulas/aula-52-serverless-conceitos.qmd) |
+| 53 | Serverless: funções, eventos e provedores | [aula-53](aulas/aula-53.pdf) | [.qmd](aulas/aula-53-serverless-funcoes-eventos.qmd) |
+| 54 | Atividade — Computação sem Servidor | [aula-54](aulas/aula-54.pdf) | [.qmd](aulas/aula-54-atividade-serverless.qmd) |
+| 55 | Grades computacionais: conceitos | [aula-55](aulas/aula-55.pdf) | [.qmd](aulas/aula-55-grades-computacionais.qmd) |
+| 56 | TI Verde e sustentabilidade na nuvem | [aula-56](aulas/aula-56.pdf) | [.qmd](aulas/aula-56-ti-verde-sustentabilidade.qmd) |
+| 57 | Edge computing e Internet das Coisas | [aula-57](aulas/aula-57.pdf) | [.qmd](aulas/aula-57-edge-computing-iot.qmd) |
+| 58 | Virtualização em data centers: VMware e Xen | [aula-58](aulas/aula-58.pdf) | [.qmd](aulas/aula-58-vmware-xen-data-centers.qmd) |
+| 59 | Revisão para a avaliação bimestral | [aula-59](aulas/aula-59.pdf) | [.qmd](aulas/aula-59-revisao-bimestre-3.qmd) |
 | 60 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-60-avaliacao-b3-av2.gift` |
 
 ### 4º Bimestre — Banco de Dados, DevOps, Provedores e Projeto Integrador
@@ -117,16 +117,16 @@ Cronograma com **72 aulas de conteúdo** (18 por bimestre) e **8 avaliações** 
 | 67 | Atividade — Cloud DevOps e Integração Contínua | [aula-67](aulas/aula-67.pdf) | [.qmd](aulas/aula-67-atividade-cloud-devops.qmd) |
 | 68 | Provedores: AWS — visão geral | [aula-68](aulas/aula-68.pdf) | [.qmd](aulas/aula-68-provedores-aws.qmd) |
 | 69 | Provedores: Microsoft Azure | [aula-69](aulas/aula-69.pdf) | [.qmd](aulas/aula-69-provedores-azure.qmd) |
-| 70 | Provedores: Google Cloud Platform | [aula-70](aulas/aula-70.pdf) | [.qmd](aulas/aula-70-provedores-gcp.qmd) |
-| 71 | Provedores: OpenStack | [aula-71](aulas/aula-71.pdf) | [.qmd](aulas/aula-71-provedores-openstack.qmd) |
-| 72 | Análise de soluções de nuvem selecionadas | [aula-72](aulas/aula-72.pdf) | [.qmd](aulas/aula-72-analise-solucoes-nuvem.qmd) |
-| 73 | Governança em TI e custos na nuvem (FinOps) | [aula-73](aulas/aula-73.pdf) | [.qmd](aulas/aula-73-governanca-finops.qmd) |
-| 74 | Projeto integrador — planejamento | [aula-74](aulas/aula-74.pdf) | [.qmd](aulas/aula-74-projeto-integrador-planejamento.qmd) |
-| 75 | Projeto integrador — desenvolvimento | [aula-75](aulas/aula-75.pdf) | [.qmd](aulas/aula-75-projeto-integrador-desenvolvimento.qmd) |
-| 76 | Projeto integrador — apresentação | [aula-76](aulas/aula-76.pdf) | [.qmd](aulas/aula-76-projeto-integrador-apresentacao.qmd) |
-| 77 | Revisão geral do curso | [aula-77](aulas/aula-77.pdf) | [.qmd](aulas/aula-77-revisao-geral-curso.qmd) |
-| 78 | Encerramento e avaliação final | [aula-78](aulas/aula-78.pdf) | [.qmd](aulas/aula-78-encerramento-avaliacao-final.qmd) |
-| 79 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-79-avaliacao-b4-av1.gift` |
+| 70 | **Avaliação 1 (GIFT, 10 questões)** | — | `aula-70-avaliacao-b4-av1.gift` |
+| 71 | Provedores: Google Cloud Platform | [aula-71](aulas/aula-71.pdf) | [.qmd](aulas/aula-71-provedores-gcp.qmd) |
+| 72 | Provedores: OpenStack | [aula-72](aulas/aula-72.pdf) | [.qmd](aulas/aula-72-provedores-openstack.qmd) |
+| 73 | Análise de soluções de nuvem selecionadas | [aula-73](aulas/aula-73.pdf) | [.qmd](aulas/aula-73-analise-solucoes-nuvem.qmd) |
+| 74 | Governança em TI e custos na nuvem (FinOps) | [aula-74](aulas/aula-74.pdf) | [.qmd](aulas/aula-74-governanca-finops.qmd) |
+| 75 | Projeto integrador — planejamento | [aula-75](aulas/aula-75.pdf) | [.qmd](aulas/aula-75-projeto-integrador-planejamento.qmd) |
+| 76 | Projeto integrador — desenvolvimento | [aula-76](aulas/aula-76.pdf) | [.qmd](aulas/aula-76-projeto-integrador-desenvolvimento.qmd) |
+| 77 | Projeto integrador — apresentação | [aula-77](aulas/aula-77.pdf) | [.qmd](aulas/aula-77-projeto-integrador-apresentacao.qmd) |
+| 78 | Revisão geral do curso | [aula-78](aulas/aula-78.pdf) | [.qmd](aulas/aula-78-revisao-geral-curso.qmd) |
+| 79 | Encerramento e avaliação final | [aula-79](aulas/aula-79.pdf) | [.qmd](aulas/aula-79-encerramento-avaliacao-final.qmd) |
 | 80 | **Avaliação 2 (GIFT, 10 questões)** | — | `aula-80-avaliacao-b4-av2.gift` |
 
 ---

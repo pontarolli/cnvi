@@ -1,0 +1,106 @@
+---
+title: "Aula 39 — Orquestração de Contêineres com Kubernetes"
+---
+
+## Objetivos da Aula
+
+- Compreender a necessidade de **orquestração**.
+- Conhecer a **arquitetura do Kubernetes**.
+- Entender os principais **objetos** (Pod, Deployment, Service).
+- Reconhecer o Kubernetes como padrão de mercado.
+
+## Por que Orquestrar?
+
+- Dezenas/centenas de contêineres para **gerenciar**.
+- Necessidade de **escalar, reiniciar e distribuir** cargas.
+- **Alta disponibilidade** e autorrecuperação.
+- Orquestração automatiza tudo isso.
+
+## O que é Kubernetes (K8s)?
+
+- Plataforma de **orquestração de contêineres** de código aberto.
+- Criado pelo Google, mantido pela **CNCF**.
+- Gerencia o ciclo de vida, escala e rede dos contêineres.
+- Base de nuvens gerenciadas: EKS, AKS, GKE.
+
+## Arquitetura — Control Plane
+
+- **API Server:** ponto central de comunicação.
+- **etcd:** armazena o estado do cluster.
+- **Scheduler:** decide onde rodar os Pods.
+- **Controller Manager:** mantém o estado desejado.
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\footnotesize,node distance=10mm,
+  b/.style={draw,rounded corners,minimum width=3.4cm,minimum height=0.7cm,align=center,inner sep=3pt}]
+  \node[b,fill=orange!20] (cp) {Control Plane: API Server, etcd, Scheduler, Controller};
+  \node[b,fill=green!12,below left=10mm and 3mm of cp] (n1) {Node 1: kubelet, kube-proxy};
+  \node[b,fill=green!12,below right=10mm and 3mm of cp] (n2) {Node 2: kubelet, kube-proxy};
+  \draw[-{Latex}] (cp) -- (n1);
+  \draw[-{Latex}] (cp) -- (n2);
+\end{tikzpicture}
+\end{center}
+```
+
+## Arquitetura — Nodes
+
+- **Node:** máquina (física/VM) que executa os Pods.
+- **kubelet:** agente que gerencia o Node.
+- **kube-proxy:** rede do Node.
+- **Container runtime:** executa os contêineres.
+
+## Objetos Principais
+
+- **Pod:** menor unidade, agrupa um ou mais contêineres.
+- **Deployment:** gerencia réplicas e atualizações de Pods.
+- **Service:** expõe os Pods com um endereço estável.
+- **ConfigMap/Secret:** configurações e segredos.
+
+## Estado Desejado
+
+- Você **declara** o estado desejado (ex.: 3 réplicas).
+- O Kubernetes **reconcilia** continuamente.
+- Se um Pod falha, outro é **recriado**.
+- Autorrecuperação e **self-healing**.
+
+## Escalabilidade e Atualizações
+
+- **Escala horizontal:** ajustar o número de réplicas.
+- **Rolling update:** atualizar sem downtime.
+- **Rollback** para versões anteriores.
+- **HPA**: escalonamento automático por métricas.
+
+## Kubernetes na Nuvem
+
+- Serviços gerenciados: **EKS, AKS, GKE**.
+- O provedor cuida do control plane.
+- Integração com rede, armazenamento e identidade.
+- Padrão de facto para cargas containerizadas.
+
+::: {.callout-note}
+**Docker** empacota e executa contêineres; **Kubernetes** os gerencia em escala. Trabalham juntos.
+:::
+
+## Resumo da Aula
+
+- **Orquestração** é necessária para gerenciar contêineres em escala.
+- Kubernetes tem **control plane** e **nodes**.
+- Objetos: **Pod, Deployment, Service, ConfigMap/Secret**.
+- Reconciliação garante o **estado desejado** (self-healing).
+
+## Atividade Rápida
+
+- Explique a diferença entre **Pod e Deployment**.
+- Para que serve um **Service**?
+- Cite dois serviços gerenciados de Kubernetes na nuvem.
+
+## Referências
+
+- Kubernetes — *Documentação oficial*.
+- CNCF — *Cloud Native*.
+- Material das aulas 33 a 37.
+
+## Próxima Aula
+
+- **Aula 41:** Revisão e prática de Kubernetes (3º bimestre).

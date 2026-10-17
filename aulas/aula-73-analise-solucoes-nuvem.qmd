@@ -1,0 +1,104 @@
+---
+title: "Aula 73 — Análise de Soluções de Nuvem"
+---
+
+## Objetivos da Aula
+
+- Aprender **critérios** para escolher uma solução de nuvem.
+- Comparar **provedores** de forma objetiva.
+- Avaliar **custo total de propriedade (TCO)**.
+- Decidir com base em **requisitos**.
+
+## Por que Analisar?
+
+- Provedores e serviços são **muitos**.
+- A escolha errada gera **custos e retrabalho**.
+- É preciso decidir com **critérios**, não por moda.
+- A escolha ideal depende do **contexto**.
+
+## Critérios de Avaliação
+
+- **Custo** (TCO, previsibilidade).
+- **Segurança e conformidade** (LGPD, certificações).
+- **Desempenho e latência**.
+- **Escalabilidade e disponibilidade**.
+- **Suporte e maturidade**.
+- **Portabilidade** (evitar lock-in).
+
+```{=latex}
+\begin{center}
+\begin{tikzpicture}[font=\scriptsize,node distance=4mm and 5mm,
+  c/.style={draw,rounded corners,fill=blue!10,minimum width=2.7cm,minimum height=0.8cm,align=center,inner sep=3pt}]
+  \node[c] (a) {Custo (TCO)};
+  \node[c,right=of a,fill=green!12] (b) {Segurança};
+  \node[c,right=of b,fill=orange!20] (c) {Desempenho};
+  \node[c,below=of a,fill=yellow!25] (d) {Escalabilidade};
+  \node[c,below=of b,fill=gray!15] (e) {Suporte};
+  \node[c,below=of c,fill=red!12] (f) {Portabilidade};
+\end{tikzpicture}
+\end{center}
+```
+
+## Custo Total de Propriedade (TCO)
+
+- Não basta olhar o preço do recurso.
+- Inclui **operação, treinamento, migração e saída**.
+- Comparar **on-premises × nuvem**.
+- Considerar **custos ocultos** (egress, suporte).
+
+## Matriz de Decisão
+
+- Listar **requisitos** e **pesos**.
+- Pontuar cada **provedor** em cada critério.
+- Somar e comparar.
+- Ferramenta simples para decisão **fundamentada**.
+
+## Estudo Comparativo
+
+| Critério | Peso | Provedor A | Provedor B |
+|----------|------|------------|------------|
+| Custo | 30% | 4 | 5 |
+| Segurança | 25% | 5 | 4 |
+| Desempenho | 20% | 4 | 4 |
+| Suporte | 15% | 5 | 3 |
+| Portabilidade | 10% | 3 | 5 |
+
+## Boas Práticas de Escolha
+
+- Comece pelos **requisitos de negócio**.
+- Teste em **pequena escala** (piloto).
+- Evite **dependência** desnecessária.
+- Reavalie periodicamente.
+
+## Lock-in
+
+- Dependência de **serviços proprietários**.
+- Mitigação: **padrões abertos** (Kubernetes, containers).
+- Contratos de **saída** documentados.
+- Balancear conveniência × portabilidade.
+
+::: {.callout-note}
+Não existe "melhor nuvem" universal. A melhor solução é a que **atende aos requisitos** com o melhor equilíbrio de custo, risco e valor.
+:::
+
+## Resumo da Aula
+
+- A escolha de nuvem usa **critérios objetivos**.
+- **TCO** vai além do preço do recurso.
+- Uma **matriz de decisão** apoia a escolha.
+- Considere **lock-in e portabilidade**.
+
+## Atividade Rápida
+
+- Liste cinco **critérios** de avaliação.
+- O que compõe o **TCO**?
+- Como mitigar **lock-in**?
+
+## Referências
+
+- Gartner — *Cloud Comparison*.
+- Material das aulas 68 a 71.
+
+## Próxima Aula
+
+- **Aula 74:** Governança em TI e custos na nuvem (FinOps).

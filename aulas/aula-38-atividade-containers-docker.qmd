@@ -1,0 +1,87 @@
+---
+title: "Aula 38 — Atividade: Contêineres e Docker"
+---
+
+## Objetivos da Aula
+
+- Consolidar **contêineres e Docker**.
+- Praticar o empacotamento de uma **aplicação**.
+- Entregar um ambiente **reproduzível**.
+- Preparar para a avaliação do bimestre.
+
+## Revisão Rápida
+
+- **Contêiner:** aplicação + dependências, kernel compartilhado.
+- **Imagem × contêiner**; **Dockerfile** e camadas.
+- **Volumes** e **redes**; **Docker Compose**.
+
+## Roteiro da Atividade
+
+- Trabalho em **duplas**.
+- Escolha uma **aplicação simples** (ex.: site estático, API).
+- Empacote-a em uma **imagem Docker**.
+- Documente o **Dockerfile** e os comandos.
+- Execute e valide o funcionamento.
+
+## Parte 1 — Empacotamento
+
+- Criar o **Dockerfile** com base adequada.
+- Copiar a aplicação e instalar dependências.
+- Definir porta e comando de execução.
+- Construir a imagem (`docker build`).
+
+## Parte 2 — Execução
+
+- Executar o contêiner e mapear **portas**.
+- Testar o acesso à aplicação.
+- Ajustar problemas (logs, dependências).
+- Registrar evidências (capturas de tela).
+
+## Parte 3 — Compose (opcional)
+
+- Criar um `docker-compose.yml` para a aplicação.
+- Se aplicável, adicionar um **banco de dados**.
+- Subir o ambiente com `docker compose up`.
+- Demonstrar persistência com **volume**.
+
+## Entrega
+
+- Repositório ou pasta com **Dockerfile**, app e README.
+- **Capturas de tela** da execução.
+- Explicação das **escolhas** (imagem base, portas).
+- Entrega no **Moodle**.
+
+## Critérios de Avaliação
+
+- A aplicação **executa** corretamente no contêiner.
+- **Dockerfile** correto e enxuto.
+- Uso adequado de **portas/volumes**.
+- Qualidade da **documentação**.
+
+::: {.callout-important}
+A **Avaliação 2 (GIFT, 10 questões)** do bimestre cobre segurança, gerenciamento e contêineres. Revise antes de responder.
+:::
+
+## Checklist da Atividade
+
+- [ ] Aplicação escolhida.
+- [ ] Dockerfile criado e testado.
+- [ ] Imagem construída.
+- [ ] Contêiner em execução e acessível.
+- [ ] Documentação enviada.
+
+## Resumo da Aula
+
+- Empacotamos uma aplicação em **contêiner**.
+- Validamos a **execução** e o acesso.
+- Documentamos um ambiente **reproduzível**.
+- Próxima aula: **orquestração com Kubernetes**.
+
+## Referências
+
+- Docker — *Get Started*.
+- Material das aulas 33 a 36.
+
+## Próxima Aula
+
+- **Aula 39:** Orquestração de contêineres com Kubernetes.
